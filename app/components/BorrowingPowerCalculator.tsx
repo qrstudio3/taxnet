@@ -922,7 +922,7 @@ export default function BorrowingPowerCalculator() {
                       color: "#4A3B18",
                     }}
                   >
-                    💡 Shaving just <strong>0.35%</strong> off your interest rate through TaxNet broker negotiations saves approximately{" "}
+                    💡 Shaving just <strong>0.35%</strong> off your interest rate through Taxnet broker negotiations saves approximately{" "}
                     <strong>{formatAud(maxBorrowingCapacity * 0.0035 * 18)}</strong> over the life of this loan.
                   </div>
                 </div>
@@ -985,7 +985,7 @@ export default function BorrowingPowerCalculator() {
                     {/* Specialized Lender */}
                     <div>
                       <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "2px" }}>
-                        <span style={{ color: "#0D3E26", fontWeight: 700 }}>TaxNet Optimized Specialist / Non-Bank</span>
+                        <span style={{ color: "#0D3E26", fontWeight: 700 }}>Taxnet Optimized Specialist / Non-Bank</span>
                         <span style={{ fontWeight: 800, color: "#0D3E26" }}>{formatAud(optimizedLenderCapacity)}</span>
                       </div>
                       <div style={{ height: "12px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
@@ -1089,7 +1089,7 @@ export default function BorrowingPowerCalculator() {
             </a>
 
             <a
-              href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20used%20your%20borrowing%20power%20calculator%20and%20would%20like%20to%20review%20my%20capacity."
+              href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20used%20your%20borrowing%20power%20calculator%20and%20would%20like%20to%20review%20my%20capacity."
               target="_blank"
               rel="noopener noreferrer"
               style={{

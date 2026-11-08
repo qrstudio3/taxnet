@@ -204,7 +204,7 @@ export default function ContactPageForm() {
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <a
               href={`https://wa.me/61420956761?text=${encodeURIComponent(
-                `Hi TaxNet, I just submitted a consultation request for ${selectedService}. My name is ${formData.name || ""}.`
+                `Hi Taxnet, I just submitted a consultation request for ${selectedService}. My name is ${formData.name || ""}.`
               )}`}
               target="_blank"
               rel="noopener noreferrer"

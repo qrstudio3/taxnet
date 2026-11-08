@@ -28,8 +28,8 @@
   --color-surface:          #FFFFFF; /* Pure white — card elevation */
   --color-surface-raised:   #F2F1ED; /* Deeper off-white for nested cards */
   --color-primary:          #1C2022; /* Dark Charcoal/Black — 60% body, nav, icons */
-  --color-secondary:        #0D3E26; /* Forest Green — 30% headlines, footers, sections */
-  --color-secondary-light:  #155233; /* Lighter forest green — hover on green sections */
+  --color-secondary:        #0A0D0B; /* Luxury Onyx Black — replaces forest green */
+  --color-secondary-light:  #161A18; /* Elevated Black — hover on dark sections */
   --color-accent:           #A18650; /* Warm Gold/Tan — 10% CTAs, active tabs */
   --color-accent-hover:     #8A7040; /* Darker gold — button hover state */
   --color-accent-subtle:    #F5EFE4; /* Pale gold tint — badge backgrounds */

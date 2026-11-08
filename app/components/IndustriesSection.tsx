@@ -4,49 +4,49 @@ import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-/* ─── Industries Data ─── */
+/* ─── Industries Data (Black & Gold Visual Edition) ─── */
 const INDUSTRIES = [
   {
     id: "doctors",
     name: "Doctors",
     tag: "Healthcare",
-    image: "/industries/Tailored-Bookkeeping-Services-for-Melbourne-Doctors.png",
+    image: "/industries/gold/doctors.png?v=gold_v2",
   },
   {
     id: "mechanics",
     name: "Mechanics",
     tag: "Automotive",
-    image: "/industries/Mechanics.png",
+    image: "/industries/gold/mechanics.png?v=gold_v2",
   },
   {
     id: "electricians",
     name: "Electricians",
     tag: "Trade & Electrical",
-    image: "/industries/Tailored-Bookkeeping-for-Melbourne-Electricians.png",
+    image: "/industries/gold/electricians.png?v=gold_v2",
   },
   {
     id: "plumbers",
     name: "Plumbers",
     tag: "Plumbing Services",
-    image: "/industries/Melbournes-Reliable-Bookkeeping-for-Plumbers.png",
+    image: "/industries/gold/plumbers.png?v=gold_v2",
   },
   {
     id: "restaurants",
     name: "Restaurants",
     tag: "Hospitality & Dining",
-    image: "/industries/Expert-Accounting-Services-for-Melbournes-Hospitality-Sector.png",
+    image: "/industries/gold/restaurants.png?v=gold_v2",
   },
   {
     id: "startups",
     name: "Startups",
     tag: "Tech & Innovation",
-    image: "/industries/Startups.png",
+    image: "/industries/gold/startups.png?v=gold_v2",
   },
   {
     id: "lawyers",
     name: "Lawyers",
     tag: "Legal Practices",
-    image: "/industries/Lawyers.png",
+    image: "/industries/gold/lawyers.png?v=gold_v2",
   },
 ];
 
@@ -164,7 +164,7 @@ export default function IndustriesSection() {
             fontFamily: '"Monety", serif',
             fontSize: "clamp(2rem, 3.8vw, 2.75rem)",
             fontWeight: 400,
-            color: "#0F261B",
+            color: "#1C2022",
             lineHeight: 1.2,
             letterSpacing: "-0.01em",
             margin: "0 auto 0.6rem",
@@ -174,7 +174,7 @@ export default function IndustriesSection() {
           Industries We Provide{" "}
           <span
             style={{
-              color: "#0D3E26",
+              color: "#C5A869",
             }}
           >
             Services
@@ -216,7 +216,7 @@ export default function IndustriesSection() {
               key={`${ind.id}-${idx}`}
               className="industry-item"
             >
-              {/* Illustration in Forest Green */}
+              {/* Illustration in Black & Gold */}
               <div
                 className="industry-img-wrap"
                 style={{
@@ -233,6 +233,7 @@ export default function IndustriesSection() {
                   alt={ind.name}
                   width={180}
                   height={110}
+                  unoptimized={true}
                   style={{
                     maxWidth: "100%",
                     maxHeight: "100%",
@@ -261,8 +262,8 @@ export default function IndustriesSection() {
                 style={{
                   fontSize: "0.72rem",
                   fontWeight: 600,
-                  color: "#0D3E26",
-                  opacity: 0.75,
+                  color: "#C5A869",
+                  opacity: 0.95,
                   letterSpacing: "0.02em",
                 }}
               >
@@ -295,7 +296,7 @@ export default function IndustriesSection() {
           <Link
             href="/contact"
             style={{
-              color: "#0D3E26",
+              color: "#C5A869",
               fontWeight: 700,
               textDecoration: "underline",
               textUnderlineOffset: "3px",

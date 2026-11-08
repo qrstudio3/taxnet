@@ -211,7 +211,7 @@ export default function FloatingContact() {
         <div className={`fab-menu ${isOpen ? "open" : "closed"}`}>
           {/* WhatsApp Option */}
           <a
-            href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
+            href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
             target="_blank"
             rel="noopener noreferrer"
             className="fab-action-row"

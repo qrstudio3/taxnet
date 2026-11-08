@@ -31,9 +31,9 @@ const FAQ_ITEMS = [
   },
   {
     id: "faq-5",
-    question: "What Makes TaxNet Different From Other Accounting Firms?",
+    question: "What Makes Taxnet Different From Other Accounting Firms?",
     answer:
-      "Unlike traditional firms that only review your numbers once a year at tax time, TaxNet acts as your proactive year-round growth partner. We combine certified CPA tax strategists, senior bookkeepers, and licensed mortgage brokers under one roof—ensuring your tax minimization, cash flow, and lending capacity work in complete harmony.",
+      "Unlike traditional firms that only review your numbers once a year at tax time, Taxnet acts as your proactive year-round growth partner. We combine certified CPA tax strategists, senior bookkeepers, and licensed mortgage brokers under one roof—ensuring your tax minimization, cash flow, and lending capacity work in complete harmony.",
   },
   {
     id: "faq-6",
@@ -75,13 +75,13 @@ export default function FaqSection() {
                 fontFamily: '"Monety", Georgia, serif',
                 fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
                 fontWeight: 400,
-                color: "#0F261B",
+                color: "#1C2022",
                 lineHeight: 1.2,
                 letterSpacing: "-0.01em",
                 margin: "0 auto 0.6rem",
               }}
             >
-              Frequently Asked Questions
+              Frequently Asked <span style={{ color: "#C5A869" }}>Questions</span>
             </h2>
             <p
               style={{
@@ -136,7 +136,7 @@ export default function FaqSection() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 600,
-                      color: isOpen ? "#0D3E26" : "#1A3225",
+                      color: isOpen ? "#C5A869" : "#1C2022",
                       lineHeight: 1.4,
                       letterSpacing: "-0.01em",
                       transition: "color 180ms ease",
@@ -152,7 +152,7 @@ export default function FaqSection() {
                       height: "30px",
                       borderRadius: "50%",
                       backgroundColor: isOpen
-                        ? "rgba(13, 62, 38, 0.08)"
+                        ? "rgba(197, 168, 105, 0.12)"
                         : "rgba(0, 0, 0, 0.03)",
                       display: "flex",
                       alignItems: "center",
@@ -166,7 +166,7 @@ export default function FaqSection() {
                         fontSize: "1.25rem",
                         lineHeight: 1,
                         fontWeight: 400,
-                        color: isOpen ? "#0D3E26" : "#6B7C72",
+                        color: isOpen ? "#C5A869" : "#6B7C72",
                         transform: isOpen ? "rotate(180deg)" : "none",
                         transition: "transform 250ms ease, color 200ms ease",
                       }}
@@ -224,7 +224,7 @@ export default function FaqSection() {
             <Link
               href="/contact"
               style={{
-                color: "#0D3E26",
+                color: "#C5A869",
                 fontWeight: 700,
                 textDecoration: "underline",
                 textUnderlineOffset: "3px",

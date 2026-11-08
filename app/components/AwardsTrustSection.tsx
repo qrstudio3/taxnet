@@ -117,13 +117,13 @@ export default function AwardsTrustSection() {
               fontFamily: '"Monety", serif',
               fontSize: "clamp(1.75rem, 3.2vw, 2.3rem)",
               fontWeight: 400,
-              color: "#0F261B",
+              color: "#1C2022",
               margin: "0 0 0.35rem 0",
               lineHeight: 1.15,
             }}
           >
             Award-Winning Advisory.{" "}
-            <span style={{ color: "#A18650" }}>Proven Trust.</span>
+            <span style={{ color: "#C5A869" }}>Proven Trust.</span>
           </h2>
           <p
             style={{
@@ -198,7 +198,7 @@ export default function AwardsTrustSection() {
                 style={{
                   fontSize: "0.98rem",
                   fontWeight: 800,
-                  color: "#0F261B",
+                  color: "#1C2022",
                   lineHeight: 1.25,
                   marginTop: "0.2rem",
                 }}

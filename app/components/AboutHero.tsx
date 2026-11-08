@@ -349,7 +349,7 @@ export default function AboutHero() {
             {/* Exactly darklog.png as specified */}
             <Image
               src="/logo/darklog.png"
-              alt="TaxNet Logo"
+              alt="Taxnet Logo"
               width={520}
               height={178}
               priority

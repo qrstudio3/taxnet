@@ -105,7 +105,7 @@ export default function Navbar() {
 
   /* ─────────────── Derived styles ─────────────── */
   const navTextColor   = solid ? "var(--color-text-secondary)" : "rgba(249,249,246,0.85)";
-  const navTextHover   = solid ? "var(--color-secondary)"      : "#ffffff";
+  const navTextHover   = "#C5A869";
   const topBg          = solid
     ? "rgba(255,255,255,0.97)"
     : "transparent";
@@ -148,7 +148,7 @@ export default function Navbar() {
           <Link
             href="/"
             id="nav-logo"
-            aria-label="TaxNet"
+            aria-label="Taxnet"
             style={{
               position: "relative",
               display: "flex",
@@ -162,7 +162,7 @@ export default function Navbar() {
             {/* Normal Navbar Logo: light/white for dark hero video background */}
             <img
               src="/logo/darklog.png"
-              alt="TaxNet"
+              alt="Taxnet"
               style={{
                 position: "absolute",
                 top: "50%",
@@ -180,7 +180,7 @@ export default function Navbar() {
             {/* Sticky Navbar Logo: dark green for light/scrolled background */}
             <img
               src="/logo/Logo_TAXTNET.png"
-              alt="TaxNet"
+              alt="Taxnet"
               style={{
                 position: "absolute",
                 top: "50%",
@@ -345,8 +345,8 @@ export default function Navbar() {
       <div
         className="service-bar"
         style={{
-          backgroundColor: "var(--color-secondary)",
-          borderBottom: "1px solid rgba(255,255,255,0.08)",
+          backgroundColor: "#0A0D0B",
+          borderBottom: "1px solid rgba(197, 168, 105, 0.22)",
         }}
       >
         <div
@@ -371,8 +371,8 @@ export default function Navbar() {
                     padding: "0 1.125rem",
                     background: "none",
                     border: "none",
-                    borderBottom: isOpen ? "2px solid rgba(255,255,255,0.85)" : "2px solid transparent",
-                    color: isOpen ? "#fff" : "rgba(255,255,255,0.78)",
+                    borderBottom: isOpen ? "2px solid #C5A869" : "2px solid transparent",
+                    color: isOpen ? "#C5A869" : "rgba(255,255,255,0.78)",
                     fontFamily: "var(--font-sans)",
                     fontWeight: 500,
                     fontSize: "0.8125rem",
@@ -380,7 +380,7 @@ export default function Navbar() {
                     whiteSpace: "nowrap",
                     transition: "color 160ms ease, border-color 160ms ease",
                   }}
-                  onMouseEnter={e => { e.currentTarget.style.color = "#fff"; }}
+                  onMouseEnter={e => { e.currentTarget.style.color = "#C5A869"; }}
                   onMouseLeave={e => { if (!isOpen) e.currentTarget.style.color = "rgba(255,255,255,0.78)"; }}
                 >
                   {s.label}
@@ -410,7 +410,7 @@ export default function Navbar() {
                       minWidth: "220px",
                       backgroundColor: "var(--color-surface)",
                       border: "1px solid var(--color-border)",
-                      borderTop: "2px solid var(--color-secondary)",
+                      borderTop: "2px solid #C5A869",
                       borderRadius: "0 0 6px 6px",
                       boxShadow: "var(--shadow-lg)",
                       padding: "0.5rem 0",
@@ -434,7 +434,7 @@ export default function Navbar() {
                         }}
                         onMouseEnter={e => {
                           e.currentTarget.style.backgroundColor = "var(--color-surface-raised)";
-                          e.currentTarget.style.color = "var(--color-secondary)";
+                          e.currentTarget.style.color = "#C5A869";
                         }}
                         onMouseLeave={e => {
                           e.currentTarget.style.backgroundColor = "transparent";
@@ -508,7 +508,7 @@ export default function Navbar() {
                       border: "none",
                       fontSize: "0.95rem",
                       fontWeight: 600,
-                      color: isExpanded ? "var(--color-secondary)" : "var(--color-text)",
+                      color: isExpanded ? "#C5A869" : "var(--color-text)",
                       cursor: "pointer",
                       transition: "color 200ms ease"
                     }}
@@ -590,7 +590,7 @@ export default function Navbar() {
                   justifyContent: "center",
                   fontWeight: 600,
                   fontSize: "1rem",
-                  color: "var(--color-secondary)",
+                  color: "#C5A869",
                   textDecoration: "none",
                   padding: "0.75rem",
                   backgroundColor: "var(--color-surface-raised)",

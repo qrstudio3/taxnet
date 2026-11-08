@@ -18,7 +18,7 @@ const REVIEWS = [
     serviceCategory: "tax",
     serviceTag: "Corporate Tax & Structuring",
     title: "Found $42,000 in deductions our previous accountant overlooked",
-    body: "We switched to TaxNet at the start of last financial year when our tech startup began scaling quickly. Their senior CPAs completely restructured our entity setup to protect IP and identified significant R&D tax offsets that our old firm never even mentioned. Flat monthly billing means no awkward surprises when we call for advice.",
+    body: "We switched to Taxnet at the start of last financial year when our tech startup began scaling quickly. Their senior CPAs completely restructured our entity setup to protect IP and identified significant R&D tax offsets that our old firm never even mentioned. Flat monthly billing means no awkward surprises when we call for advice.",
   },
   {
     id: "sarah",
@@ -32,7 +32,7 @@ const REVIEWS = [
     serviceCategory: "bookkeeping",
     serviceTag: "Medical Practice Bookkeeping & BAS",
     title: "Complete peace of mind with multi-clinic payroll and BAS",
-    body: "Running two medical clinics with 18 consulting doctors and support staff was a payroll and super nightmare before TaxNet took over. They automated our entire Xero workflow, handle our quarterly BAS without us lifting a finger, and make sure we remain 100% compliant with ATO and payroll tax thresholds.",
+    body: "Running two medical clinics with 18 consulting doctors and support staff was a payroll and super nightmare before Taxnet took over. They automated our entire Xero workflow, handle our quarterly BAS without us lifting a finger, and make sure we remain 100% compliant with ATO and payroll tax thresholds.",
   },
   {
     id: "david",
@@ -46,7 +46,7 @@ const REVIEWS = [
     serviceCategory: "tax",
     serviceTag: "Trust Accounting & Partnership Tax",
     title: "Deep expertise in Law Society trust accounting regulations",
-    body: "As a legal practice, compliance with Victorian Legal Services Board trust accounts is non-negotiable. TaxNet’s partner team understands these regulations inside out. Their year-end financial statements and partnership tax distributions were completed weeks ahead of deadline. A truly elite accounting team.",
+    body: "As a legal practice, compliance with Victorian Legal Services Board trust accounts is non-negotiable. Taxnet’s partner team understands these regulations inside out. Their year-end financial statements and partnership tax distributions were completed weeks ahead of deadline. A truly elite accounting team.",
   },
   {
     id: "julian",
@@ -60,7 +60,7 @@ const REVIEWS = [
     serviceCategory: "bookkeeping",
     serviceTag: "Payroll & Fortnightly BAS",
     title: "Automated restaurant award wages and saved our cashflow",
-    body: "Hospitality award rates and penalty shifts used to give me headaches every fortnight. TaxNet sorted our roster-to-payroll integrations in Xero and meets with me monthly to go over our food and labor percentage margins. They’re more like a virtual CFO than just a tax agent.",
+    body: "Hospitality award rates and penalty shifts used to give me headaches every fortnight. Taxnet sorted our roster-to-payroll integrations in Xero and meets with me monthly to go over our food and labor percentage margins. They’re more like a virtual CFO than just a tax agent.",
   },
   {
     id: "robert",
@@ -74,7 +74,7 @@ const REVIEWS = [
     serviceCategory: "lending",
     serviceTag: "Commercial Equipment Loan",
     title: "Secured $1.4M machine financing with instant write-off advice",
-    body: "We needed to upgrade our CNC machinery and didn't want to get slowed down by big-bank red tape. TaxNet’s broking division secured the $1.4M equipment facility within 9 days at a fantastic rate, while their tax advisors made sure we maximized our asset write-offs and depreciation for the year. Outstanding service.",
+    body: "We needed to upgrade our CNC machinery and didn't want to get slowed down by big-bank red tape. Taxnet’s broking division secured the $1.4M equipment facility within 9 days at a fantastic rate, while their tax advisors made sure we maximized our asset write-offs and depreciation for the year. Outstanding service.",
   },
 ];
 
@@ -204,11 +204,11 @@ export default function TestimonialsSection() {
       ref={sectionRef}
       style={{
         position: "relative",
-        backgroundColor: "#0D3E26",
+        backgroundColor: "#070B09",
         paddingTop: "3.75rem",
         paddingBottom: "4rem",
         overflow: "hidden",
-        borderTop: "1px solid rgba(161, 134, 80, 0.22)",
+        borderTop: "1px solid rgba(197, 168, 105, 0.22)",
       }}
     >
       <style>{`
@@ -309,7 +309,7 @@ export default function TestimonialsSection() {
                 color: "#C5A869",
               }}
             >
-              TaxNet
+              Taxnet
             </span>
           </h2>
           <p
@@ -425,7 +425,7 @@ export default function TestimonialsSection() {
                         style={{
                           fontSize: "0.95rem",
                           fontWeight: 800,
-                          color: "#0F261B",
+                          color: "#1C2022",
                           lineHeight: 1.2,
                         }}
                       >
@@ -449,13 +449,13 @@ export default function TestimonialsSection() {
                       display: "flex",
                       alignItems: "center",
                       gap: "4px",
-                      background: "rgba(13, 62, 38, 0.06)",
-                      border: "1px solid rgba(13, 62, 38, 0.12)",
+                      background: "rgba(197, 168, 105, 0.08)",
+                      border: "1px solid rgba(197, 168, 105, 0.25)",
                       padding: "3px 8px",
                       borderRadius: "6px",
                       fontSize: "0.68rem",
                       fontWeight: 700,
-                      color: "#0D3E26",
+                      color: "#C5A869",
                     }}
                   >
                     <span>✓</span> Verified
@@ -489,7 +489,7 @@ export default function TestimonialsSection() {
                   style={{
                     fontSize: "0.98rem",
                     fontWeight: 800,
-                    color: "#0F261B",
+                    color: "#1C2022",
                     lineHeight: 1.35,
                     marginBottom: "0.55rem",
                     letterSpacing: "-0.01em",
@@ -497,8 +497,6 @@ export default function TestimonialsSection() {
                 >
                   &ldquo;{r.title}&rdquo;
                 </h4>
-
-                {/* Review Body Text */}
                 <p
                   style={{
                     fontSize: "0.84rem",
@@ -525,8 +523,8 @@ export default function TestimonialsSection() {
                   style={{
                     fontSize: "0.7rem",
                     fontWeight: 700,
-                    color: "#0D3E26",
-                    background: "rgba(13, 62, 38, 0.08)",
+                    color: "#C5A869",
+                    background: "rgba(197, 168, 105, 0.12)",
                     padding: "3px 10px",
                     borderRadius: "999px",
                   }}

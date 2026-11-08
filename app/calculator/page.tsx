@@ -7,7 +7,7 @@ import BookkeepingContact from "@/app/components/BookkeepingContact";
 import BookkeepingBenefitIcon from "@/app/components/BookkeepingBenefitIcon";
 
 export const metadata: Metadata = {
-  title: "Borrowing Power Calculator Australia | Accurate Home Loan Capacity | TaxNet",
+  title: "Borrowing Power Calculator Australia | Accurate Home Loan Capacity | Taxnet",
   description:
     "Calculate your exact home loan borrowing capacity across 40+ Australian lenders. Includes APRA 3.00% serviceability stress buffers, HEM living expense benchmarks, and visual cashflow charts. Free assessment.",
   keywords: [
@@ -39,7 +39,7 @@ const EXPLANATORY_CARDS = [
   {
     icon: "calculator" as const,
     title: "Self-Employed & Tax Add-Backs",
-    desc: "Traditional branch bankers often decline business owners by looking solely at bottom-line taxable profit. TaxNet's CPA team prepares verified lender submissions adding back paper depreciation, interest, and director super.",
+    desc: "Traditional branch bankers often decline business owners by looking solely at bottom-line taxable profit. Taxnet's CPA team prepares verified lender submissions adding back paper depreciation, interest, and director super.",
   },
 ];
 
@@ -50,7 +50,7 @@ const CALC_FAQS = [
   },
   {
     q: "Why do different Australian banks offer such different borrowing capacities?",
-    a: "While all lenders follow APRA guidelines, credit policies diverge dramatically between institutions. For instance, some banks shade rental income to 70% while others accept 80% to 90%. Some banks average two years of business tax returns, while specialist lenders use the most recent year if your business is expanding. TaxNet compares 40+ lenders to find the policy that maximizes your borrowing capacity.",
+    a: "While all lenders follow APRA guidelines, credit policies diverge dramatically between institutions. For instance, some banks shade rental income to 70% while others accept 80% to 90%. Some banks average two years of business tax returns, while specialist lenders use the most recent year if your business is expanding. Taxnet compares 40+ lenders to find the policy that maximizes your borrowing capacity.",
   },
   {
     q: "How can I immediately increase my borrowing power before applying?",
@@ -61,7 +61,7 @@ const CALC_FAQS = [
     a: "Yes. Compulsory HECS/HELP repayments are deducted directly from your gross income according to ATO salary brackets. For someone earning $120,000, HECS repayments reduce take-home pay by ~$750/month, which can reduce total borrowing power by $60,000 to $80,000.",
   },
   {
-    q: "How much does a formal TaxNet borrowing capacity review cost?",
+    q: "How much does a formal Taxnet borrowing capacity review cost?",
     a: "Our residential mortgage broking services and borrowing assessments are 100% free ($0 broker fee). The lender pays our practice an industry-standard commission after your mortgage settles, meaning you receive expert credit guidance, lender comparison, and application handling at zero out-of-pocket cost.",
   },
 ];

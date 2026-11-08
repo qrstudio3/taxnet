@@ -55,11 +55,11 @@ export default function Footer() {
     <footer
       style={{
         position: "relative",
-        backgroundColor: "#0D3E26",
-        background: "linear-gradient(180deg, #0D3E26 0%, #072316 100%)",
+        backgroundColor: "#05110A",
+        background: "linear-gradient(180deg, #090D0B 0%, #040705 100%)",
         color: "#FFFFFF",
         overflow: "hidden",
-        borderTop: "1px solid rgba(161, 134, 80, 0.28)",
+        borderTop: "1px solid rgba(197, 168, 105, 0.28)",
       }}
     >
       {/* ── Responsive View Switching (Mobile vs Desktop) ── */}
@@ -223,7 +223,7 @@ export default function Footer() {
               href="/contact"
               style={{
                 backgroundColor: "#A18650",
-                color: "#0D3E26",
+                color: "#0A0D0B",
                 fontWeight: 700,
                 fontSize: "0.85rem",
                 padding: "0.75rem 1.4rem",
@@ -282,7 +282,7 @@ export default function Footer() {
               {/* Using the requested light logo: public/logo/darklog.png */}
               <Image
                 src="/logo/darklog.png"
-                alt="TaxNet"
+                alt="Taxnet"
                 width={150}
                 height={48}
                 style={{
@@ -302,7 +302,7 @@ export default function Footer() {
                 marginBottom: "1rem",
               }}
             >
-              TaxNet is an Australian CPA accounting firm and licensed finance broking
+              Taxnet is an Australian CPA accounting firm and licensed finance broking
               practice providing full-spectrum corporate tax, proactive bookkeeping,
               and commercial debt solutions.
             </p>
@@ -416,7 +416,7 @@ export default function Footer() {
                   </svg>
                 </span>
                 <a
-                  href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
+                  href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
                   target="_blank"
                   rel="noopener noreferrer"
                   style={{ color: "#FFFFFF", textDecoration: "none", transition: "color 160ms ease" }}
@@ -671,7 +671,7 @@ export default function Footer() {
           }}
         >
           <div>
-            © {new Date().getFullYear()} TaxNet Advisory Pty Ltd. ABN 40 610 387 881. All rights reserved.
+            © {new Date().getFullYear()} Taxnet Advisory Pty Ltd. ABN 40 610 387 881. All rights reserved.
           </div>
 
           <div style={{ display: "flex", gap: "1.25rem", flexWrap: "wrap" }}>
@@ -727,7 +727,7 @@ export default function Footer() {
           <Link href="/" style={{ display: "inline-block", textDecoration: "none" }}>
             <Image
               src="/logo/darklog.png"
-              alt="TaxNet"
+              alt="Taxnet"
               width={130}
               height={40}
               style={{ height: "36px", width: "auto", objectFit: "contain" }}
@@ -838,7 +838,7 @@ export default function Footer() {
               backgroundColor: "#A18650",
               borderRadius: "8px",
               padding: "10px",
-              color: "#0D3E26",
+              color: "#0A0D0B",
               textDecoration: "none",
               fontSize: "0.82rem",
               fontWeight: 700,
@@ -880,7 +880,7 @@ export default function Footer() {
               fontSize: "0.84rem",
             }}
           >
-            <Link href="/about" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>About TaxNet</Link>
+            <Link href="/about" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>About Taxnet</Link>
             <Link href="/accounting-and-tax/business-accounting" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Business Accounting</Link>
             <Link href="/accounting-and-tax/tax-planning" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Tax Planning</Link>
             <Link href="/small-business-bookkeeping" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Bookkeeping</Link>
@@ -937,7 +937,7 @@ export default function Footer() {
             color: "rgba(255, 255, 255, 0.5)",
           }}
         >
-          <div>© {new Date().getFullYear()} TaxNet Advisory Pty Ltd</div>
+          <div>© {new Date().getFullYear()} Taxnet Advisory Pty Ltd</div>
           <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
             <Link href="/privacy-policy" style={{ color: "rgba(255, 255, 255, 0.6)", textDecoration: "none" }}>Privacy</Link>
             <span>·</span>

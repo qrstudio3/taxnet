@@ -11,7 +11,7 @@ interface ExecutiveWhatsAppButtonProps {
 }
 
 export default function ExecutiveWhatsAppButton({
-  message = "Hi TaxNet, I would like to speak with an advisor regarding your services.",
+  message = "Hi Taxnet, I would like to speak with an advisor regarding your services.",
   className,
   style,
 }: ExecutiveWhatsAppButtonProps) {

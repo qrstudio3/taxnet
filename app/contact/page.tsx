@@ -8,16 +8,16 @@ import ContactPageForm from "@/app/components/ContactPageForm";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Contact TaxNet | CPA Accountants & Mortgage Brokers Melbourne",
+  title: "Contact Taxnet | CPA Accountants & Mortgage Brokers Melbourne",
   description:
-    "Schedule a confidential consultation with TaxNet's certified CPA accountants, registered tax agents, and licensed mortgage brokers. Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 or video consultation Australia-wide.",
+    "Schedule a confidential consultation with Taxnet's certified CPA accountants, registered tax agents, and licensed mortgage brokers. Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 or video consultation Australia-wide.",
   keywords: [
-    "contact TaxNet",
+    "contact Taxnet",
     "tax accountant Doncaster East",
     "CPA accountant Melbourne contact",
     "mortgage broker Doncaster East contact",
-    "TaxNet phone number",
-    "TaxNet office address Melbourne",
+    "Taxnet phone number",
+    "Taxnet office address Melbourne",
     "book accountant consultation Melbourne",
   ],
 };
@@ -33,10 +33,10 @@ const FAQS = [
   },
   {
     q: "How does the handover process work if I already have an accountant?",
-    a: "We make switching accountants effortless. TaxNet prepares the formal Ethical Clearance letter required under CPA Australia professional standards and manages the retrieval of all prior year tax returns, depreciation schedules, and cloud files directly from your previous accountant with zero disruption to your business.",
+    a: "We make switching accountants effortless. Taxnet prepares the formal Ethical Clearance letter required under CPA Australia professional standards and manages the retrieval of all prior year tax returns, depreciation schedules, and cloud files directly from your previous accountant with zero disruption to your business.",
   },
   {
-    q: "Can TaxNet coordinate my business tax and my home loan together?",
+    q: "Can Taxnet coordinate my business tax and my home loan together?",
     a: "Yes! This is our signature strength. Traditional branch bankers and standalone accountants rarely communicate, often leading to deductions that unintentionally reduce your mortgage borrowing power. As integrated CPA tax accountants and licensed mortgage brokers, we ensure your tax returns and lending strategy work in perfect harmony.",
   },
   {
@@ -131,7 +131,7 @@ export default function ContactPage() {
                 <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
                   {/* WhatsApp Direct Card */}
                   <a
-                    href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
+                    href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -338,7 +338,7 @@ export default function ContactPage() {
                     }}
                   >
                     <iframe
-                      title="TaxNet Doncaster East Office Map"
+                      title="Taxnet Doncaster East Office Map"
                       width="100%"
                       height="100%"
                       style={{ border: 0 }}
@@ -650,7 +650,7 @@ export default function ContactPage() {
               }}
             >
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I would like to schedule a consultation with your Melbourne partners."
+                message="Hi Taxnet, I would like to schedule a consultation with your Melbourne partners."
                 style={{
                   fontSize: "1rem",
                   padding: "1rem 2rem",

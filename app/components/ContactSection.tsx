@@ -93,7 +93,7 @@ export default function ContactSection() {
                 fontFamily: '"Monety", Georgia, serif',
                 fontSize: "clamp(2rem, 3.6vw, 2.75rem)",
                 fontWeight: 400,
-                color: "#0F261B",
+                color: "#1C2022",
                 lineHeight: 1.2,
                 letterSpacing: "-0.01em",
                 margin: "0 0 1rem 0",
@@ -102,7 +102,7 @@ export default function ContactSection() {
               Let’s Elevate Your{" "}
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#C5A869",
                 }}
               >
                 Financial Position
@@ -138,8 +138,8 @@ export default function ContactSection() {
                     width: "42px",
                     height: "42px",
                     borderRadius: "10px",
-                    backgroundColor: "rgba(13, 62, 38, 0.08)",
-                    border: "1px solid rgba(13, 62, 38, 0.12)",
+                    backgroundColor: "rgba(197, 168, 105, 0.1)",
+                    border: "1px solid rgba(197, 168, 105, 0.25)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -151,7 +151,7 @@ export default function ContactSection() {
                     height="20"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#0D3E26"
+                    stroke="#C5A869"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -161,7 +161,7 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
                     Melbourne Head Office
                   </div>
                   <div style={{ fontSize: "0.88rem", color: "#3B4A41", marginTop: "2px" }}>
@@ -176,8 +176,8 @@ export default function ContactSection() {
                     width: "42px",
                     height: "42px",
                     borderRadius: "10px",
-                    backgroundColor: "rgba(13, 62, 38, 0.08)",
-                    border: "1px solid rgba(13, 62, 38, 0.12)",
+                    backgroundColor: "rgba(197, 168, 105, 0.1)",
+                    border: "1px solid rgba(197, 168, 105, 0.25)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -189,7 +189,7 @@ export default function ContactSection() {
                     height="19"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#0D3E26"
+                    stroke="#C5A869"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -198,7 +198,7 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
                     Direct Advisory Line
                   </div>
                   <a
@@ -223,8 +223,8 @@ export default function ContactSection() {
                     width: "42px",
                     height: "42px",
                     borderRadius: "10px",
-                    backgroundColor: "rgba(13, 62, 38, 0.08)",
-                    border: "1px solid rgba(13, 62, 38, 0.12)",
+                    backgroundColor: "rgba(197, 168, 105, 0.1)",
+                    border: "1px solid rgba(197, 168, 105, 0.25)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -236,7 +236,7 @@ export default function ContactSection() {
                     height="19"
                     viewBox="0 0 24 24"
                     fill="none"
-                    stroke="#0D3E26"
+                    stroke="#C5A869"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -246,7 +246,7 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
                     Email Advisory
                   </div>
                   <a
@@ -284,11 +284,11 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
                     Direct WhatsApp
                   </div>
                   <a
-                    href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
+                    href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{
@@ -329,8 +329,8 @@ export default function ContactSection() {
                     width: "60px",
                     height: "60px",
                     borderRadius: "50%",
-                    backgroundColor: "rgba(13, 62, 38, 0.1)",
-                    color: "#0D3E26",
+                    backgroundColor: "rgba(197, 168, 105, 0.15)",
+                    color: "#C5A869",
                     fontSize: "2rem",
                     display: "flex",
                     alignItems: "center",
@@ -344,7 +344,7 @@ export default function ContactSection() {
                   style={{
                     fontFamily: '"Monety", Georgia, serif',
                     fontSize: "1.75rem",
-                    color: "#0D3E26",
+                    color: "#1C2022",
                     marginBottom: "0.5rem",
                   }}
                 >
@@ -373,7 +373,7 @@ export default function ContactSection() {
                   }}
                 >
                   <a
-                    href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20just%20submitted%20a%20consultation%20request%20and%20would%20like%20to%20connect%20now."
+                    href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20just%20submitted%20a%20consultation%20request%20and%20would%20like%20to%20connect%20now."
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Chat with us on WhatsApp"
@@ -383,7 +383,7 @@ export default function ContactSection() {
                       justifyContent: "center",
                       gap: "9px",
                       backgroundColor: "#FFFFFF",
-                      color: "#0D3E26",
+                      color: "#1C2022",
                       border: "1.5px solid #25D366",
                       borderRadius: "8px",
                       padding: "11px 18px",
@@ -402,9 +402,9 @@ export default function ContactSection() {
                     type="button"
                     onClick={() => setSubmitted(false)}
                     style={{
-                      background: "#0D3E26",
+                      background: "#0A0D0B",
                       color: "#FFFFFF",
-                      border: "none",
+                      border: "1px solid rgba(197, 168, 105, 0.4)",
                       borderRadius: "8px",
                       padding: "10px 22px",
                       fontSize: "0.85rem",
@@ -422,7 +422,7 @@ export default function ContactSection() {
                   style={{
                     fontSize: "1.25rem",
                     fontWeight: 700,
-                    color: "#0F261B",
+                    color: "#1C2022",
                     marginBottom: "0.4rem",
                     letterSpacing: "-0.01em",
                   }}
@@ -455,7 +455,7 @@ export default function ContactSection() {
                         display: "block",
                         fontSize: "0.78rem",
                         fontWeight: 700,
-                        color: "#0D3E26",
+                        color: "#1C2022",
                         marginBottom: "4px",
                       }}
                     >
@@ -488,7 +488,7 @@ export default function ContactSection() {
                         display: "block",
                         fontSize: "0.78rem",
                         fontWeight: 700,
-                        color: "#0D3E26",
+                        color: "#1C2022",
                         marginBottom: "4px",
                       }}
                     >
@@ -532,7 +532,7 @@ export default function ContactSection() {
                         display: "block",
                         fontSize: "0.78rem",
                         fontWeight: 700,
-                        color: "#0D3E26",
+                        color: "#1C2022",
                         marginBottom: "4px",
                       }}
                     >
@@ -564,7 +564,7 @@ export default function ContactSection() {
                         display: "block",
                         fontSize: "0.78rem",
                         fontWeight: 700,
-                        color: "#0D3E26",
+                        color: "#1C2022",
                         marginBottom: "4px",
                       }}
                     >
@@ -599,7 +599,7 @@ export default function ContactSection() {
                       display: "block",
                       fontSize: "0.78rem",
                       fontWeight: 700,
-                      color: "#0D3E26",
+                      color: "#1C2022",
                       marginBottom: "4px",
                     }}
                   >
@@ -654,7 +654,7 @@ export default function ContactSection() {
                       display: "block",
                       fontSize: "0.78rem",
                       fontWeight: 700,
-                      color: "#0D3E26",
+                      color: "#1C2022",
                       marginBottom: "4px",
                     }}
                   >
@@ -706,26 +706,28 @@ export default function ContactSection() {
                   disabled={loading}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
-                    border: "none",
+                    border: "1px solid rgba(197, 168, 105, 0.45)",
                     borderRadius: "10px",
                     padding: "14px 20px",
                     fontSize: "0.95rem",
                     fontWeight: 700,
                     letterSpacing: "0.01em",
                     cursor: loading ? "wait" : "pointer",
-                    boxShadow: "0 4px 14px rgba(13, 62, 38, 0.25)",
-                    transition: "transform 180ms ease, background-color 180ms ease",
+                    boxShadow: "0 4px 18px rgba(0, 0, 0, 0.25)",
+                    transition: "transform 180ms ease, background-color 180ms ease, border-color 180ms ease",
                   }}
                   onMouseEnter={(e) => {
                     if (!loading) {
-                      e.currentTarget.style.backgroundColor = "#155233";
+                      e.currentTarget.style.backgroundColor = "#161A18";
+                      e.currentTarget.style.borderColor = "#C5A869";
                       e.currentTarget.style.transform = "translateY(-1px)";
                     }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "#0D3E26";
+                    e.currentTarget.style.backgroundColor = "#0A0D0B";
+                    e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
                     e.currentTarget.style.transform = "translateY(0)";
                   }}
                 >
@@ -759,7 +761,7 @@ export default function ContactSection() {
 
                 {/* Simple White Background WhatsApp Button */}
                 <a
-                  href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
+                  href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat with us on WhatsApp"
@@ -770,7 +772,7 @@ export default function ContactSection() {
                     gap: "10px",
                     width: "100%",
                     backgroundColor: "#FFFFFF",
-                    color: "#0D3E26",
+                    color: "#1C2022",
                     fontWeight: 700,
                     fontSize: "0.95rem",
                     padding: "13px 20px",

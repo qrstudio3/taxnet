@@ -125,7 +125,7 @@ export default function Hero() {
         <img
           ref={logoRef}
           src="/logo/darklog.png"
-          alt="TaxNet Logo"
+          alt="Taxnet Logo"
           style={{ width: "260px", height: "auto", opacity: 0 }}
         />
       </div>
@@ -311,8 +311,9 @@ export default function Hero() {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "0.625rem",
-                backgroundColor: "var(--color-secondary)",
+                backgroundColor: "#0A0D0B",
                 color: "#fff",
+                border: "1px solid rgba(197, 168, 105, 0.45)",
                 fontFamily: "var(--font-sans)",
                 fontWeight: 600,
                 fontSize: "0.9375rem",
@@ -320,10 +321,10 @@ export default function Hero() {
                 padding: "0.9rem 1.8rem",
                 borderRadius: "4px",
                 textDecoration: "none",
-                transition: "background-color 220ms ease, transform 200ms ease",
+                transition: "background-color 220ms ease, transform 200ms ease, border-color 220ms ease",
               }}
-              onMouseEnter={e => { e.currentTarget.style.backgroundColor = "var(--color-secondary-light)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={e => { e.currentTarget.style.backgroundColor = "var(--color-secondary)"; e.currentTarget.style.transform = "translateY(0)"; }}
+              onMouseEnter={e => { e.currentTarget.style.backgroundColor = "#161A18"; e.currentTarget.style.borderColor = "#C5A869"; e.currentTarget.style.transform = "translateY(-2px)"; }}
+              onMouseLeave={e => { e.currentTarget.style.backgroundColor = "#0A0D0B"; e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
               Book a Chat
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">

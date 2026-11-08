@@ -114,7 +114,7 @@ export default function NewsletterModal() {
     <div
       role="dialog"
       aria-modal="true"
-      aria-label="TaxNet Newsletter Subscription"
+      aria-label="Taxnet Newsletter Subscription"
       style={{
         position: "fixed",
         inset: 0,
@@ -172,8 +172,8 @@ export default function NewsletterModal() {
           position: "relative",
           width: "100%",
           maxWidth: "450px",
-          backgroundColor: "#071F14",
-          background: "linear-gradient(150deg, #071F14 0%, #0D3E26 65%, #0A2B1B 100%)",
+          backgroundColor: "#080B0A",
+          background: "linear-gradient(150deg, #0C0F0E 0%, #050806 65%, #020302 100%)",
           borderRadius: "18px",
           border: "1px solid rgba(197, 168, 105, 0.35)",
           boxShadow: "0 20px 50px rgba(0, 0, 0, 0.65), 0 0 35px rgba(197, 168, 105, 0.12)",
@@ -285,7 +285,7 @@ export default function NewsletterModal() {
                 You&apos;re Subscribed!
               </div>
               <p style={{ fontSize: "0.85rem", color: "rgba(255, 255, 255, 0.85)", margin: 0 }}>
-                Thank you for connecting with TaxNet. You&apos;ll receive our next quarterly advisory digest.
+                Thank you for connecting with Taxnet. You&apos;ll receive our next quarterly advisory digest.
               </p>
             </div>
           ) : (

@@ -45,8 +45,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Full Scope Business Accounting",
         description: "Comprehensive financial statements, cash flow analytics, profit & loss management, and proactive executive-level advisory for Australian enterprises.",
         highlights: ["Quarterly P&L & Balance Sheet", "Cashflow Forecasting", "Proactive Advisory"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "chart",
         overlayLabel: "Full-scope financial clarity",
         image: "/taxnet-categories-images/Accounting%20and%20Tax/Business%20Accounting%20Consultation/Accountant_consulting_business_o_3a69478d.jpg",
@@ -75,8 +75,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Individual Tax Returns",
         description: "Tailored returns for professionals, investors, and contractors. Maximizing all work deductions, foreign income rules, and investment offsets.",
         highlights: ["Work Deductions Check", "Crypto & Share Portfolios", "Fast ATO Lodgement"],
-        themeColor: "#114B30",
-        accentBg: "#165E3D",
+        themeColor: "#141718",
+        accentBg: "#1E2326",
         iconType: "shield",
         overlayLabel: "Maximise every refund",
         image: "/taxnet-categories-images/Accounting%20and%20Tax/Individual%20Tax%20Returns/Tax_consultant_helping_client_wi_9abab800.jpg",
@@ -105,8 +105,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Tax Planning",
         description: "Proactive pre-30 June tax planning frameworks, trust distributions, and optimal entity structures to legally minimize long-term tax liabilities.",
         highlights: ["Pre-June Review", "Trust Distributions", "Capital Gains Strategies"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "blueprint",
         overlayLabel: "Legally minimise your tax",
         image: "/taxnet-categories-images/Accounting%20and%20Tax/Tax%20Planning/Tax_advisor_analyzing_financial_247bc4d4.jpg",
@@ -150,8 +150,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Fringe Benefits Tax (FBT)",
         description: "Review of employer-provided benefits, salary sacrifice packages, motor vehicle calculations, and exemption optimization to prevent costly ATO audits.",
         highlights: ["Salary Packaging Check", "Vehicle Logbook Method", "Exempt Minor Benefits"],
-        themeColor: "#114B30",
-        accentBg: "#165E3D",
+        themeColor: "#141718",
+        accentBg: "#1E2326",
         iconType: "percent",
         overlayLabel: "Smart benefit structuring",
         image: "/taxnet-categories-images/Accounting%20and%20Tax/Fringe%20Benefits%20Tax/Tax_advisor_discussing_with_dire_a244a2c2.jpg",
@@ -165,8 +165,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Property & Investment Tax",
         description: "Negative gearing structuring, capital gains tax (CGT) discount calculations, foreign investment compliance, and depreciation schedule integration.",
         highlights: ["Negative Gearing Maximizer", "Division 40/43 Depreciation", "CGT Main Residence Rules"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "building",
         overlayLabel: "Maximise property returns",
         image: "/taxnet-categories-images/Accounting%20and%20Tax/Property%20Investment%20Tax/Advisor_reviewing_property_with_7fb17636.jpg",
@@ -188,8 +188,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Buying Your First Home",
         description: "Step-by-step guidance from pre-approval to settlement. Unlock First Home Guarantee (FHG) 5% deposit schemes and state stamp duty concessions.",
         highlights: ["5% Deposit Guarantee", "Stamp Duty Concessions", "Free Pre-Approval"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "home",
         overlayLabel: "Get your keys sooner",
         image: "/taxnet-categories-images/Mortgage%20Broking/Buying%20Your%20First%20Home/Broker_consulting_couple_on_mort_34d7a579.jpg",
@@ -218,8 +218,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Refinancing & Debt Consolidation",
         description: "Compare your current rate against 40+ lenders. Consolidate personal loans, credit cards, and car debt into one manageable, lower repayment.",
         highlights: ["40+ Bank Comparison", "Cashback Incentive Review", "Reduced Monthly Outgoings"],
-        themeColor: "#114B30",
-        accentBg: "#165E3D",
+        themeColor: "#141718",
+        accentBg: "#1E2326",
         iconType: "refresh",
         overlayLabel: "Save thousands on your loan",
         image: "/taxnet-categories-images/Mortgage%20Broking/Refinancing%20Debt%20Consolidation/Advisor_reviewing_mortgage_with_7c45afd4.jpg",
@@ -248,8 +248,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Land & Construction Loans",
         description: "Specialized progressive drawdown finance for vacant land acquisition, knockdown-rebuilds, and turnkey custom residential architectural builds.",
         highlights: ["Progress Payment Invoicing", "Fixed Price Contracts", "Interest Only While Building"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "crane",
         overlayLabel: "Build your dream home",
         image: "/taxnet-categories-images/Mortgage%20Broking/Land%20and%20Construction%20Loans/Broker_reviewing_construction_pl_2e98e204.jpg",
@@ -278,8 +278,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Personal, Car & Equipment Finance",
         description: "Competitive chattel mortgages, novated leases, and industrial plant finance to equip your enterprise without depleting working cash reserves.",
         highlights: ["Chattel Mortgage", "Novated Car Leases", "Tax-Effective Depreciation"],
-        themeColor: "#114B30",
-        accentBg: "#165E3D",
+        themeColor: "#141718",
+        accentBg: "#1E2326",
         iconType: "truck",
         overlayLabel: "Drive away today",
         image: "/taxnet-categories-images/Mortgage%20Broking/Personal%20Car%20Equipment%20Finance/Business_owner_inspecting_indust_239dc354.jpg",
@@ -316,8 +316,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Small Business Bookkeeping",
         description: "Flawless day-to-day transaction coding, expense tracking, and monthly reconciliation ensuring your books are accurate and up to date every week.",
         highlights: ["Weekly Transaction Coding", "Expense Categorization", "Monthly Balanced Ledgers"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "book",
         overlayLabel: "Books balanced every week",
         image: "/taxnet-categories-images/Bookkeeping/Small%20Business%20Bookkeeping/Bookkeeper_organizing_financial_1e11db7f.jpg",
@@ -346,8 +346,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Payroll",
         description: "Accurate weekly, fortnightly, or monthly payroll processing, superannuation clearing house transfers, and STP Phase 2 ATO compliance.",
         highlights: ["STP Phase 2 Direct ATO", "Super Guarantee (11.5%)", "Leave Accrual Tracking"],
-        themeColor: "#114B30",
-        accentBg: "#165E3D",
+        themeColor: "#141718",
+        accentBg: "#1E2326",
         iconType: "users",
         overlayLabel: "Pay runs done right",
         image: "/taxnet-categories-images/Bookkeeping/Payroll/Professionals_reviewing_payroll_2577f172.jpg",
@@ -376,8 +376,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Automated Invoicing",
         description: "Accelerate cash collection with professional, branded digital invoicing, automated payment reminders, and integrated payment gateway links.",
         highlights: ["Automated Reminders", "Pay-Now Buttons", "Zero Payment Lag"],
-        themeColor: "#114B30",
-        accentBg: "#165E3D",
+        themeColor: "#141718",
+        accentBg: "#1E2326",
         iconType: "invoice",
         overlayLabel: "Get paid on time, every time",
         image: "/taxnet-categories-images/Bookkeeping/Invoicing%20and%20Accounts%20Management/Woman_reviewing_invoice_at_works_a5ae91ad.jpg",
@@ -391,8 +391,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Budgeting & Cash Flow",
         description: "Dynamic 13-week rolling cash forecasts, variance tracking, and scenario modeling so you never encounter unexpected cash shortages.",
         highlights: ["13-Week Cash Projections", "Variance Analysis", "Working Capital Insights"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "graph",
         overlayLabel: "Predict & control cash flow",
         image: "/taxnet-categories-images/Bookkeeping/Budgeting%20and%20Cash%20Flow/Consultant_and_owners_planning_b_e32e868c.jpg",
@@ -429,8 +429,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "Xero",
         description: "Seamless, beautiful cloud accounting with automated bank feeds, real-time invoicing, single touch payroll, and 1,000+ ecosystem integrations for growing businesses.",
         highlights: ["Real-Time Bank Feeds", "Automated Invoicing", "1,000+ App Connections"],
-        themeColor: "#0D3E26",
-        accentBg: "#114B30",
+        themeColor: "#0A0D0B",
+        accentBg: "#161A18",
         iconType: "cloud",
         overlayLabel: "Certified Xero setup & training",
         image: "/taxnet-categories-images/Software%20We%20Use/Xero/Accountant_consulting_with_busin_2ce35d4f.jpg",
@@ -459,8 +459,8 @@ const SERVICES_DATA: ServiceCategory[] = [
         headline: "QuickBooks",
         description: "Intuitive cash flow monitoring, instant mobile receipt snapping, automated mileage tracking, and streamlined tax preparation for sole traders and SMBs.",
         highlights: ["Mobile Expense Snapping", "Live Cash Flow Dashboard", "Multi-Currency Support"],
-        themeColor: "#114B30",
-        accentBg: "#165E3D",
+        themeColor: "#141718",
+        accentBg: "#1E2326",
         iconType: "trend",
         overlayLabel: "QuickBooks ProAdvisor setup",
         image: "/taxnet-categories-images/Software%20We%20Use/QuickBooks/Accountant_reviewing_financial_r_46f66d7c.jpg",
@@ -760,9 +760,9 @@ export default function ServicesSection() {
           border-color: var(--color-border) !important;
         }
         .service-card-item:hover {
-          background-color: #0F261B !important;
+          background-color: #0A0D0B !important;
           transform: translateY(-8px) scale(1.02) !important;
-          box-shadow: 0 30px 60px rgba(13, 62, 38, 0.35), 0 0 0 1px #C5A869 !important;
+          box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45), 0 0 0 1px #C5A869 !important;
           border-color: transparent !important;
         }
         .service-card-item:hover .sc-tag,
@@ -805,8 +805,8 @@ export default function ServicesSection() {
           fontSize: "clamp(6rem, 18vw, 16rem)",
           fontWeight: 400,
           letterSpacing: "-0.01em",
-          color: "var(--color-secondary)",
-          opacity: 0.12,
+          color: "#C5A869",
+          opacity: 0.08,
           userSelect: "none",
           pointerEvents: "none",
           lineHeight: 0.85,
@@ -829,12 +829,12 @@ export default function ServicesSection() {
                 fontWeight: 400,
                 lineHeight: 1.08,
                 letterSpacing: "-0.01em",
-                color: "var(--color-secondary)",
+                color: "#C5A869",
                 marginBottom: "1.25rem",
               }}
             >
               Comprehensive Financial Solutions,{" "}
-              <span style={{ color: "var(--color-primary)" }}>Engineered for Growth.</span>
+              <span style={{ color: "#1C2022" }}>Engineered for Growth.</span>
             </h2>
 
             <p
@@ -932,16 +932,16 @@ export default function ServicesSection() {
                   style={{
                     padding: "0.625rem 1.35rem",
                     borderRadius: "9999px",
-                    border: "none",
                     cursor: "pointer",
                     fontSize: "0.9375rem",
                     fontWeight: isActive ? 700 : 500,
                     letterSpacing: "-0.01em",
                     fontFamily: "var(--font-sans)",
                     transition: "all 240ms cubic-bezier(0.2, 0.8, 0.2, 1)",
-                    backgroundColor: isActive ? "var(--color-secondary)" : "transparent",
-                    color: isActive ? "#FFFFFF" : "var(--color-text-secondary)",
-                    boxShadow: isActive ? "0 4px 14px rgba(13, 62, 38, 0.22)" : "none",
+                    backgroundColor: isActive ? "#0A0D0B" : "transparent",
+                    color: isActive ? "#C5A869" : "var(--color-text-secondary)",
+                    boxShadow: isActive ? "0 4px 14px rgba(197, 168, 105, 0.25)" : "none",
+                    border: isActive ? "1px solid rgba(197, 168, 105, 0.4)" : "1px solid transparent",
                     display: "flex",
                     alignItems: "center",
                     gap: "8px",
@@ -956,8 +956,8 @@ export default function ServicesSection() {
                       fontWeight: 700,
                       padding: "2px 7px",
                       borderRadius: "12px",
-                      backgroundColor: isActive ? "rgba(255,255,255,0.2)" : "rgba(0,0,0,0.06)",
-                      color: isActive ? "#fff" : "var(--color-text-muted)",
+                      backgroundColor: isActive ? "rgba(197, 168, 105, 0.2)" : "rgba(0,0,0,0.06)",
+                      color: isActive ? "#C5A869" : "var(--color-text-muted)",
                     }}
                   >
                     {tab.items.length}
@@ -1008,8 +1008,8 @@ export default function ServicesSection() {
                   transition: "all 150ms ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--color-secondary)";
-                  e.currentTarget.style.color = "#fff";
+                  e.currentTarget.style.backgroundColor = "#0A0D0B";
+                  e.currentTarget.style.color = "#C5A869";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = "var(--color-surface)";
@@ -1037,8 +1037,8 @@ export default function ServicesSection() {
                   transition: "all 150ms ease",
                 }}
                 onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = "var(--color-secondary)";
-                  e.currentTarget.style.color = "#fff";
+                  e.currentTarget.style.backgroundColor = "#0A0D0B";
+                  e.currentTarget.style.color = "#C5A869";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.backgroundColor = "var(--color-surface)";
@@ -1139,8 +1139,8 @@ export default function ServicesSection() {
                 <span
                   className="sc-badge"
                   style={{
-                    backgroundColor: "rgba(13, 62, 38, 0.08)",
-                    color: "var(--color-secondary)",
+                    backgroundColor: "rgba(197, 168, 105, 0.12)",
+                    color: "#C5A869",
                     padding: "2px 8px",
                     borderRadius: "6px",
                     fontSize: "0.6875rem",
@@ -1210,7 +1210,7 @@ export default function ServicesSection() {
                       gap: "6px",
                       fontSize: "0.9375rem",
                       fontWeight: 700,
-                      color: "var(--color-secondary)",
+                      color: "#C5A869",
                       transition: "all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)",
                       textDecoration: "none",
                     }}

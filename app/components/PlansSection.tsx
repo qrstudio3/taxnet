@@ -415,10 +415,11 @@ export default function PlansSection() {
       ref={sectionRef}
       style={{
         position: "relative",
-        backgroundColor: "#0D3E26",
+        backgroundColor: "#070B09",
         overflow: "hidden",
         paddingTop: "3.75rem",
         paddingBottom: "4.25rem",
+        borderTop: "1px solid rgba(197, 168, 105, 0.2)",
       }}
     >
       {/* ── Background decorations ── */}
@@ -432,7 +433,7 @@ export default function PlansSection() {
           height: "520px",
           borderRadius: "50%",
           background:
-            "radial-gradient(circle, rgba(37,229,93,0.07) 0%, transparent 70%)",
+            "radial-gradient(circle, rgba(197, 168, 105, 0.12) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
