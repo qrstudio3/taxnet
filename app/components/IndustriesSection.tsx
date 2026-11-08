@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 /* ─── Industries Data ─── */
 const INDUSTRIES = [
@@ -291,8 +292,8 @@ export default function IndustriesSection() {
         >
           Hover over any industry to pause &nbsp;·&nbsp; Serving over 50+
           industry sectors across Australia &nbsp;·&nbsp;{" "}
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             style={{
               color: "#0D3E26",
               fontWeight: 700,
@@ -301,7 +302,7 @@ export default function IndustriesSection() {
             }}
           >
             Explore your industry →
-          </a>
+          </Link>
         </p>
       </div>
     </section>

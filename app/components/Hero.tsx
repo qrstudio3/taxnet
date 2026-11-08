@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import gsap from "gsap";
 
 /* Combined navbar height: top row 72px + service bar 44px = 116px */
@@ -264,17 +265,61 @@ export default function Hero() {
           {/* CTAs */}
           <div
             ref={ctaRef}
-            style={{ display: "flex", alignItems: "center", gap: "1.25rem", flexWrap: "wrap", opacity: 0 }}
+            style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap", opacity: 0 }}
           >
-            <a
-              href="#contact"
+            {/* Calculator Link */}
+            <Link
+              href="/calculator"
+              id="hero-cta-calculator"
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.625rem",
+                backgroundColor: "#A18650",
+                color: "#06120B",
+                fontFamily: "var(--font-sans)",
+                fontWeight: 700,
+                fontSize: "0.9375rem",
+                letterSpacing: "0.01em",
+                padding: "0.9rem 1.8rem",
+                borderRadius: "4px",
+                textDecoration: "none",
+                boxShadow: "0 4px 18px rgba(161, 134, 80, 0.35)",
+                transition: "background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#C5A869";
+                e.currentTarget.style.transform = "translateY(-2px)";
+                e.currentTarget.style.boxShadow = "0 8px 24px rgba(161, 134, 80, 0.45)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#A18650";
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 4px 18px rgba(161, 134, 80, 0.35)";
+              }}
+            >
+              <span>How much I can borrow</span>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+
+            <Link
+              href="/contact"
               id="hero-cta-primary"
               style={{
-                display: "inline-flex", alignItems: "center", gap: "0.625rem",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.625rem",
                 backgroundColor: "var(--color-secondary)",
-                color: "#fff", fontFamily: "var(--font-sans)", fontWeight: 600,
-                fontSize: "0.9375rem", letterSpacing: "0.01em",
-                padding: "0.9rem 2rem", borderRadius: "2px", textDecoration: "none",
+                color: "#fff",
+                fontFamily: "var(--font-sans)",
+                fontWeight: 600,
+                fontSize: "0.9375rem",
+                letterSpacing: "0.01em",
+                padding: "0.9rem 1.8rem",
+                borderRadius: "4px",
+                textDecoration: "none",
                 transition: "background-color 220ms ease, transform 200ms ease",
               }}
               onMouseEnter={e => { e.currentTarget.style.backgroundColor = "var(--color-secondary-light)"; e.currentTarget.style.transform = "translateY(-2px)"; }}
@@ -284,15 +329,22 @@ export default function Hero() {
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-            </a>
+            </Link>
+
             <a
               href="#services"
               id="hero-cta-secondary"
               style={{
-                display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                color: "rgba(249,249,246,0.72)", fontFamily: "var(--font-sans)",
-                fontWeight: 500, fontSize: "0.9375rem", textDecoration: "none",
-                paddingBottom: "2px", borderBottom: "1px solid rgba(249,249,246,0.28)",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem",
+                color: "rgba(249,249,246,0.72)",
+                fontFamily: "var(--font-sans)",
+                fontWeight: 500,
+                fontSize: "0.9375rem",
+                textDecoration: "none",
+                paddingBottom: "2px",
+                borderBottom: "1px solid rgba(249,249,246,0.28)",
                 transition: "color 180ms ease, border-color 180ms ease",
               }}
               onMouseEnter={e => { e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = "rgba(249,249,246,0.75)"; }}

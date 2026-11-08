@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 
 /* ─── Compact Awards & Trust Data (To The Point) ─── */
 const TRUST_ITEMS = [
@@ -84,26 +84,9 @@ const BADGES = [
 ];
 
 export default function AwardsTrustSection() {
-  const sectionRef = useRef<HTMLElement>(null);
-  const [visible, setVisible] = useState(false);
-
-  useEffect(() => {
-    const io = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((e) => {
-          if (e.isIntersecting) setVisible(true);
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) io.observe(sectionRef.current);
-    return () => io.disconnect();
-  }, []);
-
   return (
     <section
       id="trust"
-      ref={sectionRef}
       style={{
         position: "relative",
         backgroundColor: "#FFFFFF",
@@ -127,10 +110,6 @@ export default function AwardsTrustSection() {
           style={{
             textAlign: "center",
             marginBottom: "2rem",
-            transform: visible ? "translateY(0) scale(1)" : "translateY(30px) scale(0.95)",
-            opacity: visible ? 1 : 0,
-            filter: visible ? "blur(0px)" : "blur(12px)",
-            transition: "transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 1.2s ease, filter 1.2s ease",
           }}
         >
           <h2
@@ -165,10 +144,6 @@ export default function AwardsTrustSection() {
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
             gap: "1.1rem",
             marginBottom: "2rem",
-            transform: visible ? "translateY(0) scale(1)" : "translateY(30px) scale(0.95)",
-            opacity: visible ? 1 : 0,
-            filter: visible ? "blur(0px)" : "blur(12px)",
-            transition: "transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1) 120ms, opacity 1.2s ease 120ms, filter 1.2s ease 120ms",
           }}
         >
           {TRUST_ITEMS.map((item) => (
@@ -208,13 +183,9 @@ export default function AwardsTrustSection() {
                 {item.icon}
                 <span
                   style={{
-                    background: "rgba(161, 134, 80, 0.12)",
-                    border: "1px solid rgba(161, 134, 80, 0.3)",
                     color: "#8A6E3B",
-                    fontSize: "0.62rem",
+                    fontSize: "0.72rem",
                     fontWeight: 700,
-                    padding: "2px 8px",
-                    borderRadius: "999px",
                     letterSpacing: "0.04em",
                     textTransform: "uppercase",
                   }}
@@ -257,25 +228,18 @@ export default function AwardsTrustSection() {
             flexWrap: "wrap",
             justifyContent: "center",
             alignItems: "center",
-            gap: "0.75rem 1.75rem",
-            transform: visible ? "translateY(0)" : "translateY(12px)",
-            opacity: visible ? 0.85 : 0,
-            transition: "transform 600ms ease 220ms, opacity 600ms ease 220ms",
+            gap: "1.25rem 2rem",
           }}
         >
           {BADGES.map((b) => (
             <span
               key={b}
               style={{
-                fontSize: "0.74rem",
+                fontSize: "0.78rem",
                 fontWeight: 600,
                 color: "#4A5A50",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "6px",
               }}
             >
-              <span style={{ color: "#A18650", fontSize: "0.65rem" }}>✦</span>
               {b}
             </span>
           ))}

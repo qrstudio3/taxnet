@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 /* ─── Plan Data ─── */
 const PLANS = [
@@ -169,7 +170,7 @@ function PlanCard({
             boxShadow: "0 6px 20px rgba(161, 134, 80, 0.65), 0 0 12px rgba(229, 214, 182, 0.5)",
           }}
         >
-          ✦ Most Popular
+          Most Popular
         </div>
       )}
 
@@ -322,8 +323,8 @@ function PlanCard({
       </ul>
 
       {/* CTA */}
-      <a
-        href="#contact"
+      <Link
+        href="/contact"
         style={{
           display: "flex",
           alignItems: "center",
@@ -379,7 +380,7 @@ function PlanCard({
             strokeLinejoin="round"
           />
         </svg>
-      </a>
+      </Link>
     </div>
   );
 }
@@ -562,8 +563,8 @@ export default function PlansSection() {
           >
             All plans include a complimentary initial consultation &nbsp;·&nbsp;
             Prices exclude GST &nbsp;·&nbsp;{" "}
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               style={{
                 color: "#FFFFFF",
                 textDecoration: "underline",
@@ -571,7 +572,7 @@ export default function PlansSection() {
               }}
             >
               Need a custom plan? Let&apos;s talk.
-            </a>
+            </Link>
           </p>
         </div>
       </div>

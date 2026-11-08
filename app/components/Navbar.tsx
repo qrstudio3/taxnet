@@ -1,67 +1,67 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import gsap from "gsap";
+import Link from "next/link";
 
 /* ── Navigation data ── */
 const TOP_LINKS = [
   { label: "Home",           href: "/" },
   { label: "About Us",       href: "/about" },
   { label: "Calculator",     href: "/calculator" },
-  { label: "Market Updates", href: "/market-updates" },
   { label: "Contact",        href: "/contact" },
 ];
 
 const SERVICE_LINKS = [
   {
     label: "Accounting & Tax",
-    href: "/accounting-tax",
+    href: "/accounting-and-tax",
     items: [
-      "Full Scope Business Accounting",
-      "GST & BAS Preparation",
-      "Individual Tax Returns",
-      "Super Fund Tax Returns",
-      "Tax Planning",
-      "Business Advice",
-      "Company & ASIC Services",
-      "Fringe Benefits Tax (FBT)",
-      "Property & Investment Tax",
+      { label: "Full Scope Business Accounting", href: "/accounting-and-tax/business-accounting" },
+      { label: "Tax Planning & Structuring", href: "/accounting-and-tax/tax-planning" },
+      { label: "GST & BAS Preparation", href: "/accounting-and-tax/gst-bas-preparation" },
+      { label: "Individual Tax Returns", href: "/accounting-and-tax/individual-tax-returns" },
+      { label: "Super Fund Tax Returns (SMSF)", href: "/accounting-and-tax/super-fund-tax-returns" },
+      { label: "Strategic Business Advice", href: "/accounting-and-tax/business-advice" },
+      { label: "Company & ASIC Services", href: "/accounting-and-tax/company-asic-services" },
+      { label: "Fringe Benefits Tax (FBT)", href: "/accounting-and-tax/fringe-benefits-tax" },
+      { label: "Property & Investment Tax", href: "/accounting-and-tax/property-investment-tax" },
     ],
   },
   {
     label: "Mortgage Broking",
     href: "/mortgage-broking",
     items: [
-      "Buying Your First Home",
-      "Buying Your Next Home",
-      "Refinancing & Debt Consolidation",
-      "Investment Property Loans",
-      "Land & Construction Loans",
-      "Business Loans",
-      "Personal, Car & Equipment Finance",
-      "Bridging Loans",
+      { label: "Buying Your First Home", href: "/mortgage-broking/first-home-buyer" },
+      { label: "Buying Your Next Home", href: "/mortgage-broking/next-home-buyer" },
+      { label: "Refinancing & Debt Consolidation", href: "/mortgage-broking/refinancing-debt-consolidation" },
+      { label: "Investment Property Loans", href: "/mortgage-broking/investment-property-loans" },
+      { label: "Land & Construction Loans", href: "/mortgage-broking/land-construction-loans" },
+      { label: "Business Loans", href: "/mortgage-broking/business-loans" },
+      { label: "Personal, Car & Equipment Finance", href: "/mortgage-broking/personal-car-equipment-finance" },
+      { label: "Bridging Loans", href: "/mortgage-broking/bridging-loans" },
     ],
   },
   {
     label: "Bookkeeping",
     href: "/bookkeeping",
     items: [
-      "Small Business Bookkeeping",
-      "Bank Reconciliation & BAS-Ready Records",
-      "Payroll",
-      "Invoicing & Accounts Management",
-      "Budgeting & Cash Flow",
-      "Cloud Accounting Set-Up",
+      { label: "Small Business Bookkeeping", href: "/small-business-bookkeeping" },
+      { label: "Bank Reconciliation & BAS-Ready Records", href: "/small-business-bookkeeping/bank-reconciliation" },
+      { label: "Payroll", href: "/small-business-bookkeeping/payroll" },
+      { label: "Accounts Management", href: "/small-business-bookkeeping/accounts-management" },
+      { label: "Automated Invoicing", href: "/small-business-bookkeeping/invoicing" },
+      { label: "Budgeting & Cash Flow", href: "/small-business-bookkeeping/budgeting-cash-flow" },
+      { label: "Cloud Accounting Set-Up", href: "/small-business-bookkeeping/cloud-accounting" },
     ],
   },
   {
     label: "Software We Use",
     href: "/software-we-use",
     items: [
-      "QuickBooks",
-      "Xero",
-      "MYOB",
-      "Cloud Accounting Add-Ons",
+      { label: "QuickBooks", href: "/software-we-use/quickbooks" },
+      { label: "Xero", href: "/software-we-use/xero" },
+      { label: "MYOB", href: "/software-we-use/myob" },
+      { label: "Cloud Accounting Add-Ons", href: "/software-we-use/cloud-accounting-add-ons" },
     ],
   },
 ];
@@ -145,7 +145,7 @@ export default function Navbar() {
           }}
         >
           {/* Logo */}
-          <a
+          <Link
             href="/"
             id="nav-logo"
             aria-label="TaxNet"
@@ -195,7 +195,7 @@ export default function Navbar() {
                 transition: "opacity 300ms ease",
               }}
             />
-          </a>
+          </Link>
 
           {/* Centre links */}
           <ul
@@ -204,7 +204,7 @@ export default function Navbar() {
           >
             {TOP_LINKS.map((l) => (
               <li key={l.label}>
-                <a
+                <Link
                   href={l.href}
                   style={{
                     display: "block",
@@ -228,7 +228,7 @@ export default function Navbar() {
                   }}
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -236,7 +236,7 @@ export default function Navbar() {
           {/* Right: phone + CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }} className="nav-right">
             <a
-              href="tel:0390008820"
+              href="tel:0398025800"
               style={{
                 fontFamily: "var(--font-sans)",
                 fontWeight: 600,
@@ -251,10 +251,10 @@ export default function Navbar() {
               onMouseEnter={e => { e.currentTarget.style.color = navTextHover; }}
               onMouseLeave={e => { e.currentTarget.style.color = navTextColor; }}
             >
-              (03) 9000 8820
+              (03) 9802 5800
             </a>
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               id="nav-cta"
               style={{
                 display: "inline-flex",
@@ -286,7 +286,7 @@ export default function Navbar() {
               }}
             >
               Book a Chat
-            </a>
+            </Link>
 
             {/* Hamburger */}
             <button
@@ -418,9 +418,10 @@ export default function Navbar() {
                     }}
                   >
                     {s.items.map(item => (
-                      <a
-                        key={item}
-                        href="#"
+                      <Link
+                        key={item.label}
+                        href={item.href}
+                        onClick={() => setOpenDrop(null)}
                         style={{
                           display: "block",
                           padding: "0.625rem 1.25rem",
@@ -440,8 +441,8 @@ export default function Navbar() {
                           e.currentTarget.style.color = "var(--color-text-secondary)";
                         }}
                       >
-                        {item}
-                      </a>
+                        {item.label}
+                      </Link>
                     ))}
                   </div>
                 )}
@@ -473,7 +474,7 @@ export default function Navbar() {
           <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: "0.25rem", margin: 0, padding: 0 }}>
             {TOP_LINKS.filter(l => l.label === "Home").map(l => (
               <li key={l.label} style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <a
+                <Link
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
                   style={{
@@ -487,7 +488,7 @@ export default function Navbar() {
                   }}
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
             
@@ -536,9 +537,9 @@ export default function Navbar() {
                     <div style={{ overflow: "hidden" }}>
                       <div style={{ paddingBottom: "1rem", display: "flex", flexDirection: "column", gap: "0.25rem" }}>
                         {s.items.map(item => (
-                          <a
-                            key={item}
-                            href="#"
+                          <Link
+                            key={item.label}
+                            href={item.href}
                             onClick={() => setMobileOpen(false)}
                             style={{
                               display: "block",
@@ -550,8 +551,8 @@ export default function Navbar() {
                               transition: "color 200ms ease",
                             }}
                           >
-                            {item}
-                          </a>
+                            {item.label}
+                          </Link>
                         ))}
                       </div>
                     </div>
@@ -562,7 +563,7 @@ export default function Navbar() {
 
             {TOP_LINKS.filter(l => l.label !== "Home").map(l => (
               <li key={l.label} style={{ borderBottom: "1px solid var(--color-border)" }}>
-                <a
+                <Link
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
                   style={{
@@ -576,13 +577,13 @@ export default function Navbar() {
                   }}
                 >
                   {l.label}
-                </a>
+                </Link>
               </li>
             ))}
 
             <li style={{ paddingTop: "1.5rem", display: "flex", flexDirection: "column", gap: "1rem", marginTop: "0.5rem" }}>
               <a
-                href="tel:0390008820"
+                href="tel:0398025800"
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -601,10 +602,10 @@ export default function Navbar() {
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '8px' }}>
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                 </svg>
-                (03) 9000 8820
+                (03) 9802 5800
               </a>
-              <a
-                href="#contact"
+              <Link
+                href="/contact"
                 className="btn btn-primary"
                 style={{ 
                   width: "100%", 
@@ -617,7 +618,7 @@ export default function Navbar() {
                 onClick={() => setMobileOpen(false)}
               >
                 Book a Chat
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

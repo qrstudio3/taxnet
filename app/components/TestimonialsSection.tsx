@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 /* ─── Genuine Client Reviews Data ─── */
 const REVIEWS = [
@@ -603,8 +604,8 @@ export default function TestimonialsSection() {
             }}
           >
             Ready to experience proactive accounting with zero stress? &nbsp;·&nbsp;{" "}
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               style={{
                 color: "#C5A869",
                 fontWeight: 700,
@@ -613,7 +614,7 @@ export default function TestimonialsSection() {
               }}
             >
               Book a Free Discovery Call →
-            </a>
+            </Link>
           </p>
         </div>
       </div>

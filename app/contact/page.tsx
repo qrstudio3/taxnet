@@ -1,0 +1,689 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
+import ContactHero from "@/app/components/ContactHero";
+import ContactPageForm from "@/app/components/ContactPageForm";
+import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+
+export const metadata: Metadata = {
+  title: "Contact TaxNet | CPA Accountants & Mortgage Brokers Melbourne",
+  description:
+    "Schedule a confidential consultation with TaxNet's certified CPA accountants, registered tax agents, and licensed mortgage brokers. Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 or video consultation Australia-wide.",
+  keywords: [
+    "contact TaxNet",
+    "tax accountant Doncaster East",
+    "CPA accountant Melbourne contact",
+    "mortgage broker Doncaster East contact",
+    "TaxNet phone number",
+    "TaxNet office address Melbourne",
+    "book accountant consultation Melbourne",
+  ],
+};
+
+const FAQS = [
+  {
+    q: "Is there any cost for our initial discovery session?",
+    a: "No. Your initial 15-to-30 minute discovery session is 100% complimentary and carries zero obligation. We evaluate your current entity structure, historical tax lodgements, or borrowing objectives, and provide transparent scope and fixed-fee options before you proceed.",
+  },
+  {
+    q: "Do I need to visit your Doncaster East office in person?",
+    a: "While we love hosting clients at our Doncaster East suites (with free on-site visitor parking), we also service hundreds of clients across Victoria, New South Wales, Queensland, and Australia-wide via high-definition video consultations (Zoom/Teams) and secure digital document signing.",
+  },
+  {
+    q: "How does the handover process work if I already have an accountant?",
+    a: "We make switching accountants effortless. TaxNet prepares the formal Ethical Clearance letter required under CPA Australia professional standards and manages the retrieval of all prior year tax returns, depreciation schedules, and cloud files directly from your previous accountant with zero disruption to your business.",
+  },
+  {
+    q: "Can TaxNet coordinate my business tax and my home loan together?",
+    a: "Yes! This is our signature strength. Traditional branch bankers and standalone accountants rarely communicate, often leading to deductions that unintentionally reduce your mortgage borrowing power. As integrated CPA tax accountants and licensed mortgage brokers, we ensure your tax returns and lending strategy work in perfect harmony.",
+  },
+  {
+    q: "What are your operating hours and direct contact channels?",
+    a: "Our Melbourne office operates Monday through Friday from 6:00 AM to 6:00 PM (AEST). You can reach our reception directly at (03) 9802 5800, connect instantly with our advisory team on WhatsApp at +61 420 956 761, or email us at info@taxnet.com.au.",
+  },
+];
+
+const STEPS = [
+  {
+    num: "01",
+    title: "Confidential Discovery",
+    desc: "A focused 15–30 minute session to understand your business operations, tax liabilities, or mortgage borrowing ambitions.",
+  },
+  {
+    num: "02",
+    title: "Strategic Blueprint & Fixed Quote",
+    desc: "We analyze your numbers and deliver a comprehensive plan with guaranteed, upfront fixed fees. No surprise hourly billing.",
+  },
+  {
+    num: "03",
+    title: "Seamless Implementation",
+    desc: "Our senior practitioners handle complete file migration, ATO lodgements, and lender negotiations so you can focus on growth.",
+  },
+];
+
+export default function ContactPage() {
+  return (
+    <>
+      <Navbar />
+
+      <main style={{ backgroundColor: "#F9FAF9", color: "#1C2022" }}>
+        {/* ─── CINEMATIC ANIMATED HERO SECTION ─── */}
+        <ContactHero />
+
+        {/* ─── TWO-COLUMN INTERACTIVE CONSULTATION & CONTACT CENTER ─── */}
+        <section
+          id="booking"
+          style={{
+            paddingTop: "5rem",
+            paddingBottom: "5.5rem",
+            position: "relative",
+          }}
+        >
+          <div
+            className="container"
+            style={{
+              maxWidth: "1240px",
+              margin: "0 auto",
+              padding: "0 1.5rem",
+            }}
+          >
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(360px, 1fr))",
+                gap: "3.5rem",
+                alignItems: "start",
+              }}
+            >
+              {/* ── LEFT COLUMN: DIRECT CHANNELS & OFFICE LOGISTICS ── */}
+              <div>
+                <div style={{ marginBottom: "2rem" }}>
+                  <div
+                    style={{
+                      fontSize: "0.78rem",
+                      fontWeight: 700,
+                      color: "#0D3E26",
+                      letterSpacing: "0.08em",
+                      textTransform: "uppercase",
+                      marginBottom: "0.5rem",
+                    }}
+                  >
+                    Direct Senior Access
+                  </div>
+                  <h2
+                    style={{
+                      fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                      fontSize: "clamp(2rem, 3.2vw, 2.75rem)",
+                      fontWeight: 400,
+                      color: "#0F261B",
+                      lineHeight: 1.18,
+                      letterSpacing: "-0.01em",
+                      margin: 0,
+                    }}
+                  >
+                    Immediate Advisory & Head Office Details
+                  </h2>
+                </div>
+
+                {/* 3 High-Priority Interactive Channel Cards */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "1rem", marginBottom: "2rem" }}>
+                  {/* WhatsApp Direct Card */}
+                  <a
+                    href="https://wa.me/61420956761?text=Hi%20TaxNet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1.25rem",
+                      padding: "1.25rem 1.5rem",
+                      borderRadius: "16px",
+                      backgroundColor: "#FFFFFF",
+                      border: "1.5px solid #D6E8DC",
+                      boxShadow: "0 6px 20px rgba(13, 62, 38, 0.05)",
+                      textDecoration: "none",
+                      color: "#1C2022",
+                      transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "52px",
+                        height: "52px",
+                        borderRadius: "14px",
+                        backgroundColor: "rgba(37, 211, 102, 0.12)",
+                        border: "1px solid rgba(37, 211, 102, 0.3)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <svg width="26" height="26" viewBox="0 0 24 24" fill="#25D366">
+                        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
+                      </svg>
+                    </div>
+                    <div style={{ flexGrow: 1 }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "2px" }}>
+                        <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#1F7A43", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                          Direct WhatsApp Advisory
+                        </span>
+                        <span style={{ fontSize: "0.74rem", color: "#6B7C72" }}>• Mon–Fri 6am–6pm</span>
+                      </div>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0D3E26" }}>
+                        +61 420 956 761
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
+                        Direct WhatsApp message with senior team
+                      </div>
+                    </div>
+                    <span style={{ color: "#0D3E26", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
+                  </a>
+
+                  {/* Direct Phone Card */}
+                  <a
+                    href="tel:0398025800"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1.25rem",
+                      padding: "1.25rem 1.5rem",
+                      borderRadius: "16px",
+                      backgroundColor: "#FFFFFF",
+                      border: "1.5px solid #E2ECE5",
+                      boxShadow: "0 6px 20px rgba(13, 62, 38, 0.05)",
+                      textDecoration: "none",
+                      color: "#1C2022",
+                      transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "52px",
+                        height: "52px",
+                        borderRadius: "14px",
+                        backgroundColor: "rgba(13, 62, 38, 0.08)",
+                        border: "1px solid rgba(13, 62, 38, 0.18)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D3E26" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                      </svg>
+                    </div>
+                    <div style={{ flexGrow: 1 }}>
+                      <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", marginBottom: "2px" }}>
+                        Melbourne Reception & Advice
+                      </div>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0D3E26" }}>
+                        (03) 9802 5800
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
+                        Monday to Friday: 6:00 AM – 6:00 PM (AEST)
+                      </div>
+                    </div>
+                    <span style={{ color: "#0D3E26", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
+                  </a>
+
+                  {/* Email Advisory Card */}
+                  <a
+                    href="mailto:info@taxnet.com.au"
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "1.25rem",
+                      padding: "1.25rem 1.5rem",
+                      borderRadius: "16px",
+                      backgroundColor: "#FFFFFF",
+                      border: "1.5px solid #E2ECE5",
+                      boxShadow: "0 6px 20px rgba(13, 62, 38, 0.05)",
+                      textDecoration: "none",
+                      color: "#1C2022",
+                      transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease",
+                    }}
+                  >
+                    <div
+                      style={{
+                        width: "52px",
+                        height: "52px",
+                        borderRadius: "14px",
+                        backgroundColor: "rgba(13, 62, 38, 0.08)",
+                        border: "1px solid rgba(13, 62, 38, 0.18)",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D3E26" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+                        <rect x="2" y="4" width="20" height="16" rx="2" />
+                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                      </svg>
+                    </div>
+                    <div style={{ flexGrow: 1 }}>
+                      <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", marginBottom: "2px" }}>
+                        Formal Email Inquiries
+                      </div>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0D3E26" }}>
+                        info@taxnet.com.au
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
+                        Monitored by CPA partners with fast 2-hour turnaround
+                      </div>
+                    </div>
+                    <span style={{ color: "#0D3E26", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
+                  </a>
+                </div>
+
+                {/* Head Office Address & Interactive Google Maps Card */}
+                <div
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    borderRadius: "20px",
+                    padding: "1.75rem",
+                    border: "1px solid #E2ECE5",
+                    boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
+                    marginBottom: "1.5rem",
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "1rem" }}>
+                    <div
+                      style={{
+                        width: "36px",
+                        height: "36px",
+                        borderRadius: "8px",
+                        backgroundColor: "rgba(13, 62, 38, 0.08)",
+                        color: "#0D3E26",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        flexShrink: 0,
+                      }}
+                    >
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                        <circle cx="12" cy="10" r="3" />
+                      </svg>
+                    </div>
+                    <div>
+                      <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase" }}>
+                        Head Office Location
+                      </div>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0F261B", marginTop: "2px" }}>
+                        Suite 6 , 861 Doncaster Road
+                      </div>
+                      <div style={{ fontSize: "0.88rem", color: "#54655B" }}>
+                        Doncaster East VIC 3109, Australia
+                      </div>
+                      <div style={{ fontSize: "0.8rem", color: "#7A8C82", marginTop: "4px" }}>
+                        Free on-site client parking available & full wheelchair accessibility.
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Embedded Stylized Map Iframe */}
+                  <div
+                    style={{
+                      borderRadius: "14px",
+                      overflow: "hidden",
+                      border: "1px solid #D5E2D9",
+                      height: "220px",
+                      position: "relative",
+                      marginBottom: "1.25rem",
+                    }}
+                  >
+                    <iframe
+                      title="TaxNet Doncaster East Office Map"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      loading="lazy"
+                      allowFullScreen
+                      referrerPolicy="no-referrer-when-downgrade"
+                      src="https://maps.google.com/maps?q=Suite+6+861+Doncaster+Road+Doncaster+East+VIC+3109&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    />
+                  </div>
+
+                  {/* Opening Hours Table & Directions Link */}
+                  <div
+                    style={{
+                      backgroundColor: "#F7F9F7",
+                      borderRadius: "12px",
+                      padding: "1rem 1.25rem",
+                      fontSize: "0.84rem",
+                      marginBottom: "1.25rem",
+                    }}
+                  >
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
+                      <span style={{ fontWeight: 600, color: "#25382E" }}>Monday – Friday:</span>
+                      <span style={{ fontWeight: 700, color: "#0D3E26" }}>6:00 AM – 6:00 PM</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
+                      <span style={{ fontWeight: 600, color: "#25382E" }}>Saturday:</span>
+                      <span style={{ color: "#7B8E82" }}>Closed (By Appointment)</span>
+                    </div>
+                    <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0" }}>
+                      <span style={{ fontWeight: 600, color: "#25382E" }}>Sunday:</span>
+                      <span style={{ color: "#7B8E82" }}>Closed</span>
+                    </div>
+                  </div>
+
+                  <a
+                    href="https://maps.google.com/?q=Suite+6+861+Doncaster+Road+Doncaster+East+VIC+3109"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "8px",
+                      width: "100%",
+                      padding: "12px",
+                      borderRadius: "10px",
+                      backgroundColor: "#0D3E26",
+                      color: "#FFFFFF",
+                      fontSize: "0.88rem",
+                      fontWeight: 700,
+                      textDecoration: "none",
+                      transition: "background-color 180ms ease",
+                    }}
+                  >
+                    <span>Open Directions in Google Maps</span>
+                    <span>↗</span>
+                  </a>
+                </div>
+              </div>
+
+              {/* ── RIGHT COLUMN: INTERACTIVE CONSULTATION FORM ── */}
+              <div>
+                <ContactPageForm />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── 3-STEP CONSULTATION ROADMAP ─── */}
+        <section
+          style={{
+            backgroundColor: "#FFFFFF",
+            paddingTop: "4.5rem",
+            paddingBottom: "5rem",
+            borderTop: "1px solid #E5ECE7",
+            borderBottom: "1px solid #E5ECE7",
+          }}
+        >
+          <div
+            className="container"
+            style={{
+              maxWidth: "1240px",
+              margin: "0 auto",
+              padding: "0 1.5rem",
+            }}
+          >
+            <div style={{ textAlign: "center", maxWidth: "720px", margin: "0 auto 3.5rem auto" }}>
+              <div
+                style={{
+                  fontSize: "0.8rem",
+                  fontWeight: 700,
+                  color: "#A18650",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Transparent Advisory Process
+              </div>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                  fontSize: "clamp(2rem, 3.5vw, 2.85rem)",
+                  fontWeight: 400,
+                  color: "#0F261B",
+                  lineHeight: 1.15,
+                  margin: "0 0 1rem 0",
+                }}
+              >
+                What Happens When You Reach Out?
+              </h2>
+              <p style={{ fontSize: "1rem", color: "#55675D", lineHeight: 1.6, margin: 0 }}>
+                From initial confidential discovery to final execution, our Melbourne partners ensure a seamless, structured experience with zero surprises.
+              </p>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+                gap: "2rem",
+              }}
+            >
+              {STEPS.map((step) => (
+                <div
+                  key={step.num}
+                  style={{
+                    backgroundColor: "#FAFBF9",
+                    borderRadius: "18px",
+                    padding: "2rem 1.75rem",
+                    border: "1px solid #E2EDE6",
+                    position: "relative",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-monety), "Monety", serif',
+                      fontSize: "2.75rem",
+                      fontWeight: 400,
+                      color: "#A18650",
+                      lineHeight: 1,
+                      marginBottom: "1rem",
+                      opacity: 0.85,
+                    }}
+                  >
+                    {step.num}
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: "1.2rem",
+                      fontWeight: 700,
+                      color: "#0D3E26",
+                      marginBottom: "0.6rem",
+                    }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.9rem",
+                      color: "#54655B",
+                      lineHeight: 1.6,
+                      margin: 0,
+                    }}
+                  >
+                    {step.desc}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
+        <section
+          style={{
+            paddingTop: "5rem",
+            paddingBottom: "5.5rem",
+            backgroundColor: "#F9FAF9",
+          }}
+        >
+          <div
+            className="container"
+            style={{
+              maxWidth: "960px",
+              margin: "0 auto",
+              padding: "0 1.5rem",
+            }}
+          >
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+              <div
+                style={{
+                  fontSize: "0.8rem",
+                  fontWeight: 700,
+                  color: "#0D3E26",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Clear Answers
+              </div>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                  fontSize: "clamp(2rem, 3.5vw, 2.85rem)",
+                  fontWeight: 400,
+                  color: "#0F261B",
+                  lineHeight: 1.15,
+                  margin: 0,
+                }}
+              >
+                Frequently Asked Consultation Questions
+              </h2>
+            </div>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+              {FAQS.map((faq, i) => (
+                <div
+                  key={i}
+                  style={{
+                    backgroundColor: "#FFFFFF",
+                    borderRadius: "16px",
+                    padding: "1.75rem 2rem",
+                    border: "1px solid #E1EBE4",
+                    boxShadow: "0 4px 16px rgba(13, 62, 38, 0.04)",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "1.1rem",
+                      fontWeight: 700,
+                      color: "#0D3E26",
+                      marginBottom: "0.75rem",
+                      lineHeight: 1.35,
+                    }}
+                  >
+                    {faq.q}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "0.92rem",
+                      color: "#4F6056",
+                      lineHeight: 1.65,
+                      margin: 0,
+                    }}
+                  >
+                    {faq.a}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ─── CINEMATIC EXECUTIVE FOOTER BANNER ─── */}
+        <section
+          style={{
+            backgroundColor: "#06120B",
+            background: "linear-gradient(135deg, #06120B 0%, #0D3E26 60%, #071E12 100%)",
+            color: "#FFFFFF",
+            padding: "4.5rem 1.5rem",
+            position: "relative",
+            overflow: "hidden",
+            borderTop: "1px solid rgba(197, 168, 105, 0.3)",
+          }}
+        >
+          <div
+            className="container"
+            style={{
+              maxWidth: "1000px",
+              margin: "0 auto",
+              textAlign: "center",
+              position: "relative",
+              zIndex: 1,
+            }}
+          >
+            <h2
+              style={{
+                fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                fontWeight: 400,
+                color: "#FFFFFF",
+                marginBottom: "1rem",
+                lineHeight: 1.15,
+              }}
+            >
+              Need Immediate Guidance? Connect on WhatsApp Today.
+            </h2>
+            <p
+              style={{
+                fontSize: "1.05rem",
+                color: "rgba(255, 255, 255, 0.82)",
+                maxWidth: "680px",
+                margin: "0 auto 2.25rem auto",
+                lineHeight: 1.6,
+              }}
+            >
+              Send our senior Melbourne partners a direct message. We’re available for quick questions, urgent lodgements, and rapid borrowing assessments.
+            </p>
+
+            <div
+              style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "1rem",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <ExecutiveWhatsAppButton
+                message="Hi TaxNet, I would like to schedule a consultation with your Melbourne partners."
+                style={{
+                  fontSize: "1rem",
+                  padding: "1rem 2rem",
+                  boxShadow: "0 6px 20px rgba(37, 211, 102, 0.35)",
+                }}
+              />
+
+              <a
+                href="tel:0398025800"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  padding: "1rem 1.75rem",
+                  borderRadius: "8px",
+                  border: "1.5px solid rgba(197, 168, 105, 0.6)",
+                  backgroundColor: "rgba(255, 255, 255, 0.08)",
+                  color: "#E5D6B6",
+                  fontSize: "0.95rem",
+                  fontWeight: 700,
+                  textDecoration: "none",
+                  transition: "all 180ms ease",
+                }}
+              >
+                <span>Call (03) 9802 5800</span>
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </>
+  );
+}
+

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import AnimatedHeading from "./AnimatedHeading";
 
 const FAQ_ITEMS = [
@@ -220,8 +221,8 @@ export default function FaqSection() {
             }}
           >
             Have a specific scenario or complex entity structure? &nbsp;
-            <a
-              href="#contact"
+            <Link
+              href="/contact"
               style={{
                 color: "#0D3E26",
                 fontWeight: 700,
@@ -230,7 +231,7 @@ export default function FaqSection() {
               }}
             >
               Speak with a Senior CPA Advisor →
-            </a>
+            </Link>
           </p>
         </div>
       </div>

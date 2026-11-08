@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 import AnimatedHeading from "./AnimatedHeading";
 /* ─── Service Data Definitions ─── */
 interface SubService {
@@ -14,8 +16,9 @@ interface SubService {
   themeColor: string;
   accentBg: string;
   iconType: string;
-  overlayEmoji: string;
   overlayLabel: string;
+  image: string;
+  href: string;
 }
 
 interface ServiceCategory {
@@ -45,8 +48,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#0D3E26",
         accentBg: "#114B30",
         iconType: "chart",
-        overlayEmoji: "📊",
         overlayLabel: "Full-scope financial clarity",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Business%20Accounting%20Consultation/Accountant_consulting_business_o_3a69478d.jpg",
+        href: "/accounting-and-tax/business-accounting",
       },
       {
         id: "gst-bas-prep",
@@ -59,8 +63,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#1C2022",
         accentBg: "#282E32",
         iconType: "ledger",
-        overlayEmoji: "🧾",
         overlayLabel: "Zero penalty lodgements",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/GST-BAS-Preparation/Accountant_preparing_financial_r_9f0cd682.jpg",
+        href: "/accounting-and-tax/gst-bas-preparation",
       },
       {
         id: "individual-tax",
@@ -73,8 +78,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#114B30",
         accentBg: "#165E3D",
         iconType: "shield",
-        overlayEmoji: "💰",
         overlayLabel: "Maximise every refund",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Individual%20Tax%20Returns/Tax_consultant_helping_client_wi_9abab800.jpg",
+        href: "/accounting-and-tax/individual-tax-returns",
       },
       {
         id: "super-fund-tax",
@@ -87,8 +93,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#141718",
         accentBg: "#22272A",
         iconType: "vault",
-        overlayEmoji: "🏦",
         overlayLabel: "Protect your retirement wealth",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Super%20Fund%20Tax%20Returns/Accountant_meeting_with_couple_b956daa8.jpg",
+        href: "/accounting-and-tax/super-fund-tax-returns",
       },
       {
         id: "tax-planning",
@@ -101,8 +108,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#0D3E26",
         accentBg: "#114B30",
         iconType: "blueprint",
-        overlayEmoji: "🎯",
         overlayLabel: "Legally minimise your tax",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Tax%20Planning/Tax_advisor_analyzing_financial_247bc4d4.jpg",
+        href: "/accounting-and-tax/tax-planning",
       },
       {
         id: "business-advice",
@@ -115,8 +123,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#1C2022",
         accentBg: "#282E32",
         iconType: "compass",
-        overlayEmoji: "🚀",
         overlayLabel: "Accelerate your growth",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Business%20Advice/Advisor_consulting_entrepreneur_a37a99dd.jpg",
+        href: "/accounting-and-tax/business-advice",
       },
       {
         id: "company-asic",
@@ -129,8 +138,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#141718",
         accentBg: "#22272A",
         iconType: "certificate",
-        overlayEmoji: "🏛️",
         overlayLabel: "Full ASIC compliance covered",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Company%20ASIC%20Services/Consultant_meeting_with_entrepre_50c2fa66.jpg",
+        href: "/accounting-and-tax/company-asic-services",
       },
       {
         id: "fbt",
@@ -143,8 +153,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#114B30",
         accentBg: "#165E3D",
         iconType: "percent",
-        overlayEmoji: "🎁",
         overlayLabel: "Smart benefit structuring",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Fringe%20Benefits%20Tax/Tax_advisor_discussing_with_dire_a244a2c2.jpg",
+        href: "/accounting-and-tax/fringe-benefits-tax",
       },
       {
         id: "property-investment-tax",
@@ -157,8 +168,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#0D3E26",
         accentBg: "#114B30",
         iconType: "building",
-        overlayEmoji: "🏠",
         overlayLabel: "Maximise property returns",
+        image: "/taxnet-categories-images/Accounting%20and%20Tax/Property%20Investment%20Tax/Advisor_reviewing_property_with_7fb17636.jpg",
+        href: "/accounting-and-tax/property-investment-tax",
       },
     ],
   },
@@ -179,8 +191,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#0D3E26",
         accentBg: "#114B30",
         iconType: "home",
-        overlayEmoji: "🔑",
         overlayLabel: "Get your keys sooner",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Buying%20Your%20First%20Home/Broker_consulting_couple_on_mort_34d7a579.jpg",
+        href: "/mortgage-broking/first-home-buyer",
       },
       {
         id: "next-home",
@@ -193,8 +206,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#1C2022",
         accentBg: "#282E32",
         iconType: "key",
-        overlayEmoji: "🏡",
         overlayLabel: "Your perfect next chapter",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Buying%20Your%20Next%20Home/Family_exploring_new_home_d12c6415.jpg",
+        href: "/mortgage-broking/next-home-buyer",
       },
       {
         id: "refinancing",
@@ -207,8 +221,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#114B30",
         accentBg: "#165E3D",
         iconType: "refresh",
-        overlayEmoji: "💸",
         overlayLabel: "Save thousands on your loan",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Refinancing%20Debt%20Consolidation/Advisor_reviewing_mortgage_with_7c45afd4.jpg",
+        href: "/mortgage-broking/refinancing-debt-consolidation",
       },
       {
         id: "investment-property-loans",
@@ -221,8 +236,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#141718",
         accentBg: "#22272A",
         iconType: "trend",
-        overlayEmoji: "📈",
         overlayLabel: "Grow your portfolio",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Investment%20Property%20Loans/Mortgage_broker_consulting_prope_c4e3922b.jpg",
+        href: "/mortgage-broking/investment-property-loans",
       },
       {
         id: "land-construction",
@@ -235,8 +251,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#0D3E26",
         accentBg: "#114B30",
         iconType: "crane",
-        overlayEmoji: "🏗️",
         overlayLabel: "Build your dream home",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Land%20and%20Construction%20Loans/Broker_reviewing_construction_pl_2e98e204.jpg",
+        href: "/mortgage-broking/land-construction-loans",
       },
       {
         id: "business-loans",
@@ -249,8 +266,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#1C2022",
         accentBg: "#282E32",
         iconType: "briefcase",
-        overlayEmoji: "💼",
         overlayLabel: "Fuel your business growth",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Business%20Loans/Finance_advisor_meeting_business_fad494fe.jpg",
+        href: "/mortgage-broking/business-loans",
       },
       {
         id: "asset-finance",
@@ -263,8 +281,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#114B30",
         accentBg: "#165E3D",
         iconType: "truck",
-        overlayEmoji: "🚗",
         overlayLabel: "Drive away today",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Personal%20Car%20Equipment%20Finance/Business_owner_inspecting_indust_239dc354.jpg",
+        href: "/mortgage-broking/personal-car-equipment-finance",
       },
       {
         id: "bridging-loans",
@@ -277,8 +296,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#141718",
         accentBg: "#22272A",
         iconType: "bridge",
-        overlayEmoji: "🌉",
         overlayLabel: "Buy before you sell",
+        image: "/taxnet-categories-images/Mortgage%20Broking/Bridging%20Loans/Broker_reviewing_documents_with_1bc068cc.jpg",
+        href: "/mortgage-broking/bridging-loans",
       },
     ],
   },
@@ -286,7 +306,7 @@ const SERVICES_DATA: ServiceCategory[] = [
     id: "bookkeeping",
     title: "Bookkeeping",
     subtitle: "Precision Records, Payroll & Real-Time Financial Visibility",
-    shortDesc: "Clean, compliant books powered by certified Xero & MYOB advisors so you never miss a deduction or deadline.",
+    shortDesc: "Clean, compliant books managed by certified Xero & MYOB advisors so you never miss a deduction or deadline.",
     items: [
       {
         id: "smb-bookkeeping",
@@ -299,8 +319,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#0D3E26",
         accentBg: "#114B30",
         iconType: "book",
-        overlayEmoji: "📚",
         overlayLabel: "Books balanced every week",
+        image: "/taxnet-categories-images/Bookkeeping/Small%20Business%20Bookkeeping/Bookkeeper_organizing_financial_1e11db7f.jpg",
+        href: "/small-business-bookkeeping",
       },
       {
         id: "bank-rec",
@@ -313,8 +334,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#1C2022",
         accentBg: "#282E32",
         iconType: "checkcircle",
-        overlayEmoji: "✅",
         overlayLabel: "Zero discrepancies, always",
+        image: "/taxnet-categories-images/Bookkeeping/Bank%20Reconciliation%20and%20BAS-Ready%20Records/Bookkeeper_consulting_business_o_4a9fba8d.jpg",
+        href: "/small-business-bookkeeping/bank-reconciliation",
       },
       {
         id: "payroll-stp",
@@ -327,22 +349,39 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#114B30",
         accentBg: "#165E3D",
         iconType: "users",
-        overlayEmoji: "👥",
         overlayLabel: "Pay runs done right",
+        image: "/taxnet-categories-images/Bookkeeping/Payroll/Professionals_reviewing_payroll_2577f172.jpg",
+        href: "/small-business-bookkeeping/payroll",
       },
       {
-        id: "invoicing-accounts",
-        tag: "Cash Velocity",
-        badge: "Debtor Control",
-        title: "Invoicing & Accounts",
-        headline: "Invoicing & Accounts Management",
-        description: "Fast-track incoming cash with automated customer invoicing, polite debt collection follow-ups, and streamlined accounts payable approvals.",
-        highlights: ["Debtor Follow-ups", "Supplier Bill Approval", "Aged Receivables Control"],
+        id: "accounts-management",
+        tag: "Debtor & Creditor",
+        badge: "AP / AR",
+        title: "Accounts Management",
+        headline: "Accounts Management",
+        description: "Systematic debtor follow-up, supplier bill verification, aged payables tracking, and structured cash approvals to protect vendor relationships and credit rating.",
+        highlights: ["Accounts Receivable", "Accounts Payable Approval", "Aged Debt Recovery"],
         themeColor: "#141718",
         accentBg: "#22272A",
+        iconType: "certificate",
+        overlayLabel: "Streamline payables & receivables",
+        image: "/taxnet-categories-images/Bookkeeping/Invoicing%20and%20Accounts%20Management/Managers_reviewing_financial_rep_1d46b3e0.jpg",
+        href: "/small-business-bookkeeping/accounts-management",
+      },
+      {
+        id: "invoicing",
+        tag: "Cash Velocity",
+        badge: "Fast Payments",
+        title: "Automated Invoicing",
+        headline: "Automated Invoicing",
+        description: "Accelerate cash collection with professional, branded digital invoicing, automated payment reminders, and integrated payment gateway links.",
+        highlights: ["Automated Reminders", "Pay-Now Buttons", "Zero Payment Lag"],
+        themeColor: "#114B30",
+        accentBg: "#165E3D",
         iconType: "invoice",
-        overlayEmoji: "⚡",
-        overlayLabel: "Cash in faster",
+        overlayLabel: "Get paid on time, every time",
+        image: "/taxnet-categories-images/Bookkeeping/Invoicing%20and%20Accounts%20Management/Woman_reviewing_invoice_at_works_a5ae91ad.jpg",
+        href: "/small-business-bookkeeping/invoicing",
       },
       {
         id: "cash-flow-budget",
@@ -355,8 +394,9 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#0D3E26",
         accentBg: "#114B30",
         iconType: "graph",
-        overlayEmoji: "🔮",
         overlayLabel: "Predict & control cash flow",
+        image: "/taxnet-categories-images/Bookkeeping/Budgeting%20and%20Cash%20Flow/Consultant_and_owners_planning_b_e32e868c.jpg",
+        href: "/small-business-bookkeeping/budgeting-cash-flow",
       },
       {
         id: "cloud-setup",
@@ -369,128 +409,107 @@ const SERVICES_DATA: ServiceCategory[] = [
         themeColor: "#1C2022",
         accentBg: "#282E32",
         iconType: "cloud",
-        overlayEmoji: "☁️",
         overlayLabel: "Seamless cloud migration",
+        image: "/taxnet-categories-images/Bookkeeping/Cloud%20Accounting%20Set-Up/Man_reviewing_financials_on_laptop_81b34cc9.jpg",
+        href: "/small-business-bookkeeping/cloud-accounting",
+      },
+    ],
+  },
+  {
+    id: "software-we-use",
+    title: "Software We Use",
+    subtitle: "Certified Cloud Platforms & Ecosystem Integrations",
+    shortDesc: "Official certified partnerships across Australia's leading cloud accounting platforms with tailored workflows and real-time reporting.",
+    items: [
+      {
+        id: "xero",
+        tag: "Cloud Ecosystem",
+        badge: "Gold Partner",
+        title: "Xero Cloud Accounting",
+        headline: "Xero",
+        description: "Seamless, beautiful cloud accounting with automated bank feeds, real-time invoicing, single touch payroll, and 1,000+ ecosystem integrations for growing businesses.",
+        highlights: ["Real-Time Bank Feeds", "Automated Invoicing", "1,000+ App Connections"],
+        themeColor: "#0D3E26",
+        accentBg: "#114B30",
+        iconType: "cloud",
+        overlayLabel: "Certified Xero setup & training",
+        image: "/taxnet-categories-images/Software%20We%20Use/Xero/Accountant_consulting_with_busin_2ce35d4f.jpg",
+        href: "/software-we-use/xero",
+      },
+      {
+        id: "myob",
+        tag: "Enterprise Grade",
+        badge: "Certified Partner",
+        title: "MYOB Business Solutions",
+        headline: "MYOB",
+        description: "Powerful Australian business management platform engineered for inventory control, complex enterprise payroll, multi-entity reporting, and STP Phase 2 compliance.",
+        highlights: ["Complex Payroll Management", "Inventory Control", "Multi-Entity Reporting"],
+        themeColor: "#1C2022",
+        accentBg: "#282E32",
+        iconType: "briefcase",
+        overlayLabel: "End-to-end MYOB management",
+        image: "/taxnet-categories-images/Software%20We%20Use/MYOB/Accountant_consulting_business_o_76bfb758.jpg",
+        href: "/software-we-use/myob",
+      },
+      {
+        id: "quickbooks",
+        tag: "Smart Automation",
+        badge: "ProAdvisor",
+        title: "QuickBooks Online",
+        headline: "QuickBooks",
+        description: "Intuitive cash flow monitoring, instant mobile receipt snapping, automated mileage tracking, and streamlined tax preparation for sole traders and SMBs.",
+        highlights: ["Mobile Expense Snapping", "Live Cash Flow Dashboard", "Multi-Currency Support"],
+        themeColor: "#114B30",
+        accentBg: "#165E3D",
+        iconType: "trend",
+        overlayLabel: "QuickBooks ProAdvisor setup",
+        image: "/taxnet-categories-images/Software%20We%20Use/QuickBooks/Accountant_reviewing_financial_r_46f66d7c.jpg",
+        href: "/software-we-use/quickbooks",
+      },
+      {
+        id: "cloud-addons",
+        tag: "Ecosystem Sync",
+        badge: "App Integration",
+        title: "Cloud Accounting Add-Ons",
+        headline: "Cloud Accounting Add-Ons",
+        description: "Supercharge your tech stack with Dext, Receipt Bank, Stripe, Shopify, and Deputy integrations for complete end-to-end workflow automation.",
+        highlights: ["Dext / Receipt Bank OCR", "Shopify & Stripe Sync", "Inventory & POS Integrations"],
+        themeColor: "#141718",
+        accentBg: "#22272A",
+        iconType: "refresh",
+        overlayLabel: "Automate your workflows",
+        image: "/taxnet-categories-images/Software%20We%20Use/Cloud%20Accounting%20Add-Ons/Man_configuring_business_softwar_ec0afc8b.jpg",
+        href: "/software-we-use/cloud-accounting-add-ons",
       },
     ],
   },
 ];
 
-const CARD_IMAGES = [
-  "/services%20card/cards.jpg",
-  "/services%20card/card2.jpg",
-];
-
-
-/* ─── Service Card Visual Cover with Animated Hover Overlay ─── */
+/* ─── Service Card Visual Cover ─── */
 function CardPosterArt({
   title,
-  index = 0,
-  overlayLabel,
+  image,
 }: {
   title: string;
-  index?: number;
-  overlayLabel: string;
+  image: string;
+  overlayLabel?: string;
+  href?: string;
 }) {
-  const imgSrc = CARD_IMAGES[index % CARD_IMAGES.length];
-
   return (
     <div className="card-poster-wrapper">
       <img
-        src={imgSrc}
+        src={image}
         alt={title}
         className="card-poster-img"
         draggable={false}
-        style={{
-          WebkitTransition: "transform 550ms cubic-bezier(0.25,0.46,0.45,0.94), filter 550ms ease, -webkit-transform 550ms cubic-bezier(0.25,0.46,0.45,0.94), -webkit-filter 550ms ease",
-          transition: "transform 550ms cubic-bezier(0.25,0.46,0.45,0.94), filter 550ms ease",
-        }}
       />
-
-      {/* Floating particles — shown on hover */}
-      <div
-        className="card-overlay-particles"
-        style={{ transition: "opacity 320ms ease 80ms" }}
-      >
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="particle"
-            style={{
-              left: `${12 + i * 15}%`,
-              bottom: `${8 + (i % 3) * 18}%`,
-              animationDelay: `${i * 0.4}s`,
-              animationDuration: `${2.0 + i * 0.35}s`,
-              width: i % 2 === 0 ? "5px" : "3px",
-              height: i % 2 === 0 ? "5px" : "3px",
-              background:
-                i % 3 === 0
-                  ? "rgba(37,229,93,0.8)"
-                  : i % 3 === 1
-                  ? "rgba(255,255,255,0.55)"
-                  : "rgba(200,240,215,0.7)",
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Main overlay */}
-      <div
-        className="card-poster-overlay"
-        style={{
-          WebkitTransition: "opacity 400ms ease",
-          transition: "opacity 400ms ease",
-        }}
-      >
-        {/* Decorative shimmer line */}
-        <div
-          className="card-overlay-shimmer"
-          style={{
-            height: "2px",
-            background: "linear-gradient(90deg, transparent, #25E55D, #fff, #25E55D, transparent)",
-            borderRadius: "2px",
-            transition: "width 500ms cubic-bezier(0.34,1.56,0.64,1) 60ms",
-            marginBottom: "8px",
-          }}
-        />
-        <span
-          className="card-overlay-label"
-          style={{
-            WebkitTransition: "transform 460ms cubic-bezier(0.25,0.46,0.45,0.94) 120ms, -webkit-transform 460ms cubic-bezier(0.25,0.46,0.45,0.94) 120ms, opacity 340ms ease 120ms",
-            transition: "transform 460ms cubic-bezier(0.25,0.46,0.45,0.94) 120ms, opacity 340ms ease 120ms",
-          }}
-        >
-          {overlayLabel}
-        </span>
-        {/* Decorative bottom shimmer line */}
-        <div
-          className="card-overlay-shimmer-bottom"
-          style={{
-            height: "1px",
-            background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent)",
-            borderRadius: "1px",
-            transition: "width 500ms cubic-bezier(0.34,1.56,0.64,1) 160ms",
-            margin: "4px 0 2px",
-          }}
-        />
-        <a
-          href="#contact"
-          className="card-overlay-cta"
-          style={{
-            WebkitTransition: "transform 480ms cubic-bezier(0.25,0.46,0.45,0.94) 195ms, -webkit-transform 480ms cubic-bezier(0.25,0.46,0.45,0.94) 195ms, opacity 360ms ease 195ms",
-            transition: "transform 480ms cubic-bezier(0.25,0.46,0.45,0.94) 195ms, opacity 360ms ease 195ms",
-          }}
-          onClick={(e) => { e.stopPropagation(); }}
-        >
-          Book a Chat →
-        </a>
-      </div>
     </div>
   );
 }
 
 /* ─── Main ServicesSection Component ─── */
 export default function ServicesSection() {
+  const router = useRouter();
   const [activeTab, setActiveTab] = useState<string>("accounting-tax");
   const [isDragging, setIsDragging] = useState<boolean>(false);
   const [dragCursorVisible, setDragCursorVisible] = useState<boolean>(false);
@@ -503,16 +522,11 @@ export default function ServicesSection() {
   const cursorRef = useRef<HTMLDivElement>(null);
 
   // Click handler for entire card
-  const handleCardClick = (sub: SubService) => {
+  const handleCardClick = (href: string) => {
     if (state.current.hasMovedSignificantly) {
       return;
     }
-    const contactEl = document.getElementById("contact");
-    if (contactEl) {
-      contactEl.scrollIntoView({ behavior: "smooth" });
-    } else {
-      window.location.hash = "contact";
-    }
+    router.push(href);
   };
 
   // Physics animation state
@@ -767,41 +781,14 @@ export default function ServicesSection() {
         .service-card-item:hover .sc-footer {
           border-color: rgba(197, 168, 105, 0.3) !important;
         }
-        /* Reveal poster overlay on parent hover */
+        /* Service image clean presentation without hover distortion */
         .card-poster-img {
-          transform: scale(1);
-          filter: brightness(1);
+          transform: none !important;
+          filter: none !important;
         }
-        .card-overlay-particles { opacity: 0; }
-        .card-poster-overlay { opacity: 0; pointer-events: none; }
-        .card-overlay-shimmer { width: 0px; }
-        .card-overlay-shimmer-bottom { width: 0px !important; }
-        .card-overlay-label { transform: translateY(16px); opacity: 0; }
-        .card-overlay-cta {
-          transform: translateY(18px);
-          opacity: 0;
-          pointer-events: none;
-        }
-        
         .service-card-item:hover .card-poster-img {
-          transform: scale(1.08) !important;
-          filter: brightness(0.45) !important;
-        }
-        .service-card-item:hover .card-overlay-particles { opacity: 1 !important; }
-        .service-card-item:hover .card-poster-overlay {
-          opacity: 1 !important;
-          pointer-events: auto !important;
-        }
-        .service-card-item:hover .card-overlay-shimmer { width: 56px !important; }
-        .service-card-item:hover .card-overlay-shimmer-bottom { width: 40px !important; }
-        .service-card-item:hover .card-overlay-label {
-          transform: translateY(0) !important;
-          opacity: 1 !important;
-        }
-        .service-card-item:hover .card-overlay-cta {
-          transform: translateY(0) !important;
-          opacity: 1 !important;
-          pointer-events: auto !important;
+          transform: none !important;
+          filter: none !important;
         }
       `}</style>
       {/* ─── ARCHITECTURAL DISPLAY TYPOGRAPHY IN FOREST GREEN & MONETY FONT ─── */}
@@ -858,12 +845,12 @@ export default function ServicesSection() {
                 maxWidth: "720px",
               }}
             >
-              Three multidisciplinary pillars delivering elite compliance, wealth acceleration, and lending strategy for Australian businesses, property investors, and individuals.
+              Four multidisciplinary pillars delivering elite compliance, wealth acceleration, lending strategy, and cloud accounting systems for Australian businesses, property investors, and individuals.
             </p>
           </div>
         </AnimatedHeading>
 
-        {/* ─── 3 MAIN SERVICE TABS ─── */}
+        {/* ─── 4 MAIN SERVICE TABS ─── */}
         <div
           style={{
             display: "flex",
@@ -990,39 +977,16 @@ export default function ServicesSection() {
             </div>
           </div>
 
-          {/* Navigation Controls: Arrows & Drag Hint */}
+          {/* Navigation Controls: Arrows */}
           <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
             <span
               style={{
-                fontSize: "0.8125rem",
+                fontSize: "0.84rem",
                 color: "var(--color-text-muted)",
                 fontFamily: "var(--font-sans)",
-                display: "flex",
-                alignItems: "center",
-                gap: "6px",
               }}
             >
-              <span
-                style={{
-                  display: "inline-block",
-                  padding: "2px 6px",
-                  borderRadius: "4px",
-                  backgroundColor: "#25E55D",
-                  color: "#000",
-                  fontWeight: 700,
-                  fontSize: "0.6875rem",
-                  animation: "pulse-green 2s infinite"
-                }}
-              >
-                SWIPE
-              </span>
-              <span>cards to explore</span>
-              <style>{`
-                @keyframes pulse-green {
-                  0%, 100% { box-shadow: 0 0 0 0 rgba(37,229,93, 0.4); }
-                  50% { box-shadow: 0 0 0 6px rgba(37,229,93, 0); }
-                }
-              `}</style>
+              Scroll to explore
             </span>
 
             <div style={{ display: "flex", gap: "0.5rem" }}>
@@ -1122,39 +1086,6 @@ export default function ServicesSection() {
           paddingBottom: "2rem",
         } as React.CSSProperties}
       >
-        {/* Floating Neon Green `< DRAG >` Indicator (Matching video reference) */}
-        {dragCursorVisible && !hoveringCard && (
-          <div
-            ref={cursorRef}
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              pointerEvents: "none",
-              zIndex: 30,
-              backgroundColor: "#25E55D",
-              color: "#051A0B",
-              fontFamily: "var(--font-sans)",
-              fontSize: "0.75rem",
-              fontWeight: 800,
-              letterSpacing: "0.08em",
-              padding: "0.625rem 0.875rem",
-              borderRadius: "8px",
-              boxShadow: "0 8px 24px rgba(37, 229, 93, 0.45), 0 2px 6px rgba(0,0,0,0.15)",
-              display: "flex",
-              alignItems: "center",
-              gap: "6px",
-              transform: "translate(-50%, -50%)",
-              transition: "opacity 200ms ease",
-            }}
-          >
-            <span>‹</span>
-            <span>DRAG</span>
-            <span>›</span>
-          </div>
-        )}
-
         {/* Carousel Moving Track */}
         <div
           ref={trackRef}
@@ -1170,7 +1101,7 @@ export default function ServicesSection() {
             <div
               key={sub.id}
               className="service-card-item"
-              onClick={() => handleCardClick(sub)}
+              onClick={() => handleCardClick(sub.href)}
               onMouseEnter={() => setHoveringCard(true)}
               onMouseLeave={() => setHoveringCard(false)}
               onPointerEnter={() => setHoveringCard(true)}
@@ -1218,15 +1149,16 @@ export default function ServicesSection() {
                     transition: "all 0.4s ease",
                   }}
                 >
-                  TaxNet
+                  {sub.badge}
                 </span>
               </div>
 
               {/* Service Card Visual Illustration with animated hover overlay */}
               <CardPosterArt
                 title={sub.title}
-                index={index}
+                image={sub.image}
                 overlayLabel={sub.overlayLabel}
+                href={sub.href}
               />
 
               {/* Lower Content Section */}
@@ -1269,7 +1201,8 @@ export default function ServicesSection() {
                     transition: "border-color 0.4s ease",
                   }}
                 >
-                  <div
+                  <Link
+                    href={sub.href}
                     className="sc-link"
                     style={{
                       display: "inline-flex",
@@ -1279,11 +1212,18 @@ export default function ServicesSection() {
                       fontWeight: 700,
                       color: "var(--color-secondary)",
                       transition: "all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1)",
+                      textDecoration: "none",
+                    }}
+                    onClick={(e) => {
+                      if (state.current.hasMovedSignificantly) {
+                        e.preventDefault();
+                      }
+                      e.stopPropagation();
                     }}
                   >
-                    <span>Book a Chat</span>
+                    <span>Explore Service</span>
                     <span>→</span>
-                  </div>
+                  </Link>
 
                   <span
                     className="sc-counter"
