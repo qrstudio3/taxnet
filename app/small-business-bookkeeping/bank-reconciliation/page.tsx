@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Bank Reconciliation & BAS-Ready Bookkeeping Melbourne | TaxNet",
+  title: "Bank Reconciliation & BAS-Ready Bookkeeping Melbourne | Taxnet",
   description:
     "Zero-discrepancy bank reconciliations, GST coding, and BAS-ready financial records. Melbourne CPA bookkeepers ensuring 100% balanced ledgers every week.",
   keywords: [
@@ -198,7 +198,7 @@ export default function BankReconciliationPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss bank reconciliation and BAS-ready records."
+                message="Hi Taxnet, I'd like to discuss bank reconciliation and BAS-ready records."
                 label="Chat with a Reconciliation Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -245,7 +245,7 @@ export default function BankReconciliationPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet accountant performing bank reconciliation and ledger verification"
+                    alt="Taxnet accountant performing bank reconciliation and ledger verification"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -304,7 +304,7 @@ export default function BankReconciliationPage() {
                   non-taxable income transfers between their own accounts.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet audits every line item. We verify tax invoices for expenses above $82.50, ensure correct
+                  Taxnet audits every line item. We verify tax invoices for expenses above $82.50, ensure correct
                   depreciation thresholds are applied, and reconcile loan balances against bank amortization schedules.
                 </p>
 
@@ -457,7 +457,7 @@ export default function BankReconciliationPage() {
                   Peace of Mind with Certified Registered BAS Agents
                 </h2>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  You didn&apos;t start a business to spend Friday nights matching bank feeds. With TaxNet, you have a
+                  You didn&apos;t start a business to spend Friday nights matching bank feeds. With Taxnet, you have a
                   dedicated Australian bookkeeper backed by CPA partners who inspects your ledgers on a weekly rhythm.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
@@ -496,7 +496,7 @@ export default function BankReconciliationPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet bookkeeper consulting with Australian business owner on financial reports"
+                  alt="Taxnet bookkeeper consulting with Australian business owner on financial reports"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -573,6 +573,7 @@ export default function BankReconciliationPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Bank Reconciliation & BAS Records"
+          submitButtonText="Book A Consultation"
           title="Get Your Ledgers Clean & Balanced"
           subtitle="Stop stressing about mystery balance discrepancies. Speak with our Melbourne bookkeeping team for an immediate audit-proof review."
         />

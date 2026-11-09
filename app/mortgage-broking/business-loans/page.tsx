@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Business Loans & Commercial Finance Melbourne | TaxNet",
+  title: "Business Loans & Commercial Finance Melbourne | Taxnet",
   description:
     "Expert commercial and business loans in Melbourne. Working capital facilities, commercial property mortgages, debtor finance, and CPA-prepared credit submission packs.",
   keywords: [
@@ -58,7 +58,7 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 const FAQS = [
   {
     q: "Why do so many Australian business loan applications get rejected by major banks?",
-    a: "Standard retail bank branches use automated computer algorithms that strictly scan bottom-line net profit. If you utilize smart tax strategies (such as accelerated depreciation, director super contributions, or instant asset write-offs), your net taxable income looks artificially low to an algorithm. TaxNet's CPA accountants build professional credit add-back schedules that demonstrate your true normalized cash-flow and servicing strength.",
+    a: "Standard retail bank branches use automated computer algorithms that strictly scan bottom-line net profit. If you utilize smart tax strategies (such as accelerated depreciation, director super contributions, or instant asset write-offs), your net taxable income looks artificially low to an algorithm. Taxnet's CPA accountants build professional credit add-back schedules that demonstrate your true normalized cash-flow and servicing strength.",
   },
   {
     q: "What is the difference between secured and unsecured business loans?",
@@ -73,7 +73,7 @@ const FAQS = [
     a: "Yes. Purchasing your business trading premises protects you from landlord rent hikes, secures your location long-term, and builds substantial commercial wealth. We structure owner-occupier commercial mortgages with up to 80% loan-to-value ratios (LVR) or help you purchase via an SMSF structure.",
   },
   {
-    q: "How fast can TaxNet secure business funding in Melbourne?",
+    q: "How fast can Taxnet secure business funding in Melbourne?",
     a: "Unsecured business loans and invoice debtor facilities can often be approved and funded within 24 to 48 hours. Major commercial property mortgages and bank overdraft restructures typically settle within 2 to 4 weeks depending on independent valuation timelines.",
   },
 ];
@@ -174,7 +174,7 @@ export default function BusinessLoansPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Fuel your growth, acquire commercial premises, or secure flexible working capital. TaxNet bridges the gap
+              Fuel your growth, acquire commercial premises, or secure flexible working capital. Taxnet bridges the gap
               between business accounting and institutional banking to get complex commercial deals approved.
             </p>
 
@@ -201,7 +201,7 @@ export default function BusinessLoansPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I need commercial finance / business loan advisory for my company."
+                message="Hi Taxnet, I need commercial finance / business loan advisory for my company."
                 label="Chat with a Commercial Lending Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function BusinessLoansPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet finance advisor meeting business owner to structure a commercial growth facility"
+                    alt="Taxnet finance advisor meeting business owner to structure a commercial growth facility"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function BusinessLoansPage() {
                   they fail to explain them to credit underwriters, resulting in immediate loan declines.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet is an integrated CPA practice and credit brokerage. We compile sophisticated credit submission
+                  Taxnet is an integrated CPA practice and credit brokerage. We compile sophisticated credit submission
                   packs that demonstrate your normalized EBITDA, show true debt serviceability, and negotiate directly
                   with commercial bank executives who have high lending authority.
                 </p>
@@ -464,7 +464,7 @@ export default function BusinessLoansPage() {
                   face immediate solvency crises.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet structures tax-effective commercial borrowing facilities that allow you to invest in long-term
+                  Taxnet structures tax-effective commercial borrowing facilities that allow you to invest in long-term
                   assets while keeping your operating cash reserves intact. We ensure loan interest, bank fees, and lease
                   charges are fully integrated into your corporate tax returns for maximum deductions.
                 </p>
@@ -500,7 +500,7 @@ export default function BusinessLoansPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="Business owner discussing company financial growth and loan restructuring with TaxNet"
+                  alt="Business owner discussing company financial growth and loan restructuring with Taxnet"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -577,6 +577,7 @@ export default function BusinessLoansPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Business & Commercial Loan"
+          submitButtonText="Book A Consultation"
           title="Secure Your Commercial Growth Facility"
           subtitle="Our Melbourne CPA accountants and commercial finance specialists prepare your loan submission pack to secure optimal rates from tier-1 lenders."
         />

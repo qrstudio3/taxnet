@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Buying Your Next Home Mortgage Broker Melbourne | Upgrade & Upsize | TaxNet",
+  title: "Buying Your Next Home Mortgage Broker Melbourne | Upgrade & Upsize | Taxnet",
   description:
     "Expert mortgage broking for next home buyers in Melbourne. Unlock equity, coordinate simultaneous settlements, port existing loans, and compare 40+ Australian lenders.",
   keywords: [
@@ -66,7 +66,7 @@ const FAQS = [
   },
   {
     q: "Can I keep my current home as an investment property when I move?",
-    a: "Yes. Many of our clients transition their current home into a rental investment. Together with TaxNet's in-house CPA tax team, we structure your loans so that the debt against the investment property is tax-deductible, while minimizing non-deductible private debt on your new family home.",
+    a: "Yes. Many of our clients transition their current home into a rental investment. Together with Taxnet's in-house CPA tax team, we structure your loans so that the debt against the investment property is tax-deductible, while minimizing non-deductible private debt on your new family home.",
   },
   {
     q: "What is loan portability and when should I use it?",
@@ -174,7 +174,7 @@ export default function NextHomeBuyerPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Whether upsizing for a growing family or downsizing for low-maintenance living, TaxNet unlocks equity
+              Whether upsizing for a growing family or downsizing for low-maintenance living, Taxnet unlocks equity
               from your current property and negotiates market-leading rates across 40+ Australian lenders.
             </p>
 
@@ -201,7 +201,7 @@ export default function NextHomeBuyerPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'm planning to buy my next home and want to assess my equity and borrowing power."
+                message="Hi Taxnet, I'm planning to buy my next home and want to assess my equity and borrowing power."
                 label="Chat with an Upgrader Lending Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function NextHomeBuyerPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet mortgage advisor meeting couple to discuss upgrading to their next home"
+                    alt="Taxnet mortgage advisor meeting couple to discuss upgrading to their next home"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function NextHomeBuyerPage() {
                   worry about carrying two mortgages if your current property takes longer to sell.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet engineers precision financing solutions. We evaluate your equity position, structure pre-approved
+                  Taxnet engineers precision financing solutions. We evaluate your equity position, structure pre-approved
                   simultaneous settlements, and line up flexible bridging loan safety nets so you can purchase your dream
                   home with calm confidence.
                 </p>
@@ -463,7 +463,7 @@ export default function NextHomeBuyerPage() {
                   strong and long-term capital growth proven, retaining your first property creates substantial wealth.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  Because TaxNet integrates licensed mortgage brokers with senior CPA tax accountants, we structure your
+                  Because Taxnet integrates licensed mortgage brokers with senior CPA tax accountants, we structure your
                   new debt correctly from day one. We ensure loans linked to your future investment property maximize
                   tax deductions while your new home loan remains debt-recycled for fast principal repayment.
                 </p>
@@ -576,6 +576,7 @@ export default function NextHomeBuyerPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Next Home Buyer Mortgage"
+          submitButtonText="Book A Consultation"
           title="Plan Your Next Home Purchase"
           subtitle="Speak with our Melbourne finance brokers to calculate usable equity, explore bridging options, and structure your next home upgrade."
         />

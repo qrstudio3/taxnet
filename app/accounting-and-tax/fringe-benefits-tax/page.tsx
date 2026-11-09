@@ -5,12 +5,12 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
-import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Fringe Benefits Tax (FBT) Melbourne | Salary Packaging & EV Exemptions | TaxNet",
+  title: "Fringe Benefits Tax (FBT) Melbourne | Salary Packaging & EV Exemptions | Taxnet",
   description:
     "Expert Fringe Benefits Tax (FBT) compliance and salary packaging advisory in Melbourne. Electric vehicle (EV) exemptions, commercial vehicle logbooks, and FBT liability minimization.",
   keywords: [
@@ -58,7 +58,7 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 const FAQS = [
   {
     q: "When does the Fringe Benefits Tax year run and when is the return due?",
-    a: "Unlike the standard financial year, the FBT year runs from 1 April to 31 March. Self-lodgers must lodge and pay by 21 May, but when you lodge through TaxNet as your registered tax agent, your lodgement and payment deadline is automatically extended to 25 June.",
+    a: "Unlike the standard financial year, the FBT year runs from 1 April to 31 March. Self-lodgers must lodge and pay by 21 May, but when you lodge through Taxnet as your registered tax agent, your lodgement and payment deadline is automatically extended to 25 June.",
   },
   {
     q: "How does the Electric Vehicle (EV) FBT exemption work?",
@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: "Why is the FBT rate set at 47%?",
-    a: "The FBT rate of 47% mirrors the highest individual marginal tax bracket (including the 2% Medicare levy). Because benefits are grossed up to reflect the pre-tax income required to purchase the perk, unmanaged FBT can easily double the cost of a benefit. TaxNet structures your ledger to prevent these punitive charges.",
+    a: "The FBT rate of 47% mirrors the highest individual marginal tax bracket (including the 2% Medicare levy). Because benefits are grossed up to reflect the pre-tax income required to purchase the perk, unmanaged FBT can easily double the cost of a benefit. Taxnet structures your ledger to prevent these punitive charges.",
   },
 ];
 
@@ -92,13 +92,15 @@ export default function FringeBenefitsTaxPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "56vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             paddingTop: "140px",
             paddingBottom: "5rem",
             overflow: "hidden",
+            textAlign: "center",
           }}
         >
           {/* Parallax Background Hero Image */}
@@ -110,114 +112,99 @@ export default function FringeBenefitsTaxPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
+            }}
+          />
+
+          {/* Subtle gold ambient glow */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              top: "40%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "550px",
+              height: "320px",
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(197, 168, 105, 0.12) 0%, transparent 70%)",
+              pointerEvents: "none",
             }}
           />
 
           <div
             style={{
-              maxWidth: "1240px",
+              maxWidth: "860px",
               margin: "0 auto",
               padding: "0 1.5rem",
               position: "relative",
               zIndex: 2,
               width: "100%",
+              textAlign: "center",
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Home
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
-              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Accounting & Tax
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
-              <span style={{ color: "#C5A869" }}>Fringe Benefits Tax (FBT)</span>
+              <span style={{ color: "#C5A869" }}>Fringe Benefits Tax</span>
             </nav>
 
-            {/* Headline */}
+            {/* Short Heading in Center */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.5rem, 5.2vw, 4.25rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.15,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                margin: "0 auto 1.75rem auto",
+                maxWidth: "760px",
               }}
             >
-              Fringe Benefits Tax.{" "}
+              Fringe Benefits 
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                Smart Packaging.
-              </span>{" "}
-              Zero Punitive Liabilities.
+                Tax (FBT)
+              </span>
             </h1>
 
-            {/* Subtitle */}
-            <p
-              style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
-              }}
-            >
-              At a punishing 47% statutory tax rate, Fringe Benefits Tax can silently erode company margins. TaxNet
-              structures your employee remuneration, unlocks electric vehicle exemptions, and legally minimizes your FBT
-              liability to zero.
-            </p>
-
-            {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
-              <a
-                href="#contact"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
-                  fontWeight: 800,
-                  fontSize: "0.95rem",
-                  padding: "0.9rem 2rem",
-                  borderRadius: "8px",
-                  textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
-                  transition: "all 180ms ease",
-                }}
-              >
-                Schedule an FBT Review →
-              </a>
-
-              <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss Fringe Benefits Tax and EV salary packaging."
-                label="Chat with an FBT Specialist"
-                sublabel="Direct WhatsApp Line"
-              />
-
-              <a
-                href="tel:0398025800"
-                style={{
-                  color: "rgba(255,255,255,0.85)",
-                  fontWeight: 600,
-                  fontSize: "0.92rem",
-                  textDecoration: "none",
-                  marginLeft: "0.5rem",
-                }}
-              >
-                Or call (03) 9802 5800
+            {/* Book A Consultation Button */}
+                        <style>{`
+              .hero-consultation-btn {
+                display: inline-block;
+                background-color: #C5A869;
+                color: #0A0D0B;
+                font-weight: 700;
+                font-size: 0.95rem;
+                padding: 14px 34px;
+                border-radius: 10px;
+                text-decoration: none;
+                box-shadow: 0 6px 20px rgba(197, 168, 105, 0.4);
+                transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+              }
+              .hero-consultation-btn:hover {
+                background-color: #DFC386 !important;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(197, 168, 105, 0.55) !important;
+              }
+            `}</style>
+            <div>
+              <a href="#contact" className="hero-consultation-btn">
+                Book A Consultation →
               </a>
             </div>
           </div>
@@ -247,7 +234,7 @@ export default function FringeBenefitsTaxPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet consultant reviewing corporate expense records and vehicle logbooks with client"
+                    alt="Taxnet consultant reviewing corporate expense records and vehicle logbooks with client"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -259,7 +246,7 @@ export default function FringeBenefitsTaxPage() {
                     position: "absolute",
                     bottom: "-20px",
                     right: "-20px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "1.2rem 1.4rem",
                     borderRadius: "14px",
@@ -280,7 +267,7 @@ export default function FringeBenefitsTaxPage() {
               <div>
                 <span
                   style={{
-                    color: "#0D3E26",
+                    color: "#A18650",
                     fontWeight: 700,
                     fontSize: "0.82rem",
                     letterSpacing: "0.08em",
@@ -293,7 +280,7 @@ export default function FringeBenefitsTaxPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -306,7 +293,7 @@ export default function FringeBenefitsTaxPage() {
                   base, an unmanaged $10,000 fringe benefit can trigger over $9,700 in additional tax.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet reviews your general ledger to categorize meal entertainment correctly, structure employee
+                  Taxnet reviews your general ledger to categorize meal entertainment correctly, structure employee
                   reimbursements under the Employee Contribution Method, and leverage vehicle logbooks so you pay minimal or
                   zero FBT legally.
                 </p>
@@ -320,7 +307,7 @@ export default function FringeBenefitsTaxPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       EV Salary Packaging
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -335,7 +322,7 @@ export default function FringeBenefitsTaxPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Safe Meal Structuring
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -349,12 +336,12 @@ export default function FringeBenefitsTaxPage() {
         </section>
 
         {/* ─── 6 PILLARS ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
+        <section style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E7ECE8" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -367,7 +354,7 @@ export default function FringeBenefitsTaxPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -375,52 +362,7 @@ export default function FringeBenefitsTaxPage() {
               </h2>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards items={PILLARS} />
           </div>
         </section>
 
@@ -452,7 +394,7 @@ export default function FringeBenefitsTaxPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -465,7 +407,7 @@ export default function FringeBenefitsTaxPage() {
                   logbook) often makes the difference between paying thousands in FBT or paying nothing.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet models both calculation methodologies for every commercial vehicle in your fleet, ensuring you
+                  Taxnet models both calculation methodologies for every commercial vehicle in your fleet, ensuring you
                   select the most cost-effective method before lodgement.
                 </p>
 
@@ -475,7 +417,7 @@ export default function FringeBenefitsTaxPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -500,7 +442,7 @@ export default function FringeBenefitsTaxPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet tax advisor discussing executive remuneration and vehicle fleet policies with company director"
+                  alt="Taxnet tax advisor discussing executive remuneration and vehicle fleet policies with company director"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -519,7 +461,7 @@ export default function FringeBenefitsTaxPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -532,7 +474,7 @@ export default function FringeBenefitsTaxPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -554,7 +496,7 @@ export default function FringeBenefitsTaxPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",
@@ -576,6 +518,7 @@ export default function FringeBenefitsTaxPage() {
 
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
+          submitButtonText="Book A Consultation"
           serviceName="Fringe Benefits Tax (FBT)"
           title="Eliminate Your Fringe Benefits Tax Exposure"
           subtitle="Structure executive perks and commercial vehicle fleets to slash FBT. Speak with our Melbourne CPA tax advisory team today."

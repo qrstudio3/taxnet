@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "QuickBooks Online Certified ProAdvisor Melbourne | TaxNet",
+  title: "QuickBooks Online Certified ProAdvisor Melbourne | Taxnet",
   description:
     "Expert QuickBooks Online (QBO) setup, migration, and bookkeeping in Melbourne. Certified ProAdvisors for multi-currency, mobile invoicing, and automated mileage tracking.",
   keywords: [
@@ -66,10 +66,10 @@ const FAQS = [
   },
   {
     q: "What is Taxable Payments Annual Reporting (TPAR) and how does QuickBooks help?",
-    a: "If your business provides building and construction, cleaning, courier, IT, or security services and hires subcontractors, the ATO requires you to lodge an annual TPAR by August 28. TaxNet configures QuickBooks to tag subcontractor payments throughout the year, enabling one-click digital TPAR lodgement without last-minute panic.",
+    a: "If your business provides building and construction, cleaning, courier, IT, or security services and hires subcontractors, the ATO requires you to lodge an annual TPAR by August 28. Taxnet configures QuickBooks to tag subcontractor payments throughout the year, enabling one-click digital TPAR lodgement without last-minute panic.",
   },
   {
-    q: "Can TaxNet migrate our data from another system to QuickBooks Online?",
+    q: "Can Taxnet migrate our data from another system to QuickBooks Online?",
     a: "Yes. We regularly migrate clients from desktop software, Xero, MYOB, or Excel into QuickBooks Online. We migrate your customer contacts, open accounts receivable, supplier balances, and opening balances to ensure your new file starts with 100% balanced precision.",
   },
   {
@@ -175,7 +175,7 @@ export default function QuickBooksSoftwarePage() {
               }}
             >
               Stay agile, bill on the move, and track multi-currency profits. As Certified QuickBooks ProAdvisors,
-              TaxNet architects seamless QBO workflows, automated bank reconciliations, and compliant contractor TPAR lodgements.
+              Taxnet architects seamless QBO workflows, automated bank reconciliations, and compliant contractor TPAR lodgements.
             </p>
 
             {/* CTA Buttons */}
@@ -201,7 +201,7 @@ export default function QuickBooksSoftwarePage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss QuickBooks Online setup and bookkeeping."
+                message="Hi Taxnet, I'd like to discuss QuickBooks Online setup and bookkeeping."
                 label="Chat with a QuickBooks Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -248,7 +248,7 @@ export default function QuickBooksSoftwarePage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet accountant reviewing QuickBooks Online financial reports with Melbourne client"
+                    alt="Taxnet accountant reviewing QuickBooks Online financial reports with Melbourne client"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -307,7 +307,7 @@ export default function QuickBooksSoftwarePage() {
                   un-reconciled merchant clearing accounts and incorrect BAS claims.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet configures QBO to work like an automated financial cockpit. We establish bank rules that reconcile
+                  Taxnet configures QBO to work like an automated financial cockpit. We establish bank rules that reconcile
                   regular overheads, set up recurring invoices that bill customers automatically on the first of each
                   month, and connect your point of sale so card payments balance down to the exact cent.
                 </p>
@@ -466,7 +466,7 @@ export default function QuickBooksSoftwarePage() {
                   of billing and recalculates real-time variances when payment settles into your multi-currency account.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet ensures your foreign currency accounts, overseas digital supplier costs, and Australian GST
+                  Taxnet ensures your foreign currency accounts, overseas digital supplier costs, and Australian GST
                   obligations remain strictly aligned with ATO Section 9-85 translation rules, shielding you from tax
                   penalties.
                 </p>
@@ -581,6 +581,7 @@ export default function QuickBooksSoftwarePage() {
           serviceName="QuickBooks Online Setup & Advisory"
           title="Optimize Your Business With QuickBooks"
           subtitle="Speak with our Certified QuickBooks ProAdvisors in Melbourne to configure automated invoicing, multi-currency tracking, and contractor TPAR compliance."
+          submitButtonText="Book A Consultation"
         />
       </main>
 

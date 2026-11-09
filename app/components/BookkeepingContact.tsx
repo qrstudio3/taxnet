@@ -6,12 +6,18 @@ interface BookkeepingContactProps {
   title?: string;
   subtitle?: string;
   serviceName?: string;
+  submitButtonText?: string;
+  darkTheme?: boolean;
+  hideSoftwareField?: boolean;
 }
 
 export default function BookkeepingContact({
   title = "Ready to Put Your Books on Autopilot?",
   subtitle = "Book a confidential 15-minute discovery consultation with our Melbourne CPA team. We'll assess your current ledger, eliminate bottlenecks, and tailor a flat-fee bookkeeping plan.",
   serviceName = "Small Business Bookkeeping",
+  submitButtonText,
+  darkTheme = false,
+  hideSoftwareField = false,
 }: BookkeepingContactProps) {
   const isMortgage = /mortgage|loan|finance|buyer|refinanc/i.test(serviceName);
   const isSoftware = /software|xero|myob|quickbooks|add-ons|integration|migration|cloud setup/i.test(serviceName);
@@ -85,23 +91,35 @@ export default function BookkeepingContact({
 
   const whatsappMessage = encodeURIComponent(
     isMortgage
-      ? `Hi TaxNet, I'm looking for advice regarding ${serviceName}. I'd like to book a consultation with a mortgage broker.`
+      ? `Hi Taxnet, I'm looking for advice regarding ${serviceName}. I'd like to book a consultation with a mortgage broker.`
       : isSoftware
-      ? `Hi TaxNet, I'm interested in ${serviceName} for my business. I'd like to connect with a certified software specialist.`
-      : `Hi TaxNet, I'm interested in your ${serviceName} services for my business. I'd like to book a quick consultation.`
+      ? `Hi Taxnet, I'm interested in ${serviceName} for my business. I'd like to connect with a certified software specialist.`
+      : `Hi Taxnet, I'm interested in your ${serviceName} services for my business. I'd like to book a quick consultation.`
   );
+
+  const labelColor = "#0A0D0B";
+  const inputBg = "#FAFBF9";
+  const inputBorder = "1px solid #D1DCD5";
+  const inputTextColor = "#1C2022";
+  const cardBg = "#FFFFFF";
+  const cardBorder = "1px solid rgba(161, 134, 80, 0.28)";
+  const cardText = "#1C2022";
+  const titleColor = "#0A0D0B";
+  const submitBg = "#0A0D0B";
+  const submitText = "#FFFFFF";
+  const submitHoverBg = "#222824";
 
   return (
     <section
       id="contact"
       style={{
-        backgroundColor: "#081D13",
+        backgroundColor: "#0A0D0B",
         color: "#FFFFFF",
         paddingTop: "5rem",
         paddingBottom: "5.5rem",
         position: "relative",
         overflow: "hidden",
-        borderTop: "1px solid rgba(161, 134, 80, 0.28)",
+        borderTop: "1px solid rgba(197, 168, 105, 0.28)",
       }}
     >
       {/* Background Ambient Glows */}
@@ -127,7 +145,7 @@ export default function BookkeepingContact({
           width: "450px",
           height: "450px",
           borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(37, 229, 93, 0.08) 0%, transparent 70%)",
+          background: "radial-gradient(circle, rgba(197, 168, 105, 0.08) 0%, transparent 70%)",
           pointerEvents: "none",
         }}
       />
@@ -192,7 +210,7 @@ export default function BookkeepingContact({
                   borderRadius: "10px",
                   backgroundColor: "#FFFFFF",
                   border: "1px solid rgba(0, 0, 0, 0.12)",
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   textDecoration: "none",
                   boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
                   transition: "all 180ms ease",
@@ -200,7 +218,7 @@ export default function BookkeepingContact({
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "translateY(-2px)";
                   e.currentTarget.style.boxShadow = "0 8px 22px rgba(0, 0, 0, 0.14)";
-                  e.currentTarget.style.borderColor = "rgba(0, 0, 0, 0.22)";
+                  e.currentTarget.style.borderColor = "#C5A869";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "translateY(0)";
@@ -213,11 +231,11 @@ export default function BookkeepingContact({
                     <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
                   </svg>
                   <div>
-                    <div style={{ fontSize: "0.98rem", fontWeight: 700, color: "#0D3E26" }}>Chat with us</div>
+                    <div style={{ fontSize: "0.98rem", fontWeight: 700, color: "#0A0D0B" }}>Chat with us</div>
                     <div style={{ fontSize: "0.78rem", color: "#5C6B63" }}>Instant reply · Melbourne Advisory Desk</div>
                   </div>
                 </div>
-                <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0D3E26" }}>→</span>
+                <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0A0D0B" }}>→</span>
               </a>
 
               {/* Direct Phone */}
@@ -321,35 +339,17 @@ export default function BookkeepingContact({
                 <span style={{ fontSize: "0.85rem", color: "#A18650", fontWeight: 600 }}>Email Us →</span>
               </a>
             </div>
-
-            {/* Credibility badges */}
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "1.25rem",
-                paddingTop: "1.25rem",
-                borderTop: "1px solid rgba(255, 255, 255, 0.12)",
-                fontSize: "0.78rem",
-                color: "rgba(255, 255, 255, 0.65)",
-              }}
-            >
-              <span>✓ Certified CPA Partner</span>
-              <span>✓ Registered BAS Agent</span>
-              <span>✓ Xero Platinum Champion</span>
-              <span>✓ No Lock-in Contracts</span>
-            </div>
           </div>
 
           {/* ── Right Column: Consultation Booking Card ── */}
           <div
             style={{
-              backgroundColor: "#FFFFFF",
-              color: "#1C2022",
+              backgroundColor: cardBg,
+              color: cardText,
               borderRadius: "20px",
               padding: "2.25rem 2rem",
-              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.35)",
-              border: "1px solid rgba(161, 134, 80, 0.3)",
+              boxShadow: "0 20px 50px rgba(0, 0, 0, 0.15)",
+              border: cardBorder,
             }}
           >
             {submitted ? (
@@ -359,22 +359,23 @@ export default function BookkeepingContact({
                     width: "60px",
                     height: "60px",
                     borderRadius: "50%",
-                    backgroundColor: "rgba(13, 62, 38, 0.1)",
-                    color: "#0D3E26",
-                    fontSize: "2rem",
+                    backgroundColor: "rgba(161, 134, 80, 0.15)",
+                    color: "#A18650",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     margin: "0 auto 1.25rem",
                   }}
                 >
-                  ✓
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
                 </div>
                 <h3
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "1.75rem",
-                    color: "#0D3E26",
+                    color: "#0A0D0B",
                     marginBottom: "0.5rem",
                   }}
                 >
@@ -401,8 +402,8 @@ export default function BookkeepingContact({
                   type="button"
                   onClick={() => setSubmitted(false)}
                   style={{
-                    background: "#0D3E26",
-                    color: "#FFFFFF",
+                    background: submitBg,
+                    color: submitText,
                     border: "none",
                     borderRadius: "8px",
                     padding: "10px 22px",
@@ -421,7 +422,7 @@ export default function BookkeepingContact({
                     style={{
                       fontSize: "1.35rem",
                       fontWeight: 800,
-                      color: "#0F261B",
+                      color: titleColor,
                       marginBottom: "0.3rem",
                       letterSpacing: "-0.01em",
                     }}
@@ -432,7 +433,7 @@ export default function BookkeepingContact({
                       ? `Request a Free ${serviceName} Assessment`
                       : `Request a Free Bookkeeping Assessment`}
                   </h3>
-                  <p style={{ fontSize: "0.82rem", color: "#6B7C72", margin: 0 }}>
+                  <p style={{ fontSize: "0.82rem", color: darkTheme ? "#9CA3AF" : "#6B7C72", margin: 0 }}>
                     {isSoftware
                       ? "100% confidential · Certified Cloud Platform Partners · Direct CPA Migration Blueprint"
                       : isTaxOrAccounting
@@ -448,7 +449,7 @@ export default function BookkeepingContact({
                   <div>
                     <label
                       htmlFor="bk-name"
-                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "#0D3E26", marginBottom: "4px" }}
+                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
                     >
                       Full Name *
                     </label>
@@ -464,18 +465,18 @@ export default function BookkeepingContact({
                         width: "100%",
                         padding: "10px 12px",
                         borderRadius: "8px",
-                        border: "1px solid #D1DCD5",
+                        border: inputBorder,
                         fontSize: "0.88rem",
-                        color: "#1C2022",
+                        color: inputTextColor,
                         outline: "none",
-                        backgroundColor: "#FAFBF9",
+                        backgroundColor: inputBg,
                       }}
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="bk-email"
-                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "#0D3E26", marginBottom: "4px" }}
+                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
                     >
                       Business Email *
                     </label>
@@ -491,11 +492,11 @@ export default function BookkeepingContact({
                         width: "100%",
                         padding: "10px 12px",
                         borderRadius: "8px",
-                        border: "1px solid #D1DCD5",
+                        border: inputBorder,
                         fontSize: "0.88rem",
-                        color: "#1C2022",
+                        color: inputTextColor,
                         outline: "none",
-                        backgroundColor: "#FAFBF9",
+                        backgroundColor: inputBg,
                       }}
                     />
                   </div>
@@ -506,7 +507,7 @@ export default function BookkeepingContact({
                   <div>
                     <label
                       htmlFor="bk-phone"
-                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "#0D3E26", marginBottom: "4px" }}
+                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
                     >
                       Mobile / Phone *
                     </label>
@@ -522,18 +523,18 @@ export default function BookkeepingContact({
                         width: "100%",
                         padding: "10px 12px",
                         borderRadius: "8px",
-                        border: "1px solid #D1DCD5",
+                        border: inputBorder,
                         fontSize: "0.88rem",
-                        color: "#1C2022",
+                        color: inputTextColor,
                         outline: "none",
-                        backgroundColor: "#FAFBF9",
+                        backgroundColor: inputBg,
                       }}
                     />
                   </div>
                   <div>
                     <label
                       htmlFor="bk-business"
-                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "#0D3E26", marginBottom: "4px" }}
+                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
                     >
                       {isMortgage ? "Employer or Business (Optional)" : "Company / Trading Name"}
                     </label>
@@ -548,87 +549,80 @@ export default function BookkeepingContact({
                         width: "100%",
                         padding: "10px 12px",
                         borderRadius: "8px",
-                        border: "1px solid #D1DCD5",
+                        border: inputBorder,
                         fontSize: "0.88rem",
-                        color: "#1C2022",
+                        color: inputTextColor,
                         outline: "none",
-                        backgroundColor: "#FAFBF9",
+                        backgroundColor: inputBg,
                       }}
                     />
                   </div>
                 </div>
 
-                {/* Accounting Software / Platform */}
-                <div style={{ marginBottom: "1rem" }}>
-                  <label
-                    htmlFor="bk-software"
-                    style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "#0D3E26", marginBottom: "4px" }}
-                  >
-                    {isMortgage
-                      ? "Lender or Finance Objective"
-                      : isSoftware
-                      ? "Target Platform or Migration Current State"
-                      : "Current Accounting Software / Method"}
-                  </label>
-                  <select
-                    id="bk-software"
-                    name="software"
-                    value={formData.software}
-                    onChange={handleChange}
-                    style={{
-                      width: "100%",
-                      padding: "10px 12px",
-                      borderRadius: "8px",
-                      border: "1px solid #D1DCD5",
-                      fontSize: "0.88rem",
-                      color: "#1C2022",
-                      outline: "none",
-                      backgroundColor: "#FAFBF9",
-                      cursor: "pointer",
-                    }}
-                  >
-                    {isMortgage ? (
-                      <>
-                        <option value="Exploring Best Rates">Open to Best Rate Across 40+ Lenders</option>
-                        <option value="Major Bank (CBA/NAB/ANZ/Westpac)">Major Bank (CBA, NAB, ANZ, Westpac)</option>
-                        <option value="Second-Tier / Non-Major">Second-Tier (Macquarie, Bankwest, ING)</option>
-                        <option value="Non-Bank Private Lender">Non-Bank / Commercial Specialist</option>
-                      </>
-                    ) : isSoftware ? (
-                      <>
-                        <option value="Xero">Xero (Platinum Certified Practice)</option>
-                        <option value="MYOB">MYOB (Certified Practice Specialist)</option>
-                        <option value="QuickBooks Online">QuickBooks Online (Advanced ProAdvisor)</option>
-                        <option value="Cloud Add-Ons (Dext/Deputy/Tradify)">Cloud Add-Ons (Dext, Deputy, Tradify, Shopify)</option>
-                        <option value="Migrating from Desktop (MYOB/Reckon)">Migrating from Desktop (MYOB AccountRight / Reckon)</option>
-                        <option value="Looking for Best Platform Recommendation">Looking for Best Platform Recommendation</option>
-                      </>
-                    ) : isBookkeeping ? (
-                      <>
-                        <option value="Xero">Xero (Certified Practice)</option>
-                        <option value="MYOB">MYOB</option>
-                        <option value="QuickBooks Online">QuickBooks Online</option>
-                        <option value="Spreadsheets / Excel">Spreadsheets / Excel</option>
-                        <option value="Need New Setup">Looking to set up fresh cloud software</option>
-                      </>
-                    ) : (
-                      <>
-                        <option value="Xero">Xero (Certified Practice)</option>
-                        <option value="MYOB">MYOB</option>
-                        <option value="QuickBooks Online">QuickBooks Online</option>
-                        <option value="Spreadsheets / Excel">Spreadsheets / Excel</option>
-                        <option value="Individual / No Software">Individual Return / No Software</option>
-                        <option value="Need New Setup">Need Fresh Cloud Accounting Setup</option>
-                      </>
-                    )}
-                  </select>
-                </div>
+                {/* Accounting Software / Platform (Only for Bookkeeping/Tax/Software, not Mortgage) */}
+                {!isMortgage && !hideSoftwareField && (
+                  <div style={{ marginBottom: "1rem" }}>
+                    <label
+                      htmlFor="bk-software"
+                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
+                    >
+                      {isSoftware
+                        ? "Target Platform or Migration Current State"
+                        : "Current Accounting Software / Method"}
+                    </label>
+                    <select
+                      id="bk-software"
+                      name="software"
+                      value={formData.software}
+                      onChange={handleChange}
+                      style={{
+                        width: "100%",
+                        padding: "10px 12px",
+                        borderRadius: "8px",
+                        border: inputBorder,
+                        fontSize: "0.88rem",
+                        color: inputTextColor,
+                        outline: "none",
+                        backgroundColor: inputBg,
+                        cursor: "pointer",
+                      }}
+                    >
+                      {isSoftware ? (
+                        <>
+                          <option value="Xero">Xero (Platinum Certified Practice)</option>
+                          <option value="MYOB">MYOB (Certified Practice Specialist)</option>
+                          <option value="QuickBooks Online">QuickBooks Online (Advanced ProAdvisor)</option>
+                          <option value="Cloud Add-Ons (Dext/Deputy/Tradify)">Cloud Add-Ons (Dext, Deputy, Tradify, Shopify)</option>
+                          <option value="Migrating from Desktop (MYOB/Reckon)">Migrating from Desktop (MYOB AccountRight / Reckon)</option>
+                          <option value="Looking for Best Platform Recommendation">Looking for Best Platform Recommendation</option>
+                        </>
+                      ) : isBookkeeping ? (
+                        <>
+                          <option value="Xero">Xero (Certified Practice)</option>
+                          <option value="MYOB">MYOB</option>
+                          <option value="QuickBooks Online">QuickBooks Online</option>
+                          <option value="Spreadsheets / Excel">Spreadsheets / Excel</option>
+                          <option value="Need New Setup">Looking to set up fresh cloud software</option>
+                        </>
+                      ) : (
+                        <>
+                          <option value="Xero">Xero (Certified Practice)</option>
+                          <option value="MYOB">MYOB</option>
+                          <option value="QuickBooks Online">QuickBooks Online</option>
+                          <option value="Spreadsheets / Excel">Spreadsheets / Excel</option>
+                          <option value="Individual / No Software">Individual Return / No Software</option>
+                          <option value="Need Fresh Cloud Accounting Setup">Need Fresh Cloud Accounting Setup</option>
+                        </>
+                      )}
+                    </select>
+                  </div>
+                )}
 
                 {/* Message */}
                 <div style={{ marginBottom: "1.25rem" }}>
                   <label
                     htmlFor="bk-msg"
-                    style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: "#0D3E26", marginBottom: "4px" }}
+                    style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
                   >
                     {isSoftware
                       ? "How can our certified cloud specialists assist with your software setup?"
@@ -657,11 +651,11 @@ export default function BookkeepingContact({
                       width: "100%",
                       padding: "10px 12px",
                       borderRadius: "8px",
-                      border: "1px solid #D1DCD5",
+                      border: inputBorder,
                       fontSize: "0.88rem",
-                      color: "#1C2022",
+                      color: inputTextColor,
                       outline: "none",
-                      backgroundColor: "#FAFBF9",
+                      backgroundColor: inputBg,
                       fontFamily: "inherit",
                       resize: "vertical",
                     }}
@@ -692,8 +686,8 @@ export default function BookkeepingContact({
                   disabled={loading}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0D3E26",
-                    color: "#FFFFFF",
+                    backgroundColor: submitBg,
+                    color: submitText,
                     border: "none",
                     borderRadius: "10px",
                     padding: "14px 20px",
@@ -701,29 +695,25 @@ export default function BookkeepingContact({
                     fontWeight: 700,
                     letterSpacing: "0.01em",
                     cursor: loading ? "wait" : "pointer",
-                    boxShadow: "0 4px 14px rgba(13, 62, 38, 0.25)",
+                    boxShadow: "0 4px 14px rgba(10, 13, 11, 0.25)",
                     transition: "transform 180ms ease, background-color 180ms ease",
                   }}
                   onMouseEnter={(e) => {
                     if (!loading) {
-                      e.currentTarget.style.backgroundColor = "#155233";
+                      e.currentTarget.style.backgroundColor = submitHoverBg;
                       e.currentTarget.style.transform = "translateY(-1px)";
                     }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "#0D3E26";
+                    e.currentTarget.style.backgroundColor = submitBg;
                     e.currentTarget.style.transform = "translateY(0)";
                   }}
                 >
                   {loading
                     ? "Dispatching Consultation Request..."
-                    : isSoftware
-                    ? `Book ${serviceName} Consultation · Talk to a Specialist →`
-                    : isTaxOrAccounting
-                    ? `Book ${serviceName} Consultation · Talk to a Senior CPA →`
-                    : isMortgage
-                    ? `Request ${serviceName} Assessment · Talk to an MFAA Broker →`
-                    : `Book Free Assessment · Talk to a Senior CPA →`}
+                    : submitButtonText
+                    ? submitButtonText
+                    : "Book A Consultation"}
                 </button>
 
                 {/* Divider */}
@@ -762,7 +752,7 @@ export default function BookkeepingContact({
                     gap: "10px",
                     width: "100%",
                     backgroundColor: "#FFFFFF",
-                    color: "#0D3E26",
+                    color: "#0A0D0B",
                     fontWeight: 700,
                     fontSize: "0.95rem",
                     padding: "13px 20px",

@@ -38,7 +38,7 @@ const OPENING_HOURS = [
 const QUICK_LINKS = [
   { label: "About Our Practice", href: "/about" },
   { label: "Borrowing Power Calculator", href: "/calculator" },
-  { label: "Client Pricing & Plans", href: "/#plans" },
+  { label: "Industries We Serve", href: "/#industries" },
   { label: "Cloud Software & Add-Ons", href: "/software-we-use" },
   { label: "Accreditations & Trust", href: "/#trust" },
   { label: "Client Testimonials", href: "/#testimonials" },

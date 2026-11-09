@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Cloud Accounting Set-Up & Xero Migration Melbourne | TaxNet",
+  title: "Cloud Accounting Set-Up & Xero Migration Melbourne | Taxnet",
   description:
     "Seamless cloud accounting setup and migrations for Australian businesses. Certified Xero Platinum & MYOB partners managing data transitions with zero downtime.",
   keywords: [
@@ -170,7 +170,7 @@ export default function CloudAccountingPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Still chained to outdated desktop software or tangled spreadsheets? TaxNet handles full-scope cloud
+              Still chained to outdated desktop software or tangled spreadsheets? Taxnet handles full-scope cloud
               migrations to Xero, MYOB, or QuickBooks—preserving historical data, automating bank feeds, and training
               your team to operate faster from anywhere.
             </p>
@@ -198,7 +198,7 @@ export default function CloudAccountingPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss cloud accounting setup and Xero migration."
+                message="Hi Taxnet, I'd like to discuss cloud accounting setup and Xero migration."
                 label="Chat with a Cloud Systems Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -245,7 +245,7 @@ export default function CloudAccountingPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet technician configuring accounting software and bank feeds"
+                    alt="Taxnet technician configuring accounting software and bank feeds"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -304,7 +304,7 @@ export default function CloudAccountingPage() {
                   vital records can vanish.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  By moving to the cloud with TaxNet, you gain 24/7 access to your financial performance from any phone,
+                  By moving to the cloud with Taxnet, you gain 24/7 access to your financial performance from any phone,
                   tablet, or laptop. Your bank feeds update automatically every midnight, invoices can be sent from job
                   sites in seconds, and your accountants collaborate in real-time.
                 </p>
@@ -458,7 +458,7 @@ export default function CloudAccountingPage() {
                   We Don&apos;t Just Set It Up. We Teach Your Team How to Win With It.
                 </h2>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  Software is only as good as the team operating it. That&apos;s why every TaxNet cloud setup includes
+                  Software is only as good as the team operating it. That&apos;s why every Taxnet cloud setup includes
                   tailored video walkthroughs, cheat sheets, and 1-on-1 coaching for your administration and sales staff.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
@@ -497,7 +497,7 @@ export default function CloudAccountingPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet manager reviewing live cloud financials on laptop"
+                  alt="Taxnet manager reviewing live cloud financials on laptop"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -574,6 +574,7 @@ export default function CloudAccountingPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Cloud Accounting Setup & Migration"
+          submitButtonText="Book A Consultation"
           title="Move Your Business to the Cloud Seamlessly"
           subtitle="Stop wrestling with desktop accounting. Let our Melbourne Xero Platinum specialists handle your migration with zero data loss and guaranteed peace of mind."
         />

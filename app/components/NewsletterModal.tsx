@@ -280,7 +280,11 @@ export default function NewsletterModal() {
                 color: "#FFFFFF",
               }}
             >
-              <div style={{ fontSize: "1.4rem", marginBottom: "0.25rem" }}>✓</div>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: "0.5rem", color: "#C5A869" }}>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </div>
               <div style={{ fontWeight: 700, fontSize: "1rem", color: "#C5A869", marginBottom: "0.25rem" }}>
                 You&apos;re Subscribed!
               </div>

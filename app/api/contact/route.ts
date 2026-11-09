@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+﻿import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
@@ -87,7 +87,7 @@ CLIENT MESSAGE / REQUIREMENTS:
 ${message || "No additional notes provided."}
 
 =======================================
-Delivered securely via TaxNet Gmail SMTP Integration.
+Delivered securely via Taxnet Gmail SMTP Integration.
 `.trim();
 
     // High-End Luxury HTML Email Template
@@ -97,7 +97,7 @@ Delivered securely via TaxNet Gmail SMTP Integration.
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New TaxNet Client Consultation Request</title>
+  <title>New Taxnet Client Consultation Request</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #F4F6F4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1C2022;">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #F4F6F4; padding: 40px 15px;">
@@ -187,14 +187,14 @@ Delivered securely via TaxNet Gmail SMTP Integration.
                 Client Notes / Scope Requirements
               </div>
               <div style="background-color: #FAFCFA; border: 1px solid #E1E8E2; border-left: 4px solid #C5A869; border-radius: 8px; padding: 16px; font-size: 14px; line-height: 1.6; color: #2C3530; margin-bottom: 28px;">
-                ${(message || "I would like to schedule a discovery consultation with TaxNet.").replace(/\n/g, "<br>")}
+                ${(message || "I would like to schedule a discovery consultation with Taxnet.").replace(/\n/g, "<br>")}
               </div>
 
               <!-- Quick Action Button -->
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center">
-                    <a href="mailto:${email}?subject=RE: TaxNet Advisory Consultation - ${encodeURIComponent(name)}" style="display: inline-block; background: linear-gradient(135deg, #0D3E26 0%, #155233 100%); color: #FFFFFF; font-size: 14px; font-weight: 700; text-decoration: none; padding: 13px 28px; border-radius: 8px; box-shadow: 0 4px 14px rgba(13,62,38,0.25);">
+                    <a href="mailto:${email}?subject=RE: Taxnet Advisory Consultation - ${encodeURIComponent(name)}" style="display: inline-block; background: linear-gradient(135deg, #0D3E26 0%, #155233 100%); color: #FFFFFF; font-size: 14px; font-weight: 700; text-decoration: none; padding: 13px 28px; border-radius: 8px; box-shadow: 0 4px 14px rgba(13,62,38,0.25);">
                       Reply Directly to Client (${email}) →
                     </a>
                   </td>
@@ -207,7 +207,7 @@ Delivered securely via TaxNet Gmail SMTP Integration.
           <!-- Footer Information -->
           <tr>
             <td style="background-color: #F8FAF8; padding: 22px 32px; border-top: 1px solid #E5ECE7; text-align: center; color: #7A8B80; font-size: 11px; line-height: 1.5;">
-              TaxNet Pty Ltd · Suite 6, 861 Doncaster Road, Doncaster East VIC 3109<br>
+              Taxnet Pty Ltd · Suite 6, 861 Doncaster Road, Doncaster East VIC 3109<br>
               Phone: (03) 9802 5800 · Direct WhatsApp: +61 420 956 761 · CPA Australia Public Practice
             </td>
           </tr>
@@ -222,14 +222,14 @@ Delivered securely via TaxNet Gmail SMTP Integration.
 
     // Dispatch email via Gmail SMTP with anti-spam transactional headers
     await transporter.sendMail({
-      from: `"TaxNet Notification" <${gmailUser}>`,
+      from: `"Taxnet Notification" <${gmailUser}>`,
       to: receiverEmail,
       replyTo: email,
-      subject: `[TaxNet Web Inquiry] ${name} - ${selectedService || "Consultation Request"}`,
+      subject: `[Taxnet Web Inquiry] ${name} - ${selectedService || "Consultation Request"}`,
       text: textContent,
       html: htmlContent,
       headers: {
-        "X-Mailer": "TaxNet Web Contact Form",
+        "X-Mailer": "Taxnet Web Contact Form",
         "X-Priority": "3",
         "Importance": "Normal",
       },

@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import ContactHero from "@/app/components/ContactHero";
 import ContactPageForm from "@/app/components/ContactPageForm";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import ExpandableFaq from "@/app/components/ExpandableFaq";
 
 export const metadata: Metadata = {
   title: "Contact Taxnet | CPA Accountants & Mortgage Brokers Melbourne",
@@ -24,42 +23,34 @@ export const metadata: Metadata = {
 
 const FAQS = [
   {
-    q: "Is there any cost for our initial discovery session?",
-    a: "No. Your initial 15-to-30 minute discovery session is 100% complimentary and carries zero obligation. We evaluate your current entity structure, historical tax lodgements, or borrowing objectives, and provide transparent scope and fixed-fee options before you proceed.",
+    q: "Is there any cost for our initial discovery consultation?",
+    a: "No. Your initial discovery consultation is 100% complimentary ($0 cost) with zero obligation. We evaluate your accounting, tax, or mortgage scenario and provide transparent upfront options.",
   },
   {
     q: "Do I need to visit your Doncaster East office in person?",
-    a: "While we love hosting clients at our Doncaster East suites (with free on-site visitor parking), we also service hundreds of clients across Victoria, New South Wales, Queensland, and Australia-wide via high-definition video consultations (Zoom/Teams) and secure digital document signing.",
+    a: "Not necessarily. While we welcome clients to our Doncaster East suites (with free on-site parking), we also service clients Australia-wide via secure video consultations and digital document signing.",
   },
   {
-    q: "How does the handover process work if I already have an accountant?",
-    a: "We make switching accountants effortless. Taxnet prepares the formal Ethical Clearance letter required under CPA Australia professional standards and manages the retrieval of all prior year tax returns, depreciation schedules, and cloud files directly from your previous accountant with zero disruption to your business.",
-  },
-  {
-    q: "Can Taxnet coordinate my business tax and my home loan together?",
-    a: "Yes! This is our signature strength. Traditional branch bankers and standalone accountants rarely communicate, often leading to deductions that unintentionally reduce your mortgage borrowing power. As integrated CPA tax accountants and licensed mortgage brokers, we ensure your tax returns and lending strategy work in perfect harmony.",
-  },
-  {
-    q: "What are your operating hours and direct contact channels?",
-    a: "Our Melbourne office operates Monday through Friday from 6:00 AM to 6:00 PM (AEST). You can reach our reception directly at (03) 9802 5800, connect instantly with our advisory team on WhatsApp at +61 420 956 761, or email us at info@taxnet.com.au.",
+    q: "Can Taxnet coordinate my business tax and my mortgage together?",
+    a: "Yes. As qualified CPA accountants and licensed mortgage brokers under one roof, we structure your financials so business tax deductions don't inadvertently limit your home loan borrowing capacity.",
   },
 ];
 
 const STEPS = [
   {
     num: "01",
-    title: "Confidential Discovery",
-    desc: "A focused 15–30 minute session to understand your business operations, tax liabilities, or mortgage borrowing ambitions.",
+    title: "Complimentary Discovery",
+    desc: "A confidential 15–30 minute session to review your business, tax position, or borrowing goals.",
   },
   {
     num: "02",
-    title: "Strategic Blueprint & Fixed Quote",
-    desc: "We analyze your numbers and deliver a comprehensive plan with guaranteed, upfront fixed fees. No surprise hourly billing.",
+    title: "Clear Plan & Fixed Quote",
+    desc: "We deliver a transparent, tailored roadmap with guaranteed upfront fixed pricing and zero surprise billing.",
   },
   {
     num: "03",
-    title: "Seamless Implementation",
-    desc: "Our senior practitioners handle complete file migration, ATO lodgements, and lender negotiations so you can focus on growth.",
+    title: "Partner-Led Execution",
+    desc: "Our senior Melbourne CPAs and brokers handle complete file setup, ATO lodgements, and lender submissions.",
   },
 ];
 
@@ -68,16 +59,16 @@ export default function ContactPage() {
     <>
       <Navbar />
 
-      <main style={{ backgroundColor: "#F9FAF9", color: "#1C2022" }}>
-        {/* ─── CINEMATIC ANIMATED HERO SECTION ─── */}
+      <main style={{ backgroundColor: "#F9F9F6", color: "#1C2022" }}>
+        {/* ─── HERO SECTION (CENTERED, MINIMAL, TITLE + BUTTON) ─── */}
         <ContactHero />
 
-        {/* ─── TWO-COLUMN INTERACTIVE CONSULTATION & CONTACT CENTER ─── */}
+        {/* ─── TWO-COLUMN CONSULTATION & DIRECT CHANNELS ─── */}
         <section
           id="booking"
           style={{
-            paddingTop: "5rem",
-            paddingBottom: "5.5rem",
+            paddingTop: "4.5rem",
+            paddingBottom: "5rem",
             position: "relative",
           }}
         >
@@ -97,14 +88,14 @@ export default function ContactPage() {
                 alignItems: "start",
               }}
             >
-              {/* ── LEFT COLUMN: DIRECT CHANNELS & OFFICE LOGISTICS ── */}
+              {/* ── LEFT COLUMN: DIRECT CHANNELS & OFFICE LOCATION ── */}
               <div>
                 <div style={{ marginBottom: "2rem" }}>
                   <div
                     style={{
                       fontSize: "0.78rem",
                       fontWeight: 700,
-                      color: "#0D3E26",
+                      color: "#A18650",
                       letterSpacing: "0.08em",
                       textTransform: "uppercase",
                       marginBottom: "0.5rem",
@@ -114,10 +105,10 @@ export default function ContactPage() {
                   </div>
                   <h2
                     style={{
-                      fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                      fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                       fontSize: "clamp(2rem, 3.2vw, 2.75rem)",
                       fontWeight: 400,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       lineHeight: 1.18,
                       letterSpacing: "-0.01em",
                       margin: 0,
@@ -141,8 +132,8 @@ export default function ContactPage() {
                       padding: "1.25rem 1.5rem",
                       borderRadius: "16px",
                       backgroundColor: "#FFFFFF",
-                      border: "1.5px solid #D6E8DC",
-                      boxShadow: "0 6px 20px rgba(13, 62, 38, 0.05)",
+                      border: "1.5px solid #E2ECE5",
+                      boxShadow: "0 4px 18px rgba(0, 0, 0, 0.04)",
                       textDecoration: "none",
                       color: "#1C2022",
                       transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease",
@@ -167,19 +158,19 @@ export default function ContactPage() {
                     </div>
                     <div style={{ flexGrow: 1 }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "2px" }}>
-                        <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#1F7A43", textTransform: "uppercase", letterSpacing: "0.04em" }}>
+                        <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", letterSpacing: "0.04em" }}>
                           Direct WhatsApp Advisory
                         </span>
                         <span style={{ fontSize: "0.74rem", color: "#6B7C72" }}>• Mon–Fri 6am–6pm</span>
                       </div>
-                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0D3E26" }}>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
                         +61 420 956 761
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
-                        Direct WhatsApp message with senior team
+                        Instant chat with our senior advisory team
                       </div>
                     </div>
-                    <span style={{ color: "#0D3E26", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
+                    <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
                   </a>
 
                   {/* Direct Phone Card */}
@@ -193,7 +184,7 @@ export default function ContactPage() {
                       borderRadius: "16px",
                       backgroundColor: "#FFFFFF",
                       border: "1.5px solid #E2ECE5",
-                      boxShadow: "0 6px 20px rgba(13, 62, 38, 0.05)",
+                      boxShadow: "0 4px 18px rgba(0, 0, 0, 0.04)",
                       textDecoration: "none",
                       color: "#1C2022",
                       transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease",
@@ -204,15 +195,15 @@ export default function ContactPage() {
                         width: "52px",
                         height: "52px",
                         borderRadius: "14px",
-                        backgroundColor: "rgba(13, 62, 38, 0.08)",
-                        border: "1px solid rgba(13, 62, 38, 0.18)",
+                        backgroundColor: "rgba(161, 134, 80, 0.12)",
+                        border: "1px solid rgba(161, 134, 80, 0.25)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         flexShrink: 0,
                       }}
                     >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D3E26" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A18650" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                       </svg>
                     </div>
@@ -220,14 +211,14 @@ export default function ContactPage() {
                       <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", marginBottom: "2px" }}>
                         Melbourne Reception & Advice
                       </div>
-                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0D3E26" }}>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
                         (03) 9802 5800
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
                         Monday to Friday: 6:00 AM – 6:00 PM (AEST)
                       </div>
                     </div>
-                    <span style={{ color: "#0D3E26", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
+                    <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
                   </a>
 
                   {/* Email Advisory Card */}
@@ -241,7 +232,7 @@ export default function ContactPage() {
                       borderRadius: "16px",
                       backgroundColor: "#FFFFFF",
                       border: "1.5px solid #E2ECE5",
-                      boxShadow: "0 6px 20px rgba(13, 62, 38, 0.05)",
+                      boxShadow: "0 4px 18px rgba(0, 0, 0, 0.04)",
                       textDecoration: "none",
                       color: "#1C2022",
                       transition: "transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease",
@@ -252,15 +243,15 @@ export default function ContactPage() {
                         width: "52px",
                         height: "52px",
                         borderRadius: "14px",
-                        backgroundColor: "rgba(13, 62, 38, 0.08)",
-                        border: "1px solid rgba(13, 62, 38, 0.18)",
+                        backgroundColor: "rgba(161, 134, 80, 0.12)",
+                        border: "1px solid rgba(161, 134, 80, 0.25)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         flexShrink: 0,
                       }}
                     >
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0D3E26" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#A18650" strokeWidth="2.1" strokeLinecap="round" strokeLinejoin="round">
                         <rect x="2" y="4" width="20" height="16" rx="2" />
                         <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                       </svg>
@@ -269,14 +260,14 @@ export default function ContactPage() {
                       <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", marginBottom: "2px" }}>
                         Formal Email Inquiries
                       </div>
-                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0D3E26" }}>
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
                         info@taxnet.com.au
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
                         Monitored by CPA partners with fast 2-hour turnaround
                       </div>
                     </div>
-                    <span style={{ color: "#0D3E26", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
+                    <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
                   </a>
                 </div>
 
@@ -288,7 +279,6 @@ export default function ContactPage() {
                     padding: "1.75rem",
                     border: "1px solid #E2ECE5",
                     boxShadow: "0 10px 30px rgba(0, 0, 0, 0.04)",
-                    marginBottom: "1.5rem",
                   }}
                 >
                   <div style={{ display: "flex", alignItems: "flex-start", gap: "12px", marginBottom: "1rem" }}>
@@ -297,8 +287,8 @@ export default function ContactPage() {
                         width: "36px",
                         height: "36px",
                         borderRadius: "8px",
-                        backgroundColor: "rgba(13, 62, 38, 0.08)",
-                        color: "#0D3E26",
+                        backgroundColor: "rgba(161, 134, 80, 0.12)",
+                        color: "#A18650",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
@@ -314,8 +304,8 @@ export default function ContactPage() {
                       <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase" }}>
                         Head Office Location
                       </div>
-                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0F261B", marginTop: "2px" }}>
-                        Suite 6 , 861 Doncaster Road
+                      <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B", marginTop: "2px" }}>
+                        Suite 6, 861 Doncaster Road
                       </div>
                       <div style={{ fontSize: "0.88rem", color: "#54655B" }}>
                         Doncaster East VIC 3109, Australia
@@ -332,7 +322,7 @@ export default function ContactPage() {
                       borderRadius: "14px",
                       overflow: "hidden",
                       border: "1px solid #D5E2D9",
-                      height: "220px",
+                      height: "200px",
                       position: "relative",
                       marginBottom: "1.25rem",
                     }}
@@ -349,7 +339,7 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Opening Hours Table & Directions Link */}
+                  {/* Opening Hours Table */}
                   <div
                     style={{
                       backgroundColor: "#F7F9F7",
@@ -361,7 +351,7 @@ export default function ContactPage() {
                   >
                     <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
                       <span style={{ fontWeight: 600, color: "#25382E" }}>Monday – Friday:</span>
-                      <span style={{ fontWeight: 700, color: "#0D3E26" }}>6:00 AM – 6:00 PM</span>
+                      <span style={{ fontWeight: 700, color: "#0A0D0B" }}>6:00 AM – 6:00 PM</span>
                     </div>
                     <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
                       <span style={{ fontWeight: 600, color: "#25382E" }}>Saturday:</span>
@@ -385,7 +375,7 @@ export default function ContactPage() {
                       width: "100%",
                       padding: "12px",
                       borderRadius: "10px",
-                      backgroundColor: "#0D3E26",
+                      backgroundColor: "#0A0D0B",
                       color: "#FFFFFF",
                       fontSize: "0.88rem",
                       fontWeight: 700,
@@ -407,12 +397,12 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* ─── 3-STEP CONSULTATION ROADMAP ─── */}
+        {/* ─── 3-STEP CONSULTATION ROADMAP (CLEAN & CONCISE) ─── */}
         <section
           style={{
             backgroundColor: "#FFFFFF",
-            paddingTop: "4.5rem",
-            paddingBottom: "5rem",
+            paddingTop: "4rem",
+            paddingBottom: "4.5rem",
             borderTop: "1px solid #E5ECE7",
             borderBottom: "1px solid #E5ECE7",
           }}
@@ -425,33 +415,33 @@ export default function ContactPage() {
               padding: "0 1.5rem",
             }}
           >
-            <div style={{ textAlign: "center", maxWidth: "720px", margin: "0 auto 3.5rem auto" }}>
+            <div style={{ textAlign: "center", maxWidth: "680px", margin: "0 auto 3rem auto" }}>
               <div
                 style={{
-                  fontSize: "0.8rem",
+                  fontSize: "0.78rem",
                   fontWeight: 700,
                   color: "#A18650",
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  marginBottom: "0.5rem",
+                  marginBottom: "0.4rem",
                 }}
               >
                 Transparent Advisory Process
               </div>
               <h2
                 style={{
-                  fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.5vw, 2.85rem)",
+                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                  fontSize: "clamp(1.85rem, 3.2vw, 2.5rem)",
                   fontWeight: 400,
-                  color: "#0F261B",
-                  lineHeight: 1.15,
-                  margin: "0 0 1rem 0",
+                  color: "#0A0D0B",
+                  lineHeight: 1.2,
+                  margin: "0 0 0.6rem 0",
                 }}
               >
                 What Happens When You Reach Out?
               </h2>
-              <p style={{ fontSize: "1rem", color: "#55675D", lineHeight: 1.6, margin: 0 }}>
-                From initial confidential discovery to final execution, our Melbourne partners ensure a seamless, structured experience with zero surprises.
+              <p style={{ fontSize: "0.95rem", color: "#55675D", lineHeight: 1.6, margin: 0 }}>
+                From initial confidential discovery to final execution, our Melbourne partners ensure a seamless, structured experience.
               </p>
             </div>
 
@@ -459,7 +449,7 @@ export default function ContactPage() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: "2rem",
+                gap: "1.5rem",
               }}
             >
               {STEPS.map((step) => (
@@ -467,38 +457,36 @@ export default function ContactPage() {
                   key={step.num}
                   style={{
                     backgroundColor: "#FAFBF9",
-                    borderRadius: "18px",
-                    padding: "2rem 1.75rem",
+                    borderRadius: "16px",
+                    padding: "1.75rem",
                     border: "1px solid #E2EDE6",
-                    position: "relative",
                   }}
                 >
                   <div
                     style={{
-                      fontFamily: 'var(--font-monety), "Monety", serif',
-                      fontSize: "2.75rem",
+                      fontFamily: 'var(--font-monety), "Playfair Display", serif',
+                      fontSize: "2.25rem",
                       fontWeight: 400,
                       color: "#A18650",
                       lineHeight: 1,
-                      marginBottom: "1rem",
-                      opacity: 0.85,
+                      marginBottom: "0.75rem",
                     }}
                   >
                     {step.num}
                   </div>
                   <h3
                     style={{
-                      fontSize: "1.2rem",
+                      fontSize: "1.1rem",
                       fontWeight: 700,
-                      color: "#0D3E26",
-                      marginBottom: "0.6rem",
+                      color: "#0A0D0B",
+                      marginBottom: "0.45rem",
                     }}
                   >
                     {step.title}
                   </h3>
                   <p
                     style={{
-                      fontSize: "0.9rem",
+                      fontSize: "0.88rem",
                       color: "#54655B",
                       lineHeight: 1.6,
                       margin: 0,
@@ -512,104 +500,84 @@ export default function ContactPage() {
           </div>
         </section>
 
-        {/* ─── FREQUENTLY ASKED QUESTIONS ─── */}
+        {/* ─── CONCISE FREQUENTLY ASKED QUESTIONS ─── */}
         <section
           style={{
-            paddingTop: "5rem",
-            paddingBottom: "5.5rem",
-            backgroundColor: "#F9FAF9",
+            paddingTop: "4rem",
+            paddingBottom: "4.5rem",
+            backgroundColor: "#F9F9F6",
           }}
         >
           <div
             className="container"
             style={{
-              maxWidth: "960px",
+              maxWidth: "880px",
               margin: "0 auto",
               padding: "0 1.5rem",
             }}
           >
-            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "2.5rem" }}>
               <div
                 style={{
-                  fontSize: "0.8rem",
+                  fontSize: "0.78rem",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#A18650",
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  marginBottom: "0.5rem",
+                  marginBottom: "0.4rem",
                 }}
               >
                 Clear Answers
               </div>
               <h2
                 style={{
-                  fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.5vw, 2.85rem)",
+                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                  fontSize: "clamp(1.85rem, 3.2vw, 2.5rem)",
                   fontWeight: 400,
-                  color: "#0F261B",
-                  lineHeight: 1.15,
+                  color: "#0A0D0B",
+                  lineHeight: 1.2,
                   margin: 0,
                 }}
               >
-                Frequently Asked Consultation Questions
+                Frequently Asked Questions
               </h2>
             </div>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-              {FAQS.map((faq, i) => (
-                <div
-                  key={i}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "1.75rem 2rem",
-                    border: "1px solid #E1EBE4",
-                    boxShadow: "0 4px 16px rgba(13, 62, 38, 0.04)",
-                  }}
-                >
-                  <h3
-                    style={{
-                      fontSize: "1.1rem",
-                      fontWeight: 700,
-                      color: "#0D3E26",
-                      marginBottom: "0.75rem",
-                      lineHeight: 1.35,
-                    }}
-                  >
-                    {faq.q}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "0.92rem",
-                      color: "#4F6056",
-                      lineHeight: 1.65,
-                      margin: 0,
-                    }}
-                  >
-                    {faq.a}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <ExpandableFaq items={FAQS} defaultOpenIndex={0} />
           </div>
         </section>
 
-        {/* ─── CINEMATIC EXECUTIVE FOOTER BANNER ─── */}
+        {/* ─── FOOTER CTA BANNER (BLACK WITH GOLD ACCENTS) ─── */}
         <section
           style={{
-            backgroundColor: "#06120B",
-            background: "linear-gradient(135deg, #06120B 0%, #0D3E26 60%, #071E12 100%)",
+            backgroundColor: "#0A0D0B",
             color: "#FFFFFF",
-            padding: "4.5rem 1.5rem",
+            padding: "4rem 1.5rem",
             position: "relative",
             overflow: "hidden",
             borderTop: "1px solid rgba(197, 168, 105, 0.3)",
           }}
         >
+          {/* Subtle gold ambient glow */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "500px",
+              height: "250px",
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(197, 168, 105, 0.1) 0%, transparent 70%)",
+              pointerEvents: "none",
+            }}
+          />
+
           <div
             className="container"
             style={{
-              maxWidth: "1000px",
+              maxWidth: "880px",
               margin: "0 auto",
               textAlign: "center",
               position: "relative",
@@ -618,26 +586,26 @@ export default function ContactPage() {
           >
             <h2
               style={{
-                fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
-                fontSize: "clamp(2rem, 4vw, 3.2rem)",
+                fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                fontSize: "clamp(1.85rem, 3.5vw, 2.75rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                marginBottom: "1rem",
-                lineHeight: 1.15,
+                marginBottom: "0.85rem",
+                lineHeight: 1.18,
               }}
             >
-              Need Immediate Guidance? Connect on WhatsApp Today.
+              Need Immediate Guidance? Connect With Us Today.
             </h2>
             <p
               style={{
-                fontSize: "1.05rem",
-                color: "rgba(255, 255, 255, 0.82)",
-                maxWidth: "680px",
-                margin: "0 auto 2.25rem auto",
+                fontSize: "0.95rem",
+                color: "rgba(255, 255, 255, 0.78)",
+                maxWidth: "600px",
+                margin: "0 auto 2rem auto",
                 lineHeight: 1.6,
               }}
             >
-              Send our senior Melbourne partners a direct message. We’re available for quick questions, urgent lodgements, and rapid borrowing assessments.
+              Reach our senior Melbourne advisory desk directly for quick questions, lodgements, and borrowing reviews.
             </p>
 
             <div
@@ -652,9 +620,8 @@ export default function ContactPage() {
               <ExecutiveWhatsAppButton
                 message="Hi Taxnet, I would like to schedule a consultation with your Melbourne partners."
                 style={{
-                  fontSize: "1rem",
-                  padding: "1rem 2rem",
-                  boxShadow: "0 6px 20px rgba(37, 211, 102, 0.35)",
+                  fontSize: "0.95rem",
+                  padding: "0.9rem 1.75rem",
                 }}
               />
 
@@ -664,12 +631,12 @@ export default function ContactPage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  padding: "1rem 1.75rem",
+                  padding: "0.9rem 1.75rem",
                   borderRadius: "8px",
-                  border: "1.5px solid rgba(197, 168, 105, 0.6)",
+                  border: "1px solid rgba(197, 168, 105, 0.6)",
                   backgroundColor: "rgba(255, 255, 255, 0.08)",
                   color: "#E5D6B6",
-                  fontSize: "0.95rem",
+                  fontSize: "0.92rem",
                   fontWeight: 700,
                   textDecoration: "none",
                   transition: "all 180ms ease",
@@ -686,4 +653,3 @@ export default function ContactPage() {
     </>
   );
 }
-

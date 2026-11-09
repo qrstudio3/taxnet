@@ -30,7 +30,7 @@ export default function ExecutiveWhatsAppButton({
         alignItems: "center",
         gap: "9px",
         backgroundColor: "#FFFFFF",
-        color: "#0D3E26",
+        color: "#0A0D0B",
         fontWeight: 700,
         fontSize: "0.95rem",
         padding: "0.85rem 1.6rem",

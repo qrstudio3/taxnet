@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "First Home Buyer Mortgage Broker Melbourne | 5% Deposit & Grants | TaxNet",
+  title: "First Home Buyer Mortgage Broker Melbourne | 5% Deposit & Grants | Taxnet",
   description:
     "Expert first home buyer mortgage broking in Melbourne. Compare 40+ lenders, access the 5% deposit First Home Guarantee Scheme, FHOG $10k grants, and $0 broker fees.",
   keywords: [
@@ -58,14 +58,14 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 const FAQS = [
   {
     q: "How does the federal First Home Guarantee (FHBG) work and who is eligible?",
-    a: "Under the First Home Guarantee, eligible Australian citizens and permanent residents can purchase a home with as little as a 5% deposit without paying Lenders Mortgage Insurance (LMI). The federal government guarantees up to 15% of the property value. TaxNet is accredited with all participating major and regional panel lenders to secure your scheme allocation.",
+    a: "Under the First Home Guarantee, eligible Australian citizens and permanent residents can purchase a home with as little as a 5% deposit without paying Lenders Mortgage Insurance (LMI). The federal government guarantees up to 15% of the property value. Taxnet is accredited with all participating major and regional panel lenders to secure your scheme allocation.",
   },
   {
     q: "What first home buyer grants and stamp duty concessions apply in Victoria?",
     a: "In Victoria, first home buyers purchasing an eligible new or established home valued up to $600,000 pay $0 stamp duty. For properties valued between $600,001 and $750,000, a sliding concession applies. Additionally, a $10,000 First Home Owner Grant (FHOG) is available when purchasing or building a brand new home valued up to $750,000.",
   },
   {
-    q: "Why are TaxNet's mortgage broking services completely free of charge?",
+    q: "Why are Taxnet's mortgage broking services completely free of charge?",
     a: "Under Australian credit regulations, mortgage brokers are paid an industry-standard commission by the lender upon successful loan settlement. You receive complete independent market research, multi-lender comparison, and end-to-end application management without paying a single dollar in broker fees.",
   },
   {
@@ -174,7 +174,7 @@ export default function FirstHomeBuyerPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Stepping onto the Australian property ladder shouldn&apos;t feel like a confusing maze. TaxNet compares 40+
+              Stepping onto the Australian property ladder shouldn&apos;t feel like a confusing maze. Taxnet compares 40+
               banks, unlocks 5% deposit schemes, files government grants, and negotiates discounted interest rates for you.
             </p>
 
@@ -201,7 +201,7 @@ export default function FirstHomeBuyerPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'm looking to buy my first home and need expert mortgage advice."
+                message="Hi Taxnet, I'm looking to buy my first home and need expert mortgage advice."
                 label="Chat with a First Home Loan Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function FirstHomeBuyerPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet mortgage broker consulting first home buyer couple on loan options"
+                    alt="Taxnet mortgage broker consulting first home buyer couple on loan options"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function FirstHomeBuyerPage() {
                   your borrowing amount, your property dreams can stall for months.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  As MFAA-accredited finance brokers, TaxNet compares over 40 Australian lenders side-by-side. Different
+                  As MFAA-accredited finance brokers, Taxnet compares over 40 Australian lenders side-by-side. Different
                   lenders treat overtime, bonus income, HECS debts, and family living expenses drastically differently—often
                   resulting in borrowing capacity variances of over $150,000 for the exact same applicant.
                 </p>
@@ -576,6 +576,7 @@ export default function FirstHomeBuyerPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="First Home Buyer Mortgage"
+          submitButtonText="Book A Consultation"
           title="Get Ready to Buy Your First Home"
           subtitle="Let our Melbourne MFAA-accredited mortgage brokers calculate your exact borrowing power and unlock government first home concessions."
         />

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Small Business Payroll Services Melbourne | STP Phase 2 & Super | TaxNet",
+  title: "Small Business Payroll Services Melbourne | STP Phase 2 & Super | Taxnet",
   description:
     "Compliant, accurate payroll processing for Australian businesses. STP Phase 2 reporting, superannuation clearing house management, award rates, and leave tracking.",
   keywords: [
@@ -58,7 +58,7 @@ const PAYROLL_PILLARS: { icon: BenefitIconType; title: string; desc: string }[] 
 const FAQS = [
   {
     q: "What is STP Phase 2 and are we compliant?",
-    a: "Single Touch Payroll (STP) Phase 2 expands the reporting requirements to include detailed breakdowns of gross pay, overtime, bonuses, paid leave, and salary sacrifice directly to the ATO every pay run. When TaxNet manages your payroll, your software is configured to ensure 100% STP Phase 2 compliance with every pay cycle.",
+    a: "Single Touch Payroll (STP) Phase 2 expands the reporting requirements to include detailed breakdowns of gross pay, overtime, bonuses, paid leave, and salary sacrifice directly to the ATO every pay run. When Taxnet manages your payroll, your software is configured to ensure 100% STP Phase 2 compliance with every pay cycle.",
   },
   {
     q: "How do employees view their payslips?",
@@ -171,7 +171,7 @@ export default function PayrollPage() {
               }}
             >
               With shifting Modern Awards and strict ATO Single Touch Payroll (STP Phase 2) rules, payroll mistakes can
-              trigger devastating penalties. TaxNet provides foolproof, automated weekly, fortnightly, or monthly payroll
+              trigger devastating penalties. Taxnet provides foolproof, automated weekly, fortnightly, or monthly payroll
               solutions for Melbourne employers.
             </p>
 
@@ -198,7 +198,7 @@ export default function PayrollPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss payroll services for my business."
+                message="Hi Taxnet, I'd like to discuss payroll services for my business."
                 label="Chat with a Payroll Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -245,7 +245,7 @@ export default function PayrollPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet specialist processing employee payroll and STP compliance"
+                    alt="Taxnet specialist processing employee payroll and STP compliance"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -304,7 +304,7 @@ export default function PayrollPage() {
                   getting payroll wrong is extraordinarily expensive.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet takes full custody of your payroll operations. We review timesheets, interpret appropriate award
+                  Taxnet takes full custody of your payroll operations. We review timesheets, interpret appropriate award
                   tiers, manage superannuation clearing house filings, and distribute electronic payslips without you
                   lifting a finger.
                 </p>
@@ -498,7 +498,7 @@ export default function PayrollPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet professionals reviewing team payroll and employee data"
+                  alt="Taxnet professionals reviewing team payroll and employee data"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -575,6 +575,7 @@ export default function PayrollPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Payroll & STP Compliance"
+          submitButtonText="Book A Consultation"
           title="Make Payroll Completely Effortless"
           subtitle="Don't spend another Friday evening stressing over pay runs or super deadlines. Connect with our Melbourne payroll specialists for a tailored quote."
         />

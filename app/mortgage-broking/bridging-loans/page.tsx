@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Bridging Loans Melbourne | Buy Before You Sell Mortgage Broker | TaxNet",
+  title: "Bridging Loans Melbourne | Buy Before You Sell Mortgage Broker | Taxnet",
   description:
     "Secure bridging loans in Melbourne. Buy your new home before selling your current one without double moves. Open and closed bridging finance with interest capitalization.",
   keywords: [
@@ -70,11 +70,11 @@ const FAQS = [
   },
   {
     q: "How much usable equity do I need to qualify for bridging finance?",
-    a: "Lenders typically require that your peak debt does not exceed 75% to 80% of the combined value of both properties. TaxNet orders upfront professional bank valuations on both your current home and your intended purchase to calculate your exact peak equity position.",
+    a: "Lenders typically require that your peak debt does not exceed 75% to 80% of the combined value of both properties. Taxnet orders upfront professional bank valuations on both your current home and your intended purchase to calculate your exact peak equity position.",
   },
   {
     q: "What happens if my current house takes longer than 12 months to sell?",
-    a: "If your property has not sold near the end of the agreed bridging period, the bank may require you to reprice the property, commence servicing both loans from cash flow, or extend the bridging facility. TaxNet works closely with your real estate agent throughout the term to ensure realistic pricing and timely settlement.",
+    a: "If your property has not sold near the end of the agreed bridging period, the bank may require you to reprice the property, commence servicing both loans from cash flow, or extend the bridging facility. Taxnet works closely with your real estate agent throughout the term to ensure realistic pricing and timely settlement.",
   },
 ];
 
@@ -201,7 +201,7 @@ export default function BridgingLoansPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I want to buy a new home before selling my current one and need bridging loan advice."
+                message="Hi Taxnet, I want to buy a new home before selling my current one and need bridging loan advice."
                 label="Chat with a Bridging Loan Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function BridgingLoansPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet mortgage broker reviewing bridging loan documents with home upgraders"
+                    alt="Taxnet mortgage broker reviewing bridging loan documents with home upgraders"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function BridgingLoansPage() {
                   away $50,000 to $100,000 in property equity just to secure a rushed sale is devastating.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet structures ironclad bridging facilities with up to 12 months grace period. You purchase your
+                  Taxnet structures ironclad bridging facilities with up to 12 months grace period. You purchase your
                   new property without a subject-to-sale clause (making your offer far more attractive to sellers) and
                   give your selling agent ample time to stage, market, and auction your old house for maximum value.
                 </p>
@@ -464,7 +464,7 @@ export default function BridgingLoansPage() {
                   fees, and then packing up again—costs a family thousands in lost money and immense stress.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  With TaxNet&apos;s bridging finance, you take possession of your new keys, move straight in at your own pace,
+                  With Taxnet&apos;s bridging finance, you take possession of your new keys, move straight in at your own pace,
                   and leave your former home beautifully vacant, cleaned, and professionally styled for open-for-inspections.
                 </p>
 
@@ -576,6 +576,7 @@ export default function BridgingLoansPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Bridging Finance"
+          submitButtonText="Book A Consultation"
           title="Buy Your Next Home Before You Sell"
           subtitle="Speak with our Melbourne bridging loan brokers to calculate peak debt, evaluate interest capitalization, and secure your new property without delay."
         />

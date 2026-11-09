@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Xero Certified Platinum Partner Melbourne | Setup, Migration & Training | TaxNet",
+  title: "Xero Certified Platinum Partner Melbourne | Setup, Migration & Training | Taxnet",
   description:
     "Accredited Xero Platinum Champion Partners in Melbourne. Expert Xero setup, seamless zero data-loss migration, custom chart of accounts, and hands-on staff training.",
   keywords: [
@@ -58,15 +58,15 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 const FAQS = [
   {
     q: "Why should we hire a Xero Platinum Partner rather than setting up Xero ourselves?",
-    a: "DIY setups frequently result in incorrect GST tax codes, duplicated bank transactions, misallocated capital expenditures, and non-compliant payroll categories. As Xero Platinum Partners, TaxNet architects your ledger correctly from day one, ensures STP Phase 2 disaggregation is audit-ready, and sets up advanced automation rules that save your team 5 to 10 hours every single week.",
+    a: "DIY setups frequently result in incorrect GST tax codes, duplicated bank transactions, misallocated capital expenditures, and non-compliant payroll categories. As Xero Platinum Partners, Taxnet architects your ledger correctly from day one, ensures STP Phase 2 disaggregation is audit-ready, and sets up advanced automation rules that save your team 5 to 10 hours every single week.",
   },
   {
     q: "Can you migrate our historical data from MYOB or Reckon into Xero without downtime?",
     a: "Yes. We execute clean data cut-overs. We extract your chart of accounts, customer and supplier lists, item codes, historical monthly comparative balances, and open unpaid invoices. We schedule migrations so your daily billing and invoicing continue seamlessly without operational disruption.",
   },
   {
-    q: "What exclusive discounts do TaxNet clients receive on Xero subscriptions?",
-    a: "As top-tier Platinum Champion Partners, TaxNet has access to exclusive wholesale software pricing and multi-organisation discounts. When you partner with us for bookkeeping or tax services, we pass these wholesale subscription rates directly on to your business.",
+    q: "What exclusive discounts do Taxnet clients receive on Xero subscriptions?",
+    a: "As top-tier Platinum Champion Partners, Taxnet has access to exclusive wholesale software pricing and multi-organisation discounts. When you partner with us for bookkeeping or tax services, we pass these wholesale subscription rates directly on to your business.",
   },
   {
     q: "Can you fix our existing Xero file if it has become messy or out of balance?",
@@ -175,7 +175,7 @@ export default function XeroSoftwarePage() {
               }}
             >
               Harness the full automation power of Australia&apos;s leading cloud accounting engine. As accredited
-              Xero Platinum Partners, TaxNet sets up audit-ready ledgers, migrates historical records with 100% precision,
+              Xero Platinum Partners, Taxnet sets up audit-ready ledgers, migrates historical records with 100% precision,
               and trains your team to save 10+ hours every single week.
             </p>
 
@@ -202,7 +202,7 @@ export default function XeroSoftwarePage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss Xero setup and migration for my business."
+                message="Hi Taxnet, I'd like to discuss Xero setup and migration for my business."
                 label="Chat with a Xero Platinum Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -249,7 +249,7 @@ export default function XeroSoftwarePage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet Xero certified accountant consulting with Melbourne business owner on cloud automation"
+                    alt="Taxnet Xero certified accountant consulting with Melbourne business owner on cloud automation"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -309,7 +309,7 @@ export default function XeroSoftwarePage() {
                   liabilities unbalanced.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  As Xero Platinum Partners, TaxNet customizes your chart of accounts to match your specific industry,
+                  As Xero Platinum Partners, Taxnet customizes your chart of accounts to match your specific industry,
                   establishes foolproof automated bank rules, and integrates automated receipt processing so you never
                   lose another tax deduction again.
                 </p>
@@ -464,7 +464,7 @@ export default function XeroSoftwarePage() {
                 </h2>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
                   Gone are the days of waiting until the end of the quarter to discover whether your business made a
-                  profit. With TaxNet&apos;s Xero cloud deployment, you open the app on your phone, tablet, or laptop
+                  profit. With Taxnet&apos;s Xero cloud deployment, you open the app on your phone, tablet, or laptop
                   and immediately view live cash balances, real-time debtor lists, and upcoming tax liabilities.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
@@ -488,7 +488,7 @@ export default function XeroSoftwarePage() {
                     textDecoration: "none",
                   }}
                 >
-                  Upgrade to Xero With TaxNet →
+                  Upgrade to Xero With Taxnet →
                 </a>
               </div>
 
@@ -504,7 +504,7 @@ export default function XeroSoftwarePage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet accountant reviewing real-time Xero financial reports and KPIs with Melbourne business client"
+                  alt="Taxnet accountant reviewing real-time Xero financial reports and KPIs with Melbourne business client"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -583,6 +583,7 @@ export default function XeroSoftwarePage() {
           serviceName="Xero Cloud Setup & Migration"
           title="Elevate Your Business With Xero"
           subtitle="Speak with our certified Xero Platinum Partners in Melbourne to architect a clean ledger, automate bank feeds, and train your staff."
+          submitButtonText="Book A Consultation"
         />
       </main>
 

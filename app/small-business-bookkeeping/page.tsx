@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Small Business Bookkeeping Melbourne | Certified CPA Bookkeepers | TaxNet",
+  title: "Small Business Bookkeeping Melbourne | Certified CPA Bookkeepers | Taxnet",
   description:
     "Tailored bookkeeping services for Australian small businesses. Accurate weekly transaction coding, payroll, BAS-ready financials, and fixed monthly fees. Free initial assessment.",
   keywords: [
@@ -198,7 +198,7 @@ export default function SmallBusinessBookkeepingPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss small business bookkeeping."
+                message="Hi Taxnet, I'd like to discuss small business bookkeeping."
                 label="Chat with a Bookkeeping Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -245,7 +245,7 @@ export default function SmallBusinessBookkeepingPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet Bookkeeper organizing financial records"
+                    alt="Taxnet Bookkeeper organizing financial records"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -303,7 +303,7 @@ export default function SmallBusinessBookkeepingPage() {
                   nights, or worry about missing Single Touch Payroll deadlines.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  At TaxNet, we don&apos;t just type numbers into software. Our senior bookkeeping team acts as your virtual
+                  At Taxnet, we don&apos;t just type numbers into software. Our senior bookkeeping team acts as your virtual
                   back-office: categorizing every deduction, keeping your ledger clean, and ensuring you are always
                   prepared for BAS and end-of-year tax without costly surprises.
                 </p>
@@ -450,19 +450,19 @@ export default function SmallBusinessBookkeepingPage() {
                   Make Confident Decisions with Live Financial Dashboards
                 </h2>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  Knowing your bank balance is not the same as knowing your true profitability. With TaxNet, your
+                  Knowing your bank balance is not the same as knowing your true profitability. With Taxnet, your
                   books are structured so you can instantly see customer payment cycles, supplier liabilities, and net
                   margins.
                 </p>
                 <ul style={{ listStyle: "none", padding: 0, margin: "0 0 2rem 0", display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                   <li style={{ display: "flex", alignItems: "center", gap: "10px", color: "#3B4A41", fontSize: "0.92rem" }}>
-                    <span style={{ color: "#0D3E26", fontWeight: 800 }}>✓</span> Monthly profit & loss statements with plain-English insights
+                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#A18650", display: "inline-block" }} /> Monthly profit & loss statements with plain-English insights
                   </li>
                   <li style={{ display: "flex", alignItems: "center", gap: "10px", color: "#3B4A41", fontSize: "0.92rem" }}>
-                    <span style={{ color: "#0D3E26", fontWeight: 800 }}>✓</span> Accounts receivable tracking to slash your average debtor days
+                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#A18650", display: "inline-block" }} /> Accounts receivable tracking to slash your average debtor days
                   </li>
                   <li style={{ display: "flex", alignItems: "center", gap: "10px", color: "#3B4A41", fontSize: "0.92rem" }}>
-                    <span style={{ color: "#0D3E26", fontWeight: 800 }}>✓</span> Superannuation and PAYG accruals so you never get hit with surprise tax bills
+                    <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#A18650", display: "inline-block" }} /> Superannuation and PAYG accruals so you never get hit with surprise tax bills
                   </li>
                 </ul>
 
@@ -497,7 +497,7 @@ export default function SmallBusinessBookkeepingPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="Business owners reviewing financial results with TaxNet advisor"
+                  alt="Business owners reviewing financial results with Taxnet advisor"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -574,6 +574,7 @@ export default function SmallBusinessBookkeepingPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Small Business Bookkeeping"
+          submitButtonText="Book A Consultation"
           title="Get Your Free Bookkeeping Health-Check"
           subtitle="Stop spending your weekends in spreadsheets. Speak with our Melbourne CPA bookkeepers today and get a fixed flat monthly quote."
         />

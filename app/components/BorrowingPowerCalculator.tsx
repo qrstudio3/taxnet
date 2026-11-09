@@ -159,18 +159,18 @@ export default function BorrowingPowerCalculator() {
         backgroundColor: "#FFFFFF",
         borderRadius: "24px",
         border: "1px solid #E2EAE5",
-        boxShadow: "0 18px 48px rgba(13, 62, 38, 0.08)",
+        boxShadow: "0 18px 48px rgba(0, 0, 0, 0.08)",
         overflow: "hidden",
         margin: "0 auto",
       }}
     >
-      {/* ─── CALCULATOR HEADER BAR ─── */}
+      {/* ─── CALCULATOR HEADER BAR (BLACK WITH GOLD ACCENT) ─── */}
       <div
         style={{
-          backgroundColor: "#0D3E26",
-          padding: "2rem 2.25rem",
+          backgroundColor: "#0A0D0B",
+          padding: "1.75rem 2rem",
           color: "#FFFFFF",
-          borderBottom: "1px solid rgba(255, 255, 255, 0.12)",
+          borderBottom: "1px solid rgba(197, 168, 105, 0.25)",
         }}
       >
         <div
@@ -179,44 +179,32 @@ export default function BorrowingPowerCalculator() {
             flexWrap: "wrap",
             justifyContent: "space-between",
             alignItems: "center",
-            gap: "1.25rem",
+            gap: "1rem",
           }}
         >
           <div>
             <span
               style={{
                 color: "#C5A869",
-                fontSize: "0.8rem",
+                fontSize: "0.78rem",
                 fontWeight: 700,
-                letterSpacing: "0.08em",
+                letterSpacing: "0.1em",
                 textTransform: "uppercase",
               }}
             >
-              Precision Financial Assessment Engine
+              Precision Assessment Engine
             </span>
             <h2
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(1.75rem, 2.6vw, 2.3rem)",
+                fontSize: "clamp(1.6rem, 2.4vw, 2.2rem)",
                 fontWeight: 400,
-                margin: "0.35rem 0 0 0",
+                margin: "0.25rem 0 0 0",
+                color: "#FFFFFF",
               }}
             >
-              Australian Borrowing Power & Capacity Calculator
+              Borrowing Capacity Calculator
             </h2>
-          </div>
-          <div
-            style={{
-              backgroundColor: "rgba(255, 255, 255, 0.08)",
-              border: "1px solid rgba(255, 255, 255, 0.18)",
-              padding: "8px 16px",
-              borderRadius: "8px",
-              fontSize: "0.82rem",
-              color: "#E5D6B6",
-              fontWeight: 600,
-            }}
-          >
-            ✓ APRA 3.00% Stress Buffer Included
           </div>
         </div>
       </div>
@@ -229,10 +217,10 @@ export default function BorrowingPowerCalculator() {
           gap: 0,
         }}
       >
-        {/* ── LEFT PANE: INPUTS & SLIDERS ── */}
+        {/* ── LEFT PANE: INPUTS & SLIDERS (WHITE AS PRIMARY) ── */}
         <div
           style={{
-            padding: "2.25rem 2rem",
+            padding: "2rem",
             borderRight: "1px solid #EEF3EF",
             backgroundColor: "#FFFFFF",
           }}
@@ -244,14 +232,13 @@ export default function BorrowingPowerCalculator() {
                 style={{
                   fontSize: "0.78rem",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   textTransform: "uppercase",
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.08em",
                 }}
               >
                 1. Borrower Profile
               </span>
-              <span style={{ fontSize: "0.74rem", color: "#6B7C72" }}>Step 1 of 4</span>
             </div>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "10px", marginBottom: "1rem" }}>
@@ -261,9 +248,9 @@ export default function BorrowingPowerCalculator() {
                 style={{
                   padding: "10px 14px",
                   borderRadius: "8px",
-                  border: isJoint ? "1px solid #D1DCD5" : "2px solid #0D3E26",
-                  backgroundColor: isJoint ? "#FAFBF9" : "rgba(13, 62, 38, 0.08)",
-                  color: isJoint ? "#4A5A50" : "#0D3E26",
+                  border: isJoint ? "1px solid #D1DCD5" : "2px solid #0A0D0B",
+                  backgroundColor: isJoint ? "#FAFBF9" : "#0A0D0B",
+                  color: isJoint ? "#4A5A50" : "#FFFFFF",
                   fontWeight: 700,
                   fontSize: "0.88rem",
                   cursor: "pointer",
@@ -278,16 +265,16 @@ export default function BorrowingPowerCalculator() {
                 style={{
                   padding: "10px 14px",
                   borderRadius: "8px",
-                  border: !isJoint ? "1px solid #D1DCD5" : "2px solid #0D3E26",
-                  backgroundColor: !isJoint ? "#FAFBF9" : "rgba(13, 62, 38, 0.08)",
-                  color: !isJoint ? "#4A5A50" : "#0D3E26",
+                  border: !isJoint ? "1px solid #D1DCD5" : "2px solid #0A0D0B",
+                  backgroundColor: !isJoint ? "#FAFBF9" : "#0A0D0B",
+                  color: !isJoint ? "#4A5A50" : "#FFFFFF",
                   fontWeight: 700,
                   fontSize: "0.88rem",
                   cursor: "pointer",
                   transition: "all 150ms ease",
                 }}
               >
-                Joint / Couple (2 Incomes)
+                Joint / Couple
               </button>
             </div>
 
@@ -300,14 +287,15 @@ export default function BorrowingPowerCalculator() {
                 value={dependents}
                 onChange={(e) => setDependents(Number(e.target.value))}
                 style={{
-                  padding: "6px 14px",
+                  padding: "7px 14px",
                   borderRadius: "6px",
                   border: "1px solid #D1DCD5",
                   fontSize: "0.88rem",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   backgroundColor: "#FFFFFF",
                   cursor: "pointer",
+                  outline: "none",
                 }}
               >
                 <option value={0}>0 Dependents</option>
@@ -326,9 +314,9 @@ export default function BorrowingPowerCalculator() {
                 display: "block",
                 fontSize: "0.78rem",
                 fontWeight: 700,
-                color: "#0D3E26",
+                color: "#0A0D0B",
                 textTransform: "uppercase",
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 marginBottom: "0.8rem",
               }}
             >
@@ -339,9 +327,9 @@ export default function BorrowingPowerCalculator() {
             <div style={{ marginBottom: "1.1rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
                 <label htmlFor={salary1Id} style={{ fontSize: "0.85rem", color: "#3B4A41", fontWeight: 600 }}>
-                  Primary Applicant Gross Salary
+                  Primary Gross Salary
                 </label>
-                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0D3E26" }}>
+                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0A0D0B" }}>
                   {formatAud(primarySalary)}
                 </span>
               </div>
@@ -353,7 +341,7 @@ export default function BorrowingPowerCalculator() {
                 step={5000}
                 value={primarySalary}
                 onChange={(e) => setPrimarySalary(Number(e.target.value))}
-                style={{ width: "100%", accentColor: "#0D3E26", height: "6px" }}
+                style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
             </div>
 
@@ -362,9 +350,9 @@ export default function BorrowingPowerCalculator() {
               <div style={{ marginBottom: "1.1rem" }}>
                 <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
                   <label htmlFor={salary2Id} style={{ fontSize: "0.85rem", color: "#3B4A41", fontWeight: 600 }}>
-                    Secondary Applicant Gross Salary
+                    Secondary Gross Salary
                   </label>
-                  <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0D3E26" }}>
+                  <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0A0D0B" }}>
                     {formatAud(secondarySalary)}
                   </span>
                 </div>
@@ -376,7 +364,7 @@ export default function BorrowingPowerCalculator() {
                   step={5000}
                   value={secondarySalary}
                   onChange={(e) => setSecondarySalary(Number(e.target.value))}
-                  style={{ width: "100%", accentColor: "#0D3E26", height: "6px" }}
+                  style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
                 />
               </div>
             )}
@@ -385,9 +373,9 @@ export default function BorrowingPowerCalculator() {
             <div>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
                 <label htmlFor={otherIncId} style={{ fontSize: "0.85rem", color: "#3B4A41", fontWeight: 600 }}>
-                  Other Annual Income (Rental, Overtime, Bonus)
+                  Other Annual Income (Rental, Bonus)
                 </label>
-                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0D3E26" }}>
+                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0A0D0B" }}>
                   {formatAud(otherIncome)}
                 </span>
               </div>
@@ -399,10 +387,10 @@ export default function BorrowingPowerCalculator() {
                 step={2500}
                 value={otherIncome}
                 onChange={(e) => setOtherIncome(Number(e.target.value))}
-                style={{ width: "100%", accentColor: "#0D3E26", height: "6px" }}
+                style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
               <span style={{ fontSize: "0.72rem", color: "#7A8A80", display: "block", marginTop: "2px" }}>
-                *Lenders shade rental and commission income to 80% to account for vacancies and taxation.
+                *Lenders shade secondary/rental income to 80%.
               </span>
             </div>
           </div>
@@ -414,22 +402,22 @@ export default function BorrowingPowerCalculator() {
                 display: "block",
                 fontSize: "0.78rem",
                 fontWeight: 700,
-                color: "#0D3E26",
+                color: "#0A0D0B",
                 textTransform: "uppercase",
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 marginBottom: "0.8rem",
               }}
             >
-              3. Living Costs & Financial Commitments
+              3. Living Costs & Commitments
             </span>
 
             {/* Monthly Living Costs */}
             <div style={{ marginBottom: "1.1rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
                 <label htmlFor={expensesId} style={{ fontSize: "0.85rem", color: "#3B4A41", fontWeight: 600 }}>
-                  Monthly General Living Costs (Groceries, bills, lifestyle)
+                  Monthly Living Costs
                 </label>
-                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0D3E26" }}>
+                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0A0D0B" }}>
                   {formatAud(livingExpenses)} / mo
                 </span>
               </div>
@@ -441,10 +429,10 @@ export default function BorrowingPowerCalculator() {
                 step={100}
                 value={livingExpenses}
                 onChange={(e) => setLivingExpenses(Number(e.target.value))}
-                style={{ width: "100%", accentColor: "#0D3E26", height: "6px" }}
+                style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
               <span style={{ fontSize: "0.72rem", color: "#7A8A80", display: "block", marginTop: "2px" }}>
-                Assessed against the statutory Household Expenditure Measure (HEM) benchmark floor of {formatAud(hemBenchmark)}/mo.
+                Benchmarked against HEM floor of {formatAud(hemBenchmark)}/mo.
               </span>
             </div>
 
@@ -452,9 +440,9 @@ export default function BorrowingPowerCalculator() {
             <div style={{ marginBottom: "1.1rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
                 <label htmlFor={otherLoansId} style={{ fontSize: "0.85rem", color: "#3B4A41", fontWeight: 600 }}>
-                  Other Monthly Loan Repayments (Car, Personal loans)
+                  Other Monthly Loan Repayments
                 </label>
-                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0D3E26" }}>
+                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0A0D0B" }}>
                   {formatAud(otherLoanRepayments)} / mo
                 </span>
               </div>
@@ -466,7 +454,7 @@ export default function BorrowingPowerCalculator() {
                 step={50}
                 value={otherLoanRepayments}
                 onChange={(e) => setOtherLoanRepayments(Number(e.target.value))}
-                style={{ width: "100%", accentColor: "#0D3E26", height: "6px" }}
+                style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
             </div>
 
@@ -474,9 +462,9 @@ export default function BorrowingPowerCalculator() {
             <div style={{ marginBottom: "1.1rem" }}>
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
                 <label htmlFor={ccLimitsId} style={{ fontSize: "0.85rem", color: "#3B4A41", fontWeight: 600 }}>
-                  Total Combined Credit Card Limits
+                  Credit Card Limits
                 </label>
-                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0D3E26" }}>
+                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "#0A0D0B" }}>
                   {formatAud(creditCardLimit)}
                 </span>
               </div>
@@ -488,10 +476,10 @@ export default function BorrowingPowerCalculator() {
                 step={1000}
                 value={creditCardLimit}
                 onChange={(e) => setCreditCardLimit(Number(e.target.value))}
-                style={{ width: "100%", accentColor: "#0D3E26", height: "6px" }}
+                style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
               <span style={{ fontSize: "0.72rem", color: "#7A8A80", display: "block", marginTop: "2px" }}>
-                *Banks assess 3.5% of the total limit per month as liability, even if card balance is $0!
+                *Lenders assess 3.5% of total limit monthly, even at $0 balance.
               </span>
             </div>
 
@@ -505,11 +493,11 @@ export default function BorrowingPowerCalculator() {
                   type="button"
                   onClick={() => setHasHecs(false)}
                   style={{
-                    padding: "4px 14px",
+                    padding: "5px 14px",
                     borderRadius: "6px",
-                    border: hasHecs ? "1px solid #D1DCD5" : "2px solid #0D3E26",
-                    backgroundColor: hasHecs ? "#FAFBF9" : "rgba(13, 62, 38, 0.08)",
-                    color: hasHecs ? "#55645B" : "#0D3E26",
+                    border: hasHecs ? "1px solid #D1DCD5" : "2px solid #0A0D0B",
+                    backgroundColor: hasHecs ? "#FAFBF9" : "#0A0D0B",
+                    color: hasHecs ? "#55645B" : "#FFFFFF",
                     fontWeight: 700,
                     fontSize: "0.8rem",
                     cursor: "pointer",
@@ -521,17 +509,17 @@ export default function BorrowingPowerCalculator() {
                   type="button"
                   onClick={() => setHasHecs(true)}
                   style={{
-                    padding: "4px 14px",
+                    padding: "5px 14px",
                     borderRadius: "6px",
-                    border: !hasHecs ? "1px solid #D1DCD5" : "2px solid #0D3E26",
-                    backgroundColor: !hasHecs ? "#FAFBF9" : "rgba(13, 62, 38, 0.08)",
-                    color: !hasHecs ? "#55645B" : "#0D3E26",
+                    border: !hasHecs ? "1px solid #D1DCD5" : "2px solid #0A0D0B",
+                    backgroundColor: !hasHecs ? "#FAFBF9" : "#0A0D0B",
+                    color: !hasHecs ? "#55645B" : "#FFFFFF",
                     fontWeight: 700,
                     fontSize: "0.8rem",
                     cursor: "pointer",
                   }}
                 >
-                  Yes, Active
+                  Active HECS
                 </button>
               </div>
             </div>
@@ -544,13 +532,13 @@ export default function BorrowingPowerCalculator() {
                 display: "block",
                 fontSize: "0.78rem",
                 fontWeight: 700,
-                color: "#0D3E26",
+                color: "#0A0D0B",
                 textTransform: "uppercase",
-                letterSpacing: "0.06em",
+                letterSpacing: "0.08em",
                 marginBottom: "0.8rem",
               }}
             >
-              4. Loan Term & Rate Preferences
+              4. Loan Preferences
             </span>
 
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "12px" }}>
@@ -568,9 +556,10 @@ export default function BorrowingPowerCalculator() {
                     borderRadius: "6px",
                     border: "1px solid #D1DCD5",
                     fontSize: "0.88rem",
-                    color: "#0D3E26",
+                    color: "#0A0D0B",
                     fontWeight: 700,
                     backgroundColor: "#FFFFFF",
+                    outline: "none",
                   }}
                 >
                   <option value={30}>30 Years (Standard)</option>
@@ -597,8 +586,10 @@ export default function BorrowingPowerCalculator() {
                     borderRadius: "6px",
                     border: "1px solid #D1DCD5",
                     fontSize: "0.88rem",
-                    color: "#0D3E26",
+                    color: "#0A0D0B",
                     fontWeight: 700,
+                    backgroundColor: "#FFFFFF",
+                    outline: "none",
                   }}
                 />
               </div>
@@ -606,11 +597,11 @@ export default function BorrowingPowerCalculator() {
           </div>
         </div>
 
-        {/* ── RIGHT PANE: RESULTS & INTERACTIVE VISUAL CHARTS ── */}
+        {/* ── RIGHT PANE: RESULTS & INTERACTIVE CHARTS ── */}
         <div
           style={{
             backgroundColor: "#F9FAF9",
-            padding: "2.25rem 2rem",
+            padding: "2rem",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
@@ -624,17 +615,17 @@ export default function BorrowingPowerCalculator() {
                 borderRadius: "16px",
                 padding: "1.75rem",
                 border: "1px solid #D6E3DB",
-                boxShadow: "0 8px 24px rgba(13, 62, 38, 0.06)",
+                boxShadow: "0 8px 24px rgba(0, 0, 0, 0.05)",
                 textAlign: "center",
-                marginBottom: "1.75rem",
+                marginBottom: "1.5rem",
               }}
             >
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   fontWeight: 700,
                   fontSize: "0.82rem",
-                  letterSpacing: "0.06em",
+                  letterSpacing: "0.08em",
                   textTransform: "uppercase",
                 }}
               >
@@ -644,9 +635,9 @@ export default function BorrowingPowerCalculator() {
               <div
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2.5rem, 4.2vw, 3.8rem)",
+                  fontSize: "clamp(2.4rem, 4.2vw, 3.6rem)",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   lineHeight: 1.1,
                   margin: "0.4rem 0",
                 }}
@@ -654,8 +645,8 @@ export default function BorrowingPowerCalculator() {
                 {formatAud(maxBorrowingCapacity)}
               </div>
 
-              <div style={{ fontSize: "0.82rem", color: "#55645B", marginBottom: "1rem" }}>
-                Tested at stress rate of <strong>{(interestRate + 3.0).toFixed(2)}% p.a.</strong> (APRA Mandatory Buffer)
+              <div style={{ fontSize: "0.8rem", color: "#55645B", marginBottom: "1rem" }}>
+                Tested at stress rate of <strong style={{ color: "#0A0D0B" }}>{(interestRate + 3.0).toFixed(2)}% p.a.</strong> (APRA Buffer)
               </div>
 
               {/* Repayments grid */}
@@ -670,7 +661,7 @@ export default function BorrowingPowerCalculator() {
               >
                 <div style={{ backgroundColor: "#F7FAF8", padding: "10px", borderRadius: "10px" }}>
                   <div style={{ fontSize: "0.72rem", color: "#6B7C72", fontWeight: 600 }}>Monthly Repayment</div>
-                  <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0F261B", marginTop: "2px" }}>
+                  <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0A0D0B", marginTop: "2px" }}>
                     {formatAud(actualMonthlyRepayment)}
                   </div>
                   <div style={{ fontSize: "0.68rem", color: "#8A9990" }}>At {interestRate}% p.a.</div>
@@ -678,7 +669,7 @@ export default function BorrowingPowerCalculator() {
 
                 <div style={{ backgroundColor: "#F7FAF8", padding: "10px", borderRadius: "10px" }}>
                   <div style={{ fontSize: "0.72rem", color: "#6B7C72", fontWeight: 600 }}>Fortnightly Repayment</div>
-                  <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0F261B", marginTop: "2px" }}>
+                  <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0A0D0B", marginTop: "2px" }}>
                     {formatAud(actualFortnightlyRepayment)}
                   </div>
                   <div style={{ fontSize: "0.68rem", color: "#8A9990" }}>At {interestRate}% p.a.</div>
@@ -687,7 +678,7 @@ export default function BorrowingPowerCalculator() {
             </div>
 
             {/* ─── INTERACTIVE CHARTS SECTION ─── */}
-            <div style={{ marginBottom: "1.75rem" }}>
+            <div style={{ marginBottom: "1.5rem" }}>
               {/* Tab Selector */}
               <div
                 style={{
@@ -696,7 +687,7 @@ export default function BorrowingPowerCalculator() {
                   padding: "4px",
                   borderRadius: "10px",
                   gap: "4px",
-                  marginBottom: "1rem",
+                  marginBottom: "0.85rem",
                 }}
               >
                 <button
@@ -704,57 +695,57 @@ export default function BorrowingPowerCalculator() {
                   onClick={() => setActiveChartTab("cashflow")}
                   style={{
                     flex: 1,
-                    padding: "8px 12px",
+                    padding: "8px 10px",
                     borderRadius: "8px",
                     border: "none",
-                    backgroundColor: activeChartTab === "cashflow" ? "#FFFFFF" : "transparent",
-                    color: activeChartTab === "cashflow" ? "#0D3E26" : "#55645B",
+                    backgroundColor: activeChartTab === "cashflow" ? "#0A0D0B" : "transparent",
+                    color: activeChartTab === "cashflow" ? "#C5A869" : "#55645B",
                     fontWeight: 700,
                     fontSize: "0.78rem",
                     cursor: "pointer",
-                    boxShadow: activeChartTab === "cashflow" ? "0 2px 6px rgba(0,0,0,0.06)" : "none",
+                    boxShadow: activeChartTab === "cashflow" ? "0 2px 6px rgba(0,0,0,0.1)" : "none",
                     transition: "all 150ms ease",
                   }}
                 >
-                  Cashflow Allocation
+                  Cashflow
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveChartTab("lifetime")}
                   style={{
                     flex: 1,
-                    padding: "8px 12px",
+                    padding: "8px 10px",
                     borderRadius: "8px",
                     border: "none",
-                    backgroundColor: activeChartTab === "lifetime" ? "#FFFFFF" : "transparent",
-                    color: activeChartTab === "lifetime" ? "#0D3E26" : "#55645B",
+                    backgroundColor: activeChartTab === "lifetime" ? "#0A0D0B" : "transparent",
+                    color: activeChartTab === "lifetime" ? "#C5A869" : "#55645B",
                     fontWeight: 700,
                     fontSize: "0.78rem",
                     cursor: "pointer",
-                    boxShadow: activeChartTab === "lifetime" ? "0 2px 6px rgba(0,0,0,0.06)" : "none",
+                    boxShadow: activeChartTab === "lifetime" ? "0 2px 6px rgba(0,0,0,0.1)" : "none",
                     transition: "all 150ms ease",
                   }}
                 >
-                  30-Yr Principal vs Interest
+                  Principal vs Interest
                 </button>
                 <button
                   type="button"
                   onClick={() => setActiveChartTab("lenders")}
                   style={{
                     flex: 1,
-                    padding: "8px 12px",
+                    padding: "8px 10px",
                     borderRadius: "8px",
                     border: "none",
-                    backgroundColor: activeChartTab === "lenders" ? "#FFFFFF" : "transparent",
-                    color: activeChartTab === "lenders" ? "#0D3E26" : "#55645B",
+                    backgroundColor: activeChartTab === "lenders" ? "#0A0D0B" : "transparent",
+                    color: activeChartTab === "lenders" ? "#C5A869" : "#55645B",
                     fontWeight: 700,
                     fontSize: "0.78rem",
                     cursor: "pointer",
-                    boxShadow: activeChartTab === "lenders" ? "0 2px 6px rgba(0,0,0,0.06)" : "none",
+                    boxShadow: activeChartTab === "lenders" ? "0 2px 6px rgba(0,0,0,0.1)" : "none",
                     transition: "all 150ms ease",
                   }}
                 >
-                  Lender Comparison
+                  Lenders
                 </button>
               </div>
 
@@ -764,32 +755,31 @@ export default function BorrowingPowerCalculator() {
                   style={{
                     backgroundColor: "#FFFFFF",
                     borderRadius: "14px",
-                    padding: "1.25rem",
+                    padding: "1.15rem",
                     border: "1px solid #E2EAE5",
                   }}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                    <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
-                      Monthly Gross Cashflow Breakdown ({formatAud(monthlyGross)}/mo)
+                    <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0A0D0B" }}>
+                      Monthly Gross Cashflow ({formatAud(monthlyGross)}/mo)
                     </span>
                   </div>
 
                   {/* Horizontal Segmented Bar Chart */}
                   <div
                     style={{
-                      height: "22px",
+                      height: "20px",
                       borderRadius: "999px",
                       backgroundColor: "#EEF2EF",
                       display: "flex",
                       overflow: "hidden",
-                      marginBottom: "1rem",
-                      boxShadow: "inset 0 1px 3px rgba(0,0,0,0.1)",
+                      marginBottom: "0.9rem",
                     }}
                   >
                     <div
                       style={{
                         width: `${surplusPct}%`,
-                        backgroundColor: "#0D3E26",
+                        backgroundColor: "#0A0D0B",
                         transition: "width 300ms ease",
                       }}
                       title={`Mortgage Surplus: ${surplusPct}%`}
@@ -830,30 +820,30 @@ export default function BorrowingPowerCalculator() {
                     }}
                   >
                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                      <span style={{ width: "12px", height: "12px", borderRadius: "3px", backgroundColor: "#0D3E26", flexShrink: 0 }} />
+                      <span style={{ width: "10px", height: "10px", borderRadius: "2px", backgroundColor: "#0A0D0B", flexShrink: 0 }} />
                       <span style={{ color: "#3B4A41" }}>
-                        Mortgage Capacity: <strong>{formatAud(netMonthlySurplus)}</strong> ({surplusPct}%)
+                        Surplus: <strong>{formatAud(netMonthlySurplus)}</strong>
                       </span>
                     </div>
 
                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                      <span style={{ width: "12px", height: "12px", borderRadius: "3px", backgroundColor: "#A18650", flexShrink: 0 }} />
+                      <span style={{ width: "10px", height: "10px", borderRadius: "2px", backgroundColor: "#A18650", flexShrink: 0 }} />
                       <span style={{ color: "#3B4A41" }}>
-                        Living Costs (HEM): <strong>{formatAud(assessedLivingExpenses)}</strong> ({livingPct}%)
+                        Living: <strong>{formatAud(assessedLivingExpenses)}</strong>
                       </span>
                     </div>
 
                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                      <span style={{ width: "12px", height: "12px", borderRadius: "3px", backgroundColor: "#D97706", flexShrink: 0 }} />
+                      <span style={{ width: "10px", height: "10px", borderRadius: "2px", backgroundColor: "#D97706", flexShrink: 0 }} />
                       <span style={{ color: "#3B4A41" }}>
-                        Existing Debts: <strong>{formatAud(monthlyDebtsTotal)}</strong> ({debtPct}%)
+                        Debts: <strong>{formatAud(monthlyDebtsTotal)}</strong>
                       </span>
                     </div>
 
                     <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-                      <span style={{ width: "12px", height: "12px", borderRadius: "3px", backgroundColor: "#64748B", flexShrink: 0 }} />
+                      <span style={{ width: "10px", height: "10px", borderRadius: "2px", backgroundColor: "#64748B", flexShrink: 0 }} />
                       <span style={{ color: "#3B4A41" }}>
-                        Tax & Medicare: <strong>{formatAud(monthlyTaxTotal)}</strong> ({taxPct}%)
+                        Tax: <strong>{formatAud(monthlyTaxTotal)}</strong>
                       </span>
                     </div>
                   </div>
@@ -866,29 +856,28 @@ export default function BorrowingPowerCalculator() {
                   style={{
                     backgroundColor: "#FFFFFF",
                     borderRadius: "14px",
-                    padding: "1.25rem",
+                    padding: "1.15rem",
                     border: "1px solid #E2EAE5",
                   }}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                    <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
-                      Total 30-Year Loan Repayment: {formatAud(totalLifetimeRepayments)}
+                    <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0A0D0B" }}>
+                      Total 30-Year Repayment: {formatAud(totalLifetimeRepayments)}
                     </span>
                   </div>
 
-                  {/* Dual Bar Chart */}
-                  <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "1rem" }}>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "10px", marginBottom: "0.85rem" }}>
                     <div>
                       <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "3px" }}>
-                        <span style={{ color: "#0D3E26", fontWeight: 700 }}>Principal (Original Loan)</span>
-                        <span style={{ color: "#0D3E26", fontWeight: 700 }}>{formatAud(maxBorrowingCapacity)}</span>
+                        <span style={{ color: "#0A0D0B", fontWeight: 700 }}>Principal (Loan)</span>
+                        <span style={{ color: "#0A0D0B", fontWeight: 700 }}>{formatAud(maxBorrowingCapacity)}</span>
                       </div>
-                      <div style={{ height: "14px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
+                      <div style={{ height: "12px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
                         <div
                           style={{
                             height: "100%",
                             width: totalLifetimeRepayments > 0 ? `${(maxBorrowingCapacity / totalLifetimeRepayments) * 100}%` : "0%",
-                            backgroundColor: "#0D3E26",
+                            backgroundColor: "#0A0D0B",
                             transition: "width 300ms ease",
                           }}
                         />
@@ -897,10 +886,10 @@ export default function BorrowingPowerCalculator() {
 
                     <div>
                       <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "3px" }}>
-                        <span style={{ color: "#A18650", fontWeight: 700 }}>Total Interest Paid (30 Yrs)</span>
+                        <span style={{ color: "#A18650", fontWeight: 700 }}>Total Interest Paid</span>
                         <span style={{ color: "#A18650", fontWeight: 700 }}>{formatAud(totalLifetimeInterest)}</span>
                       </div>
-                      <div style={{ height: "14px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
+                      <div style={{ height: "12px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
                         <div
                           style={{
                             height: "100%",
@@ -922,8 +911,7 @@ export default function BorrowingPowerCalculator() {
                       color: "#4A3B18",
                     }}
                   >
-                    💡 Shaving just <strong>0.35%</strong> off your interest rate through Taxnet broker negotiations saves approximately{" "}
-                    <strong>{formatAud(maxBorrowingCapacity * 0.0035 * 18)}</strong> over the life of this loan.
+                    💡 Shaving <strong>0.35%</strong> off your interest rate saves ~<strong>{formatAud(maxBorrowingCapacity * 0.0035 * 18)}</strong> over the loan life.
                   </div>
                 </div>
               )}
@@ -934,27 +922,26 @@ export default function BorrowingPowerCalculator() {
                   style={{
                     backgroundColor: "#FFFFFF",
                     borderRadius: "14px",
-                    padding: "1.25rem",
+                    padding: "1.15rem",
                     border: "1px solid #E2EAE5",
                   }}
                 >
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                    <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
-                      Borrowing Power Across Lender Policies
+                    <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0A0D0B" }}>
+                      Borrowing Capacity Across Lenders
                     </span>
-                    <span style={{ fontSize: "0.72rem", color: "#25D366", fontWeight: 700 }}>
+                    <span style={{ fontSize: "0.72rem", color: "#A18650", fontWeight: 700 }}>
                       +{formatAud(optimizedLenderCapacity - conservativeLenderCapacity)} Max Advantage
                     </span>
                   </div>
 
                   <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
-                    {/* Conservative Bank */}
                     <div>
                       <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "2px" }}>
-                        <span style={{ color: "#55645B" }}>Conservative Major Bank (Strict HEM)</span>
+                        <span style={{ color: "#55645B" }}>Conservative Major Bank</span>
                         <span style={{ fontWeight: 700, color: "#55645B" }}>{formatAud(conservativeLenderCapacity)}</span>
                       </div>
-                      <div style={{ height: "12px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
+                      <div style={{ height: "10px", borderRadius: "5px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
                         <div
                           style={{
                             height: "100%",
@@ -965,35 +952,33 @@ export default function BorrowingPowerCalculator() {
                       </div>
                     </div>
 
-                    {/* Standard Tier 1 */}
                     <div>
                       <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "2px" }}>
-                        <span style={{ color: "#0D3E26" }}>Standard Tier-1 Major Bank</span>
-                        <span style={{ fontWeight: 700, color: "#0D3E26" }}>{formatAud(averageLenderCapacity)}</span>
+                        <span style={{ color: "#0A0D0B" }}>Standard Tier-1 Bank</span>
+                        <span style={{ fontWeight: 700, color: "#0A0D0B" }}>{formatAud(averageLenderCapacity)}</span>
                       </div>
-                      <div style={{ height: "12px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
+                      <div style={{ height: "10px", borderRadius: "5px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
                         <div
                           style={{
                             height: "100%",
                             width: optimizedLenderCapacity > 0 ? `${(averageLenderCapacity / optimizedLenderCapacity) * 100}%` : "0%",
-                            backgroundColor: "#0D3E26",
+                            backgroundColor: "#0A0D0B",
                           }}
                         />
                       </div>
                     </div>
 
-                    {/* Specialized Lender */}
                     <div>
                       <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.75rem", marginBottom: "2px" }}>
-                        <span style={{ color: "#0D3E26", fontWeight: 700 }}>Taxnet Optimized Specialist / Non-Bank</span>
-                        <span style={{ fontWeight: 800, color: "#0D3E26" }}>{formatAud(optimizedLenderCapacity)}</span>
+                        <span style={{ color: "#0A0D0B", fontWeight: 700 }}>Taxnet Optimized Specialist</span>
+                        <span style={{ fontWeight: 800, color: "#0A0D0B" }}>{formatAud(optimizedLenderCapacity)}</span>
                       </div>
-                      <div style={{ height: "12px", borderRadius: "6px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
+                      <div style={{ height: "10px", borderRadius: "5px", backgroundColor: "#EEF2EF", overflow: "hidden" }}>
                         <div
                           style={{
                             height: "100%",
                             width: "100%",
-                            background: "linear-gradient(90deg, #0D3E26 0%, #A18650 100%)",
+                            background: "linear-gradient(90deg, #0A0D0B 0%, #A18650 100%)",
                           }}
                         />
                       </div>
@@ -1007,17 +992,17 @@ export default function BorrowingPowerCalculator() {
             <div
               style={{
                 backgroundColor: "#FFFFFF",
-                padding: "1.25rem",
+                padding: "1.15rem",
                 borderRadius: "14px",
                 border: "1px solid #D5E2D9",
-                marginBottom: "1.75rem",
+                marginBottom: "1.5rem",
               }}
             >
               <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "4px" }}>
-                <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0D3E26" }}>
-                  Your Available Cash Deposit / Equity
+                <span style={{ fontSize: "0.82rem", fontWeight: 700, color: "#0A0D0B" }}>
+                  Cash Deposit / Equity
                 </span>
-                <span style={{ fontSize: "0.88rem", fontWeight: 700, color: "#0D3E26" }}>
+                <span style={{ fontSize: "0.88rem", fontWeight: 700, color: "#0A0D0B" }}>
                   {formatAud(cashDeposit)}
                 </span>
               </div>
@@ -1038,17 +1023,17 @@ export default function BorrowingPowerCalculator() {
                   display: "flex",
                   justifyContent: "space-between",
                   alignItems: "center",
-                  paddingTop: "10px",
+                  paddingTop: "8px",
                   borderTop: "1px solid #EDF3EF",
                 }}
               >
                 <div>
                   <span style={{ fontSize: "0.78rem", fontWeight: 600, color: "#55645B", display: "block" }}>
-                    Total Estimated Property Budget:
+                    Total Estimated Budget:
                   </span>
-                  <span style={{ fontSize: "0.72rem", color: lvrPercentage <= 80 ? "#25D366" : "#D97706", fontWeight: 700 }}>
+                  <span style={{ fontSize: "0.72rem", color: lvrPercentage <= 80 ? "#A18650" : "#D97706", fontWeight: 700 }}>
                     {lvrPercentage <= 80
-                      ? `LVR: ${lvrPercentage.toFixed(1)}% (No LMI Required)`
+                      ? `LVR: ${lvrPercentage.toFixed(1)}% (No LMI)`
                       : `LVR: ${lvrPercentage.toFixed(1)}% (LMI May Apply)`}
                   </span>
                 </div>
@@ -1056,7 +1041,7 @@ export default function BorrowingPowerCalculator() {
                   style={{
                     fontSize: "1.35rem",
                     fontWeight: 800,
-                    color: "#0D3E26",
+                    color: "#0A0D0B",
                   }}
                 >
                   {formatAud(totalPropertyBudget)}
@@ -1072,7 +1057,7 @@ export default function BorrowingPowerCalculator() {
               style={{
                 display: "block",
                 width: "100%",
-                backgroundColor: "#0D3E26",
+                backgroundColor: "#0A0D0B",
                 color: "#FFFFFF",
                 textAlign: "center",
                 padding: "14px 20px",
@@ -1080,9 +1065,9 @@ export default function BorrowingPowerCalculator() {
                 fontWeight: 700,
                 fontSize: "0.95rem",
                 textDecoration: "none",
-                boxShadow: "0 4px 14px rgba(13, 62, 38, 0.25)",
+                boxShadow: "0 4px 14px rgba(10, 13, 11, 0.25)",
                 marginBottom: "10px",
-                transition: "background-color 160ms ease",
+                transition: "opacity 160ms ease, transform 160ms ease",
               }}
             >
               Lock In Formal Borrowing Pre-Approval →
@@ -1099,7 +1084,7 @@ export default function BorrowingPowerCalculator() {
                 gap: "8px",
                 width: "100%",
                 backgroundColor: "#FFFFFF",
-                color: "#0D3E26",
+                color: "#0A0D0B",
                 border: "1.5px solid #25D366",
                 padding: "11px 18px",
                 borderRadius: "10px",

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -9,7 +9,7 @@ import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 
 export const metadata: Metadata = {
-  title: "Mortgage Broker Melbourne | 40+ Bank & Non-Bank Lenders | TaxNet",
+  title: "Mortgage Broker Melbourne | 40+ Bank & Non-Bank Lenders | Taxnet",
   description:
     "Expert mortgage broking services in Melbourne. Compare 40+ Australian lenders for first homes, refinancing, investment property, construction, and business loans. $0 broker fee.",
   keywords: [
@@ -82,16 +82,16 @@ const MORTGAGE_SERVICES: MortgageServiceItem[] = [
 
 const FAQS = [
   {
-    q: "Why should I use a TaxNet mortgage broker instead of going directly to my bank?",
-    a: "A single bank can only offer you their own proprietary loan products and interest rates. TaxNet has access to a panel of over 40 major Australian banks and non-bank lenders (including CBA, ANZ, NAB, Westpac, Macquarie, ING, and Bankwest). We compare thousands of products, negotiate discounted discretionary rates, handle all lender paperwork, and ensure your borrowing structure aligns with your overall tax and wealth strategy.",
+    q: "Why should I use a Taxnet mortgage broker instead of going directly to my bank?",
+    a: "A single bank can only offer you their own proprietary loan products and interest rates. Taxnet has access to a panel of over 40 major Australian banks and non-bank lenders (including CBA, ANZ, NAB, Westpac, Macquarie, ING, and Bankwest). We compare thousands of products, negotiate discounted discretionary rates, handle all lender paperwork, and ensure your borrowing structure aligns with your overall tax and wealth strategy.",
   },
   {
-    q: "How much do TaxNet's mortgage broking services cost?",
+    q: "How much do Taxnet's mortgage broking services cost?",
     a: "Our residential mortgage broking services are completely free ($0) to you. The lender pays our practice an industry-standard commission after your loan settles. You receive independent, unbiased credit advice, maximum borrowing power calculations, and full application management without paying a broker fee.",
   },
   {
     q: "How does having an accounting firm manage our mortgage broking help us?",
-    a: "For business owners, self-employed contractors, trust beneficiaries, and property investors, traditional lenders often struggle to interpret company financial statements, add-backs, and depreciation. Because TaxNet is a qualified CPA public practice, we prepare verified lender-ready credit memorandums that commercial credit underwriters understand, avoiding common self-employed loan rejections.",
+    a: "For business owners, self-employed contractors, trust beneficiaries, and property investors, traditional lenders often struggle to interpret company financial statements, add-backs, and depreciation. Because Taxnet is a qualified CPA public practice, we prepare verified lender-ready credit memorandums that commercial credit underwriters understand, avoiding common self-employed loan rejections.",
   },
   {
     q: "How quickly can you arrange loan pre-approval?",
@@ -193,7 +193,7 @@ export default function MortgageBrokingHubPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Navigating Australian home loans and commercial finance shouldn&apos;t be stressful. TaxNet compares 40+
+              Navigating Australian home loans and commercial finance shouldn&apos;t be stressful. Taxnet compares 40+
               banks and non-bank lenders, negotiates discounted rates, and manages all paperwork from pre-approval to settlement.
             </p>
 
@@ -220,7 +220,7 @@ export default function MortgageBrokingHubPage() {
               </Link>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss mortgage broking options."
+                message="Hi Taxnet, I'd like to discuss mortgage broking options."
                 label="Chat with a Mortgage Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -409,6 +409,7 @@ export default function MortgageBrokingHubPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Mortgage Broking & Credit Strategy"
+          submitButtonText="Book A Consultation"
           title="Secure Your Ideal Loan Structure"
           subtitle="Speak with an MFAA-accredited Melbourne finance broker at our Doncaster East offices or connect directly over phone or WhatsApp."
         />

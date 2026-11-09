@@ -5,12 +5,12 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
-import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "GST & BAS Preparation Melbourne | Registered BAS Agents | TaxNet",
+  title: "GST & BAS Preparation Melbourne | Registered BAS Agents | Taxnet",
   description:
     "Expert GST and Business Activity Statement (BAS) preparation and lodgement in Melbourne. Extended agent deadlines, input tax credit verification, and zero late penalties.",
   keywords: [
@@ -57,8 +57,8 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 
 const FAQS = [
   {
-    q: "What is the key benefit of having TaxNet lodge my BAS instead of doing it myself?",
-    a: "Self-lodgers face tight 28-day deadlines, complex tax-code rules, and strict ATO penalties for unintentional errors. As registered Tax and BAS Agents, TaxNet provides an automatic 4-week lodgement extension for most quarterly statements, verifies all input tax credits to legally maximize refunds, and provides statutory safe harbor protection against ATO administrative penalties.",
+    q: "What is the key benefit of having Taxnet lodge my BAS instead of doing it myself?",
+    a: "Self-lodgers face tight 28-day deadlines, complex tax-code rules, and strict ATO penalties for unintentional errors. As registered Tax and BAS Agents, Taxnet provides an automatic 4-week lodgement extension for most quarterly statements, verifies all input tax credits to legally maximize refunds, and provides statutory safe harbor protection against ATO administrative penalties.",
   },
   {
     q: "When is an Australian business legally required to register for GST?",
@@ -69,12 +69,12 @@ const FAQS = [
     a: "Common pitfalls include claiming GST on non-taxable supplies (such as ASIC fees, bank charges, government charges, and international software without GST), failing to collect valid tax invoices over $82.50, misreporting private vehicle usage, and failing to reconcile Stripe/Square fees correctly. We audit your ledger to eliminate these errors before lodgement.",
   },
   {
-    q: "Can TaxNet help if I have overdue or backlogged BAS statements?",
+    q: "Can Taxnet help if I have overdue or backlogged BAS statements?",
     a: "Yes. We frequently rescue businesses with months or years of overdue BAS statements. We work systematically through your historical bank records, reconstruct missing documentation, negotiate payment arrangements or remission of late lodgement penalties with the ATO, and bring your account back into good standing.",
   },
   {
     q: "How does the PAYG instalment system work on my BAS?",
-    a: "Pay As You Go (PAYG) instalments allow you to prepay your expected end-of-year income tax liability incrementally throughout the year. If your business trading conditions change significantly, TaxNet can vary your quarterly PAYG instalment rate down to preserve cashflow.",
+    a: "Pay As You Go (PAYG) instalments allow you to prepay your expected end-of-year income tax liability incrementally throughout the year. If your business trading conditions change significantly, Taxnet can vary your quarterly PAYG instalment rate down to preserve cashflow.",
   },
 ];
 
@@ -92,13 +92,15 @@ export default function GstBasPreparationPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "56vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             paddingTop: "140px",
             paddingBottom: "5rem",
             overflow: "hidden",
+            textAlign: "center",
           }}
         >
           {/* Parallax Background Hero Image */}
@@ -110,114 +112,99 @@ export default function GstBasPreparationPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
+            }}
+          />
+
+          {/* Subtle gold ambient glow */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              top: "40%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "550px",
+              height: "320px",
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(197, 168, 105, 0.12) 0%, transparent 70%)",
+              pointerEvents: "none",
             }}
           />
 
           <div
             style={{
-              maxWidth: "1240px",
+              maxWidth: "860px",
               margin: "0 auto",
               padding: "0 1.5rem",
               position: "relative",
               zIndex: 2,
               width: "100%",
+              textAlign: "center",
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Home
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
-              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Accounting & Tax
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
               <span style={{ color: "#C5A869" }}>GST & BAS Preparation</span>
             </nav>
 
-            {/* Headline */}
+            {/* Short Heading in Center */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.5rem, 5.2vw, 4.25rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.15,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                margin: "0 auto 1.75rem auto",
+                maxWidth: "760px",
               }}
             >
-              GST & BAS Preparation.{" "}
+              GST & BAS 
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                Penny-Perfect Records.
-              </span>{" "}
-              Guaranteed On-Time.
+                Preparation
+              </span>
             </h1>
 
-            {/* Subtitle */}
-            <p
-              style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
-              }}
-            >
-              Stop scrambling every quarter to find missing tax invoices or stressing over surprise GST bills. TaxNet
-              reconciles your accounts, verifies every input tax credit, and lodges directly with the ATO with extended
-              deadlines.
-            </p>
-
-            {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
-              <a
-                href="#contact"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
-                  fontWeight: 800,
-                  fontSize: "0.95rem",
-                  padding: "0.9rem 2rem",
-                  borderRadius: "8px",
-                  textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
-                  transition: "all 180ms ease",
-                }}
-              >
-                Automate Your BAS Today →
-              </a>
-
-              <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like assistance with our upcoming BAS lodgement."
-                label="Chat with a BAS Agent"
-                sublabel="Direct WhatsApp Line"
-              />
-
-              <a
-                href="tel:0398025800"
-                style={{
-                  color: "rgba(255,255,255,0.85)",
-                  fontWeight: 600,
-                  fontSize: "0.92rem",
-                  textDecoration: "none",
-                  marginLeft: "0.5rem",
-                }}
-              >
-                Or call (03) 9802 5800
+            {/* Book A Consultation Button */}
+                        <style>{`
+              .hero-consultation-btn {
+                display: inline-block;
+                background-color: #C5A869;
+                color: #0A0D0B;
+                font-weight: 700;
+                font-size: 0.95rem;
+                padding: 14px 34px;
+                border-radius: 10px;
+                text-decoration: none;
+                box-shadow: 0 6px 20px rgba(197, 168, 105, 0.4);
+                transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+              }
+              .hero-consultation-btn:hover {
+                background-color: #DFC386 !important;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(197, 168, 105, 0.55) !important;
+              }
+            `}</style>
+            <div>
+              <a href="#contact" className="hero-consultation-btn">
+                Book A Consultation →
               </a>
             </div>
           </div>
@@ -247,7 +234,7 @@ export default function GstBasPreparationPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet BAS agent preparing financial reconciliation and activity statements"
+                    alt="Taxnet BAS agent preparing financial reconciliation and activity statements"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -259,7 +246,7 @@ export default function GstBasPreparationPage() {
                     position: "absolute",
                     bottom: "-20px",
                     right: "-20px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "1.2rem 1.4rem",
                     borderRadius: "14px",
@@ -280,7 +267,7 @@ export default function GstBasPreparationPage() {
               <div>
                 <span
                   style={{
-                    color: "#0D3E26",
+                    color: "#A18650",
                     fontWeight: 700,
                     fontSize: "0.82rem",
                     letterSpacing: "0.08em",
@@ -293,7 +280,7 @@ export default function GstBasPreparationPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -307,7 +294,7 @@ export default function GstBasPreparationPage() {
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
                   A single missed deadline incurs Failure to Lodge (FTL) penalties starting at $330 per 28-day period,
-                  compounding up to $1,650 for small businesses and much higher for medium enterprises. TaxNet shields your
+                  compounding up to $1,650 for small businesses and much higher for medium enterprises. Taxnet shields your
                   enterprise from every penalty risk.
                 </p>
 
@@ -320,7 +307,7 @@ export default function GstBasPreparationPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Maximized Credits
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -335,7 +322,7 @@ export default function GstBasPreparationPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Extended Deadlines
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -349,12 +336,12 @@ export default function GstBasPreparationPage() {
         </section>
 
         {/* ─── 6 PILLARS ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
+        <section style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E7ECE8" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -367,7 +354,7 @@ export default function GstBasPreparationPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -375,52 +362,7 @@ export default function GstBasPreparationPage() {
               </h2>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards items={PILLARS} />
           </div>
         </section>
 
@@ -452,7 +394,7 @@ export default function GstBasPreparationPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -461,7 +403,7 @@ export default function GstBasPreparationPage() {
                 </h2>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
                   Every figure lodged on your BAS is backed by cross-checked electronic documentation stored securely in
-                  your cloud ledger. In the event of an ATO query or compliance audit, TaxNet acts as your authorized
+                  your cloud ledger. In the event of an ATO query or compliance audit, Taxnet acts as your authorized
                   representative, dealing directly with tax officers so you never have to endure uncomfortable interviews.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
@@ -475,7 +417,7 @@ export default function GstBasPreparationPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -500,7 +442,7 @@ export default function GstBasPreparationPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet team reviewing business documents and tax invoices for BAS accuracy"
+                  alt="Taxnet team reviewing business documents and tax invoices for BAS accuracy"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -519,7 +461,7 @@ export default function GstBasPreparationPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -532,7 +474,7 @@ export default function GstBasPreparationPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -554,7 +496,7 @@ export default function GstBasPreparationPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",
@@ -576,6 +518,7 @@ export default function GstBasPreparationPage() {
 
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
+          submitButtonText="Book A Consultation"
           serviceName="GST & BAS Lodgement"
           title="Eliminate BAS Headaches Once and for All"
           subtitle="Let registered Australian Tax & BAS Agents handle your quarterly activity statements with guaranteed accuracy and extended deadlines."

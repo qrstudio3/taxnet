@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -9,7 +9,7 @@ import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 
 export const metadata: Metadata = {
-  title: "Bookkeeping Services Melbourne | Small Business CPA Bookkeepers | TaxNet",
+  title: "Bookkeeping Services Melbourne | Small Business CPA Bookkeepers | Taxnet",
   description:
     "End-to-end bookkeeping services for Melbourne businesses. Bank reconciliations, STP Phase 2 payroll, automated invoicing, cash flow forecasting, and cloud accounting setup.",
   keywords: [
@@ -76,8 +76,8 @@ const BOOKKEEPING_SERVICES: BookkeepingServiceItem[] = [
 
 const FAQS = [
   {
-    q: "How does TaxNet differ from standard freelance bookkeepers?",
-    a: "Unlike sole-operator bookkeepers who may fall ill or lack high-level tax knowledge, TaxNet provides a dedicated Melbourne bookkeeping team directly supervised by certified CPA partners and registered tax agents. Your books are maintained with strategic tax minimization and audit-defense in mind from day one.",
+    q: "How does Taxnet differ from standard freelance bookkeepers?",
+    a: "Unlike sole-operator bookkeepers who may fall ill or lack high-level tax knowledge, Taxnet provides a dedicated Melbourne bookkeeping team directly supervised by certified CPA partners and registered tax agents. Your books are maintained with strategic tax minimization and audit-defense in mind from day one.",
   },
   {
     q: "Are all your staff based in Australia?",
@@ -210,7 +210,7 @@ export default function BookkeepingHubPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to chat about bookkeeping services."
+                message="Hi Taxnet, I'd like to chat about bookkeeping services."
                 label="Chat with a Bookkeeping Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -401,6 +401,7 @@ export default function BookkeepingHubPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Complete Bookkeeping Services"
+          submitButtonText="Book A Consultation"
           title="Transform Your Financial Back-Office Today"
           subtitle="Speak directly with our Melbourne CPA bookkeepers. Free discovery consultation, no lock-in contracts, and transparent flat monthly pricing."
         />

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Investment Property Loans Melbourne | Portfolio Mortgage Broker | TaxNet",
+  title: "Investment Property Loans Melbourne | Portfolio Mortgage Broker | Taxnet",
   description:
     "Strategic investment property mortgage broking in Melbourne. Stand-alone security structures, uncross-collateralized loans, interest-only strategies, and CPA tax integration.",
   keywords: [
@@ -58,15 +58,15 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 const FAQS = [
   {
     q: "Why is cross-collateralizing investment properties dangerous?",
-    a: "Cross-collateralization occurs when a bank uses one mortgage to secure multiple properties (e.g., your family home and an investment unit). If you decide to sell the investment property later, the bank can seize the entire sale proceeds to pay down the home loan instead of giving you your capital gains. TaxNet strictly structures each property as a stand-alone security with separate lenders if necessary.",
+    a: "Cross-collateralization occurs when a bank uses one mortgage to secure multiple properties (e.g., your family home and an investment unit). If you decide to sell the investment property later, the bank can seize the entire sale proceeds to pay down the home loan instead of giving you your capital gains. Taxnet strictly structures each property as a stand-alone security with separate lenders if necessary.",
   },
   {
     q: "Should I choose Interest-Only (IO) or Principal and Interest (P&I) for an investment loan?",
     a: "For most property investors, Interest-Only repayments maximize cash flow and allow surplus income to be funneled into non-deductible personal debt (like an owner-occupied mortgage) via an offset account. Since interest on investment loans is 100% tax-deductible against rental income, paying down principal on investment debt before home debt is tax-inefficient.",
   },
   {
-    q: "How does TaxNet integrate mortgage broking with CPA tax advice?",
-    a: "Unlike standalone brokers who only sell loan products, TaxNet houses both licensed finance brokers and senior CPA accountants under one roof. We coordinate your loan structure directly with your tax returns, ensuring your loan purpose, negative gearing benefits, depreciation schedules, and CGT reduction plans are flawlessly aligned.",
+    q: "How does Taxnet integrate mortgage broking with CPA tax advice?",
+    a: "Unlike standalone brokers who only sell loan products, Taxnet houses both licensed finance brokers and senior CPA accountants under one roof. We coordinate your loan structure directly with your tax returns, ensuring your loan purpose, negative gearing benefits, depreciation schedules, and CGT reduction plans are flawlessly aligned.",
   },
   {
     q: "Can I borrow 100% of the purchase price and stamp duty for an investment property?",
@@ -174,7 +174,7 @@ export default function InvestmentPropertyLoansPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Building a scalable Australian property portfolio requires more than cheap interest rates. TaxNet engineers
+              Building a scalable Australian property portfolio requires more than cheap interest rates. Taxnet engineers
               stand-alone credit structures that protect personal assets, maximize tax deductibility, and unlock borrowing capacity.
             </p>
 
@@ -201,7 +201,7 @@ export default function InvestmentPropertyLoansPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'm looking to invest in property and need strategic mortgage structuring."
+                message="Hi Taxnet, I'm looking to invest in property and need strategic mortgage structuring."
                 label="Chat with an Investment Loan Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function InvestmentPropertyLoansPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet mortgage broker advising property investor on portfolio loan structures"
+                    alt="Taxnet mortgage broker advising property investor on portfolio loan structures"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function InvestmentPropertyLoansPage() {
                   servicing buffers that strangle future borrowing capacity.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet takes a holistic multi-lender view. By distributing your properties across independent lenders
+                  Taxnet takes a holistic multi-lender view. By distributing your properties across independent lenders
                   with generous rental assessment calculators, we keep each title completely autonomous and maintain
                   your capacity to keep acquiring high-performing assets.
                 </p>
@@ -445,7 +445,7 @@ export default function InvestmentPropertyLoansPage() {
                     textTransform: "uppercase",
                   }}
                 >
-                  The TaxNet Edge
+                  The Taxnet Edge
                 </span>
                 <h2
                   style={{
@@ -464,7 +464,7 @@ export default function InvestmentPropertyLoansPage() {
                   rejections.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  At TaxNet, our CPA accounting team and credit broking team sit side-by-side. When we structure your
+                  At Taxnet, our CPA accounting team and credit broking team sit side-by-side. When we structure your
                   investment loan, we verify that your loan purpose, negative gearing schedules, trust distributions,
                   and corporate beneficiary caps are optimized for both bank credit approval and ATO compliance.
                 </p>
@@ -577,6 +577,7 @@ export default function InvestmentPropertyLoansPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Investment Property Mortgage"
+          submitButtonText="Book A Consultation"
           title="Scale Your Property Portfolio"
           subtitle="Consult our Melbourne investment finance specialists to structure stand-alone loans, release usable equity, and maximize borrowing power."
         />

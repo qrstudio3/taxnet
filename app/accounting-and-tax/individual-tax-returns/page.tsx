@@ -5,12 +5,12 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
-import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Individual Tax Returns Melbourne | Executive & Investor Tax Accountants | TaxNet",
+  title: "Individual Tax Returns Melbourne | Executive & Investor Tax Accountants | Taxnet",
   description:
     "Expert individual and executive tax return preparation in Melbourne. Cryptocurrency CGT, share portfolios, negative gearing, and extended May 15 lodgement deadlines.",
   keywords: [
@@ -61,19 +61,19 @@ const FAQS = [
     a: "The myGov pre-fill system only captures basic data reported by employers and banks. It does not identify missing work-related deductions, determine whether actual-cost home office claims beat the fixed-rate method, optimize depreciation on investment properties, or apply the 50% CGT discount on crypto and shares. Our clients regularly save thousands more than our fee.",
   },
   {
-    q: "How does TaxNet manage complex cryptocurrency and DeFi transactions?",
+    q: "How does Taxnet manage complex cryptocurrency and DeFi transactions?",
     a: "The ATO actively data-matches Australian crypto exchange accounts. Every trade, swap, NFT sale, or staking reward is a capital gains tax event. We import your exchange CSVs and wallet histories into specialized crypto tax software to calculate optimal FIFO/HODL capital gains and ensure full ATO disclosure.",
   },
   {
-    q: "What is the deadline for lodging my individual return with TaxNet?",
-    a: "If you lodge by yourself, the ATO deadline is October 31. However, when you appoint TaxNet as your registered tax agent before October 31, your lodgement and payment deadline is automatically extended to May 15 of the following year (or June 5 in certain circumstances).",
+    q: "What is the deadline for lodging my individual return with Taxnet?",
+    a: "If you lodge by yourself, the ATO deadline is October 31. However, when you appoint Taxnet as your registered tax agent before October 31, your lodgement and payment deadline is automatically extended to May 15 of the following year (or June 5 in certain circumstances).",
   },
   {
     q: "How can I avoid or minimize the Medicare Levy Surcharge (MLS)?",
     a: "If your taxable income exceeds the MLS threshold ($97,000 for singles, $194,000 for families) and you do not hold appropriate private hospital cover, you face up to an additional 1.5% surcharge. We review your family income thresholds and model whether salary sacrificing or health cover adjustments provide immediate tax relief.",
   },
   {
-    q: "Can I complete my individual tax return 100% online with TaxNet?",
+    q: "Can I complete my individual tax return 100% online with Taxnet?",
     a: "Yes. You can upload all your documents, receipts, and PAYG summaries securely through our client portal, review your prepared return over video or phone with a CPA accountant, and sign electronically with legally binding e-signatures from your smartphone.",
   },
 ];
@@ -92,13 +92,15 @@ export default function IndividualTaxReturnsPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "56vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             paddingTop: "140px",
             paddingBottom: "5rem",
             overflow: "hidden",
+            textAlign: "center",
           }}
         >
           {/* Parallax Background Hero Image */}
@@ -110,113 +112,99 @@ export default function IndividualTaxReturnsPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
+            }}
+          />
+
+          {/* Subtle gold ambient glow */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              top: "40%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "550px",
+              height: "320px",
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(197, 168, 105, 0.12) 0%, transparent 70%)",
+              pointerEvents: "none",
             }}
           />
 
           <div
             style={{
-              maxWidth: "1240px",
+              maxWidth: "860px",
               margin: "0 auto",
               padding: "0 1.5rem",
               position: "relative",
               zIndex: 2,
               width: "100%",
+              textAlign: "center",
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Home
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
-              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Accounting & Tax
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
               <span style={{ color: "#C5A869" }}>Individual Tax Returns</span>
             </nav>
 
-            {/* Headline */}
+            {/* Short Heading in Center */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.5rem, 5.2vw, 4.25rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.15,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                margin: "0 auto 1.75rem auto",
+                maxWidth: "760px",
               }}
             >
-              Individual & Executive Tax Returns.{" "}
+              Individual 
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                Maximized Legal Refunds.
-              </span>{" "}
-              Total Audit Defense.
+                Tax Returns
+              </span>
             </h1>
 
-            {/* Subtitle */}
-            <p
-              style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
-              }}
-            >
-              Avoid generic online tax apps that leave thousands of dollars in legitimate deductions unclaimed. TaxNet delivers
-              meticulous tax preparation for professionals, investors, property owners, and business leaders.
-            </p>
-
-            {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
-              <a
-                href="#contact"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
-                  fontWeight: 800,
-                  fontSize: "0.95rem",
-                  padding: "0.9rem 2rem",
-                  borderRadius: "8px",
-                  textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
-                  transition: "all 180ms ease",
-                }}
-              >
-                Lodge Your Tax Return Today →
-              </a>
-
-              <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to book an individual tax return consultation."
-                label="Chat with an Individual Tax Expert"
-                sublabel="Direct WhatsApp Line"
-              />
-
-              <a
-                href="tel:0398025800"
-                style={{
-                  color: "rgba(255,255,255,0.85)",
-                  fontWeight: 600,
-                  fontSize: "0.92rem",
-                  textDecoration: "none",
-                  marginLeft: "0.5rem",
-                }}
-              >
-                Or call (03) 9802 5800
+            {/* Book A Consultation Button */}
+                        <style>{`
+              .hero-consultation-btn {
+                display: inline-block;
+                background-color: #C5A869;
+                color: #0A0D0B;
+                font-weight: 700;
+                font-size: 0.95rem;
+                padding: 14px 34px;
+                border-radius: 10px;
+                text-decoration: none;
+                box-shadow: 0 6px 20px rgba(197, 168, 105, 0.4);
+                transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+              }
+              .hero-consultation-btn:hover {
+                background-color: #DFC386 !important;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(197, 168, 105, 0.55) !important;
+              }
+            `}</style>
+            <div>
+              <a href="#contact" className="hero-consultation-btn">
+                Book A Consultation →
               </a>
             </div>
           </div>
@@ -246,7 +234,7 @@ export default function IndividualTaxReturnsPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet consultant helping client maximize individual tax deductions"
+                    alt="Taxnet consultant helping client maximize individual tax deductions"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -258,7 +246,7 @@ export default function IndividualTaxReturnsPage() {
                     position: "absolute",
                     bottom: "-20px",
                     right: "-20px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "1.2rem 1.4rem",
                     borderRadius: "14px",
@@ -279,7 +267,7 @@ export default function IndividualTaxReturnsPage() {
               <div>
                 <span
                   style={{
-                    color: "#0D3E26",
+                    color: "#A18650",
                     fontWeight: 700,
                     fontSize: "0.82rem",
                     letterSpacing: "0.08em",
@@ -292,7 +280,7 @@ export default function IndividualTaxReturnsPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -305,7 +293,7 @@ export default function IndividualTaxReturnsPage() {
                   home office depreciation, professional development, and investment interests.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  At TaxNet, an experienced tax accountant personally interrogates your expense history. We know the exact
+                  At Taxnet, an experienced tax accountant personally interrogates your expense history. We know the exact
                   industry rulings and deduction boundaries set by the ATO, ensuring you legally capture every single dollar
                   you are entitled to.
                 </p>
@@ -319,7 +307,7 @@ export default function IndividualTaxReturnsPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       50% CGT Discount
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -334,7 +322,7 @@ export default function IndividualTaxReturnsPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Zero Audit Anxiety
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -348,12 +336,12 @@ export default function IndividualTaxReturnsPage() {
         </section>
 
         {/* ─── 6 PILLARS ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
+        <section style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E7ECE8" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -366,7 +354,7 @@ export default function IndividualTaxReturnsPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -374,52 +362,7 @@ export default function IndividualTaxReturnsPage() {
               </h2>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards items={PILLARS} />
           </div>
         </section>
 
@@ -451,7 +394,7 @@ export default function IndividualTaxReturnsPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -474,7 +417,7 @@ export default function IndividualTaxReturnsPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -499,7 +442,7 @@ export default function IndividualTaxReturnsPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet client reviewing personal tax deductions and return details"
+                  alt="Taxnet client reviewing personal tax deductions and return details"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -518,7 +461,7 @@ export default function IndividualTaxReturnsPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -531,7 +474,7 @@ export default function IndividualTaxReturnsPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -553,7 +496,7 @@ export default function IndividualTaxReturnsPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",
@@ -575,6 +518,7 @@ export default function IndividualTaxReturnsPage() {
 
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
+          submitButtonText="Book A Consultation"
           serviceName="Individual & Executive Tax Return"
           title="Maximize Your Personal Tax Refund"
           subtitle="Don't leave your hard-earned money in ATO coffers. Speak with our Melbourne CPA tax advisors for an exhaustive deduction review."

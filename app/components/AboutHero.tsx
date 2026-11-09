@@ -239,26 +239,26 @@ export default function AboutHero() {
         </video>
       </div>
 
-      {/* ── Soft Greenish Cinematic Overlay (Emerald Forest Tint) ── */}
+      {/* ── Cinematic Black & Gold Overlay ── */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "linear-gradient(180deg, rgba(6, 24, 15, 0.55) 0%, rgba(13, 62, 38, 0.42) 48%, rgba(4, 18, 11, 0.76) 100%)",
+            "linear-gradient(180deg, rgba(3, 7, 5, 0.78) 0%, rgba(8, 12, 10, 0.62) 48%, rgba(4, 7, 5, 0.94) 100%)",
           pointerEvents: "none",
         }}
       />
 
-      {/* ── Subtle Emerald & Dark Vignette to Frame the Center ── */}
+      {/* ── Subtle Golden Glow & Dark Vignette to Frame the Center ── */}
       <div
         aria-hidden="true"
         style={{
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(circle at center, rgba(13, 62, 38, 0.18) 20%, rgba(3, 14, 8, 0.68) 100%)",
+            "radial-gradient(circle at center, rgba(197, 168, 105, 0.09) 0%, rgba(3, 7, 5, 0.8) 100%)",
           pointerEvents: "none",
         }}
       />
@@ -301,7 +301,7 @@ export default function AboutHero() {
               height: "440px",
               borderRadius: "50%",
               background:
-                "radial-gradient(circle, rgba(197, 168, 105, 0.38) 0%, rgba(13, 62, 38, 0.22) 42%, transparent 70%)",
+                "radial-gradient(circle, rgba(197, 168, 105, 0.45) 0%, rgba(161, 134, 80, 0.22) 42%, transparent 70%)",
               filter: "blur(32px)",
               pointerEvents: "none",
               opacity: 0.45,
@@ -390,7 +390,8 @@ export default function AboutHero() {
               transform: "translateY(24px)",
             }}
           >
-            Where Strategy Meets Integrity.
+            Where Strategy Meets{" "}
+            <span style={{ color: "#C5A869" }}>Integrity.</span>
           </h1>
 
           {/* Single Concise Core Subline */}

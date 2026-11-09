@@ -331,14 +331,15 @@ export default function ContactSection() {
                     borderRadius: "50%",
                     backgroundColor: "rgba(197, 168, 105, 0.15)",
                     color: "#C5A869",
-                    fontSize: "2rem",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     margin: "0 auto 1.25rem",
                   }}
                 >
-                  ✓
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
                 </div>
                 <h3
                   style={{

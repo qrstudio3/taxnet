@@ -6,10 +6,10 @@ import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
-import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 
 export const metadata: Metadata = {
-  title: "Accounting & Tax Services Melbourne | CPA Certified Tax Accountants | TaxNet",
+  title: "Accounting & Tax Services Melbourne | CPA Certified Tax Accountants | Taxnet",
   description:
     "Proactive accounting and taxation services for Australian businesses, property investors, and individuals. Fixed-fee packages, legal tax minimization, and registered tax agents.",
   keywords: [
@@ -88,8 +88,8 @@ const ACCOUNTING_SERVICES: AccountingServiceItem[] = [
 
 const FAQS = [
   {
-    q: "How does TaxNet differ from traditional accounting firms?",
-    a: "Traditional accountants only look backward once a year when tax is already due—when it is too late to change anything. TaxNet provides proactive, forward-looking advice. We meet before June 30 to structure your profits, optimize deductions, and implement legal tax minimization strategies before the financial year closes.",
+    q: "How does Taxnet differ from traditional accounting firms?",
+    a: "Traditional accountants only look backward once a year when tax is already due—when it is too late to change anything. Taxnet provides proactive, forward-looking advice. We meet before June 30 to structure your profits, optimize deductions, and implement legal tax minimization strategies before the financial year closes.",
   },
   {
     q: "Are all your tax accountants based in Melbourne?",
@@ -121,13 +121,15 @@ export default function AccountingAndTaxHubPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "56vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             paddingTop: "140px",
             paddingBottom: "5rem",
             overflow: "hidden",
+            textAlign: "center",
           }}
         >
           {/* Parallax Background Hero Image */}
@@ -139,121 +141,107 @@ export default function AccountingAndTaxHubPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
+            }}
+          />
+
+          {/* Subtle gold ambient glow */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              top: "40%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "550px",
+              height: "320px",
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(197, 168, 105, 0.12) 0%, transparent 70%)",
+              pointerEvents: "none",
             }}
           />
 
           <div
             style={{
-              maxWidth: "1240px",
+              maxWidth: "860px",
               margin: "0 auto",
               padding: "0 1.5rem",
               position: "relative",
               zIndex: 2,
               width: "100%",
+              textAlign: "center",
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Home
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
               <span style={{ color: "#C5A869" }}>Accounting & Tax Solutions</span>
             </nav>
 
-            {/* Headline */}
+            {/* Short Heading in Center */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.5rem, 5.2vw, 4.25rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.15,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                margin: "0 auto 1.75rem auto",
+                maxWidth: "760px",
               }}
             >
-              Proactive Accounting.{" "}
+              Accounting & 
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                Strategic Tax Minimization.
-              </span>{" "}
-              Audit-Proof Peace of Mind.
+                Tax Solutions
+              </span>
             </h1>
 
-            {/* Subtitle */}
-            <p
-              style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
-              }}
-            >
-              Stop paying more tax than legally necessary. Our Melbourne CPA accountants combine deep Australian taxation law
-              expertise with year-round proactive advisory to protect your assets, optimize profits, and keep more money in your business.
-            </p>
-
-            {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
-              <a
-                href="#services"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
-                  fontWeight: 800,
-                  fontSize: "0.95rem",
-                  padding: "0.9rem 2rem",
-                  borderRadius: "8px",
-                  textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
-                  transition: "all 180ms ease",
-                }}
-              >
-                Explore Specialized Tax Services ↓
-              </a>
-
-              <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss accounting and tax services for my business."
-                label="Chat with a Tax Partner"
-                sublabel="Direct WhatsApp Line"
-              />
-
-              <a
-                href="tel:0398025800"
-                style={{
-                  color: "rgba(255,255,255,0.85)",
-                  fontWeight: 600,
-                  fontSize: "0.92rem",
-                  textDecoration: "none",
-                  marginLeft: "0.5rem",
-                }}
-              >
-                Or call (03) 9802 5800
+            {/* Book A Consultation Button */}
+                        <style>{`
+              .hero-consultation-btn {
+                display: inline-block;
+                background-color: #C5A869;
+                color: #0A0D0B;
+                font-weight: 700;
+                font-size: 0.95rem;
+                padding: 14px 34px;
+                border-radius: 10px;
+                text-decoration: none;
+                box-shadow: 0 6px 20px rgba(197, 168, 105, 0.4);
+                transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+              }
+              .hero-consultation-btn:hover {
+                background-color: #DFC386 !important;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(197, 168, 105, 0.55) !important;
+              }
+            `}</style>
+            <div>
+              <a href="#contact" className="hero-consultation-btn">
+                Book A Consultation →
               </a>
             </div>
           </div>
         </section>
 
-        {/* ─── SERVICES DIRECTORY GRID ─── */}
+        {/* ─── SERVICES DIRECTORY AUTO-SLIDER ─── */}
         <section id="services" style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -266,7 +254,7 @@ export default function AccountingAndTaxHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.6vw, 3rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -278,73 +266,7 @@ export default function AccountingAndTaxHubPage() {
               </p>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {ACCOUNTING_SERVICES.map((s) => (
-                <Link
-                  key={s.title}
-                  href={s.href}
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                    textDecoration: "none",
-                    transition: "transform 200ms ease, box-shadow 200ms ease",
-                  }}
-                  className="card"
-                >
-                  <BookkeepingBenefitIcon type={s.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: "0 0 1.5rem 0",
-                      flexGrow: 1,
-                    }}
-                  >
-                    {s.desc}
-                  </p>
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      color: "#0D3E26",
-                      fontWeight: 700,
-                      fontSize: "0.88rem",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      marginTop: "auto",
-                    }}
-                  >
-                    Explore Service →
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <AutoSlidingCards items={ACCOUNTING_SERVICES} />
           </div>
         </section>
 
@@ -357,7 +279,7 @@ export default function AccountingAndTaxHubPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -370,7 +292,7 @@ export default function AccountingAndTaxHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -392,7 +314,7 @@ export default function AccountingAndTaxHubPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",
@@ -415,6 +337,7 @@ export default function AccountingAndTaxHubPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Accounting & Taxation"
+          submitButtonText="Book A Consultation"
           title="Book Your Confidential Accounting & Tax Consultation"
           subtitle="Speak with our Melbourne CPA team at our Doncaster East office. We'll evaluate your entity structure, uncover unclaimed deductions, and provide a transparent flat-fee proposal."
         />

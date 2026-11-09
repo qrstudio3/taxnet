@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Land & Construction Loans Melbourne | Progressive Drawdown Finance | TaxNet",
+  title: "Land & Construction Loans Melbourne | Progressive Drawdown Finance | Taxnet",
   description:
     "Expert land and construction loan mortgage broking in Melbourne. Manage progressive drawdowns across 5 build stages, fixed-price contracts, and as-if-complete valuations.",
   keywords: [
@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: "What happens if there are builder variations or unexpected cost increases during the build?",
-    a: "Builder variations (such as upgrading benchtops or unexpected rock excavation) usually require upfront cash payment or an approved bank loan increase. TaxNet ensures your initial loan includes a prudent contingency buffer so that unexpected site costs never halt your build.",
+    a: "Builder variations (such as upgrading benchtops or unexpected rock excavation) usually require upfront cash payment or an approved bank loan increase. Taxnet ensures your initial loan includes a prudent contingency buffer so that unexpected site costs never halt your build.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function LandConstructionLoansPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Building a new home requires meticulous financial choreography. TaxNet handles progress claim inspections,
+              Building a new home requires meticulous financial choreography. Taxnet handles progress claim inspections,
               staged lender disbursements, and interest-only cash flow management so your build stays on time and on budget.
             </p>
 
@@ -201,7 +201,7 @@ export default function LandConstructionLoansPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'm planning to build and need expert construction loan advice."
+                message="Hi Taxnet, I'm planning to build and need expert construction loan advice."
                 label="Chat with a Construction Finance Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function LandConstructionLoansPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet mortgage broker reviewing construction plans and building schedule with builder and client"
+                    alt="Taxnet mortgage broker reviewing construction plans and building schedule with builder and client"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -306,7 +306,7 @@ export default function LandConstructionLoansPage() {
                   on-site to a grinding halt.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet serves as your dedicated construction project manager on the finance side. We review every progress
+                  Taxnet serves as your dedicated construction project manager on the finance side. We review every progress
                   claim, coordinate bank valuations at critical build stages, and ensure your builder receives funds promptly
                   so your home is finished without costly delays.
                 </p>
@@ -465,7 +465,7 @@ export default function LandConstructionLoansPage() {
                   facility converts into a permanent principal and interest or variable loan.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet automatically benchmarks your completed property against the market. With your home now physically
+                  Taxnet automatically benchmarks your completed property against the market. With your home now physically
                   built and often having achieved substantial equity growth, we renegotiate lower interest rate tiers or add
                   multiple 100% offset accounts to accelerate your mortgage-free timeline.
                 </p>
@@ -578,6 +578,7 @@ export default function LandConstructionLoansPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Land & Construction Mortgage"
+          submitButtonText="Book A Consultation"
           title="Build Your Dream Home With Confidence"
           subtitle="Speak with our Melbourne construction finance specialists to review your building contract, calculate progressive drawdowns, and lock in funding."
         />

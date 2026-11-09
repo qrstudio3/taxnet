@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | TaxNet CPA Accountants & Mortgage Advisory Melbourne",
+  title: "Privacy Policy | Taxnet CPA Accountants & Mortgage Advisory Melbourne",
   description:
-    "TaxNet's Privacy Policy outlining our compliance with the Privacy Act 1988 (Cth), Australian Privacy Principles (APPs), Tax Agent Services Act 2009, and CPA Australia fiduciary codes.",
+    "Taxnet's Privacy Policy outlining our compliance with the Privacy Act 1988 (Cth), Australian Privacy Principles (APPs), Tax Agent Services Act 2009, and CPA Australia fiduciary codes.",
   keywords: [
-    "TaxNet privacy policy",
+    "Taxnet privacy policy",
     "CPA client confidentiality Melbourne",
     "Privacy Act 1988 compliance",
     "Tax File Number security",
@@ -24,7 +24,7 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          TaxNet Pty Ltd (&ldquo;TaxNet&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), operating under
+          Taxnet Pty Ltd (&ldquo;Taxnet&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), operating under
           ABN 40 610 387 881, is committed to safeguarding the confidentiality, integrity, and privacy of all personal,
           commercial, and financial information entrusted to us by our clients and website visitors.
         </p>
@@ -50,7 +50,7 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          To provide senior-level taxation strategy, accounting lodgements, and credit assistance, TaxNet collects various
+          To provide senior-level taxation strategy, accounting lodgements, and credit assistance, Taxnet collects various
           categories of information necessary to fulfill our professional engagements:
         </p>
         <div style={{ display: "grid", gap: "1rem", marginTop: "1rem" }}>
@@ -117,7 +117,7 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          TaxNet collects and uses your information strictly for legitimate commercial and fiduciary advisory objectives:
+          Taxnet collects and uses your information strictly for legitimate commercial and fiduciary advisory objectives:
         </p>
         <ul>
           <li>Preparing and lodging annual Income Tax Returns, Business Activity Statements (BAS), Fringe Benefits Tax (FBT) returns, and SMSF compliance accounts with the ATO;</li>
@@ -129,7 +129,7 @@ const SECTIONS = [
         <div style={{ padding: "1rem 1.25rem", borderRadius: "10px", backgroundColor: "#FEF9EE", border: "1px solid #EBD5A0", marginTop: "1rem" }}>
           <strong style={{ color: "#7B5B1E", display: "block", marginBottom: "0.25rem" }}>Our Strict Non-Monetization Pledge:</strong>
           <span style={{ fontSize: "0.92rem", color: "#5F4517" }}>
-            TaxNet will <strong>never</strong> sell, rent, license, or disclose your personal contact information or financial data to third-party marketing companies, advertisers, or lead brokers. All disclosures occur solely within direct fiduciary lines authorized by you.
+            Taxnet will <strong>never</strong> sell, rent, license, or disclose your personal contact information or financial data to third-party marketing companies, advertisers, or lead brokers. All disclosures occur solely within direct fiduciary lines authorized by you.
           </span>
         </div>
       </>
@@ -143,7 +143,7 @@ const SECTIONS = [
       <>
         <p>
           Tax File Numbers are subject to heightened legislative protection under the <em>Privacy (Tax File Number) Rule 2015</em>.
-          TaxNet strictly adheres to all statutory restrictions:
+          Taxnet strictly adheres to all statutory restrictions:
         </p>
         <ul>
           <li>Your TFN is only requested and used for authorised taxation and superannuation compliance purposes;</li>
@@ -161,7 +161,7 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          TaxNet employs enterprise-grade cybersecurity measures engineered to protect sensitive client records against
+          Taxnet employs enterprise-grade cybersecurity measures engineered to protect sensitive client records against
           loss, unauthorized access, alteration, or interception:
         </p>
         <ul>
@@ -200,7 +200,7 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          Under Australian Privacy Principles 12 and 13, you have the right to request access to any personal information TaxNet
+          Under Australian Privacy Principles 12 and 13, you have the right to request access to any personal information Taxnet
           holds about you, and to request correction if you believe the information is inaccurate, out of date, or incomplete.
         </p>
         <p>
@@ -235,15 +235,15 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          If you have any questions, concerns, or wish to lodge a formal complaint regarding TaxNet&rsquo;s handling of your
+          If you have any questions, concerns, or wish to lodge a formal complaint regarding Taxnet&rsquo;s handling of your
           personal information under the Australian Privacy Principles, please contact our appointed Privacy Officer:
         </p>
         <div style={{ padding: "1.5rem", borderRadius: "14px", backgroundColor: "#0D3E26", color: "#FFFFFF", marginTop: "1rem" }}>
           <div style={{ fontSize: "0.82rem", color: "#C5A869", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>
-            Appointed Privacy Officer · TaxNet Practice
+            Appointed Privacy Officer · Taxnet Practice
           </div>
           <div style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem" }}>
-            TaxNet Advisory Pty Ltd
+            Taxnet Advisory Pty Ltd
           </div>
           <div style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "rgba(255, 255, 255, 0.85)" }}>
             Suite 6, 861 Doncaster Road, Doncaster East VIC 3109<br />
@@ -369,7 +369,7 @@ export default function PrivacyPolicyPage() {
                 margin: "0 0 2rem 0",
               }}
             >
-              How TaxNet collects, protects, utilizes, and governs confidential accounting, taxation, and mortgage
+              How Taxnet collects, protects, utilizes, and governs confidential accounting, taxation, and mortgage
               data pursuant to the <em>Privacy Act 1988 (Cth)</em> and CPA Australia professional ethical standards.
             </p>
 
@@ -386,7 +386,7 @@ export default function PrivacyPolicyPage() {
               }}
             >
               <div>
-                <strong style={{ color: "#C5A869" }}>Governing Entity:</strong> TaxNet Advisory Pty Ltd (ABN 40 610 387 881)
+                <strong style={{ color: "#C5A869" }}>Governing Entity:</strong> Taxnet Advisory Pty Ltd (ABN 40 610 387 881)
               </div>
               <div>
                 <strong style={{ color: "#C5A869" }}>Primary Jurisdiction:</strong> Victoria, Australia (APPs Compliant)

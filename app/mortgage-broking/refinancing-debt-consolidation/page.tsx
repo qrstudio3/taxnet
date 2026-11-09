@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Mortgage Refinancing & Debt Consolidation Melbourne | TaxNet",
+  title: "Mortgage Refinancing & Debt Consolidation Melbourne | Taxnet",
   description:
     "Refinance your mortgage in Melbourne and eliminate the loyalty tax. Compare 40+ lenders, access bank cashbacks up to $4k, and consolidate high-interest debts into one low rate.",
   keywords: [
@@ -70,11 +70,11 @@ const FAQS = [
   },
   {
     q: "Will refinancing hurt my credit score?",
-    a: "Submitting multiple speculative loan applications on comparison websites can harm your credit file. However, at TaxNet we review your credit file first and only lodge one carefully vetted application to the lender most likely to approve your best rate, protecting your credit reputation.",
+    a: "Submitting multiple speculative loan applications on comparison websites can harm your credit file. However, at Taxnet we review your credit file first and only lodge one carefully vetted application to the lender most likely to approve your best rate, protecting your credit reputation.",
   },
   {
     q: "How long does the refinancing process typically take in Melbourne?",
-    a: "From initial rate comparison and document upload to formal approval and PEXA title exchange, the typical refinance process takes between 2 to 4 weeks. TaxNet manages all lender follow-ups, discharge requests, and digital settlement milestones for you.",
+    a: "From initial rate comparison and document upload to formal approval and PEXA title exchange, the typical refinance process takes between 2 to 4 weeks. Taxnet manages all lender follow-ups, discharge requests, and digital settlement milestones for you.",
   },
 ];
 
@@ -174,7 +174,7 @@ export default function RefinancingDebtConsolidationPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              When did your bank last review your rate downwards without you asking? TaxNet benchmarks your loan
+              When did your bank last review your rate downwards without you asking? Taxnet benchmarks your loan
               against 40+ lenders, negotiates aggressive discounts, and rolls high-interest debt into one clean rate.
             </p>
 
@@ -201,7 +201,7 @@ export default function RefinancingDebtConsolidationPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like a free mortgage health check to see how much I can save by refinancing."
+                message="Hi Taxnet, I'd like a free mortgage health check to see how much I can save by refinancing."
                 label="Chat with a Refinance Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function RefinancingDebtConsolidationPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet mortgage advisor reviewing refinancing interest rate savings with Melbourne client"
+                    alt="Taxnet mortgage advisor reviewing refinancing interest rate savings with Melbourne client"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function RefinancingDebtConsolidationPage() {
                   account while offering deep promotional discounts to attract new signups.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  At TaxNet, we first contact your existing bank&apos;s retention department to aggressively reprice your
+                  At Taxnet, we first contact your existing bank&apos;s retention department to aggressively reprice your
                   existing loan. If they refuse to match top-tier market offers, we seamlessly switch your mortgage to a
                   competitor offering lower rates and thousands in cash-back rebates.
                 </p>
@@ -464,7 +464,7 @@ export default function RefinancingDebtConsolidationPage() {
                   sub-6% mortgage rate, your total monthly repayments can drop by $500 to $1,500 immediately.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  To avoid stretching short-term debts over a 30-year term, TaxNet creates a split loan structure. Your
+                  To avoid stretching short-term debts over a 30-year term, Taxnet creates a split loan structure. Your
                   consolidated debts remain isolated with an accelerated repayment plan, wiping them out in 3 to 5 years
                   at home-loan interest rates.
                 </p>
@@ -500,7 +500,7 @@ export default function RefinancingDebtConsolidationPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="Couple reviewing financial documents and celebrating mortgage repayment savings with TaxNet"
+                  alt="Couple reviewing financial documents and celebrating mortgage repayment savings with Taxnet"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -577,6 +577,7 @@ export default function RefinancingDebtConsolidationPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Mortgage Refinancing & Debt Consolidation"
+          submitButtonText="Book A Consultation"
           title="Eliminate Your Loyalty Tax Today"
           subtitle="Send us your current mortgage statement for a zero-obligation rate comparison and find out how much you can save every single month."
         />

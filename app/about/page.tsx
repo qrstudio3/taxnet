@@ -25,7 +25,7 @@ export default function AboutPage() {
     <>
       <Navbar />
 
-      <main style={{ backgroundColor: "#FBFBFA", color: "#1C2022" }}>
+      <main style={{ backgroundColor: "#F9F9F6", color: "#1C2022" }}>
         {/* ─── CINEMATIC CENTER-LOGO HERO (Preserved Exactly) ─── */}
         <AboutHero />
 

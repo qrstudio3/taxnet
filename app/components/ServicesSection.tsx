@@ -579,6 +579,7 @@ export default function ServicesSection() {
     const containerRect = trackContainerRef.current.getBoundingClientRect();
     const containerCenter = containerRect.left + containerRect.width / 2;
     const cards = trackRef.current.querySelectorAll<HTMLElement>(".service-card-item");
+    const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
 
     cards.forEach((card) => {
       const cardRect = card.getBoundingClientRect();
@@ -589,9 +590,10 @@ export default function ServicesSection() {
       const clampedDist = Math.max(-1.5, Math.min(1.5, distanceFromCenter));
 
       // Calculate 3D perspective rotation (Y-axis tilt, scaling, z-translation)
-      const rotateY = clampedDist * -14;
-      const scale = Math.max(0.92, 1 - Math.abs(clampedDist) * 0.08);
-      const translateZ = Math.max(-100, -Math.abs(clampedDist) * 80);
+      // Gentler angle on mobile devices to keep card content clearly visible and avoid overlap
+      const rotateY = clampedDist * (isMobile ? -5 : -14);
+      const scale = Math.max(isMobile ? 0.95 : 0.92, 1 - Math.abs(clampedDist) * (isMobile ? 0.04 : 0.08));
+      const translateZ = Math.max(isMobile ? -30 : -100, -Math.abs(clampedDist) * (isMobile ? 25 : 80));
 
       // Use separate `perspective` property instead of perspective() inside transform
       // — Edge sometimes fails pointer-event hit-testing with inline perspective().
@@ -732,7 +734,7 @@ export default function ServicesSection() {
 
   // Step Left / Right Button Handlers
   const scrollStep = (direction: "left" | "right") => {
-    const step = 360;
+    const step = typeof window !== "undefined" && window.innerWidth < 768 ? 290 : 360;
     const s = state.current;
     if (direction === "left") {
       s.targetX = Math.min(s.maxX, s.targetX + step);
@@ -789,6 +791,52 @@ export default function ServicesSection() {
         .service-card-item:hover .card-poster-img {
           transform: none !important;
           filter: none !important;
+        }
+
+        /* ─── Responsive Adjustments for Mobile Peek Carousel ─── */
+        @media (max-width: 768px) {
+          .services-gallery-viewport {
+            padding-left: 1.25rem !important;
+            padding-right: 1.25rem !important;
+            padding-top: 1rem !important;
+            padding-bottom: 1.5rem !important;
+          }
+          .services-gallery-track {
+            gap: 0.875rem !important; /* Reduced ~14px gap */
+          }
+          .service-card-item {
+            width: clamp(270px, 74vw, 300px) !important;
+            padding: 0.875rem !important;
+          }
+          .card-poster-wrapper {
+            height: 200px !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .services-gallery-viewport {
+            padding-left: 1rem !important;
+            padding-right: 1rem !important;
+            padding-top: 0.75rem !important;
+            padding-bottom: 1.25rem !important;
+          }
+          .services-gallery-track {
+            gap: 0.75rem !important; /* 12px compact gap between cards */
+          }
+          .service-card-item {
+            /* Width calibrated so the next card clearly peeks into view by ~65-85px */
+            width: clamp(255px, 75vw, 280px) !important;
+            padding: 0.75rem !important;
+            border-radius: 16px !important;
+          }
+          .card-poster-wrapper {
+            height: 180px !important;
+            border-radius: 12px !important;
+          }
+          .sc-headline {
+            font-size: 1.25rem !important;
+            margin-bottom: 1rem !important;
+          }
         }
       `}</style>
       {/* ─── ARCHITECTURAL DISPLAY TYPOGRAPHY IN FOREST GREEN & MONETY FONT ─── */}
@@ -1055,6 +1103,7 @@ export default function ServicesSection() {
       {/* ─── DRAGGABLE GALLERY VIEWPORT ─── */}
       <div
         ref={trackContainerRef}
+        className="services-gallery-viewport"
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
@@ -1089,6 +1138,7 @@ export default function ServicesSection() {
         {/* Carousel Moving Track */}
         <div
           ref={trackRef}
+          className="services-gallery-track"
           style={{
             display: "flex",
             gap: "2rem",

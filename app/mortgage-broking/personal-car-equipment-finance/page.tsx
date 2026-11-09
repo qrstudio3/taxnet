@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Personal, Car & Equipment Finance Melbourne | Chattel Mortgage | TaxNet",
+  title: "Personal, Car & Equipment Finance Melbourne | Chattel Mortgage | Taxnet",
   description:
     "Expert car and equipment finance in Melbourne. Chattel mortgages, novated leases, asset write-off tax integration, and wholesale rates that beat dealership finance.",
   keywords: [
@@ -58,7 +58,7 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 const FAQS = [
   {
     q: "Why should I use a finance broker instead of dealership car financing?",
-    a: "Car dealerships often quote attractive headline interest rates while disguising exorbitant doc fees, inflated dealer origination commissions, and punitive balloon payments that cost thousands extra over the loan term. TaxNet compares over 30 specialized asset financiers to secure genuine wholesale rates with zero hidden dealer margins.",
+    a: "Car dealerships often quote attractive headline interest rates while disguising exorbitant doc fees, inflated dealer origination commissions, and punitive balloon payments that cost thousands extra over the loan term. Taxnet compares over 30 specialized asset financiers to secure genuine wholesale rates with zero hidden dealer margins.",
   },
   {
     q: "How does a chattel mortgage work for business vehicles and machinery in Australia?",
@@ -70,7 +70,7 @@ const FAQS = [
   },
   {
     q: "Can I finance used equipment or private vehicle sales?",
-    a: "Yes. TaxNet arranges finance for new and used vehicles or machinery purchased through licensed dealerships, online auctions (like Pickles or Manheim), and verified private sellers. We perform complete PPSR title encumbrance and write-off register checks to protect you before funds are disbursed.",
+    a: "Yes. Taxnet arranges finance for new and used vehicles or machinery purchased through licensed dealerships, online auctions (like Pickles or Manheim), and verified private sellers. We perform complete PPSR title encumbrance and write-off register checks to protect you before funds are disbursed.",
   },
   {
     q: "How fast can equipment and vehicle finance be approved?",
@@ -174,7 +174,7 @@ export default function PersonalCarEquipmentFinancePage() {
                 marginBottom: "2.25rem",
               }}
             >
-              From personal car loans and novated leases to heavy machinery and commercial vehicle fleets, TaxNet secures
+              From personal car loans and novated leases to heavy machinery and commercial vehicle fleets, Taxnet secures
               wholesale broker rates, fast 24-hour turnarounds, and seamless CPA tax integration.
             </p>
 
@@ -201,7 +201,7 @@ export default function PersonalCarEquipmentFinancePage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'm looking for car / equipment finance and want a competitive rate quote."
+                message="Hi Taxnet, I'm looking for car / equipment finance and want a competitive rate quote."
                 label="Chat with an Asset Finance Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -246,7 +246,7 @@ export default function PersonalCarEquipmentFinancePage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet finance consultant reviewing vehicle and equipment loan documents with Melbourne client"
+                    alt="Taxnet finance consultant reviewing vehicle and equipment loan documents with Melbourne client"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -305,7 +305,7 @@ export default function PersonalCarEquipmentFinancePage() {
                   early exit penalties and inflated balloon payments.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet operates strictly as an independent broker. We source wholesale commercial and personal finance
+                  Taxnet operates strictly as an independent broker. We source wholesale commercial and personal finance
                   rates, compare balloon options side-by-side, and ensure the contract structure aligns perfectly with
                   your tax return deductions and ATO guidelines.
                 </p>
@@ -464,7 +464,7 @@ export default function PersonalCarEquipmentFinancePage() {
                   the new machinery to generate revenue while paying for itself over time.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet synchronises your asset acquisitions with the Federal Government&apos;s small business instant
+                  Taxnet synchronises your asset acquisitions with the Federal Government&apos;s small business instant
                   asset write-off thresholds and temporary full expensing rules, ensuring you maximize immediate tax
                   shielding in the financial year of purchase.
                 </p>
@@ -500,7 +500,7 @@ export default function PersonalCarEquipmentFinancePage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="Business owner inspecting industrial heavy machinery and equipment funded through TaxNet"
+                  alt="Business owner inspecting industrial heavy machinery and equipment funded through Taxnet"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -577,6 +577,7 @@ export default function PersonalCarEquipmentFinancePage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Personal, Car & Equipment Finance"
+          submitButtonText="Book A Consultation"
           title="Finance Your Vehicle or Equipment"
           subtitle="Get a competitive wholesale finance quote within hours. We compare 30+ lenders to deliver lower repayments and maximized tax deductions."
         />

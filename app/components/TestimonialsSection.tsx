@@ -458,7 +458,7 @@ export default function TestimonialsSection() {
                       color: "#C5A869",
                     }}
                   >
-                    <span>✓</span> Verified
+                    <span>Verified Client</span>
                   </div>
                 </div>
 

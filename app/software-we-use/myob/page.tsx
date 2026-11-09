@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "MYOB Certified Practice Partner Melbourne | Setup & Migration | TaxNet",
+  title: "MYOB Certified Practice Partner Melbourne | Setup & Migration | Taxnet",
   description:
     "Expert MYOB accounting setup and cloud migration in Melbourne. Desktop v19 to cloud conversions, complex award payroll, advanced inventory, and job costing.",
   keywords: [
@@ -61,12 +61,12 @@ const FAQS = [
     a: "Older desktop versions (like AccountRight v19) lack Single Touch Payroll (STP) Phase 2 compliance, require manual software patches, risk catastrophic data loss on local hard drives, and prevent remote access. Upgrading to MYOB Business Cloud gives you bank-grade data security, automated daily bank feeds, ATO-compliant payroll, and multi-user access anywhere in the world.",
   },
   {
-    q: "How does TaxNet manage the migration from desktop AccountRight to the cloud?",
+    q: "How does Taxnet manage the migration from desktop AccountRight to the cloud?",
     a: "We perform a comprehensive pre-migration file health check, purge obsolete accounts and duplicate cards, verify historical trial balance matching, and upload the file to MYOB Cloud. We balance bank reconciliation accounts and confirm opening balances before releasing the live environment to your team.",
   },
   {
     q: "Can MYOB handle complex Australian Modern Award wages and enterprise agreements?",
-    a: "Yes. MYOB has one of the most powerful award payroll engines in Australia. TaxNet configures complex shift penalties, RDO accruals, meal allowances, tool allowances, and salary sacrifice arrangements, ensuring you never risk Fair Work underpayment compliance penalties.",
+    a: "Yes. MYOB has one of the most powerful award payroll engines in Australia. Taxnet configures complex shift penalties, RDO accruals, meal allowances, tool allowances, and salary sacrifice arrangements, ensuring you never risk Fair Work underpayment compliance penalties.",
   },
   {
     q: "Is MYOB better suited for businesses with heavy inventory than other cloud platforms?",
@@ -74,7 +74,7 @@ const FAQS = [
   },
   {
     q: "Do you offer ongoing MYOB bookkeeping and payroll support?",
-    a: "Yes. In addition to initial setup and migration, TaxNet provides ongoing weekly, fortnightly, or monthly bookkeeping and payroll management in MYOB, guaranteeing all BAS, super, and payroll commitments are lodged on time.",
+    a: "Yes. In addition to initial setup and migration, Taxnet provides ongoing weekly, fortnightly, or monthly bookkeeping and payroll management in MYOB, guaranteeing all BAS, super, and payroll commitments are lodged on time.",
   },
 ];
 
@@ -175,7 +175,7 @@ export default function MyobSoftwarePage() {
               }}
             >
               For businesses with intricate modern awards, multi-site warehouse inventory, and strict job costing needs,
-              MYOB delivers unrivaled commercial depth. TaxNet handles desktop-to-cloud conversions and end-to-end ledger architecture.
+              MYOB delivers unrivaled commercial depth. Taxnet handles desktop-to-cloud conversions and end-to-end ledger architecture.
             </p>
 
             {/* CTA Buttons */}
@@ -201,7 +201,7 @@ export default function MyobSoftwarePage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I need MYOB setup, migration, or payroll consulting for my business."
+                message="Hi Taxnet, I need MYOB setup, migration, or payroll consulting for my business."
                 label="Chat with an MYOB Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -248,7 +248,7 @@ export default function MyobSoftwarePage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet accountant consulting with Australian business owner on MYOB cloud migration and inventory management"
+                    alt="Taxnet accountant consulting with Australian business owner on MYOB cloud migration and inventory management"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -307,7 +307,7 @@ export default function MyobSoftwarePage() {
                   audits STP Phase 2 compliance, un-upgraded businesses face immediate operational paralysis.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet takes the pain out of moving to the cloud. We inspect your data file, purge corrupted historical
+                  Taxnet takes the pain out of moving to the cloud. We inspect your data file, purge corrupted historical
                   entries, balance your general ledger against historical tax returns, and transition your team to MYOB
                   Business Cloud with zero downtime.
                 </p>
@@ -466,7 +466,7 @@ export default function MyobSoftwarePage() {
                   leave loading triggers severe penalties from the Fair Work Ombudsman.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet structures your MYOB payroll engine with customized pay items, superannuation guarantee rate
+                  Taxnet structures your MYOB payroll engine with customized pay items, superannuation guarantee rate
                   triggers, and automatic SuperStream clearing house integration. Every pay run is disaggregated to the
                   ATO with digital precision.
                 </p>
@@ -502,7 +502,7 @@ export default function MyobSoftwarePage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet payroll specialist reviewing MYOB payroll records and superannuation compliance reports"
+                  alt="Taxnet payroll specialist reviewing MYOB payroll records and superannuation compliance reports"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -581,6 +581,7 @@ export default function MyobSoftwarePage() {
           serviceName="MYOB Setup & Migration"
           title="Modernize Your Business With MYOB"
           subtitle="Speak with our certified MYOB Practice Specialists in Melbourne to plan a seamless cloud migration, configure complex awards, and optimize inventory."
+          submitButtonText="Book A Consultation"
         />
       </main>
 

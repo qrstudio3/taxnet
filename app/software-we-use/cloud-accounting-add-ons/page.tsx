@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Preferred Cloud Accounting Add-Ons Melbourne | Dext, Deputy & Tradify | TaxNet",
+  title: "Preferred Cloud Accounting Add-Ons Melbourne | Dext, Deputy & Tradify | Taxnet",
   description:
     "Supercharge your accounting software with preferred cloud add-ons. Expert integration of Dext Prepare, Hubdoc, Deputy, Tradify, Shopify, and Stripe in Melbourne.",
   keywords: [
@@ -62,7 +62,7 @@ const FAQS = [
   },
   {
     q: "How does Dext Prepare (formerly Receipt Bank) eliminate physical paper receipts?",
-    a: "Dext uses machine-learning optical character recognition (OCR) to extract supplier names, invoice dates, total amounts, and GST components from photos or PDF attachments. Once TaxNet configures your auto-publish rules, receipts are automatically linked to corresponding bank feed transactions in Xero or MYOB, meeting strict ATO 5-year digital recordkeeping compliance.",
+    a: "Dext uses machine-learning optical character recognition (OCR) to extract supplier names, invoice dates, total amounts, and GST components from photos or PDF attachments. Once Taxnet configures your auto-publish rules, receipts are automatically linked to corresponding bank feed transactions in Xero or MYOB, meeting strict ATO 5-year digital recordkeeping compliance.",
   },
   {
     q: "Can you help our trade business set up Tradify or ServiceM8?",
@@ -70,11 +70,11 @@ const FAQS = [
   },
   {
     q: "How do you handle high-volume Shopify and e-commerce merchant clearing reconciliations?",
-    a: "E-commerce stores frequently face messy reconciliations because payment gateways (Stripe, PayPal, Afterpay, Klarna) deposit net payouts minus processing fees days after sales occur. TaxNet implements automated e-commerce connectors like A2X or Dext Commerce that create balanced daily sales summaries and isolate merchant processing fees for effortless bank reconciliation.",
+    a: "E-commerce stores frequently face messy reconciliations because payment gateways (Stripe, PayPal, Afterpay, Klarna) deposit net payouts minus processing fees days after sales occur. Taxnet implements automated e-commerce connectors like A2X or Dext Commerce that create balanced daily sales summaries and isolate merchant processing fees for effortless bank reconciliation.",
   },
   {
     q: "Will our staff find these add-on apps complicated to use?",
-    a: "Not with our guided onboarding. We choose user-friendly apps designed for mobile smartphones and provide hands-on Melbourne team training. Your team only needs to learn the simple mobile interface (such as snapping a receipt on Dext or clocking in on Deputy) while TaxNet manages the underlying accounting rules.",
+    a: "Not with our guided onboarding. We choose user-friendly apps designed for mobile smartphones and provide hands-on Melbourne team training. Your team only needs to learn the simple mobile interface (such as snapping a receipt on Dext or clocking in on Deputy) while Taxnet manages the underlying accounting rules.",
   },
 ];
 
@@ -201,7 +201,7 @@ export default function CloudAccountingAddOnsPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss integrating cloud accounting add-ons (Dext, Deputy, Tradify) for my business."
+                message="Hi Taxnet, I'd like to discuss integrating cloud accounting add-ons (Dext, Deputy, Tradify) for my business."
                 label="Chat with an App Integration Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -248,7 +248,7 @@ export default function CloudAccountingAddOnsPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet technical specialist configuring business software add-ons and automated cloud integrations"
+                    alt="Taxnet technical specialist configuring business software add-ons and automated cloud integrations"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -307,7 +307,7 @@ export default function CloudAccountingAddOnsPage() {
                   This manual busywork wastes dozens of productive hours and introduces constant human errors.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet creates unified digital pipelines. When your tradie completes a job in Tradify, the invoice
+                  Taxnet creates unified digital pipelines. When your tradie completes a job in Tradify, the invoice
                   generates automatically in Xero. When an employee clocks in on Deputy, their award-interpreted hours
                   feed directly into pay runs. When receipts are snapped on Dext, the tax deduction is secured instantly.
                 </p>
@@ -466,7 +466,7 @@ export default function CloudAccountingAddOnsPage() {
                   at the exact moment it is incurred.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  When it&apos;s time for your quarterly BAS or annual tax return, TaxNet has instant access to clear,
+                  When it&apos;s time for your quarterly BAS or annual tax return, Taxnet has instant access to clear,
                   audit-proof digital receipts attached directly to each ledger transaction. No more frantic searching,
                   no missed deductions, and zero ATO compliance anxiety.
                 </p>
@@ -581,6 +581,7 @@ export default function CloudAccountingAddOnsPage() {
           serviceName="Cloud Accounting Add-Ons & Integrations"
           title="Automate Your Business App Stack"
           subtitle="Speak with our Melbourne cloud automation specialists to connect Dext, Deputy, Tradify, or Shopify directly into your accounting engine."
+          submitButtonText="Book A Consultation"
         />
       </main>
 

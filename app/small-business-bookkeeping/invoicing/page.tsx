@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Automated Invoicing & Debtor Management Melbourne | TaxNet",
+  title: "Automated Invoicing & Debtor Management Melbourne | Taxnet",
   description:
     "Speed up incoming cash flow. Automated invoicing, polite payment reminders, and instant digital payment gateways for Melbourne small businesses.",
   keywords: [
@@ -170,7 +170,7 @@ export default function InvoicingPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              A job isn&apos;t finished until the invoice is sent and settled. TaxNet automates your client billing,
+              A job isn&apos;t finished until the invoice is sent and settled. Taxnet automates your client billing,
               integrates instant digital payment gateways, and sends polite automated debtor reminders—slashing your
               average collection days without awkward confrontation.
             </p>
@@ -198,7 +198,7 @@ export default function InvoicingPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to learn more about automated invoicing."
+                message="Hi Taxnet, I'd like to learn more about automated invoicing."
                 label="Chat with an Invoicing Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -304,7 +304,7 @@ export default function InvoicingPage() {
                   productive work.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet replaces the manual hustle with an enterprise-grade accounts receivable engine. Invoices are
+                  Taxnet replaces the manual hustle with an enterprise-grade accounts receivable engine. Invoices are
                   dispatched promptly with branded professional templates, and automated workflows politely follow up
                   until the funds are cleared in your bank account.
                 </p>
@@ -498,7 +498,7 @@ export default function InvoicingPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet managers reviewing financial reports and accounts receivable"
+                  alt="Taxnet managers reviewing financial reports and accounts receivable"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -575,6 +575,7 @@ export default function InvoicingPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Invoicing & Accounts Receivable"
+          submitButtonText="Book A Consultation"
           title="Start Getting Paid on Time, Every Time"
           subtitle="Stop leaving your earned revenue on the table. Connect with our Melbourne accounts receivable specialists and get your billing running like clockwork."
         />

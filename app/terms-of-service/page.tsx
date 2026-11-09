@@ -1,14 +1,14 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service & Engagement | TaxNet CPA Accountants Melbourne",
+  title: "Terms of Service & Engagement | Taxnet CPA Accountants Melbourne",
   description:
-    "TaxNet's standard Terms of Service and Professional Engagement outlining advisory scope, client substantiation obligations, fee policies, and CPA Australia standards.",
+    "Taxnet's standard Terms of Service and Professional Engagement outlining advisory scope, client substantiation obligations, fee policies, and CPA Australia standards.",
   keywords: [
-    "TaxNet terms of service",
+    "Taxnet terms of service",
     "CPA terms of engagement Melbourne",
     "Tax agent client obligations",
     "Professional Standards Act Victoria",
@@ -25,8 +25,8 @@ const SECTIONS = [
       <>
         <p>
           These Terms of Service and Engagement (&ldquo;Terms&rdquo;) govern all professional accounting, taxation advisory,
-          Single Touch Payroll compliance, bookkeeping, and credit advisory services provided by TaxNet Pty Ltd (ABN 40 610 387 881)
-          (&ldquo;TaxNet&rdquo;) to you (&ldquo;the Client&rdquo;).
+          Single Touch Payroll compliance, bookkeeping, and credit advisory services provided by Taxnet Pty Ltd (ABN 40 610 387 881)
+          (&ldquo;Taxnet&rdquo;) to you (&ldquo;the Client&rdquo;).
         </p>
         <p>
           Our practice operates across two distinctly regulated professional capacities:
@@ -58,7 +58,7 @@ const SECTIONS = [
       <>
         <p>
           Australian taxation legislation places the primary legal responsibility for the accuracy and completeness of tax returns,
-          BAS statements, and declarations squarely upon the taxpayer. To enable TaxNet to deliver accurate advice, the Client agrees to:
+          BAS statements, and declarations squarely upon the taxpayer. To enable Taxnet to deliver accurate advice, the Client agrees to:
         </p>
         <ul>
           <li><strong>Full &amp; Frank Disclosure:</strong> Provide complete, truthful, and accurate disclosures of all worldwide income, revenue, business assets, and allowable deductions;</li>
@@ -67,7 +67,7 @@ const SECTIONS = [
           <li><strong>Formal Verification:</strong> Review all draft Income Tax Returns, activity statements, and loan applications thoroughly prior to executing final electronic authorizations.</li>
         </ul>
         <div style={{ padding: "1rem 1.25rem", borderRadius: "10px", backgroundColor: "#FEF2F2", border: "1px solid #FCA5A5", marginTop: "1rem", color: "#991B1B" }}>
-          <strong>Statutory ATO Audit Notice:</strong> TaxNet relies on the financial records provided by the Client without independent forensic audit unless specifically engaged to conduct formal auditing. The ATO may apply statutory administrative penalties and general interest charges (GIC) if claims are unsubstantiated.
+          <strong>Statutory ATO Audit Notice:</strong> Taxnet relies on the financial records provided by the Client without independent forensic audit unless specifically engaged to conduct formal auditing. The ATO may apply statutory administrative penalties and general interest charges (GIC) if claims are unsubstantiated.
         </div>
       </>
     ),
@@ -79,13 +79,13 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          As a registered Tax Agent, TaxNet clients are entitled to beneficial lodgement program extensions under the ATO Tax Agent Lodgement Program
+          As a registered Tax Agent, Taxnet clients are entitled to beneficial lodgement program extensions under the ATO Tax Agent Lodgement Program
           (typically extending annual return deadlines from 31 October up to 15 May or 5 June of the following calendar year, subject to compliance history).
         </p>
         <p>
           To maintain access to these concessional extensions, the Client must ensure that all outstanding prior-year lodgements are up to date and that
           all required financial documentation for the current financial year is delivered to our offices no later than <strong>thirty (30) days prior</strong>
-          to the relevant statutory deadline. TaxNet accepts no liability for statutory late lodgement penalties resulting from late document provision by the Client.
+          to the relevant statutory deadline. Taxnet accepts no liability for statutory late lodgement penalties resulting from late document provision by the Client.
         </p>
       </>
     ),
@@ -97,7 +97,7 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          TaxNet rejects opaque hourly billing. We provide clear, agreed billing models:
+          Taxnet rejects opaque hourly billing. We provide clear, agreed billing models:
         </p>
         <ul>
           <li><strong>Agreed Fixed Retainers:</strong> Ongoing business clients operate on an agreed monthly retainer covering all scheduled BAS, quarterly reviews, payroll oversight, and annual corporate returns;</li>
@@ -106,7 +106,7 @@ const SECTIONS = [
         </ul>
         <p>
           Invoices are payable within <strong>fourteen (14) days</strong> of issue via direct debit, electronic funds transfer (EFT), or credit card.
-          TaxNet reserves the statutory right to suspend preparation or withhold ATO lodgement where undisputed fees remain overdue beyond thirty (30) days.
+          Taxnet reserves the statutory right to suspend preparation or withhold ATO lodgement where undisputed fees remain overdue beyond thirty (30) days.
         </p>
       </>
     ),
@@ -121,7 +121,7 @@ const SECTIONS = [
           Liability limited by a scheme approved under Professional Standards Legislation.
         </p>
         <p>
-          TaxNet Advisory Pty Ltd participates in the <strong>CPA Australia Professional Standards Scheme</strong> approved under the
+          Taxnet Advisory Pty Ltd participates in the <strong>CPA Australia Professional Standards Scheme</strong> approved under the
           <em> Professional Standards Act 2003 (VIC)</em>. The scheme limits the civil liability of our firm, partners, and employees
           to the monetary caps established under the statutory scheme, except where liability cannot be excluded by law (such as fraud or gross negligence).
         </p>
@@ -168,7 +168,7 @@ const SECTIONS = [
     content: (
       <>
         <p>
-          TaxNet holds all Client files, financial balances, and communications in strict professional confidence under
+          Taxnet holds all Client files, financial balances, and communications in strict professional confidence under
           APES 110 <em>Code of Ethics for Professional Accountants</em> and section 30-10(6) of the <em>Tax Agent Services Act 2009</em>.
         </p>
         <p>
@@ -189,7 +189,7 @@ const SECTIONS = [
         </p>
         <p>
           Upon termination, the Client remains responsible for fees incurred up to the termination date. In accordance with CPA Australia
-          professional regulations, upon receiving an ethical clearance request from your nominated incoming accountant, TaxNet will promptly
+          professional regulations, upon receiving an ethical clearance request from your nominated incoming accountant, Taxnet will promptly
           transfer all primary client records, prior-year depreciation schedules, and trial balances with zero operational obstruction.
         </p>
       </>
@@ -203,7 +203,7 @@ const SECTIONS = [
       <>
         <p>
           These Terms are governed by and construed in accordance with the laws in force in the State of <strong>Victoria, Australia</strong>.
-          The Client and TaxNet submit to the exclusive jurisdiction of the Courts of Victoria and the Commonwealth of Australia in respect of
+          The Client and Taxnet submit to the exclusive jurisdiction of the Courts of Victoria and the Commonwealth of Australia in respect of
           any proceedings arising out of or in connection with these Terms.
         </p>
       </>
@@ -320,7 +320,7 @@ export default function TermsOfServicePage() {
               }}
             >
               Professional terms governing all CPA accounting, taxation advisory, corporate ASIC compliance,
-              and mortgage broking services rendered by TaxNet Advisory Pty Ltd.
+              and mortgage broking services rendered by Taxnet Advisory Pty Ltd.
             </p>
 
             {/* Regulatory Governance Strip */}

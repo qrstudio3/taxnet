@@ -9,9 +9,9 @@ import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 
 export const metadata: Metadata = {
-  title: "Cloud Accounting Software We Use | Xero, MYOB & QuickBooks | TaxNet",
+  title: "Cloud Accounting Software We Use | Xero, MYOB & QuickBooks | Taxnet",
   description:
-    "Explore the cloud accounting platforms and add-on software TaxNet uses to streamline business financials. Certified Xero Platinum, MYOB Practice, and QuickBooks ProAdvisors.",
+    "Explore the cloud accounting platforms and add-on software Taxnet uses to streamline business financials. Certified Xero Platinum, MYOB Practice, and QuickBooks ProAdvisors.",
   keywords: [
     "cloud accounting software Melbourne",
     "Xero platinum partner Melbourne",
@@ -74,7 +74,7 @@ const ADVANTAGES = [
   {
     icon: "coin" as BenefitIconType,
     title: "Wholesale Partner Discounts",
-    desc: "As accredited Platinum and Diamond tier partners, TaxNet passes wholesale software subscription discounts directly on to our ongoing bookkeeping clients.",
+    desc: "As accredited Platinum and Diamond tier partners, Taxnet passes wholesale software subscription discounts directly on to our ongoing bookkeeping clients.",
   },
   {
     icon: "users" as BenefitIconType,
@@ -94,12 +94,12 @@ const FAQS = [
     a: "The ideal platform depends on your industry and operational complexity. Xero is exceptionally user-friendly and boasts Australia's largest ecosystem of add-on apps, making it ideal for service businesses, agencies, and retail. MYOB excels at complex inventory, manufacturing, and intricate award payroll structures. QuickBooks is agile and cost-effective for freelancers, solopreneurs, and international multi-currency trading. During our initial discovery audit, we recommend the exact platform that fits your business model.",
   },
   {
-    q: "How does TaxNet manage migrations from older desktop software?",
+    q: "How does Taxnet manage migrations from older desktop software?",
     a: "We extract your full historical chart of accounts, open invoices, supplier balances, trial balances, and employee records from your previous system (e.g., desktop MYOB, Reckon, or Excel). We then convert and balance the data against historical tax returns before switching your live bank feeds on, guaranteeing zero lost records.",
   },
   {
     q: "Do I have to pay retail prices for software subscriptions?",
-    a: "No. Because TaxNet is an accredited Platinum Champion Partner with Xero and an official partner with MYOB and Intuit, we offer discounted wholesale software bundles that reduce your ongoing software licensing overhead.",
+    a: "No. Because Taxnet is an accredited Platinum Champion Partner with Xero and an official partner with MYOB and Intuit, we offer discounted wholesale software bundles that reduce your ongoing software licensing overhead.",
   },
   {
     q: "Will our data remain secure in the cloud?",
@@ -228,7 +228,7 @@ export default function SoftwareWeUseHubPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss cloud accounting software setup and migration for my business."
+                message="Hi Taxnet, I'd like to discuss cloud accounting software setup and migration for my business."
                 label="Chat with a Systems Architect"
                 sublabel="Direct WhatsApp Line"
               />
@@ -339,7 +339,7 @@ export default function SoftwareWeUseHubPage() {
                   <div style={{ borderTop: "1px solid #E6ECE8", paddingTop: "1rem", marginBottom: "1.25rem" }}>
                     {s.features.map((feat) => (
                       <div key={feat} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.82rem", color: "#3B4A40", marginBottom: "6px" }}>
-                        <span style={{ color: "#0D3E26", fontWeight: 800 }}>✓</span>
+                        <span style={{ width: "5px", height: "5px", borderRadius: "50%", backgroundColor: "#A18650", display: "inline-block" }} />
                         <span>{feat}</span>
                       </div>
                     ))}
@@ -347,7 +347,7 @@ export default function SoftwareWeUseHubPage() {
 
                   <span
                     style={{
-                      color: "#0D3E26",
+                      color: "#0A0D0B",
                       fontWeight: 700,
                       fontSize: "0.88rem",
                       display: "inline-flex",
@@ -376,7 +376,7 @@ export default function SoftwareWeUseHubPage() {
                   textTransform: "uppercase",
                 }}
               >
-                The TaxNet Advantage
+                The Taxnet Advantage
               </span>
               <h2
                 style={{
@@ -386,7 +386,7 @@ export default function SoftwareWeUseHubPage() {
                   marginTop: "0.5rem",
                 }}
               >
-                Why Businesses Trust TaxNet for Cloud Deployments
+                Why Businesses Trust Taxnet for Cloud Deployments
               </h2>
             </div>
 
@@ -508,6 +508,7 @@ export default function SoftwareWeUseHubPage() {
           serviceName="Cloud Software Setup & Migration"
           title="Upgrade Your Accounting Software"
           subtitle="Speak with our Melbourne cloud accounting specialists to select the right platform, migrate historical data safely, and train your staff."
+          submitButtonText="Book A Consultation"
         />
       </main>
 

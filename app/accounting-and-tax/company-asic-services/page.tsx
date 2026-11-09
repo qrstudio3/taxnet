@@ -5,12 +5,12 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
-import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Company ASIC Services Melbourne | Corporate Secretarial & Registered Office | TaxNet",
+  title: "Company ASIC Services Melbourne | Corporate Secretarial & Registered Office | Taxnet",
   description:
     "Complete ASIC compliance, corporate secretarial services, and Melbourne CBD registered office address. Same-day Pty Ltd company incorporations, annual review management, and share registry updates.",
   keywords: [
@@ -58,10 +58,10 @@ const PILLARS: { icon: BenefitIconType; title: string; desc: string }[] = [
 const FAQS = [
   {
     q: "What is an ASIC Registered Agent and why does my business need one?",
-    a: "An ASIC Registered Agent is an authorized professional firm appointed to manage corporate compliance on behalf of Australian companies. The Corporations Act 2001 imposes strict notification deadlines (usually 28 days) for changes to directors, addresses, or share structures. As your agent, TaxNet ensures your records remain legally current, protecting you from automatic late penalties.",
+    a: "An ASIC Registered Agent is an authorized professional firm appointed to manage corporate compliance on behalf of Australian companies. The Corporations Act 2001 imposes strict notification deadlines (usually 28 days) for changes to directors, addresses, or share structures. As your agent, Taxnet ensures your records remain legally current, protecting you from automatic late penalties.",
   },
   {
-    q: "Can I use TaxNet's office as our registered company address?",
+    q: "Can I use Taxnet's office as our registered company address?",
     a: "Yes. Australian law requires every registered company to maintain an official registered office where legal notices can be served during business hours. Many founders prefer not to publish their private home address on public government records. Our registered office address package at Suite 6, 861 Doncaster Road provides privacy, prestige, and prompt document handling.",
   },
   {
@@ -70,10 +70,10 @@ const FAQS = [
   },
   {
     q: "What is a Director Identification Number (Director ID) and how is it obtained?",
-    a: "A Director ID is a unique 15-digit identifier that a director keeps permanently. It was introduced to eliminate fictitious director appointments and combat illegal phoenix activity. Directors must apply for their own Director ID personally via myGovID. TaxNet guides you through the application and links your ID to your corporate records.",
+    a: "A Director ID is a unique 15-digit identifier that a director keeps permanently. It was introduced to eliminate fictitious director appointments and combat illegal phoenix activity. Directors must apply for their own Director ID personally via myGovID. Taxnet guides you through the application and links your ID to your corporate records.",
   },
   {
-    q: "How fast can TaxNet incorporate a new company in Australia?",
+    q: "How fast can Taxnet incorporate a new company in Australia?",
     a: "We execute company incorporations within hours once identity verifications are complete. You receive an electronic corporate binder including your Certificate of Incorporation, ACN, company constitution, initial director and shareholder minutes, and share certificates.",
   },
 ];
@@ -92,13 +92,15 @@ export default function CompanyAsicServicesPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "56vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
+            justifyContent: "center",
             paddingTop: "140px",
             paddingBottom: "5rem",
             overflow: "hidden",
+            textAlign: "center",
           }}
         >
           {/* Parallax Background Hero Image */}
@@ -110,114 +112,99 @@ export default function CompanyAsicServicesPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
+            }}
+          />
+
+          {/* Subtle gold ambient glow */}
+          <div
+            aria-hidden="true"
+            style={{
+              position: "absolute",
+              top: "40%",
+              left: "50%",
+              transform: "translate(-50%, -50%)",
+              width: "550px",
+              height: "320px",
+              borderRadius: "50%",
+              background: "radial-gradient(circle, rgba(197, 168, 105, 0.12) 0%, transparent 70%)",
+              pointerEvents: "none",
             }}
           />
 
           <div
             style={{
-              maxWidth: "1240px",
+              maxWidth: "860px",
               margin: "0 auto",
               padding: "0 1.5rem",
               position: "relative",
               zIndex: 2,
               width: "100%",
+              textAlign: "center",
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Home
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
-              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
+              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
                 Accounting & Tax
               </Link>
               <span style={{ margin: "0 8px" }}>/</span>
-              <span style={{ color: "#C5A869" }}>Company & ASIC Secretarial Services</span>
+              <span style={{ color: "#C5A869" }}>Company & ASIC Services</span>
             </nav>
 
-            {/* Headline */}
+            {/* Short Heading in Center */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.5rem, 5.2vw, 4.25rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.15,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                margin: "0 auto 1.75rem auto",
+                maxWidth: "760px",
               }}
             >
-              Company & ASIC Services.{" "}
+              Company & 
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                Flawless Governance.
-              </span>{" "}
-              Total Protection.
+                ASIC Services
+              </span>
             </h1>
 
-            {/* Subtitle */}
-            <p
-              style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
-              }}
-            >
-              Managing an Australian company carries strict legal responsibilities under the Corporations Act. TaxNet serves
-              as your registered ASIC agent and corporate custodian—handling annual reviews, solvency minutes, director IDs,
-              and share registries.
-            </p>
-
-            {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
-              <a
-                href="#contact"
-                style={{
-                  display: "inline-flex",
-                  alignItems: "center",
-                  gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
-                  fontWeight: 800,
-                  fontSize: "0.95rem",
-                  padding: "0.9rem 2rem",
-                  borderRadius: "8px",
-                  textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
-                  transition: "all 180ms ease",
-                }}
-              >
-                Appoint TaxNet as Your ASIC Agent →
-              </a>
-
-              <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss ASIC secretarial services or company incorporation."
-                label="Chat with an ASIC Specialist"
-                sublabel="Direct WhatsApp Line"
-              />
-
-              <a
-                href="tel:0398025800"
-                style={{
-                  color: "rgba(255,255,255,0.85)",
-                  fontWeight: 600,
-                  fontSize: "0.92rem",
-                  textDecoration: "none",
-                  marginLeft: "0.5rem",
-                }}
-              >
-                Or call (03) 9802 5800
+            {/* Book A Consultation Button */}
+                        <style>{`
+              .hero-consultation-btn {
+                display: inline-block;
+                background-color: #C5A869;
+                color: #0A0D0B;
+                font-weight: 700;
+                font-size: 0.95rem;
+                padding: 14px 34px;
+                border-radius: 10px;
+                text-decoration: none;
+                box-shadow: 0 6px 20px rgba(197, 168, 105, 0.4);
+                transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
+              }
+              .hero-consultation-btn:hover {
+                background-color: #DFC386 !important;
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(197, 168, 105, 0.55) !important;
+              }
+            `}</style>
+            <div>
+              <a href="#contact" className="hero-consultation-btn">
+                Book A Consultation →
               </a>
             </div>
           </div>
@@ -247,7 +234,7 @@ export default function CompanyAsicServicesPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet corporate secretarial consultant meeting with director on company governance"
+                    alt="Taxnet corporate secretarial consultant meeting with director on company governance"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -259,7 +246,7 @@ export default function CompanyAsicServicesPage() {
                     position: "absolute",
                     bottom: "-20px",
                     right: "-20px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "1.2rem 1.4rem",
                     borderRadius: "14px",
@@ -280,7 +267,7 @@ export default function CompanyAsicServicesPage() {
               <div>
                 <span
                   style={{
-                    color: "#0D3E26",
+                    color: "#A18650",
                     fontWeight: 700,
                     fontSize: "0.82rem",
                     letterSpacing: "0.08em",
@@ -293,7 +280,7 @@ export default function CompanyAsicServicesPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -306,7 +293,7 @@ export default function CompanyAsicServicesPage() {
                   your company ceases to legally exist, commercial contracts are breached, and company bank accounts are frozen.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet takes custody of your statutory obligations. We maintain your company register, issue timely reminders,
+                  Taxnet takes custody of your statutory obligations. We maintain your company register, issue timely reminders,
                   prepare compliant solvency resolutions, and safeguard your corporate veil from regulatory breakdown.
                 </p>
 
@@ -319,7 +306,7 @@ export default function CompanyAsicServicesPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Residential Privacy
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -334,7 +321,7 @@ export default function CompanyAsicServicesPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Solvency Resolution
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -348,12 +335,12 @@ export default function CompanyAsicServicesPage() {
         </section>
 
         {/* ─── 6 PILLARS ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
+        <section style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E7ECE8" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -366,7 +353,7 @@ export default function CompanyAsicServicesPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -374,52 +361,7 @@ export default function CompanyAsicServicesPage() {
               </h2>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards items={PILLARS} />
           </div>
         </section>
 
@@ -451,7 +393,7 @@ export default function CompanyAsicServicesPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -464,7 +406,7 @@ export default function CompanyAsicServicesPage() {
                   shares necessary for flexible family distributions.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  TaxNet drafts modern company constitutions and shareholder registers tailored specifically to your
+                  Taxnet drafts modern company constitutions and shareholder registers tailored specifically to your
                   commercial strategy, safeguarding founder control while optimizing tax outcomes.
                 </p>
 
@@ -474,7 +416,7 @@ export default function CompanyAsicServicesPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -499,7 +441,7 @@ export default function CompanyAsicServicesPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet corporate secretarial consultant reviewing ASIC company registers and compliance binder"
+                  alt="Taxnet corporate secretarial consultant reviewing ASIC company registers and compliance binder"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -518,7 +460,7 @@ export default function CompanyAsicServicesPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -531,7 +473,7 @@ export default function CompanyAsicServicesPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -553,7 +495,7 @@ export default function CompanyAsicServicesPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",
@@ -575,9 +517,10 @@ export default function CompanyAsicServicesPage() {
 
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
+          submitButtonText="Book A Consultation"
           serviceName="Company & ASIC Secretarial Services"
           title="Secure Your Corporate Governance"
-          subtitle="Protect your corporate veil and avoid costly ASIC penalties. Appoint TaxNet as your registered corporate agent today."
+          subtitle="Protect your corporate veil and avoid costly ASIC penalties. Appoint Taxnet as your registered corporate agent today."
         />
       </main>
 

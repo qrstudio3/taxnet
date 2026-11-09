@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Accounts Payable & Receivable Management Melbourne | TaxNet",
+  title: "Accounts Payable & Receivable Management Melbourne | Taxnet",
   description:
     "End-to-end accounts management for Australian businesses. Supplier bill approvals, ABA bank batch payments, debtor collections, and accurate vendor ledgers.",
   keywords: [
@@ -170,7 +170,7 @@ export default function AccountsManagementPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Stop wasting hours manually keying supplier invoices and chasing overdue accounts. TaxNet provides
+              Stop wasting hours manually keying supplier invoices and chasing overdue accounts. Taxnet provides
               complete accounts payable and receivable management: automated receipt processing, approval workflows,
               ABA bank batch files, and debtor control.
             </p>
@@ -198,7 +198,7 @@ export default function AccountsManagementPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss accounts payable and receivable management."
+                message="Hi Taxnet, I'd like to discuss accounts payable and receivable management."
                 label="Chat with an Accounts Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -245,7 +245,7 @@ export default function AccountsManagementPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="TaxNet managers reviewing financial reports and accounts payable"
+                    alt="Taxnet managers reviewing financial reports and accounts payable"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -303,7 +303,7 @@ export default function AccountsManagementPage() {
                   open to costly human typos.
                 </p>
                 <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  With TaxNet, bills are verified, coded to correct GST expense accounts, and grouped into an ABA batch
+                  With Taxnet, bills are verified, coded to correct GST expense accounts, and grouped into an ABA batch
                   file. You simply upload the file to your bank and confirm with one click. Your supplier ledgers update
                   automatically in Xero with zero discrepancy.
                 </p>
@@ -497,7 +497,7 @@ export default function AccountsManagementPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet account specialist reviewing business invoicing and vendor files"
+                  alt="Taxnet account specialist reviewing business invoicing and vendor files"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -574,6 +574,7 @@ export default function AccountsManagementPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Accounts Payable & Receivable Management"
+          submitButtonText="Book A Consultation"
           title="Streamline Your Accounts Management Today"
           subtitle="Get back hours of wasted time typing bank transfers. Let our Melbourne team implement an audit-proof accounts payable and receivable system."
         />

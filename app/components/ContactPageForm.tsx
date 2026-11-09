@@ -2,23 +2,6 @@
 
 import React, { useState } from "react";
 
-const SERVICE_OPTIONS = [
-  { id: "tax-accounting", label: "Accounting & Tax", desc: "Corporate returns, tax planning & BAS" },
-  { id: "mortgage-broking", label: "Mortgage & Loans", desc: "First home, refinancing & investor loans" },
-  { id: "bookkeeping", label: "Bookkeeping & STP", desc: "Weekly reconciliation, payroll & Xero/MYOB" },
-  { id: "smsf", label: "Super Fund (SMSF)", desc: "SMSF returns, compliance & audit coordination" },
-  { id: "business-advisory", label: "Virtual CFO Advisory", desc: "Cashflow forecasting, valuations & growth" },
-  { id: "commercial-loans", label: "Commercial Finance", desc: "Equipment, business loans & bridging finance" },
-];
-
-const CLIENT_TYPES = [
-  "Business Owner",
-  "Company Director",
-  "Property Investor",
-  "Individual Professional",
-  "First Home Buyer",
-];
-
 const MEETING_FORMATS = [
   { id: "in-person", label: "In-Person Doncaster East" },
   { id: "video", label: "Video Call (Zoom / Teams)" },
@@ -26,8 +9,6 @@ const MEETING_FORMATS = [
 ];
 
 export default function ContactPageForm() {
-  const [selectedService, setSelectedService] = useState<string>("Accounting & Tax");
-  const [clientType, setClientType] = useState<string>("Business Owner");
   const [meetingFormat, setMeetingFormat] = useState<string>("In-Person Doncaster East");
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
@@ -63,8 +44,8 @@ export default function ContactPageForm() {
           email: formData.email,
           phone: formData.phone,
           businessName: formData.businessName,
-          selectedService,
-          clientType,
+          selectedService: "General Consultation & Advisory",
+          clientType: "Client",
           meetingFormat,
           message: formData.message,
         }),
@@ -108,7 +89,7 @@ export default function ContactPageForm() {
         backgroundColor: "#FFFFFF",
         borderRadius: "24px",
         padding: "clamp(1.75rem, 3.5vw, 2.75rem)",
-        boxShadow: "0 20px 50px rgba(13, 62, 38, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+        boxShadow: "0 20px 50px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
         border: "1px solid #E5ECE7",
         position: "relative",
         overflow: "hidden",
@@ -123,7 +104,7 @@ export default function ContactPageForm() {
           left: 0,
           right: 0,
           height: "5px",
-          background: "linear-gradient(90deg, #0D3E26 0%, #C5A869 50%, #0D3E26 100%)",
+          background: "linear-gradient(90deg, #0A0D0B 0%, #C5A869 50%, #0A0D0B 100%)",
         }}
       />
 
@@ -140,13 +121,13 @@ export default function ContactPageForm() {
               width: "72px",
               height: "72px",
               borderRadius: "50%",
-              backgroundColor: "rgba(13, 62, 38, 0.08)",
-              border: "2px solid #0D3E26",
+              backgroundColor: "rgba(161, 134, 80, 0.12)",
+              border: "2px solid #C5A869",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               margin: "0 auto 1.5rem auto",
-              color: "#0D3E26",
+              color: "#A18650",
             }}
           >
             <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -158,7 +139,7 @@ export default function ContactPageForm() {
             style={{
               fontFamily: 'var(--font-monety), "Monety", serif',
               fontSize: "2rem",
-              color: "#0D3E26",
+              color: "#0A0D0B",
               marginBottom: "0.75rem",
               fontWeight: 400,
             }}
@@ -191,9 +172,6 @@ export default function ContactPageForm() {
             }}
           >
             <div style={{ marginBottom: "6px" }}>
-              <span style={{ color: "#7B8E82", fontWeight: 600 }}>Selected Service:</span> <strong>{selectedService}</strong>
-            </div>
-            <div style={{ marginBottom: "6px" }}>
               <span style={{ color: "#7B8E82", fontWeight: 600 }}>Meeting Preference:</span> <strong>{meetingFormat}</strong>
             </div>
             <div>
@@ -204,7 +182,7 @@ export default function ContactPageForm() {
           <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <a
               href={`https://wa.me/61420956761?text=${encodeURIComponent(
-                `Hi Taxnet, I just submitted a consultation request for ${selectedService}. My name is ${formData.name || ""}.`
+                `Hi Taxnet, I just submitted a consultation request. My name is ${formData.name || ""}.`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
@@ -267,7 +245,7 @@ export default function ContactPageForm() {
               style={{
                 fontFamily: 'var(--font-monety), "Monety", serif',
                 fontSize: "clamp(1.75rem, 2.5vw, 2.3rem)",
-                color: "#0F261B",
+                color: "#0A0D0B",
                 fontWeight: 400,
                 lineHeight: 1.18,
                 letterSpacing: "-0.01em",
@@ -289,126 +267,6 @@ export default function ContactPageForm() {
             </p>
           </div>
 
-          {/* Service Selector Chips */}
-          <div style={{ marginBottom: "1.75rem" }}>
-            <label
-              style={{
-                display: "block",
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                color: "#0D3E26",
-                letterSpacing: "0.02em",
-                marginBottom: "0.65rem",
-                textTransform: "uppercase",
-              }}
-            >
-              1. What can our team assist you with? *
-            </label>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-                gap: "0.6rem",
-              }}
-            >
-              {SERVICE_OPTIONS.map((opt) => {
-                const isSelected = selectedService === opt.label;
-                return (
-                  <button
-                    key={opt.id}
-                    type="button"
-                    onClick={() => setSelectedService(opt.label)}
-                    style={{
-                      padding: "10px 14px",
-                      borderRadius: "12px",
-                      border: isSelected
-                        ? "1.5px solid #0D3E26"
-                        : "1px solid #D9E4DD",
-                      backgroundColor: isSelected ? "#0D3E26" : "#FAFBF9",
-                      color: isSelected ? "#FFFFFF" : "#1C2022",
-                      textAlign: "left",
-                      cursor: "pointer",
-                      transition: "all 180ms ease",
-                      boxShadow: isSelected
-                        ? "0 4px 12px rgba(13, 62, 38, 0.2)"
-                        : "none",
-                    }}
-                  >
-                    <div
-                      style={{
-                        fontSize: "0.88rem",
-                        fontWeight: 700,
-                        color: isSelected ? "#FFFFFF" : "#0D3E26",
-                        marginBottom: "2px",
-                      }}
-                    >
-                      {opt.label}
-                    </div>
-                    <div
-                      style={{
-                        fontSize: "0.72rem",
-                        color: isSelected ? "rgba(255, 255, 255, 0.78)" : "#6B7C72",
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {opt.desc}
-                    </div>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Client Profile Chips */}
-          <div style={{ marginBottom: "1.75rem" }}>
-            <label
-              style={{
-                display: "block",
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                color: "#0D3E26",
-                letterSpacing: "0.02em",
-                marginBottom: "0.65rem",
-                textTransform: "uppercase",
-              }}
-            >
-              2. Which best describes your profile? *
-            </label>
-            <div
-              style={{
-                display: "flex",
-                flexWrap: "wrap",
-                gap: "0.5rem",
-              }}
-            >
-              {CLIENT_TYPES.map((type) => {
-                const isSelected = clientType === type;
-                return (
-                  <button
-                    key={type}
-                    type="button"
-                    onClick={() => setClientType(type)}
-                    style={{
-                      padding: "7px 14px",
-                      borderRadius: "999px",
-                      fontSize: "0.82rem",
-                      fontWeight: isSelected ? 700 : 500,
-                      border: isSelected
-                        ? "1.5px solid #A18650"
-                        : "1px solid #D9E4DD",
-                      backgroundColor: isSelected ? "#FBF7EF" : "#FAFBF9",
-                      color: isSelected ? "#0D3E26" : "#4A5A50",
-                      cursor: "pointer",
-                      transition: "all 150ms ease",
-                    }}
-                  >
-                    {type}
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
           {/* Form Fields: Name & Email */}
           <div
             style={{
@@ -425,7 +283,7 @@ export default function ContactPageForm() {
                   display: "block",
                   fontSize: "0.8rem",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   marginBottom: "6px",
                 }}
               >
@@ -451,8 +309,8 @@ export default function ContactPageForm() {
                   transition: "border-color 180ms ease, box-shadow 180ms ease",
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0D3E26";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(13, 62, 38, 0.12)";
+                  e.currentTarget.style.borderColor = "#0A0D0B";
+                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = "#D1DCD5";
@@ -468,7 +326,7 @@ export default function ContactPageForm() {
                   display: "block",
                   fontSize: "0.8rem",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   marginBottom: "6px",
                 }}
               >
@@ -494,8 +352,8 @@ export default function ContactPageForm() {
                   transition: "border-color 180ms ease, box-shadow 180ms ease",
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0D3E26";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(13, 62, 38, 0.12)";
+                  e.currentTarget.style.borderColor = "#0A0D0B";
+                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = "#D1DCD5";
@@ -521,7 +379,7 @@ export default function ContactPageForm() {
                   display: "block",
                   fontSize: "0.8rem",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   marginBottom: "6px",
                 }}
               >
@@ -547,8 +405,8 @@ export default function ContactPageForm() {
                   transition: "border-color 180ms ease, box-shadow 180ms ease",
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0D3E26";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(13, 62, 38, 0.12)";
+                  e.currentTarget.style.borderColor = "#0A0D0B";
+                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = "#D1DCD5";
@@ -564,7 +422,7 @@ export default function ContactPageForm() {
                   display: "block",
                   fontSize: "0.8rem",
                   fontWeight: 700,
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   marginBottom: "6px",
                 }}
               >
@@ -589,8 +447,8 @@ export default function ContactPageForm() {
                   transition: "border-color 180ms ease, box-shadow 180ms ease",
                 }}
                 onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0D3E26";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(13, 62, 38, 0.12)";
+                  e.currentTarget.style.borderColor = "#0A0D0B";
+                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
                 }}
                 onBlur={(e) => {
                   e.currentTarget.style.borderColor = "#D1DCD5";
@@ -607,13 +465,13 @@ export default function ContactPageForm() {
                 display: "block",
                 fontSize: "0.8rem",
                 fontWeight: 700,
-                color: "#0D3E26",
+                color: "#0A0D0B",
                 letterSpacing: "0.02em",
                 marginBottom: "0.65rem",
                 textTransform: "uppercase",
               }}
             >
-              3. Preferred Meeting Format *
+              Preferred Meeting Format *
             </label>
             <div
               style={{
@@ -633,9 +491,9 @@ export default function ContactPageForm() {
                       padding: "11px 14px",
                       borderRadius: "10px",
                       border: isSelected
-                        ? "1.5px solid #0D3E26"
+                        ? "1.5px solid #0A0D0B"
                         : "1px solid #D9E4DD",
-                      backgroundColor: isSelected ? "#0D3E26" : "#FAFBF9",
+                      backgroundColor: isSelected ? "#0A0D0B" : "#FAFBF9",
                       color: isSelected ? "#FFFFFF" : "#1C2022",
                       cursor: "pointer",
                       display: "flex",
@@ -662,7 +520,7 @@ export default function ContactPageForm() {
                 display: "block",
                 fontSize: "0.8rem",
                 fontWeight: 700,
-                color: "#0D3E26",
+                color: "#0A0D0B",
                 marginBottom: "6px",
               }}
             >
@@ -689,8 +547,8 @@ export default function ContactPageForm() {
                 lineHeight: 1.5,
               }}
               onFocus={(e) => {
-                e.currentTarget.style.borderColor = "#0D3E26";
-                e.currentTarget.style.boxShadow = "0 0 0 3px rgba(13, 62, 38, 0.12)";
+                e.currentTarget.style.borderColor = "#0A0D0B";
+                e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
               }}
               onBlur={(e) => {
                 e.currentTarget.style.borderColor = "#D1DCD5";
@@ -734,7 +592,7 @@ export default function ContactPageForm() {
             disabled={loading}
             style={{
               width: "100%",
-              backgroundColor: "#0D3E26",
+              backgroundColor: "#0A0D0B",
               color: "#FFFFFF",
               border: "none",
               borderRadius: "12px",
@@ -743,7 +601,7 @@ export default function ContactPageForm() {
               fontWeight: 700,
               letterSpacing: "0.02em",
               cursor: loading ? "wait" : "pointer",
-              boxShadow: "0 8px 24px rgba(13, 62, 38, 0.28)",
+              boxShadow: "0 8px 24px rgba(10, 13, 11, 0.25)",
               transition: "transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease",
               display: "flex",
               alignItems: "center",
@@ -752,55 +610,37 @@ export default function ContactPageForm() {
             }}
             onMouseEnter={(e) => {
               if (!loading) {
-                e.currentTarget.style.backgroundColor = "#144D31";
+                e.currentTarget.style.backgroundColor = "#222824";
                 e.currentTarget.style.transform = "translateY(-1px)";
-                e.currentTarget.style.boxShadow = "0 10px 28px rgba(13, 62, 38, 0.35)";
+                e.currentTarget.style.boxShadow = "0 10px 28px rgba(10, 13, 11, 0.35)";
               }
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "#0D3E26";
+              e.currentTarget.style.backgroundColor = "#0A0D0B";
               e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 8px 24px rgba(13, 62, 38, 0.28)";
+              e.currentTarget.style.boxShadow = "0 8px 24px rgba(10, 13, 11, 0.25)";
             }}
           >
             {loading ? (
               <span>Preparing Your Session Briefing...</span>
             ) : (
               <>
-                <span>Request Discovery Session · Zero Cost</span>
+                <span>Book A Consultation</span>
                 <span style={{ fontSize: "1.1rem" }}>→</span>
               </>
             )}
           </button>
 
-          {/* Privacy & Reassurance */}
+          {/* Privacy Note */}
           <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              gap: "20px",
+              textAlign: "center",
               marginTop: "1.25rem",
               fontSize: "0.8rem",
-              color: "#5C6E64",
-              flexWrap: "wrap",
+              color: "#6B7C72",
             }}
           >
-            <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0D3E26" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
-                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-              </svg>
-              Protected under CPA Professional Standards & Privacy Act 1988
-            </span>
-            <span>•</span>
-            <span style={{ display: "inline-flex", alignItems: "center", gap: "6px" }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#A18650" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <circle cx="12" cy="12" r="10" />
-                <polyline points="12 6 12 12 16 14" />
-              </svg>
-              Direct Partner Review Guaranteed
-            </span>
+            Direct Senior Partner Review · Zero Obligation
           </div>
         </form>
       )}

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
@@ -10,7 +10,7 @@ import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 
 export const metadata: Metadata = {
-  title: "Budgeting & Cash Flow Forecasting Melbourne | Small Business Advisory | TaxNet",
+  title: "Budgeting & Cash Flow Forecasting Melbourne | Small Business Advisory | Taxnet",
   description:
     "Predict and protect your business cash flow. 13-week rolling cash forecasts, working capital runway analysis, and variance tracking by Melbourne CPA advisors.",
   keywords: [
@@ -198,7 +198,7 @@ export default function BudgetingCashFlowPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi TaxNet, I'd like to discuss cash flow forecasting and budgeting."
+                message="Hi Taxnet, I'd like to discuss cash flow forecasting and budgeting."
                 label="Chat with a Cash Flow Advisor"
                 sublabel="Direct WhatsApp Line"
               />
@@ -245,7 +245,7 @@ export default function BudgetingCashFlowPage() {
                 >
                   <Image
                     src={bodyImg1}
-                    alt="Financial Analyst working on cash flow forecasts at TaxNet"
+                    alt="Financial Analyst working on cash flow forecasts at Taxnet"
                     fill
                     unoptimized
                     style={{ objectFit: "cover" }}
@@ -498,7 +498,7 @@ export default function BudgetingCashFlowPage() {
               >
                 <Image
                   src={bodyImg2}
-                  alt="TaxNet Consultant and business owners planning budget and growth"
+                  alt="Taxnet Consultant and business owners planning budget and growth"
                   fill
                   unoptimized
                   style={{ objectFit: "cover" }}
@@ -575,6 +575,7 @@ export default function BudgetingCashFlowPage() {
         {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
         <BookkeepingContact
           serviceName="Budgeting & Cash Flow Forecasting"
+          submitButtonText="Book A Consultation"
           title="Take Control of Your Cash Runway Today"
           subtitle="Don't wait for a surprise tax bill or late debtor to derail your business. Book a confidential discovery session with our Melbourne cash flow strategists."
         />
