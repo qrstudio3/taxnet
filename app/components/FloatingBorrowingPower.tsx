@@ -67,14 +67,14 @@ export default function FloatingBorrowingPower() {
           width: 56px;
           height: 56px;
           border-radius: 50%;
-          background: #0D3E26;
-          border: 2px solid #A18650;
-          color: #E5D6B6;
+          background: #0A0D0B;
+          border: 2px solid #C5A869;
+          color: #C5A869;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 24px rgba(13, 62, 38, 0.35);
-          transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.2);
+          transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
           flex-shrink: 0;
           position: relative;
           z-index: 2;
@@ -82,8 +82,9 @@ export default function FloatingBorrowingPower() {
 
         .float-borrow-root:hover .float-borrow-circle {
           transform: scale(1.06);
-          background-color: #124A2F;
-          box-shadow: 0 10px 28px rgba(13, 62, 38, 0.45);
+          background-color: #141815;
+          border-color: #E5D6B6;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(197, 168, 105, 0.35);
         }
 
         .float-borrow-banner {
@@ -91,8 +92,8 @@ export default function FloatingBorrowingPower() {
           align-items: center;
           gap: 8px;
           background-color: #FFFFFF;
-          color: #0D3E26;
-          border: 1.5px solid rgba(161, 134, 80, 0.5);
+          color: #0A0D0B;
+          border: 1.5px solid #C5A869;
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
           border-radius: 999px;
           padding: 9px 18px 9px 14px;
@@ -101,9 +102,17 @@ export default function FloatingBorrowingPower() {
           transition: max-width 420ms cubic-bezier(0.16, 1, 0.3, 1),
                       opacity 350ms ease,
                       transform 350ms cubic-bezier(0.16, 1, 0.3, 1),
-                      margin-left 350ms ease;
+                      margin-left 350ms ease,
+                      background-color 200ms ease,
+                      border-color 200ms ease;
           pointer-events: auto;
           margin-left: 10px;
+        }
+
+        .float-borrow-root:hover .float-borrow-banner {
+          background-color: #0A0D0B;
+          border-color: #C5A869;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
         }
 
         .float-borrow-banner.show {
@@ -127,17 +136,28 @@ export default function FloatingBorrowingPower() {
           font-size: 0.88rem;
           font-weight: 700;
           letter-spacing: -0.01em;
-          color: #0D3E26;
+          color: #0A0D0B;
+          transition: color 200ms ease;
+        }
+
+        .float-borrow-root:hover .float-borrow-text {
+          color: #FFFFFF;
         }
 
         .float-borrow-badge {
-          background-color: rgba(13, 62, 38, 0.08);
-          color: #A18650;
+          background-color: #0A0D0B;
+          color: #C5A869;
           font-size: 0.72rem;
           font-weight: 800;
           padding: 3px 8px;
           border-radius: 6px;
           letter-spacing: 0.02em;
+          transition: background-color 200ms ease, color 200ms ease;
+        }
+
+        .float-borrow-root:hover .float-borrow-badge {
+          background-color: #C5A869;
+          color: #0A0D0B;
         }
 
         @media (max-width: 640px) {

@@ -12,6 +12,7 @@ export default function ContactPageForm() {
   const [meetingFormat, setMeetingFormat] = useState<string>("In-Person Doncaster East");
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
+  const [isSuccess, setIsSuccess] = useState<boolean>(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
@@ -34,6 +35,7 @@ export default function ContactPageForm() {
     e.preventDefault();
     setLoading(true);
     setErrorMessage(null);
+    setIsSuccess(false);
 
     try {
       const response = await fetch("/api/contact", {
@@ -59,7 +61,11 @@ export default function ContactPageForm() {
         );
       }
 
-      setSubmitted(true);
+      setIsSuccess(true);
+      setTimeout(() => {
+        setSubmitted(true);
+        setIsSuccess(false);
+      }, 750);
     } catch (err: any) {
       console.error("Form Submission Error:", err);
       setErrorMessage(
@@ -586,43 +592,90 @@ export default function ContactPageForm() {
             </div>
           )}
 
+          <style>{`
+            @keyframes tnBtnSpin {
+              from { transform: rotate(0deg); }
+              to { transform: rotate(360deg); }
+            }
+          `}</style>
+
           {/* Submit Button */}
           <button
             type="submit"
-            disabled={loading}
+            disabled={loading || isSuccess}
             style={{
               width: "100%",
-              backgroundColor: "#0A0D0B",
-              color: "#FFFFFF",
-              border: "none",
+              backgroundColor: isSuccess ? "#C5A869" : loading ? "#141815" : "#0A0D0B",
+              color: isSuccess ? "#0A0D0B" : "#FFFFFF",
+              border: loading
+                ? "1.5px solid #C5A869"
+                : isSuccess
+                ? "1.5px solid #C5A869"
+                : "1px solid rgba(197, 168, 105, 0.45)",
               borderRadius: "12px",
               padding: "16px 24px",
               fontSize: "1rem",
               fontWeight: 700,
               letterSpacing: "0.02em",
-              cursor: loading ? "wait" : "pointer",
-              boxShadow: "0 8px 24px rgba(10, 13, 11, 0.25)",
-              transition: "transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease",
+              cursor: loading || isSuccess ? "default" : "pointer",
+              boxShadow: loading
+                ? "0 0 18px rgba(197, 168, 105, 0.25)"
+                : "0 8px 24px rgba(10, 13, 11, 0.25)",
+              transition: "all 200ms ease",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              gap: "8px",
+              gap: "10px",
             }}
             onMouseEnter={(e) => {
-              if (!loading) {
+              if (!loading && !isSuccess) {
                 e.currentTarget.style.backgroundColor = "#222824";
+                e.currentTarget.style.borderColor = "#C5A869";
                 e.currentTarget.style.transform = "translateY(-1px)";
                 e.currentTarget.style.boxShadow = "0 10px 28px rgba(10, 13, 11, 0.35)";
               }
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = "#0A0D0B";
-              e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 8px 24px rgba(10, 13, 11, 0.25)";
+              if (!loading && !isSuccess) {
+                e.currentTarget.style.backgroundColor = "#0A0D0B";
+                e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
+                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.boxShadow = "0 8px 24px rgba(10, 13, 11, 0.25)";
+              }
             }}
           >
             {loading ? (
-              <span>Preparing Your Session Briefing...</span>
+              <>
+                <svg
+                  style={{ animation: "tnBtnSpin 0.85s linear infinite" }}
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10" stroke="rgba(255, 255, 255, 0.25)" strokeWidth="3" />
+                  <path d="M12 2a10 10 0 0 1 10 10" stroke="#C5A869" strokeWidth="3" strokeLinecap="round" />
+                </svg>
+                <span>Submitting Consultation Request...</span>
+              </>
+            ) : isSuccess ? (
+              <>
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Submitted Successfully!</span>
+              </>
             ) : (
               <>
                 <span>Book A Consultation</span>

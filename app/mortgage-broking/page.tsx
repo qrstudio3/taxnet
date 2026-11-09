@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -7,6 +7,7 @@ import BookkeepingContact from "@/app/components/BookkeepingContact";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 
 export const metadata: Metadata = {
   title: "Mortgage Broker Melbourne | 40+ Bank & Non-Bank Lenders | Taxnet",
@@ -115,12 +116,12 @@ export default function MortgageBrokingHubPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
-            paddingBottom: "5rem",
+            paddingBottom: "4.5rem",
             overflow: "hidden",
           }}
         >
@@ -133,7 +134,7 @@ export default function MortgageBrokingHubPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -148,7 +149,7 @@ export default function MortgageBrokingHubPage() {
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
               <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
                 Home
               </Link>
@@ -160,19 +161,19 @@ export default function MortgageBrokingHubPage() {
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.4rem, 5vw, 4.2rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.1,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                maxWidth: "860px",
+                marginBottom: "1rem",
               }}
             >
               Independent Mortgage Broking.{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
@@ -183,40 +184,39 @@ export default function MortgageBrokingHubPage() {
               Zero Broker Fees.
             </h1>
 
-            {/* Subtitle */}
+            {/* Subtitle - Lesser & Punchy */}
             <p
               style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
+                fontSize: "clamp(1rem, 1.25vw, 1.15rem)",
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.8)",
+                maxWidth: "620px",
+                marginBottom: "2rem",
               }}
             >
-              Navigating Australian home loans and commercial finance shouldn&apos;t be stressful. Taxnet compares 40+
-              banks and non-bank lenders, negotiates discounted rates, and manages all paperwork from pre-approval to settlement.
+              Compare 40+ banks and specialist lenders. Access wholesale discounted interest rates with zero broker fees.
             </p>
 
             {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
               <Link
                 href="/calculator"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Calculate My Borrowing Capacity →
+                Calculate Borrowing Capacity →
               </Link>
 
               <ExecutiveWhatsAppButton
@@ -241,13 +241,13 @@ export default function MortgageBrokingHubPage() {
           </div>
         </section>
 
-        {/* ─── SERVICES DIRECTORY GRID (ONLY THESE KIND OF CARDS) ─── */}
+        {/* ─── SERVICES AUTO-SLIDER ─── */}
         <section id="services" style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -260,7 +260,7 @@ export default function MortgageBrokingHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.6vw, 3rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -272,73 +272,7 @@ export default function MortgageBrokingHubPage() {
               </p>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {MORTGAGE_SERVICES.map((s) => (
-                <Link
-                  key={s.title}
-                  href={s.href}
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                    textDecoration: "none",
-                    transition: "transform 200ms ease, box-shadow 200ms ease",
-                  }}
-                  className="card"
-                >
-                  <BookkeepingBenefitIcon type={s.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: "0 0 1.5rem 0",
-                      flexGrow: 1,
-                    }}
-                  >
-                    {s.desc}
-                  </p>
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      color: "#0D3E26",
-                      fontWeight: 700,
-                      fontSize: "0.88rem",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      marginTop: "auto",
-                    }}
-                  >
-                    Explore Finance Option →
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <AutoSlidingCards items={MORTGAGE_SERVICES} />
           </div>
         </section>
 
@@ -351,7 +285,7 @@ export default function MortgageBrokingHubPage() {
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -364,7 +298,7 @@ export default function MortgageBrokingHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -386,7 +320,7 @@ export default function MortgageBrokingHubPage() {
                     style={{
                       fontSize: "1.08rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

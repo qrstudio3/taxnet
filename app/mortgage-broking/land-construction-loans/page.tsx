@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
@@ -92,8 +93,8 @@ export default function LandConstructionLoansPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
@@ -110,7 +111,7 @@ export default function LandConstructionLoansPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -153,7 +154,7 @@ export default function LandConstructionLoansPage() {
               Land & Construction Loans.{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
@@ -167,15 +168,14 @@ export default function LandConstructionLoansPage() {
             {/* Subtitle */}
             <p
               style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
+                fontSize: "clamp(1rem, 1.25vw, 1.15rem)",
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.8)",
+                maxWidth: "640px",
+                marginBottom: "2rem",
               }}
             >
-              Building a new home requires meticulous financial choreography. Taxnet handles progress claim inspections,
-              staged lender disbursements, and interest-only cash flow management so your build stays on time and on budget.
+              Stage-by-stage construction financing across slab, frame, lockup, and completion with smooth progress claims.
             </p>
 
             {/* CTA Buttons */}
@@ -186,14 +186,14 @@ export default function LandConstructionLoansPage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
@@ -258,7 +258,7 @@ export default function LandConstructionLoansPage() {
                     position: "absolute",
                     bottom: "-20px",
                     right: "-20px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "1.2rem 1.4rem",
                     borderRadius: "14px",
@@ -279,7 +279,7 @@ export default function LandConstructionLoansPage() {
               <div>
                 <span
                   style={{
-                    color: "#0D3E26",
+                    color: "#A18650",
                     fontWeight: 700,
                     fontSize: "0.82rem",
                     letterSpacing: "0.08em",
@@ -292,7 +292,7 @@ export default function LandConstructionLoansPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -320,7 +320,7 @@ export default function LandConstructionLoansPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Zero Payment Delays
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -335,7 +335,7 @@ export default function LandConstructionLoansPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Fixed Price Assurance
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -349,12 +349,12 @@ export default function LandConstructionLoansPage() {
         </section>
 
         {/* ─── 6 PILLARS (ONLY THESE KIND OF CARDS) ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
+        <section style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E7ECE8" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -367,7 +367,7 @@ export default function LandConstructionLoansPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -375,52 +375,7 @@ export default function LandConstructionLoansPage() {
               </h2>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards items={PILLARS} />
           </div>
         </section>
 
@@ -452,7 +407,7 @@ export default function LandConstructionLoansPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -476,7 +431,7 @@ export default function LandConstructionLoansPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -520,7 +475,7 @@ export default function LandConstructionLoansPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -533,7 +488,7 @@ export default function LandConstructionLoansPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -555,7 +510,7 @@ export default function LandConstructionLoansPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

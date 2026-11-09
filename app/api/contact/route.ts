@@ -1,4 +1,4 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
@@ -90,7 +90,7 @@ ${message || "No additional notes provided."}
 Delivered securely via Taxnet Gmail SMTP Integration.
 `.trim();
 
-    // High-End Luxury HTML Email Template
+    // High-End Luxury HTML Email Template (Onyx Black & Warm Gold)
     const htmlContent = `
 <!DOCTYPE html>
 <html lang="en">
@@ -99,19 +99,19 @@ Delivered securely via Taxnet Gmail SMTP Integration.
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>New Taxnet Client Consultation Request</title>
 </head>
-<body style="margin: 0; padding: 0; background-color: #F4F6F4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #1C2022;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #F4F6F4; padding: 40px 15px;">
+<body style="margin: 0; padding: 0; background-color: #F7F8F7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #0A0D0B;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #F7F8F7; padding: 40px 15px;">
     <tr>
       <td align="center">
-        <table role="presentation" width="100%" style="max-width: 620px; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.06); border: 1px solid #E2E8E3;">
+        <table role="presentation" width="100%" style="max-width: 620px; background-color: #FFFFFF; border-radius: 16px; overflow: hidden; box-shadow: 0 12px 36px rgba(0,0,0,0.08); border: 1px solid #E4EAE5;">
           
           <!-- Header Banner -->
           <tr>
-            <td style="background: linear-gradient(135deg, #061A10 0%, #0D3E26 100%); padding: 36px 32px; text-align: left; border-bottom: 3px solid #C5A869;">
+            <td style="background: linear-gradient(135deg, #0A0D0B 0%, #171C19 100%); padding: 36px 32px; text-align: left; border-bottom: 2.5px solid #C5A869;">
               <div style="color: #C5A869; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px;">
-                CPA Australia Practice Consultation Desk
+                CPA Australia Practice · Consultation Desk
               </div>
-              <h1 style="color: #FFFFFF; font-size: 24px; font-weight: 600; margin: 0; line-height: 1.25;">
+              <h1 style="color: #FFFFFF; font-size: 24px; font-weight: 600; margin: 0; line-height: 1.25; font-family: Georgia, 'Times New Roman', serif;">
                 New Advisory Consultation Request
               </h1>
               <p style="color: rgba(229, 214, 182, 0.85); font-size: 13px; margin: 8px 0 0 0;">
@@ -125,32 +125,32 @@ Delivered securely via Taxnet Gmail SMTP Integration.
             <td style="padding: 32px;">
 
               <!-- Primary Client Card -->
-              <table role="presentation" width="100%" style="background-color: #F8FAF8; border: 1px solid #E1E8E2; border-radius: 12px; margin-bottom: 24px;">
+              <table role="presentation" width="100%" style="background-color: #FAFCFA; border: 1px solid #E4EAE5; border-radius: 12px; margin-bottom: 24px;">
                 <tr>
-                  <td style="padding: 20px;">
-                    <div style="font-size: 11px; font-weight: 700; color: #0D3E26; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">
+                  <td style="padding: 22px;">
+                    <div style="font-size: 11px; font-weight: 800; color: #A18650; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 14px;">
                       Client Contact Particulars
                     </div>
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="6">
                       <tr>
                         <td width="35%" style="color: #6B7C72; font-size: 13px; font-weight: 600;">Full Name:</td>
-                        <td style="color: #0D3E26; font-size: 14px; font-weight: 700;">${name}</td>
+                        <td style="color: #0A0D0B; font-size: 15px; font-weight: 700;">${name}</td>
                       </tr>
                       <tr>
                         <td style="color: #6B7C72; font-size: 13px; font-weight: 600;">Email Address:</td>
                         <td style="font-size: 14px;">
-                          <a href="mailto:${email}" style="color: #0D3E26; text-decoration: underline; font-weight: 600;">${email}</a>
+                          <a href="mailto:${email}" style="color: #0A0D0B; text-decoration: underline; font-weight: 600;">${email}</a>
                         </td>
                       </tr>
                       <tr>
                         <td style="color: #6B7C72; font-size: 13px; font-weight: 600;">Phone Number:</td>
                         <td style="font-size: 14px;">
-                          <a href="tel:${phone.replace(/\s+/g, "")}" style="color: #0D3E26; text-decoration: none; font-weight: 600;">${phone}</a>
+                          <a href="tel:${phone.replace(/\s+/g, "")}" style="color: #0A0D0B; text-decoration: none; font-weight: 700;">${phone}</a>
                         </td>
                       </tr>
                       <tr>
                         <td style="color: #6B7C72; font-size: 13px; font-weight: 600;">Business / Entity:</td>
-                        <td style="color: #1C2022; font-size: 14px;">${businessName || "Not specified"}</td>
+                        <td style="color: #0A0D0B; font-size: 14px; font-weight: 600;">${businessName || "Not specified"}</td>
                       </tr>
                     </table>
                   </td>
@@ -158,14 +158,14 @@ Delivered securely via Taxnet Gmail SMTP Integration.
               </table>
 
               <!-- Engagement Criteria -->
-              <div style="font-size: 11px; font-weight: 700; color: #0D3E26; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px;">
+              <div style="font-size: 11px; font-weight: 800; color: #A18650; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px;">
                 Engagement Scope &amp; Preferences
               </div>
               <table role="presentation" width="100%" cellspacing="0" cellpadding="8" style="border-collapse: collapse; margin-bottom: 24px;">
                 <tr style="border-bottom: 1px solid #EDF2EE;">
                   <td width="35%" style="color: #6B7C72; font-size: 13px;">Selected Service:</td>
-                  <td style="color: #0D3E26; font-size: 14px; font-weight: 700;">
-                    <span style="display: inline-block; background-color: #EBF3EE; color: #0D3E26; padding: 4px 10px; border-radius: 6px; font-size: 12px; font-weight: 700;">
+                  <td style="color: #0A0D0B; font-size: 14px; font-weight: 700;">
+                    <span style="display: inline-block; background-color: #F8F5EE; color: #8A7040; border: 1px solid rgba(197, 168, 105, 0.4); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">
                       ${selectedService || "General Advisory"}
                     </span>
                   </td>
@@ -173,20 +173,20 @@ Delivered securely via Taxnet Gmail SMTP Integration.
                 ${clientType ? `
                 <tr style="border-bottom: 1px solid #EDF2EE;">
                   <td style="color: #6B7C72; font-size: 13px;">Client Profile:</td>
-                  <td style="color: #1C2022; font-size: 13px; font-weight: 600;">${clientType}</td>
+                  <td style="color: #0A0D0B; font-size: 13px; font-weight: 600;">${clientType}</td>
                 </tr>` : ""}
                 ${meetingFormat ? `
                 <tr style="border-bottom: 1px solid #EDF2EE;">
                   <td style="color: #6B7C72; font-size: 13px;">Preferred Format:</td>
-                  <td style="color: #1C2022; font-size: 13px; font-weight: 600;">${meetingFormat}</td>
+                  <td style="color: #0A0D0B; font-size: 13px; font-weight: 600;">${meetingFormat}</td>
                 </tr>` : ""}
               </table>
 
               <!-- Client Message Box -->
-              <div style="font-size: 11px; font-weight: 700; color: #0D3E26; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px;">
+              <div style="font-size: 11px; font-weight: 800; color: #A18650; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px;">
                 Client Notes / Scope Requirements
               </div>
-              <div style="background-color: #FAFCFA; border: 1px solid #E1E8E2; border-left: 4px solid #C5A869; border-radius: 8px; padding: 16px; font-size: 14px; line-height: 1.6; color: #2C3530; margin-bottom: 28px;">
+              <div style="background-color: #FAFCFA; border: 1px solid #E4EAE5; border-left: 3.5px solid #C5A869; border-radius: 8px; padding: 18px; font-size: 14px; line-height: 1.65; color: #2C3530; margin-bottom: 28px;">
                 ${(message || "I would like to schedule a discovery consultation with Taxnet.").replace(/\n/g, "<br>")}
               </div>
 
@@ -194,7 +194,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center">
-                    <a href="mailto:${email}?subject=RE: Taxnet Advisory Consultation - ${encodeURIComponent(name)}" style="display: inline-block; background: linear-gradient(135deg, #0D3E26 0%, #155233 100%); color: #FFFFFF; font-size: 14px; font-weight: 700; text-decoration: none; padding: 13px 28px; border-radius: 8px; box-shadow: 0 4px 14px rgba(13,62,38,0.25);">
+                    <a href="mailto:${email}?subject=RE: Taxnet Advisory Consultation - ${encodeURIComponent(name)}" style="display: inline-block; background-color: #0A0D0B; color: #FFFFFF; border: 1.5px solid #C5A869; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
                       Reply Directly to Client (${email}) →
                     </a>
                   </td>
@@ -206,9 +206,10 @@ Delivered securely via Taxnet Gmail SMTP Integration.
 
           <!-- Footer Information -->
           <tr>
-            <td style="background-color: #F8FAF8; padding: 22px 32px; border-top: 1px solid #E5ECE7; text-align: center; color: #7A8B80; font-size: 11px; line-height: 1.5;">
-              Taxnet Pty Ltd · Suite 6, 861 Doncaster Road, Doncaster East VIC 3109<br>
-              Phone: (03) 9802 5800 · Direct WhatsApp: +61 420 956 761 · CPA Australia Public Practice
+            <td style="background-color: #0A0D0B; padding: 24px 32px; border-top: 1px solid rgba(197, 168, 105, 0.25); text-align: center; color: rgba(255, 255, 255, 0.75); font-size: 11px; line-height: 1.6;">
+              <div style="color: #FFFFFF; font-weight: 700; margin-bottom: 4px; font-size: 12px;">Taxnet Pty Ltd · CPA Australia Public Practice</div>
+              <div>Suite 6, 861 Doncaster Road, Doncaster East VIC 3109</div>
+              <div style="color: #C5A869; margin-top: 4px;">Phone: (03) 9802 5800 · Direct WhatsApp: +61 420 956 761</div>
             </td>
           </tr>
 

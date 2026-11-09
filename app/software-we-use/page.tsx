@@ -6,6 +6,7 @@ import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 
 export const metadata: Metadata = {
@@ -123,8 +124,8 @@ export default function SoftwareWeUseHubPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
@@ -140,8 +141,7 @@ export default function SoftwareWeUseHubPage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+              background: "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -180,7 +180,7 @@ export default function SoftwareWeUseHubPage() {
               Software We Use.{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
@@ -201,8 +201,7 @@ export default function SoftwareWeUseHubPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              We deploy Australia&apos;s leading cloud accounting platforms and tailored operational add-ons.
-              Eliminate manual paperwork, automate daily bank reconciliations, and access live financial metrics anywhere.
+              We partner with Australia&apos;s leading cloud accounting platforms to automate bank feeds, receipt capture, payroll STP Phase 2, and real-time reporting.
             </p>
 
             {/* CTA Buttons */}
@@ -213,14 +212,14 @@ export default function SoftwareWeUseHubPage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
@@ -257,7 +256,7 @@ export default function SoftwareWeUseHubPage() {
             <div style={{ textAlign: "center", marginBottom: "4rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -270,7 +269,7 @@ export default function SoftwareWeUseHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.6vw, 3rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -282,84 +281,15 @@ export default function SoftwareWeUseHubPage() {
               </p>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {SOFTWARE_LIST.map((s) => (
-                <Link
-                  key={s.title}
-                  href={s.href}
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                    textDecoration: "none",
-                    transition: "transform 200ms ease, box-shadow 200ms ease",
-                  }}
-                  className="card"
-                >
-                  <BookkeepingBenefitIcon type={s.icon} />
-                  <div style={{ fontSize: "0.75rem", color: "#A18650", fontWeight: 700, textTransform: "uppercase", marginTop: "0.4rem", marginBottom: "0.2rem" }}>
-                    {s.badge}
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: "0 0 1.5rem 0",
-                      flexGrow: 1,
-                    }}
-                  >
-                    {s.desc}
-                  </p>
-
-                  <div style={{ borderTop: "1px solid #E6ECE8", paddingTop: "1rem", marginBottom: "1.25rem" }}>
-                    {s.features.map((feat) => (
-                      <div key={feat} style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "0.82rem", color: "#3B4A40", marginBottom: "6px" }}>
-                        <span style={{ width: "5px", height: "5px", borderRadius: "50%", backgroundColor: "#A18650", display: "inline-block" }} />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  <span
-                    style={{
-                      color: "#0A0D0B",
-                      fontWeight: 700,
-                      fontSize: "0.88rem",
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "6px",
-                    }}
-                  >
-                    Explore {s.title.split(" ")[0]} Services →
-                  </span>
-                </Link>
-              ))}
-            </div>
+            <AutoSlidingCards
+              items={SOFTWARE_LIST.map((s) => ({
+                icon: s.icon,
+                title: s.title,
+                desc: s.desc,
+                tag: s.badge,
+                href: s.href,
+              }))}
+            />
           </div>
         </section>
 
@@ -369,7 +299,7 @@ export default function SoftwareWeUseHubPage() {
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -382,7 +312,7 @@ export default function SoftwareWeUseHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -414,7 +344,7 @@ export default function SoftwareWeUseHubPage() {
                       fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
                       fontSize: "1.15rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       marginBottom: "0.6rem",
                       letterSpacing: "-0.015em",
                       lineHeight: 1.3,
@@ -448,7 +378,7 @@ export default function SoftwareWeUseHubPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -461,7 +391,7 @@ export default function SoftwareWeUseHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -483,7 +413,7 @@ export default function SoftwareWeUseHubPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

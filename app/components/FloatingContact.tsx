@@ -92,21 +92,23 @@ export default function FloatingContact() {
 
         .fab-action-pill {
           background-color: #FFFFFF;
-          color: #0D3E26;
+          color: #0A0D0B;
           font-size: 0.86rem;
           font-weight: 700;
           letter-spacing: -0.01em;
           padding: 8px 14px;
           border-radius: 999px;
           box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-          border: 1px solid rgba(13, 62, 38, 0.12);
+          border: 1px solid rgba(197, 168, 105, 0.35);
           white-space: nowrap;
-          transition: background-color 180ms ease, box-shadow 180ms ease;
+          transition: background-color 180ms ease, color 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
         }
 
         .fab-action-row:hover .fab-action-pill {
-          background-color: #F8FAF8;
-          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.16);
+          background-color: #0A0D0B;
+          color: #FFFFFF;
+          border-color: #C5A869;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
         }
 
         .fab-action-bubble {
@@ -117,13 +119,13 @@ export default function FloatingContact() {
           align-items: center;
           justify-content: center;
           box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-          transition: transform 180ms ease, box-shadow 180ms ease;
+          transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
           flex-shrink: 0;
         }
 
         .fab-action-row:hover .fab-action-bubble {
           transform: scale(1.08);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
         }
 
         .fab-bubble-whatsapp {
@@ -132,37 +134,38 @@ export default function FloatingContact() {
         }
 
         .fab-bubble-phone {
-          background-color: #0D3E26;
-          color: #E5D6B6;
-          border: 1.5px solid rgba(161, 134, 80, 0.5);
+          background-color: #0A0D0B;
+          color: #C5A869;
+          border: 1.5px solid #C5A869;
         }
 
         .fab-bubble-email {
-          background-color: #0D3E26;
-          color: #E5D6B6;
-          border: 1.5px solid rgba(161, 134, 80, 0.5);
+          background-color: #0A0D0B;
+          color: #C5A869;
+          border: 1.5px solid #C5A869;
         }
 
         .fab-trigger-btn {
           width: 58px;
           height: 58px;
           border-radius: 50%;
-          background: #0D3E26;
-          border: 2px solid #A18650;
+          background: #0A0D0B;
+          border: 2px solid #C5A869;
           color: #FFFFFF;
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 8px 24px rgba(13, 62, 38, 0.35);
+          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.2);
           cursor: pointer;
-          transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+          transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
           position: relative;
         }
 
         .fab-trigger-btn:hover {
           transform: scale(1.06);
-          background-color: #124A2F;
-          box-shadow: 0 10px 28px rgba(13, 62, 38, 0.45);
+          background-color: #141815;
+          border-color: #E5D6B6;
+          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(197, 168, 105, 0.35);
         }
 
         .fab-trigger-icon {
@@ -300,7 +303,7 @@ export default function FloatingContact() {
               height="24"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#E5D6B6"
+              stroke="#C5A869"
               strokeWidth="2.5"
               strokeLinecap="round"
               strokeLinejoin="round"
@@ -315,7 +318,7 @@ export default function FloatingContact() {
               height="26"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#E5D6B6"
+              stroke="#C5A869"
               strokeWidth="2.1"
               strokeLinecap="round"
               strokeLinejoin="round"

@@ -5,6 +5,7 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
@@ -88,12 +89,12 @@ export default function BankReconciliationPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
-            paddingBottom: "5rem",
+            paddingBottom: "4.5rem",
             overflow: "hidden",
           }}
         >
@@ -106,7 +107,7 @@ export default function BankReconciliationPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -121,76 +122,55 @@ export default function BankReconciliationPage() {
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
-                Home
-              </Link>
-              <span style={{ margin: "0 8px" }}>/</span>
-              <Link href="/small-business-bookkeeping" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
-                Bookkeeping
-              </Link>
-              <span style={{ margin: "0 8px" }}>/</span>
-              <span style={{ color: "#C5A869" }}>Bank Reconciliation</span>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Home</Link><span style={{ margin: "0 8px" }}>/</span><Link href="/small-business-bookkeeping" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Small Business Bookkeeping</Link><span style={{ margin: "0 8px" }}>/</span><span style={{ color: "#C5A869" }}>Bank Reconciliation</span>
             </nav>
 
             {/* Headline */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.4rem, 5vw, 4.2rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.1,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                maxWidth: "860px",
+                marginBottom: "1rem",
               }}
             >
-              Zero Discrepancies.{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                }}
-              >
-                100% Balanced to the Cent.
-              </span>{" "}
-              BAS-Ready Every Week.
+              Zero Discrepancies.{" "}<span style={{ background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>100% Balanced to the Cent.</span>{" "}BAS-Ready Every Week.
             </h1>
 
-            {/* Subtitle */}
+            {/* Subtitle - Lesser & Punchy */}
             <p
               style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
+                fontSize: "clamp(1rem, 1.25vw, 1.15rem)",
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.8)",
+                maxWidth: "640px",
+                marginBottom: "2rem",
               }}
             >
-              An unbalanced ledger is a ticking audit risk. Our Melbourne bookkeeping specialists perform rigorous
-              weekly reconciliations across all bank accounts, credit cards, and merchant gateways—ensuring every
-              cent is accounted for and your business is always 100% BAS-ready.
+              Rigorous weekly reconciliations across all bank accounts, credit cards, and merchant gateways to eliminate audit risks.
             </p>
 
             {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
               <a
                 href="#contact"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
@@ -198,7 +178,7 @@ export default function BankReconciliationPage() {
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I'd like to discuss bank reconciliation and BAS-ready records."
+                message="Hi Taxnet, I'd like to discuss bank reconciliation and ledger balancing."
                 label="Chat with a Reconciliation Specialist"
                 sublabel="Direct WhatsApp Line"
               />
@@ -216,8 +196,6 @@ export default function BankReconciliationPage() {
                 Or call (03) 9802 5800
               </a>
             </div>
-
-
           </div>
         </section>
 
@@ -257,7 +235,7 @@ export default function BankReconciliationPage() {
                     position: "absolute",
                     bottom: "-20px",
                     right: "-20px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "1.2rem 1.4rem",
                     borderRadius: "14px",
@@ -278,7 +256,7 @@ export default function BankReconciliationPage() {
               <div>
                 <span
                   style={{
-                    color: "#0D3E26",
+                    color: "#A18650",
                     fontWeight: 700,
                     fontSize: "0.82rem",
                     letterSpacing: "0.08em",
@@ -291,7 +269,7 @@ export default function BankReconciliationPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -317,7 +295,7 @@ export default function BankReconciliationPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Maximized BAS Refunds
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -332,7 +310,7 @@ export default function BankReconciliationPage() {
                       border: "1px solid #E6ECE8",
                     }}
                   >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
+                    <div style={{ fontWeight: 800, color: "#0A0D0B", fontSize: "0.95rem", marginBottom: "4px" }}>
                       Faster Tax Lodgement
                     </div>
                     <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
@@ -346,12 +324,12 @@ export default function BankReconciliationPage() {
         </section>
 
         {/* ─── 6 RECONCILIATION PILLARS ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
+        <section style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E7ECE8" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -364,7 +342,7 @@ export default function BankReconciliationPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -372,52 +350,7 @@ export default function BankReconciliationPage() {
               </h2>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {RECON_PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards items={RECON_PILLARS} />
           </div>
         </section>
 
@@ -449,7 +382,7 @@ export default function BankReconciliationPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -471,7 +404,7 @@ export default function BankReconciliationPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -515,7 +448,7 @@ export default function BankReconciliationPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -528,7 +461,7 @@ export default function BankReconciliationPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -550,7 +483,7 @@ export default function BankReconciliationPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

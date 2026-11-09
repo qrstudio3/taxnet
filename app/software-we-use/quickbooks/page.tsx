@@ -8,6 +8,7 @@ import BookkeepingContact from "@/app/components/BookkeepingContact";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 
 export const metadata: Metadata = {
   title: "QuickBooks Online Certified ProAdvisor Melbourne | Taxnet",
@@ -92,8 +93,8 @@ export default function QuickBooksSoftwarePage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
@@ -109,8 +110,7 @@ export default function QuickBooksSoftwarePage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+              background: "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -150,18 +150,18 @@ export default function QuickBooksSoftwarePage() {
                 marginBottom: "1.5rem",
               }}
             >
-              QuickBooks Online.{" "}
+              QuickBooks Online Certified ProAdvisor.{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                ProAdvisor Setup.
+                Smart Cash Flow.
               </span>{" "}
-              Agile Mobile Bookkeeping.
+              Mobile Business Agility.
             </h1>
 
             {/* Subtitle */}
@@ -174,8 +174,7 @@ export default function QuickBooksSoftwarePage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Stay agile, bill on the move, and track multi-currency profits. As Certified QuickBooks ProAdvisors,
-              Taxnet architects seamless QBO workflows, automated bank reconciliations, and compliant contractor TPAR lodgements.
+              Intuitive cloud invoicing, automatic expense matching, multi-currency accounting, and mobile bookkeeping workflows for agile Melbourne businesses.
             </p>
 
             {/* CTA Buttons */}
@@ -186,23 +185,23 @@ export default function QuickBooksSoftwarePage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Get a QuickBooks Setup Consultation →
+                Deploy QuickBooks Online →
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I'd like to discuss QuickBooks Online setup and bookkeeping."
-                label="Chat with a QuickBooks Specialist"
+                message="Hi Taxnet, I'd like to discuss QuickBooks Online setup and bookkeeping for my business."
+                label="Chat with a QuickBooks ProAdvisor"
                 sublabel="Direct WhatsApp Line"
               />
 
@@ -227,201 +226,15 @@ export default function QuickBooksSoftwarePage() {
         {/* ─── PAIN POINT SECTION ─── */}
         <section style={{ padding: "5rem 0", backgroundColor: "#FFFFFF" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "3.5rem",
-                alignItems: "center",
-              }}
-            >
-              {/* Image 1 */}
-              <div style={{ position: "relative" }}>
-                <div
-                  style={{
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    boxShadow: "0 20px 45px rgba(0,0,0,0.1)",
-                    position: "relative",
-                    aspectRatio: "4/3",
-                  }}
-                >
-                  <Image
-                    src={bodyImg1}
-                    alt="Taxnet accountant reviewing QuickBooks Online financial reports with Melbourne client"
-                    fill
-                    unoptimized
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                {/* Float Card */}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "-20px",
-                    right: "-20px",
-                    backgroundColor: "#0D3E26",
-                    color: "#FFFFFF",
-                    padding: "1.2rem 1.4rem",
-                    borderRadius: "14px",
-                    boxShadow: "0 12px 30px rgba(0,0,0,0.2)",
-                    maxWidth: "240px",
-                  }}
-                >
-                  <div style={{ fontSize: "0.75rem", color: "#C5A869", fontWeight: 700, textTransform: "uppercase" }}>
-                    QBO Specialists
-                  </div>
-                  <div style={{ fontSize: "0.95rem", fontWeight: 700, marginTop: "2px" }}>
-                    Automate Invoicing & Mileage
-                  </div>
-                </div>
-              </div>
-
-              {/* Text */}
-              <div>
-                <span
-                  style={{
-                    color: "#0D3E26",
-                    fontWeight: 700,
-                    fontSize: "0.82rem",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Agile Cash Management
-                </span>
-                <h2
-                  style={{
-                    fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                    fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
-                    lineHeight: 1.2,
-                    margin: "0.6rem 0 1.25rem",
-                  }}
-                >
-                  Why Growing Businesses Need ProAdvisor Architecture
-                </h2>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  QuickBooks Online is simple to pick up, but without a certified ProAdvisor setting up your chart of
-                  accounts, default sales tax settings, and contractor reporting rules, businesses easily accumulate
-                  un-reconciled merchant clearing accounts and incorrect BAS claims.
-                </p>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  Taxnet configures QBO to work like an automated financial cockpit. We establish bank rules that reconcile
-                  regular overheads, set up recurring invoices that bill customers automatically on the first of each
-                  month, and connect your point of sale so card payments balance down to the exact cent.
-                </p>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      Zero Mileage Stress
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      Automated trip logging for ATO-compliant vehicle claims.
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      Accelerated Cash Flow
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      Clients pay invoices instantly via embedded digital links.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 6 PILLARS (ONLY THESE KIND OF CARDS) ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
-          <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span
-                style={{
-                  color: "#0D3E26",
-                  fontWeight: 700,
-                  fontSize: "0.82rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                QuickBooks Framework
-              </span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
-                  marginTop: "0.5rem",
-                }}
-              >
-                Modern Cloud Features Tuned for Australian Enterprise Growth
-              </h2>
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards
+              items={PILLARS.map((p) => ({
+                icon: p.icon,
+                title: p.title,
+                desc: p.desc,
+                tag: "QuickBooks Agility",
+                href: "#contact",
+              }))}
+            />
           </div>
         </section>
 
@@ -453,7 +266,7 @@ export default function QuickBooksSoftwarePage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -477,7 +290,7 @@ export default function QuickBooksSoftwarePage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -521,7 +334,7 @@ export default function QuickBooksSoftwarePage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -534,7 +347,7 @@ export default function QuickBooksSoftwarePage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -556,7 +369,7 @@ export default function QuickBooksSoftwarePage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

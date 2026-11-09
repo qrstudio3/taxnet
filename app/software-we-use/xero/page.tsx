@@ -8,6 +8,7 @@ import BookkeepingContact from "@/app/components/BookkeepingContact";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 
 export const metadata: Metadata = {
   title: "Xero Certified Platinum Partner Melbourne | Setup, Migration & Training | Taxnet",
@@ -92,8 +93,8 @@ export default function XeroSoftwarePage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
@@ -109,8 +110,7 @@ export default function XeroSoftwarePage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+              background: "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -150,18 +150,18 @@ export default function XeroSoftwarePage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Xero Cloud Accounting.{" "}
+              Xero Platinum Champion Partner.{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                Platinum Partner Setup.
+                Automated Cloud Accounting.
               </span>{" "}
-              Zero Data-Loss Migration.
+              Seamless Migrations.
             </h1>
 
             {/* Subtitle */}
@@ -174,9 +174,7 @@ export default function XeroSoftwarePage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Harness the full automation power of Australia&apos;s leading cloud accounting engine. As accredited
-              Xero Platinum Partners, Taxnet sets up audit-ready ledgers, migrates historical records with 100% precision,
-              and trains your team to save 10+ hours every single week.
+              Certified Xero Platinum Partner advisory: seamless chart of accounts setup, automatic bank reconciliations, custom invoicing, and staff payroll.
             </p>
 
             {/* CTA Buttons */}
@@ -187,23 +185,23 @@ export default function XeroSoftwarePage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Get a Free Xero Migration Quote →
+                Migrate to Xero Today →
               </a>
 
               <ExecutiveWhatsAppButton
                 message="Hi Taxnet, I'd like to discuss Xero setup and migration for my business."
-                label="Chat with a Xero Platinum Partner"
+                label="Chat with a Certified Xero Specialist"
                 sublabel="Direct WhatsApp Line"
               />
 
@@ -228,202 +226,15 @@ export default function XeroSoftwarePage() {
         {/* ─── PAIN POINT SECTION ─── */}
         <section style={{ padding: "5rem 0", backgroundColor: "#FFFFFF" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "3.5rem",
-                alignItems: "center",
-              }}
-            >
-              {/* Image 1 */}
-              <div style={{ position: "relative" }}>
-                <div
-                  style={{
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    boxShadow: "0 20px 45px rgba(0,0,0,0.1)",
-                    position: "relative",
-                    aspectRatio: "4/3",
-                  }}
-                >
-                  <Image
-                    src={bodyImg1}
-                    alt="Taxnet Xero certified accountant consulting with Melbourne business owner on cloud automation"
-                    fill
-                    unoptimized
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                {/* Float Card */}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "-20px",
-                    right: "-20px",
-                    backgroundColor: "#0D3E26",
-                    color: "#FFFFFF",
-                    padding: "1.2rem 1.4rem",
-                    borderRadius: "14px",
-                    boxShadow: "0 12px 30px rgba(0,0,0,0.2)",
-                    maxWidth: "240px",
-                  }}
-                >
-                  <div style={{ fontSize: "0.75rem", color: "#C5A869", fontWeight: 700, textTransform: "uppercase" }}>
-                    Xero Specialists
-                  </div>
-                  <div style={{ fontSize: "0.95rem", fontWeight: 700, marginTop: "2px" }}>
-                    Fix Tangled Ledgers Fast
-                  </div>
-                </div>
-              </div>
-
-              {/* Text */}
-              <div>
-                <span
-                  style={{
-                    color: "#0D3E26",
-                    fontWeight: 700,
-                    fontSize: "0.82rem",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Cloud Accounting Mastery
-                </span>
-                <h2
-                  style={{
-                    fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                    fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
-                    lineHeight: 1.2,
-                    margin: "0.6rem 0 1.25rem",
-                  }}
-                >
-                  Why DIY Xero Setups Turn Into Costly Accounting Headaches
-                </h2>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  Xero is beautifully intuitive for daily invoicing, but setting up a robust, tax-compliant ledger
-                  requires serious accounting architecture. When business owners use generic out-of-the-box templates,
-                  they inadvertently duplicate bank feeds, miscategorize GST on hire purchases, and leave payroll
-                  liabilities unbalanced.
-                </p>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  As Xero Platinum Partners, Taxnet customizes your chart of accounts to match your specific industry,
-                  establishes foolproof automated bank rules, and integrates automated receipt processing so you never
-                  lose another tax deduction again.
-                </p>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      Flawless Ledger Accuracy
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      Zero suspense account clutter and balanced trial balances.
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      10+ Hours Saved
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      Eliminate manual data entry with OCR receipt capture.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 6 PILLARS (ONLY THESE KIND OF CARDS) ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
-          <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span
-                style={{
-                  color: "#0D3E26",
-                  fontWeight: 700,
-                  fontSize: "0.82rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Xero Architecture
-              </span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
-                  marginTop: "0.5rem",
-                }}
-              >
-                End-to-End Xero Setup, Optimization & Staff Training
-              </h2>
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards
+              items={PILLARS.map((p) => ({
+                icon: p.icon,
+                title: p.title,
+                desc: p.desc,
+                tag: "Xero Architecture",
+                href: "#contact",
+              }))}
+            />
           </div>
         </section>
 
@@ -455,7 +266,7 @@ export default function XeroSoftwarePage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -479,7 +290,7 @@ export default function XeroSoftwarePage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -523,7 +334,7 @@ export default function XeroSoftwarePage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -536,7 +347,7 @@ export default function XeroSoftwarePage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -558,7 +369,7 @@ export default function XeroSoftwarePage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

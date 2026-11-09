@@ -7,6 +7,7 @@ import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
 import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
+import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 
 export const metadata: Metadata = {
@@ -92,15 +93,13 @@ export default function SuperFundTaxReturnsPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "56vh",
+            minHeight: "74vh",
             backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
-            justifyContent: "center",
             paddingTop: "140px",
-            paddingBottom: "5rem",
+            paddingBottom: "4.5rem",
             overflow: "hidden",
-            textAlign: "center",
           }}
         >
           {/* Parallax Background Hero Image */}
@@ -116,95 +115,89 @@ export default function SuperFundTaxReturnsPage() {
             }}
           />
 
-          {/* Subtle gold ambient glow */}
-          <div
-            aria-hidden="true"
-            style={{
-              position: "absolute",
-              top: "40%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: "550px",
-              height: "320px",
-              borderRadius: "50%",
-              background: "radial-gradient(circle, rgba(197, 168, 105, 0.12) 0%, transparent 70%)",
-              pointerEvents: "none",
-            }}
-          />
-
           <div
             style={{
-              maxWidth: "860px",
+              maxWidth: "1240px",
               margin: "0 auto",
               padding: "0 1.5rem",
               position: "relative",
               zIndex: 2,
               width: "100%",
-              textAlign: "center",
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.55)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
-                Home
-              </Link>
-              <span style={{ margin: "0 8px" }}>/</span>
-              <Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.55)", textDecoration: "none" }}>
-                Accounting & Tax
-              </Link>
-              <span style={{ margin: "0 8px" }}>/</span>
-              <span style={{ color: "#C5A869" }}>SMSF Tax Returns</span>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Home</Link><span style={{ margin: "0 8px" }}>/</span><Link href="/accounting-and-tax" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Accounting & Tax</Link><span style={{ margin: "0 8px" }}>/</span><span style={{ color: "#C5A869" }}>Super Fund Tax Returns</span>
             </nav>
 
-            {/* Short Heading in Center */}
+            {/* Headline */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.25rem)",
+                fontSize: "clamp(2.4rem, 5vw, 4.2rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.15,
+                lineHeight: 1.1,
                 letterSpacing: "-0.015em",
-                margin: "0 auto 1.75rem auto",
-                maxWidth: "760px",
+                maxWidth: "860px",
+                marginBottom: "1rem",
               }}
             >
-              SMSF & Super Fund 
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                }}
-              >
-                Tax Returns
-              </span>
+              SMSF Tax & Compliance.{" "}<span style={{ background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>Total Regulatory Rigour.</span>{" "}Maximum Wealth.
             </h1>
 
-            {/* Book A Consultation Button */}
-                        <style>{`
-              .hero-consultation-btn {
-                display: inline-block;
-                background-color: #C5A869;
-                color: #0A0D0B;
-                font-weight: 700;
-                font-size: 0.95rem;
-                padding: 14px 34px;
-                border-radius: 10px;
-                text-decoration: none;
-                box-shadow: 0 6px 20px rgba(197, 168, 105, 0.4);
-                transition: transform 180ms ease, background-color 180ms ease, box-shadow 180ms ease;
-              }
-              .hero-consultation-btn:hover {
-                background-color: #DFC386 !important;
-                transform: translateY(-2px);
-                box-shadow: 0 8px 24px rgba(197, 168, 105, 0.55) !important;
-              }
-            `}</style>
-            <div>
-              <a href="#contact" className="hero-consultation-btn">
-                Book A Consultation →
+            {/* Subtitle - Lesser & Punchy */}
+            <p
+              style={{
+                fontSize: "clamp(1rem, 1.25vw, 1.15rem)",
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.8)",
+                maxWidth: "640px",
+                marginBottom: "2rem",
+              }}
+            >
+              Flawless annual financial statements, independent audit management, and compliant tax return lodgement for Self-Managed Super Funds.
+            </p>
+
+            {/* CTA Buttons */}
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
+              <a
+                href="#contact"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
+                  fontWeight: 800,
+                  fontSize: "0.95rem",
+                  padding: "0.9rem 2rem",
+                  borderRadius: "8px",
+                  textDecoration: "none",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
+                  transition: "all 180ms ease",
+                }}
+              >
+                Book Your SMSF Review →
+              </a>
+
+              <ExecutiveWhatsAppButton
+                message="Hi Taxnet, I'd like to discuss our SMSF annual return and compliance audit."
+                label="Chat with an SMSF Specialist"
+                sublabel="Direct WhatsApp Line"
+              />
+
+              <a
+                href="tel:0398025800"
+                style={{
+                  color: "rgba(255,255,255,0.85)",
+                  fontWeight: 600,
+                  fontSize: "0.92rem",
+                  textDecoration: "none",
+                  marginLeft: "0.5rem",
+                }}
+              >
+                Or call (03) 9802 5800
               </a>
             </div>
           </div>

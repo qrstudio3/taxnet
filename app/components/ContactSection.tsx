@@ -6,6 +6,7 @@ import AnimatedHeading from "./AnimatedHeading";
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -27,6 +28,7 @@ export default function ContactSection() {
     e.preventDefault();
     setLoading(true);
     setErrorMessage(null);
+    setIsSuccess(false);
 
     try {
       const response = await fetch("/api/contact", {
@@ -48,7 +50,11 @@ export default function ContactSection() {
         throw new Error(result.error || "Failed to submit enquiry via SMTP.");
       }
 
-      setSubmitted(true);
+      setIsSuccess(true);
+      setTimeout(() => {
+        setSubmitted(true);
+        setIsSuccess(false);
+      }, 750);
     } catch (err: any) {
       console.error("Submission error:", err);
       setErrorMessage(
@@ -70,6 +76,12 @@ export default function ContactSection() {
         borderTop: "1px solid #E6ECE8",
       }}
     >
+      <style>{`
+        @keyframes tnBtnSpin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
       <div
         style={{
           maxWidth: "1240px",
@@ -704,37 +716,84 @@ export default function ContactSection() {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={loading}
+                  disabled={loading || isSuccess}
                   style={{
                     width: "100%",
-                    backgroundColor: "#0A0D0B",
-                    color: "#FFFFFF",
-                    border: "1px solid rgba(197, 168, 105, 0.45)",
+                    backgroundColor: isSuccess ? "#C5A869" : loading ? "#141815" : "#0A0D0B",
+                    color: isSuccess ? "#0A0D0B" : "#FFFFFF",
+                    border: loading
+                      ? "1.5px solid #C5A869"
+                      : isSuccess
+                      ? "1.5px solid #C5A869"
+                      : "1px solid rgba(197, 168, 105, 0.45)",
                     borderRadius: "10px",
                     padding: "14px 20px",
                     fontSize: "0.95rem",
                     fontWeight: 700,
                     letterSpacing: "0.01em",
-                    cursor: loading ? "wait" : "pointer",
-                    boxShadow: "0 4px 18px rgba(0, 0, 0, 0.25)",
-                    transition: "transform 180ms ease, background-color 180ms ease, border-color 180ms ease",
+                    cursor: loading || isSuccess ? "default" : "pointer",
+                    boxShadow: loading
+                      ? "0 0 16px rgba(197, 168, 105, 0.25)"
+                      : "0 4px 18px rgba(0, 0, 0, 0.25)",
+                    transition: "all 200ms ease",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "10px",
                   }}
                   onMouseEnter={(e) => {
-                    if (!loading) {
+                    if (!loading && !isSuccess) {
                       e.currentTarget.style.backgroundColor = "#161A18";
                       e.currentTarget.style.borderColor = "#C5A869";
                       e.currentTarget.style.transform = "translateY(-1px)";
                     }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = "#0A0D0B";
-                    e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
-                    e.currentTarget.style.transform = "translateY(0)";
+                    if (!loading && !isSuccess) {
+                      e.currentTarget.style.backgroundColor = "#0A0D0B";
+                      e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
+                      e.currentTarget.style.transform = "translateY(0)";
+                    }
                   }}
                 >
-                  {loading
-                    ? "Dispatching Consultation Request..."
-                    : "Request Consultation · Get Free Assessment →"}
+                  {loading ? (
+                    <>
+                      <svg
+                        style={{ animation: "tnBtnSpin 0.85s linear infinite" }}
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="10" stroke="rgba(255, 255, 255, 0.25)" strokeWidth="3" />
+                        <path d="M12 2a10 10 0 0 1 10 10" stroke="#C5A869" strokeWidth="3" strokeLinecap="round" />
+                      </svg>
+                      <span>Submitting Consultation Request...</span>
+                    </>
+                  ) : isSuccess ? (
+                    <>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      <span>Submitted Successfully!</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>Request Consultation · Get Free Assessment</span>
+                      <span style={{ fontSize: "1.05rem" }}>→</span>
+                    </>
+                  )}
                 </button>
 
                 {/* Divider */}

@@ -36,6 +36,7 @@ export default function BookkeepingContact({
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: "",
@@ -57,6 +58,7 @@ export default function BookkeepingContact({
     e.preventDefault();
     setLoading(true);
     setErrorMessage(null);
+    setIsSuccess(false);
 
     try {
       const response = await fetch("/api/contact", {
@@ -78,7 +80,12 @@ export default function BookkeepingContact({
         throw new Error(result.error || "Failed to submit enquiry via SMTP.");
       }
 
-      setSubmitted(true);
+      // Show submitted confirmation on the button, then transition to thank you screen
+      setIsSuccess(true);
+      setTimeout(() => {
+        setSubmitted(true);
+        setIsSuccess(false);
+      }, 750);
     } catch (err: any) {
       console.error("Submission error:", err);
       setErrorMessage(
@@ -122,6 +129,13 @@ export default function BookkeepingContact({
         borderTop: "1px solid rgba(197, 168, 105, 0.28)",
       }}
     >
+      <style>{`
+        @keyframes tnBtnSpin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
+
       {/* Background Ambient Glows */}
       <div
         aria-hidden="true"
@@ -356,20 +370,24 @@ export default function BookkeepingContact({
               <div style={{ textAlign: "center", padding: "2.5rem 1rem" }}>
                 <div
                   style={{
-                    width: "60px",
-                    height: "60px",
+                    width: "64px",
+                    height: "64px",
                     borderRadius: "50%",
-                    backgroundColor: "rgba(161, 134, 80, 0.15)",
-                    color: "#A18650",
+                    backgroundColor: "rgba(197, 168, 105, 0.16)",
+                    color: "#C5A869",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     margin: "0 auto 1.25rem",
+                    border: "1.5px solid rgba(197, 168, 105, 0.35)",
                   }}
                 >
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
+                </div>
+                <div style={{ color: "#C5A869", fontSize: "0.78rem", fontWeight: 800, letterSpacing: "0.14em", textTransform: "uppercase", marginBottom: "0.4rem" }}>
+                  Request Submitted Successfully
                 </div>
                 <h3
                   style={{
@@ -683,37 +701,86 @@ export default function BookkeepingContact({
                 {/* Submit button */}
                 <button
                   type="submit"
-                  disabled={loading}
+                  disabled={loading || isSuccess}
                   style={{
                     width: "100%",
-                    backgroundColor: submitBg,
-                    color: submitText,
-                    border: "none",
+                    backgroundColor: isSuccess ? "#C5A869" : loading ? "#141815" : submitBg,
+                    color: isSuccess ? "#0A0D0B" : submitText,
+                    border: loading
+                      ? "1.5px solid #C5A869"
+                      : isSuccess
+                      ? "1.5px solid #C5A869"
+                      : "1px solid rgba(197, 168, 105, 0.45)",
                     borderRadius: "10px",
                     padding: "14px 20px",
                     fontSize: "0.95rem",
                     fontWeight: 700,
                     letterSpacing: "0.01em",
-                    cursor: loading ? "wait" : "pointer",
-                    boxShadow: "0 4px 14px rgba(10, 13, 11, 0.25)",
-                    transition: "transform 180ms ease, background-color 180ms ease",
+                    cursor: loading || isSuccess ? "default" : "pointer",
+                    boxShadow: loading
+                      ? "0 0 16px rgba(197, 168, 105, 0.25)"
+                      : "0 4px 14px rgba(10, 13, 11, 0.25)",
+                    transition: "all 200ms ease",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    gap: "10px",
                   }}
                   onMouseEnter={(e) => {
-                    if (!loading) {
+                    if (!loading && !isSuccess) {
                       e.currentTarget.style.backgroundColor = submitHoverBg;
+                      e.currentTarget.style.borderColor = "#C5A869";
                       e.currentTarget.style.transform = "translateY(-1px)";
                     }
                   }}
                   onMouseLeave={(e) => {
-                    e.currentTarget.style.backgroundColor = submitBg;
-                    e.currentTarget.style.transform = "translateY(0)";
+                    if (!loading && !isSuccess) {
+                      e.currentTarget.style.backgroundColor = submitBg;
+                      e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
+                      e.currentTarget.style.transform = "translateY(0)";
+                    }
                   }}
                 >
-                  {loading
-                    ? "Dispatching Consultation Request..."
-                    : submitButtonText
-                    ? submitButtonText
-                    : "Book A Consultation"}
+                  {loading ? (
+                    <>
+                      <svg
+                        style={{ animation: "tnBtnSpin 0.85s linear infinite" }}
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <circle cx="12" cy="12" r="10" stroke="rgba(255, 255, 255, 0.25)" strokeWidth="3" />
+                        <path d="M12 2a10 10 0 0 1 10 10" stroke="#C5A869" strokeWidth="3" strokeLinecap="round" />
+                      </svg>
+                      <span>Submitting Consultation Request...</span>
+                    </>
+                  ) : isSuccess ? (
+                    <>
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2.5"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                      <span>Submitted Successfully!</span>
+                    </>
+                  ) : (
+                    <>
+                      <span>
+                        {submitButtonText ? submitButtonText : "Book A Consultation"}
+                      </span>
+                      <span style={{ fontSize: "1.05rem" }}>→</span>
+                    </>
+                  )}
                 </button>
 
                 {/* Divider */}

@@ -8,6 +8,7 @@ import BookkeepingContact from "@/app/components/BookkeepingContact";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 
 export const metadata: Metadata = {
   title: "Preferred Cloud Accounting Add-Ons Melbourne | Dext, Deputy & Tradify | Taxnet",
@@ -92,8 +93,8 @@ export default function CloudAccountingAddOnsPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
@@ -109,8 +110,7 @@ export default function CloudAccountingAddOnsPage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+              background: "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -150,18 +150,18 @@ export default function CloudAccountingAddOnsPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Cloud Accounting Add-Ons.{" "}
+              Connected App Ecosystem.{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                100% Paperless Automation.
+                API Integrations.
               </span>{" "}
-              Zero Manual Data Entry.
+                Automated Workflows.
             </h1>
 
             {/* Subtitle */}
@@ -174,8 +174,7 @@ export default function CloudAccountingAddOnsPage() {
                 marginBottom: "2.25rem",
               }}
             >
-              Supercharge your core ledger with certified third-party cloud integrations. From OCR receipt scanning with
-              Dext and staff rostering with Deputy, to trade job management with Tradify and seamless Shopify synchronization.
+              Supercharge your ledger with Dext, Hubdoc, Stripe, Shopify, Deputy, and job management add-ons configured by certified system architects.
             </p>
 
             {/* CTA Buttons */}
@@ -186,23 +185,23 @@ export default function CloudAccountingAddOnsPage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Connect Your Business App Stack →
+                Integrate Your App Stack →
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I'd like to discuss integrating cloud accounting add-ons (Dext, Deputy, Tradify) for my business."
-                label="Chat with an App Integration Partner"
+                message="Hi Taxnet, I'd like to discuss cloud accounting add-ons and integrations for my business."
+                label="Chat with an Integration Specialist"
                 sublabel="Direct WhatsApp Line"
               />
 
@@ -227,201 +226,15 @@ export default function CloudAccountingAddOnsPage() {
         {/* ─── PAIN POINT SECTION ─── */}
         <section style={{ padding: "5rem 0", backgroundColor: "#FFFFFF" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "3.5rem",
-                alignItems: "center",
-              }}
-            >
-              {/* Image 1 */}
-              <div style={{ position: "relative" }}>
-                <div
-                  style={{
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    boxShadow: "0 20px 45px rgba(0,0,0,0.1)",
-                    position: "relative",
-                    aspectRatio: "4/3",
-                  }}
-                >
-                  <Image
-                    src={bodyImg1}
-                    alt="Taxnet technical specialist configuring business software add-ons and automated cloud integrations"
-                    fill
-                    unoptimized
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                {/* Float Card */}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "-20px",
-                    right: "-20px",
-                    backgroundColor: "#0D3E26",
-                    color: "#FFFFFF",
-                    padding: "1.2rem 1.4rem",
-                    borderRadius: "14px",
-                    boxShadow: "0 12px 30px rgba(0,0,0,0.2)",
-                    maxWidth: "240px",
-                  }}
-                >
-                  <div style={{ fontSize: "0.75rem", color: "#C5A869", fontWeight: 700, textTransform: "uppercase" }}>
-                    Connected Stack
-                  </div>
-                  <div style={{ fontSize: "0.95rem", fontWeight: 700, marginTop: "2px" }}>
-                    Eliminate Double Entry
-                  </div>
-                </div>
-              </div>
-
-              {/* Text */}
-              <div>
-                <span
-                  style={{
-                    color: "#0D3E26",
-                    fontWeight: 700,
-                    fontSize: "0.82rem",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Operational Automation
-                </span>
-                <h2
-                  style={{
-                    fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                    fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
-                    lineHeight: 1.2,
-                    margin: "0.6rem 0 1.25rem",
-                  }}
-                >
-                  Stop Wasting Valuable Business Hours on Manual Double Data Entry
-                </h2>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  Does your team still type supplier paper invoices into software manually? Do your site managers re-type
-                  paper timesheets into payroll? Are your e-commerce sales manually balanced against merchant bank payouts?
-                  This manual busywork wastes dozens of productive hours and introduces constant human errors.
-                </p>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  Taxnet creates unified digital pipelines. When your tradie completes a job in Tradify, the invoice
-                  generates automatically in Xero. When an employee clocks in on Deputy, their award-interpreted hours
-                  feed directly into pay runs. When receipts are snapped on Dext, the tax deduction is secured instantly.
-                </p>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      Zero Missing Receipts
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      Capture receipts on the spot with automated OCR extraction.
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      Single Source of Truth
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      All operational software feeds live data into one balanced ledger.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 6 PILLARS (ONLY THESE KIND OF CARDS) ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
-          <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span
-                style={{
-                  color: "#0D3E26",
-                  fontWeight: 700,
-                  fontSize: "0.82rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Ecosystem Framework
-              </span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
-                  marginTop: "0.5rem",
-                }}
-              >
-                Battle-Tested Cloud Integrations Deployed by Melbourne Specialists
-              </h2>
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards
+              items={PILLARS.map((p) => ({
+                icon: p.icon,
+                title: p.title,
+                desc: p.desc,
+                tag: "Connected Add-Ons",
+                href: "#contact",
+              }))}
+            />
           </div>
         </section>
 
@@ -453,7 +266,7 @@ export default function CloudAccountingAddOnsPage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -477,7 +290,7 @@ export default function CloudAccountingAddOnsPage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -521,7 +334,7 @@ export default function CloudAccountingAddOnsPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -534,7 +347,7 @@ export default function CloudAccountingAddOnsPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -556,7 +369,7 @@ export default function CloudAccountingAddOnsPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

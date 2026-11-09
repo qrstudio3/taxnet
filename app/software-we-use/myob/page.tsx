@@ -8,6 +8,7 @@ import BookkeepingContact from "@/app/components/BookkeepingContact";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 
 export const metadata: Metadata = {
   title: "MYOB Certified Practice Partner Melbourne | Setup & Migration | Taxnet",
@@ -92,8 +93,8 @@ export default function MyobSoftwarePage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
@@ -109,8 +110,7 @@ export default function MyobSoftwarePage() {
             style={{
               position: "absolute",
               inset: 0,
-              background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+              background: "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -150,18 +150,18 @@ export default function MyobSoftwarePage() {
                 marginBottom: "1.5rem",
               }}
             >
-              MYOB Business.{" "}
+              MYOB Professional Partner.{" "}
               <span
                 style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
+                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
                   WebkitBackgroundClip: "text",
                   WebkitTextFillColor: "transparent",
                   color: "transparent",
                 }}
               >
-                Enterprise Power.
+                Enterprise Cloud Power.
               </span>{" "}
-              Complex Award Payroll & Inventory.
+              Advanced Inventory.
             </h1>
 
             {/* Subtitle */}
@@ -174,8 +174,7 @@ export default function MyobSoftwarePage() {
                 marginBottom: "2.25rem",
               }}
             >
-              For businesses with intricate modern awards, multi-site warehouse inventory, and strict job costing needs,
-              MYOB delivers unrivaled commercial depth. Taxnet handles desktop-to-cloud conversions and end-to-end ledger architecture.
+              Certified MYOB business setup, complex job costing, multi-location payroll, and seamless migration from desktop AccountRight to the cloud.
             </p>
 
             {/* CTA Buttons */}
@@ -186,23 +185,23 @@ export default function MyobSoftwarePage() {
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Migrate Your MYOB File to the Cloud →
+                Optimize Your MYOB Setup →
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I need MYOB setup, migration, or payroll consulting for my business."
-                label="Chat with an MYOB Specialist"
+                message="Hi Taxnet, I'd like to discuss MYOB setup and migration for my business."
+                label="Chat with an MYOB Partner"
                 sublabel="Direct WhatsApp Line"
               />
 
@@ -227,201 +226,15 @@ export default function MyobSoftwarePage() {
         {/* ─── PAIN POINT SECTION ─── */}
         <section style={{ padding: "5rem 0", backgroundColor: "#FFFFFF" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "3.5rem",
-                alignItems: "center",
-              }}
-            >
-              {/* Image 1 */}
-              <div style={{ position: "relative" }}>
-                <div
-                  style={{
-                    borderRadius: "20px",
-                    overflow: "hidden",
-                    boxShadow: "0 20px 45px rgba(0,0,0,0.1)",
-                    position: "relative",
-                    aspectRatio: "4/3",
-                  }}
-                >
-                  <Image
-                    src={bodyImg1}
-                    alt="Taxnet accountant consulting with Australian business owner on MYOB cloud migration and inventory management"
-                    fill
-                    unoptimized
-                    style={{ objectFit: "cover" }}
-                  />
-                </div>
-                {/* Float Card */}
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "-20px",
-                    right: "-20px",
-                    backgroundColor: "#0D3E26",
-                    color: "#FFFFFF",
-                    padding: "1.2rem 1.4rem",
-                    borderRadius: "14px",
-                    boxShadow: "0 12px 30px rgba(0,0,0,0.2)",
-                    maxWidth: "240px",
-                  }}
-                >
-                  <div style={{ fontSize: "0.75rem", color: "#C5A869", fontWeight: 700, textTransform: "uppercase" }}>
-                    Industrial Scale
-                  </div>
-                  <div style={{ fontSize: "0.95rem", fontWeight: 700, marginTop: "2px" }}>
-                    Multi-Site Inventory Power
-                  </div>
-                </div>
-              </div>
-
-              {/* Text */}
-              <div>
-                <span
-                  style={{
-                    color: "#0D3E26",
-                    fontWeight: 700,
-                    fontSize: "0.82rem",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  Commercial Architecture
-                </span>
-                <h2
-                  style={{
-                    fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                    fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
-                    lineHeight: 1.2,
-                    margin: "0.6rem 0 1.25rem",
-                  }}
-                >
-                  The Hidden Risk of Running Business Operations on Outdated Software
-                </h2>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "1.25rem" }}>
-                  Thousands of established Australian businesses still run on legacy desktop MYOB versions stored on a
-                  single office PC. When that hard drive crashes, when a key payroll officer falls ill, or when the ATO
-                  audits STP Phase 2 compliance, un-upgraded businesses face immediate operational paralysis.
-                </p>
-                <p style={{ color: "#4A5A50", lineHeight: 1.7, marginBottom: "2rem" }}>
-                  Taxnet takes the pain out of moving to the cloud. We inspect your data file, purge corrupted historical
-                  entries, balance your general ledger against historical tax returns, and transition your team to MYOB
-                  Business Cloud with zero downtime.
-                </p>
-
-                <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }}>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      Zero Data Corruption
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      Thorough pre-migration audit guarantees accurate ledger history.
-                    </div>
-                  </div>
-                  <div
-                    style={{
-                      padding: "1rem",
-                      borderRadius: "10px",
-                      backgroundColor: "#F9FAF9",
-                      border: "1px solid #E6ECE8",
-                    }}
-                  >
-                    <div style={{ fontWeight: 800, color: "#0D3E26", fontSize: "0.95rem", marginBottom: "4px" }}>
-                      Fair Work Compliance
-                    </div>
-                    <div style={{ fontSize: "0.82rem", color: "#5C6B63" }}>
-                      Precision award conditions protect you against wage underpayment risks.
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* ─── 6 PILLARS (ONLY THESE KIND OF CARDS) ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#F3F5F2", borderTop: "1px solid #E7ECE8" }}>
-          <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span
-                style={{
-                  color: "#0D3E26",
-                  fontWeight: 700,
-                  fontSize: "0.82rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                MYOB Framework
-              </span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                  color: "#0F261B",
-                  marginTop: "0.5rem",
-                }}
-              >
-                Enterprise Functionality Configured for Real-World Operations
-              </h2>
-            </div>
-
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {PILLARS.map((p) => (
-                <div
-                  key={p.title}
-                  style={{
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                  }}
-                >
-                  <BookkeepingBenefitIcon type={p.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {p.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: 0,
-                    }}
-                  >
-                    {p.desc}
-                  </p>
-                </div>
-              ))}
-            </div>
+            <AutoSlidingCards
+              items={PILLARS.map((p) => ({
+                icon: p.icon,
+                title: p.title,
+                desc: p.desc,
+                tag: "MYOB Enterprise",
+                href: "#contact",
+              }))}
+            />
           </div>
         </section>
 
@@ -453,7 +266,7 @@ export default function MyobSoftwarePage() {
                   style={{
                     fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "clamp(2rem, 3.4vw, 2.75rem)",
-                    color: "#0F261B",
+                    color: "#0A0D0B",
                     lineHeight: 1.2,
                     margin: "0.6rem 0 1.25rem",
                   }}
@@ -477,7 +290,7 @@ export default function MyobSoftwarePage() {
                     display: "inline-flex",
                     alignItems: "center",
                     gap: "8px",
-                    backgroundColor: "#0D3E26",
+                    backgroundColor: "#0A0D0B",
                     color: "#FFFFFF",
                     padding: "0.85rem 1.75rem",
                     borderRadius: "8px",
@@ -521,7 +334,7 @@ export default function MyobSoftwarePage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -534,7 +347,7 @@ export default function MyobSoftwarePage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -556,7 +369,7 @@ export default function MyobSoftwarePage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",

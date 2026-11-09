@@ -1,4 +1,4 @@
-﻿import { NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export async function POST(request: Request) {
@@ -63,29 +63,30 @@ Delivered via Taxnet Integration.
   <meta charset="UTF-8">
   <title>New Newsletter Subscriber</title>
 </head>
-<body style="margin: 0; padding: 30px; background-color: #F4F6F4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 580px; margin: 0 auto; background: #FFFFFF; border-radius: 12px; overflow: hidden; border: 1px solid #E1E8E2;">
+<body style="margin: 0; padding: 30px; background-color: #F7F8F7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 580px; margin: 0 auto; background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid #E4EAE5; box-shadow: 0 10px 30px rgba(0,0,0,0.06);">
     <tr>
-      <td style="background-color: #0D3E26; padding: 28px; text-align: center;">
-        <h1 style="color: #FFFFFF; font-size: 22px; margin: 0; font-family: Georgia, serif; font-weight: normal;">Taxnet Business Consultants</h1>
-        <p style="color: #C5A869; font-size: 13px; margin: 6px 0 0 0; text-transform: uppercase; letter-spacing: 0.12em;">New Newsletter Subscriber</p>
+      <td style="background: linear-gradient(135deg, #0A0D0B 0%, #171C19 100%); padding: 32px 28px; text-align: center; border-bottom: 2.5px solid #C5A869;">
+        <h1 style="color: #FFFFFF; font-size: 22px; margin: 0; font-family: Georgia, 'Times New Roman', serif; font-weight: normal;">Taxnet Business Consultants</h1>
+        <p style="color: #C5A869; font-size: 12px; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 0.14em; font-weight: 800;">New Newsletter Subscriber</p>
       </td>
     </tr>
     <tr>
       <td style="padding: 32px 28px;">
-        <p style="font-size: 15px; color: #2D3E34; line-height: 1.6; margin-top: 0;">A visitor has subscribed to the Taxnet quarterly newsletter:</p>
-        <div style="background-color: #F8FAF8; padding: 18px; border-radius: 8px; border: 1px solid #E2EAE3; margin: 20px 0;">
-          <div style="font-size: 12px; font-weight: bold; color: #0D3E26; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">Subscriber Email</div>
-          <div style="font-size: 18px; font-weight: bold; color: #0D3E26;">
-            <a href="mailto:${email}" style="color: #0D3E26; text-decoration: none;">${email}</a>
+        <p style="font-size: 15px; color: #2D3E34; line-height: 1.6; margin-top: 0;">A visitor has subscribed to the Taxnet quarterly intelligence digest:</p>
+        <div style="background-color: #FAFCFA; padding: 20px; border-radius: 8px; border: 1px solid #E4EAE5; border-left: 3.5px solid #C5A869; margin: 20px 0;">
+          <div style="font-size: 11px; font-weight: 800; color: #A18650; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 6px;">Subscriber Email</div>
+          <div style="font-size: 18px; font-weight: 700; color: #0A0D0B;">
+            <a href="mailto:${email}" style="color: #0A0D0B; text-decoration: none;">${email}</a>
           </div>
-          <div style="font-size: 12px; color: #6A7B70; margin-top: 8px;">Date: ${formattedDate} (Melbourne Time)</div>
+          <div style="font-size: 12px; color: #6B7C72; margin-top: 8px;">Received: ${formattedDate} (Melbourne Time)</div>
         </div>
       </td>
     </tr>
     <tr>
-      <td style="background-color: #071F14; padding: 16px 28px; text-align: center; font-size: 12px; color: rgba(255, 255, 255, 0.6);">
-        Taxnet CPA Accountants &amp; Mortgage Broking · Suite 6, 861 Doncaster Road, Doncaster East VIC 3109
+      <td style="background-color: #0A0D0B; padding: 20px 28px; text-align: center; font-size: 11px; color: rgba(255, 255, 255, 0.7); line-height: 1.5; border-top: 1px solid rgba(197, 168, 105, 0.2);">
+        <div style="color: #FFFFFF; font-weight: 700; margin-bottom: 3px;">Taxnet CPA Accountants &amp; Mortgage Broking</div>
+        <div>Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 · (03) 9802 5800</div>
       </td>
     </tr>
   </table>
@@ -136,27 +137,27 @@ If you ever wish to unsubscribe, simply reply to this email with "Unsubscribe".
   <meta charset="UTF-8">
   <title>Welcome to Taxnet Insights</title>
 </head>
-<body style="margin: 0; padding: 30px; background-color: #F4F6F4; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
-  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid #E1E8E2; box-shadow: 0 4px 16px rgba(0,0,0,0.06);">
+<body style="margin: 0; padding: 30px; background-color: #F7F8F7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="max-width: 600px; margin: 0 auto; background: #FFFFFF; border-radius: 14px; overflow: hidden; border: 1px solid #E4EAE5; box-shadow: 0 10px 30px rgba(0,0,0,0.06);">
     <tr>
-      <td style="background: linear-gradient(135deg, #071F14 0%, #0D3E26 100%); padding: 36px 32px; text-align: center;">
-        <h1 style="color: #FFFFFF; font-size: 24px; margin: 0; font-family: Georgia, serif; font-weight: normal; letter-spacing: -0.01em;">Taxnet Business Consultants</h1>
-        <p style="color: #C5A869; font-size: 13px; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 0.14em; font-weight: bold;">Strategic Tax &amp; Lending Intelligence</p>
+      <td style="background: linear-gradient(135deg, #0A0D0B 0%, #171C19 100%); padding: 36px 32px; text-align: center; border-bottom: 2.5px solid #C5A869;">
+        <h1 style="color: #FFFFFF; font-size: 24px; margin: 0; font-family: Georgia, 'Times New Roman', serif; font-weight: normal; letter-spacing: -0.01em;">Taxnet Business Consultants</h1>
+        <p style="color: #C5A869; font-size: 12px; margin: 8px 0 0 0; text-transform: uppercase; letter-spacing: 0.16em; font-weight: 800;">Strategic Tax &amp; Lending Intelligence</p>
       </td>
     </tr>
     <tr>
       <td style="padding: 36px 32px;">
-        <h2 style="color: #0D3E26; font-size: 20px; margin-top: 0; font-family: Georgia, serif; font-weight: normal;">Welcome to Taxnet Insights</h2>
+        <h2 style="color: #0A0D0B; font-size: 20px; margin-top: 0; font-family: Georgia, 'Times New Roman', serif; font-weight: normal;">Welcome to Taxnet Insights</h2>
         <p style="font-size: 15px; color: #3D4E44; line-height: 1.7; margin-bottom: 20px;">
           Thank you for subscribing. You have joined Australian business owners and property investors who rely on Taxnet for clear, proactive, and commercially astute financial guidance.
         </p>
 
-        <div style="background-color: #F8FAF8; border-left: 3px solid #C5A869; padding: 18px 20px; border-radius: 6px; margin: 24px 0;">
-          <div style="font-weight: bold; color: #0D3E26; font-size: 14px; margin-bottom: 8px;">What You Will Receive:</div>
-          <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #4A5A50; line-height: 1.7;">
-            <li><strong>CPA Tax Minimization:</strong> Legal structuring strategies for small businesses, trusts, and family enterprises.</li>
-            <li><strong>ATO Regulatory Alerts:</strong> Timely guidance on lodgement deadlines, STP Phase 2, and legislative changes.</li>
-            <li><strong>Mortgage &amp; Refinancing Intel:</strong> Commercial lending capacity benchmarks and interest rate analysis.</li>
+        <div style="background-color: #FAFCFA; border-left: 3.5px solid #C5A869; padding: 20px 22px; border-radius: 8px; border: 1px solid #E4EAE5; margin: 24px 0;">
+          <div style="font-weight: 800; color: #0A0D0B; font-size: 14px; margin-bottom: 10px;">What You Will Receive:</div>
+          <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #3A4A41; line-height: 1.75;">
+            <li><strong style="color: #0A0D0B;">CPA Tax Minimization:</strong> Legal structuring strategies for small businesses, trusts, and family enterprises.</li>
+            <li><strong style="color: #0A0D0B;">ATO Regulatory Alerts:</strong> Timely guidance on lodgement deadlines, STP Phase 2, and legislative changes.</li>
+            <li><strong style="color: #0A0D0B;">Mortgage &amp; Refinancing Intel:</strong> Commercial lending capacity benchmarks and interest rate analysis.</li>
           </ul>
         </div>
 
@@ -165,15 +166,15 @@ If you ever wish to unsubscribe, simply reply to this email with "Unsubscribe".
         </p>
 
         <div style="text-align: center; margin: 28px 0;">
-          <a href="https://taxnet.com.au/contact" style="background-color: #C5A869; color: #05110A; font-weight: bold; font-size: 14px; padding: 12px 28px; border-radius: 8px; text-decoration: none; display: inline-block;">
+          <a href="https://taxnet.com.au/contact" style="background-color: #C5A869; color: #0A0D0B; font-weight: 800; font-size: 14px; padding: 13px 32px; border-radius: 8px; text-decoration: none; display: inline-block; box-shadow: 0 4px 14px rgba(197, 168, 105, 0.35);">
             Book Discovery Consultation &rarr;
           </a>
         </div>
       </td>
     </tr>
     <tr>
-      <td style="background-color: #071F14; padding: 22px 32px; text-align: center; font-size: 12px; color: rgba(255, 255, 255, 0.7); line-height: 1.6;">
-        <div style="color: #FFFFFF; font-weight: bold; margin-bottom: 4px;">Taxnet Business Consultants</div>
+      <td style="background-color: #0A0D0B; padding: 24px 32px; text-align: center; font-size: 12px; color: rgba(255, 255, 255, 0.7); line-height: 1.6; border-top: 1px solid rgba(197, 168, 105, 0.2);">
+        <div style="color: #FFFFFF; font-weight: 700; margin-bottom: 4px;">Taxnet Business Consultants</div>
         <div>Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 · (03) 9802 5800</div>
         <div style="margin-top: 8px; font-size: 11px; color: rgba(255, 255, 255, 0.45);">
           To unsubscribe at any time, simply reply to this email with &ldquo;Unsubscribe&rdquo;.

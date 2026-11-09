@@ -6,6 +6,7 @@ import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
 import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
+import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 
 export const metadata: Metadata = {
@@ -105,12 +106,12 @@ export default function BookkeepingHubPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "82vh",
-            backgroundColor: "#06120B",
+            minHeight: "74vh",
+            backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
             paddingTop: "140px",
-            paddingBottom: "5rem",
+            paddingBottom: "4.5rem",
             overflow: "hidden",
           }}
         >
@@ -123,7 +124,7 @@ export default function BookkeepingHubPage() {
               position: "absolute",
               inset: 0,
               background:
-                "linear-gradient(135deg, rgba(6,18,11,0.95) 0%, rgba(13,62,38,0.82) 55%, rgba(6,18,11,0.96) 100%)",
+                "linear-gradient(135deg, rgba(10,13,11,0.96) 0%, rgba(20,24,22,0.85) 55%, rgba(10,13,11,0.98) 100%)",
             }}
           />
 
@@ -138,79 +139,63 @@ export default function BookkeepingHubPage() {
             }}
           >
             {/* Breadcrumb */}
-            <nav style={{ marginBottom: "1.5rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
-                Home
-              </Link>
-              <span style={{ margin: "0 8px" }}>/</span>
-              <span style={{ color: "#C5A869" }}>Bookkeeping Solutions</span>
+            <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Home</Link><span style={{ margin: "0 8px" }}>/</span><span style={{ color: "#C5A869" }}>Bookkeeping</span>
             </nav>
 
             {/* Headline */}
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                fontSize: "clamp(2.5rem, 5.2vw, 4.4rem)",
+                fontSize: "clamp(2.4rem, 5vw, 4.2rem)",
                 fontWeight: 400,
                 color: "#FFFFFF",
-                lineHeight: 1.08,
+                lineHeight: 1.1,
                 letterSpacing: "-0.015em",
-                maxWidth: "880px",
-                marginBottom: "1.5rem",
+                maxWidth: "860px",
+                marginBottom: "1rem",
               }}
             >
-              High-Precision Bookkeeping.{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #A18650)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                }}
-              >
-                CPA Strategic Oversight.
-              </span>{" "}
-              Total Peace of Mind.
+              High-Precision Bookkeeping.{" "}<span style={{ background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>CPA Strategic Oversight.</span>{" "}Total Peace of Mind.
             </h1>
 
-            {/* Subtitle */}
+            {/* Subtitle - Lesser & Punchy */}
             <p
               style={{
-                fontSize: "clamp(1.05rem, 1.35vw, 1.25rem)",
-                lineHeight: 1.65,
-                color: "rgba(255,255,255,0.78)",
-                maxWidth: "680px",
-                marginBottom: "2.25rem",
+                fontSize: "clamp(1rem, 1.25vw, 1.15rem)",
+                lineHeight: 1.6,
+                color: "rgba(255,255,255,0.8)",
+                maxWidth: "640px",
+                marginBottom: "2rem",
               }}
             >
-              From everyday receipt coding and STP Phase 2 payroll to predictive 13-week cash flow modeling and BAS
-              reconciliations. Explore our specialized bookkeeping disciplines engineered for Australian businesses.
+              Receipt coding, STP Phase 2 payroll, 13-week cash flow modeling, and BAS reconciliations for Melbourne businesses.
             </p>
 
             {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "3rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
               <a
                 href="#services"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
-                  backgroundColor: "#A18650",
-                  color: "#0D3E26",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
                   fontWeight: 800,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
                   borderRadius: "8px",
                   textDecoration: "none",
-                  boxShadow: "0 6px 20px rgba(161, 134, 80, 0.4)",
+                  boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Explore Specialized Services ↓
+                Explore Bookkeeping Solutions →
               </a>
 
               <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I'd like to chat about bookkeeping services."
+                message="Hi Taxnet, I'd like to discuss bookkeeping services."
                 label="Chat with a Bookkeeping Partner"
                 sublabel="Direct WhatsApp Line"
               />
@@ -228,8 +213,6 @@ export default function BookkeepingHubPage() {
                 Or call (03) 9802 5800
               </a>
             </div>
-
-
           </div>
         </section>
 
@@ -239,7 +222,7 @@ export default function BookkeepingHubPage() {
             <div style={{ textAlign: "center", marginBottom: "4rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -252,7 +235,7 @@ export default function BookkeepingHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.6vw, 3rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.5rem",
                 }}
               >
@@ -264,73 +247,7 @@ export default function BookkeepingHubPage() {
               </p>
             </div>
 
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                gap: "1.75rem",
-              }}
-            >
-              {BOOKKEEPING_SERVICES.map((s) => (
-                <Link
-                  key={s.title}
-                  href={s.href}
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    backgroundColor: "#FFFFFF",
-                    borderRadius: "16px",
-                    padding: "2rem 1.75rem",
-                    border: "1px solid #E4EAE6",
-                    boxShadow: "0 6px 20px rgba(0,0,0,0.03)",
-                    textDecoration: "none",
-                    transition: "transform 200ms ease, box-shadow 200ms ease",
-                  }}
-                  className="card"
-                >
-                  <BookkeepingBenefitIcon type={s.icon} />
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "1.2rem",
-                      fontWeight: 700,
-                      color: "#0F261B",
-                      marginBottom: "0.6rem",
-                      letterSpacing: "-0.015em",
-                      lineHeight: 1.3,
-                    }}
-                  >
-                    {s.title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      fontSize: "0.88rem",
-                      color: "#55645B",
-                      lineHeight: 1.6,
-                      margin: "0 0 1.5rem 0",
-                      flexGrow: 1,
-                    }}
-                  >
-                    {s.desc}
-                  </p>
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-sans), "Inter", system-ui, -apple-system, sans-serif',
-                      color: "#0D3E26",
-                      fontWeight: 700,
-                      fontSize: "0.88rem",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "6px",
-                      marginTop: "auto",
-                    }}
-                  >
-                    Explore Service →
-                  </div>
-                </Link>
-              ))}
-            </div>
+            <AutoSlidingCards items={BOOKKEEPING_SERVICES} />
           </div>
         </section>
 
@@ -343,7 +260,7 @@ export default function BookkeepingHubPage() {
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
-                  color: "#0D3E26",
+                  color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
                   letterSpacing: "0.08em",
@@ -356,7 +273,7 @@ export default function BookkeepingHubPage() {
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                   fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0F261B",
+                  color: "#0A0D0B",
                   marginTop: "0.4rem",
                 }}
               >
@@ -378,7 +295,7 @@ export default function BookkeepingHubPage() {
                     style={{
                       fontSize: "1.05rem",
                       fontWeight: 700,
-                      color: "#0F261B",
+                      color: "#0A0D0B",
                       outline: "none",
                       listStyle: "none",
                       display: "flex",
