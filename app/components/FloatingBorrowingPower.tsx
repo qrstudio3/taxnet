@@ -11,7 +11,8 @@ export default function FloatingBorrowingPower() {
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true);
+    const t = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(t);
   }, []);
 
   // Periodic Show / Hide Animation Loop
@@ -61,6 +62,13 @@ export default function FloatingBorrowingPower() {
           font-family: inherit;
           cursor: pointer;
           user-select: none;
+          transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+          will-change: transform;
+        }
+
+        .float-borrow-root:active {
+          transform: scale(0.95);
+          transition-duration: 100ms;
         }
 
         .float-borrow-circle {
@@ -74,17 +82,18 @@ export default function FloatingBorrowingPower() {
           align-items: center;
           justify-content: center;
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.2);
-          transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+          transition: transform 340ms cubic-bezier(0.34, 1.56, 0.64, 1), background-color 220ms ease, box-shadow 340ms cubic-bezier(0.34, 1.56, 0.64, 1), border-color 220ms ease;
           flex-shrink: 0;
           position: relative;
           z-index: 2;
+          will-change: transform;
         }
 
         .float-borrow-root:hover .float-borrow-circle {
-          transform: scale(1.06);
+          transform: scale(1.12);
           background-color: #141815;
           border-color: #E5D6B6;
-          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(197, 168, 105, 0.35);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(197, 168, 105, 0.45);
         }
 
         .float-borrow-banner {

@@ -534,6 +534,7 @@ export default function AboutBody() {
 
                 <Link
                   href="/contact"
+                  className="playful-btn"
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -545,11 +546,28 @@ export default function AboutBody() {
                     padding: "11px 22px",
                     borderRadius: "8px",
                     textDecoration: "none",
-                    transition: "all 180ms ease",
+                    boxShadow: "0 4px 14px rgba(197, 168, 105, 0.25)",
+                    transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.backgroundColor = "#DFC386";
+                    e.currentTarget.style.transform = "translateY(-3.5px) scale(1.04)";
+                    e.currentTarget.style.boxShadow = "0 12px 28px rgba(197, 168, 105, 0.45)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.backgroundColor = "#C5A869";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.boxShadow = "0 4px 14px rgba(197, 168, 105, 0.25)";
+                  }}
+                  onMouseDown={(e) => {
+                    e.currentTarget.style.transform = "translateY(1.5px) scale(0.965)";
+                  }}
+                  onMouseUp={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3.5px) scale(1.04)";
                   }}
                 >
                   <span>Book A Consultation</span>
-                  <span>→</span>
+                  <span className="btn-arrow">→</span>
                 </Link>
               </div>
             </div>
@@ -1181,6 +1199,7 @@ export default function AboutBody() {
                 type="button"
                 onClick={slideLeft}
                 aria-label="Previous core value"
+                className="playful-btn"
                 style={{
                   width: "44px",
                   height: "44px",
@@ -1192,17 +1211,28 @@ export default function AboutBody() {
                   alignItems: "center",
                   justifyContent: "center",
                   cursor: "pointer",
-                  transition: "all 180ms ease",
+                  transition: "all 300ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+                  willChange: "transform",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "#0A0D0B";
                   e.currentTarget.style.backgroundColor = "#0A0D0B";
                   e.currentTarget.style.color = "#FFFFFF";
+                  e.currentTarget.style.transform = "translateY(-3px) scale(1.12)";
+                  e.currentTarget.style.boxShadow = "0 8px 18px rgba(10, 13, 11, 0.2)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "#E5ECE7";
                   e.currentTarget.style.backgroundColor = "#FAFBF9";
                   e.currentTarget.style.color = "#0A0D0B";
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+                onMouseDown={(e) => {
+                  e.currentTarget.style.transform = "translateY(1.5px) scale(0.92)";
+                }}
+                onMouseUp={(e) => {
+                  e.currentTarget.style.transform = "translateY(-3px) scale(1.12)";
                 }}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -1214,6 +1244,7 @@ export default function AboutBody() {
                 type="button"
                 onClick={slideRight}
                 aria-label="Next core value"
+                className="playful-btn"
                 style={{
                   width: "44px",
                   height: "44px",
@@ -1225,17 +1256,28 @@ export default function AboutBody() {
                   alignItems: "center",
                   justifyContent: "center",
                   cursor: "pointer",
-                  transition: "all 180ms ease",
+                  transition: "all 300ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+                  willChange: "transform",
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.borderColor = "#0A0D0B";
                   e.currentTarget.style.backgroundColor = "#0A0D0B";
                   e.currentTarget.style.color = "#FFFFFF";
+                  e.currentTarget.style.transform = "translateY(-3px) scale(1.12)";
+                  e.currentTarget.style.boxShadow = "0 8px 18px rgba(10, 13, 11, 0.2)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.borderColor = "#E5ECE7";
                   e.currentTarget.style.backgroundColor = "#FAFBF9";
                   e.currentTarget.style.color = "#0A0D0B";
+                  e.currentTarget.style.transform = "translateY(0) scale(1)";
+                  e.currentTarget.style.boxShadow = "none";
+                }}
+                onMouseDown={(e) => {
+                  e.currentTarget.style.transform = "translateY(1.5px) scale(0.92)";
+                }}
+                onMouseUp={(e) => {
+                  e.currentTarget.style.transform = "translateY(-3px) scale(1.12)";
                 }}
               >
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
@@ -1416,6 +1458,7 @@ export default function AboutBody() {
           >
             <Link
               href="/contact"
+              className="playful-btn"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -1428,11 +1471,27 @@ export default function AboutBody() {
                 borderRadius: "8px",
                 textDecoration: "none",
                 boxShadow: "0 6px 20px rgba(197, 168, 105, 0.35)",
-                transition: "all 180ms ease",
+                transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#DFC386";
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.045)";
+                e.currentTarget.style.boxShadow = "0 14px 32px rgba(197, 168, 105, 0.55)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#C5A869";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "0 6px 20px rgba(197, 168, 105, 0.35)";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = "translateY(1.5px) scale(0.965)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.045)";
               }}
             >
               <span>Book A Consultation</span>
-              <span>→</span>
+              <span className="btn-arrow">→</span>
             </Link>
 
             <ExecutiveWhatsAppButton
@@ -1445,6 +1504,7 @@ export default function AboutBody() {
 
             <a
               href="tel:0398025800"
+              className="playful-btn"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -1457,7 +1517,27 @@ export default function AboutBody() {
                 fontSize: "0.92rem",
                 fontWeight: 700,
                 textDecoration: "none",
-                transition: "all 180ms ease",
+                transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(197, 168, 105, 0.18)";
+                e.currentTarget.style.borderColor = "#C5A869";
+                e.currentTarget.style.color = "#FFFFFF";
+                e.currentTarget.style.transform = "translateY(-3.5px) scale(1.04)";
+                e.currentTarget.style.boxShadow = "0 12px 28px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.4)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.08)";
+                e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.6)";
+                e.currentTarget.style.color = "#E5D6B6";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = "translateY(1.5px) scale(0.965)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = "translateY(-3.5px) scale(1.04)";
               }}
             >
               <span>Call (03) 9802 5800</span>

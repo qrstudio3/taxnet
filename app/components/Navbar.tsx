@@ -212,30 +212,39 @@ export default function Navbar() {
             <Link
               href="/contact"
               id="nav-cta"
+              className="playful-btn"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
                 backgroundColor: solid ? "#0A0D0B" : "rgba(255,255,255,0.12)",
                 color: solid ? "#C5A869" : "#FFFFFF",
-                border: solid ? "1px solid #C5A869" : "1.5px solid rgba(255,255,255,0.45)",
+                border: solid ? "1.5px solid #C5A869" : "1.5px solid rgba(255,255,255,0.45)",
                 fontFamily: "var(--font-sans)",
                 fontWeight: 600,
                 fontSize: "0.875rem",
                 padding: "0.55rem 1.25rem",
-                borderRadius: "4px",
+                borderRadius: "6px",
                 textDecoration: "none",
-                transition: "all 200ms ease",
+                transition: "all 320ms cubic-bezier(0.34, 1.56, 0.64, 1)",
                 whiteSpace: "nowrap",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = solid ? "#C5A869" : "rgba(255,255,255,0.24)";
                 e.currentTarget.style.color = solid ? "#0A0D0B" : "#FFFFFF";
-                e.currentTarget.style.transform = "translateY(-1px)";
+                e.currentTarget.style.transform = "translateY(-3px) scale(1.06)";
+                e.currentTarget.style.boxShadow = "0 8px 22px rgba(197, 168, 105, 0.45)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = solid ? "#0A0D0B" : "rgba(255,255,255,0.12)";
                 e.currentTarget.style.color = solid ? "#C5A869" : "#FFFFFF";
-                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = "translateY(1px) scale(0.96)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = "translateY(-3px) scale(1.06)";
               }}
             >
               Book a Chat

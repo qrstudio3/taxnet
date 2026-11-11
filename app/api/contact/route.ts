@@ -12,6 +12,7 @@ export async function POST(request: Request) {
       selectedService,
       clientType,
       meetingFormat,
+      source,
       message,
     } = data;
 
@@ -81,7 +82,7 @@ Entity / Business: ${businessName || "Not specified"}
 ENGAGEMENT PREFERENCES
 ----------------------
 Requested Service: ${selectedService || "General Advisory"}
-${clientType ? `Client Profile:    ${clientType}\n` : ""}${meetingFormat ? `Meeting Format:    ${meetingFormat}\n` : ""}
+${source ? `Source Page:       ${source}\n` : ""}${clientType ? `Client Profile:    ${clientType}\n` : ""}${meetingFormat ? `Meeting Format:    ${meetingFormat}\n` : ""}
 CLIENT MESSAGE / REQUIREMENTS:
 ------------------------------
 ${message || "No additional notes provided."}
@@ -170,6 +171,11 @@ Delivered securely via Taxnet Gmail SMTP Integration.
                     </span>
                   </td>
                 </tr>
+                ${source ? `
+                <tr style="border-bottom: 1px solid #EDF2EE;">
+                  <td style="color: #6B7C72; font-size: 13px;">Source:</td>
+                  <td style="color: #0A0D0B; font-size: 13px; font-weight: 600;">${source}</td>
+                </tr>` : ""}
                 ${clientType ? `
                 <tr style="border-bottom: 1px solid #EDF2EE;">
                   <td style="color: #6B7C72; font-size: 13px;">Client Profile:</td>
@@ -240,11 +246,12 @@ Delivered securely via Taxnet Gmail SMTP Integration.
       success: true,
       message: "Consultation request sent successfully via Gmail SMTP.",
     });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Gmail SMTP Send Error:", error);
 
-    let userFriendlyError = error?.message || "Failed to send email via SMTP.";
-    if (error?.code === "EAUTH" || error?.responseCode === 535) {
+    const err = error as { message?: string; code?: string; responseCode?: number };
+    let userFriendlyError = err?.message || "Failed to send email via SMTP.";
+    if (err?.code === "EAUTH" || err?.responseCode === 535) {
       userFriendlyError =
         "Gmail authentication failed. Google requires a 16-character App Password (not your standard login password). Generate one at https://myaccount.google.com/apppasswords with 2-Step Verification enabled.";
     }

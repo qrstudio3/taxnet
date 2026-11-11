@@ -273,6 +273,7 @@ export default function Hero() {
             <Link
               href="/calculator"
               id="hero-cta-calculator"
+              className="playful-btn"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -284,30 +285,37 @@ export default function Hero() {
                 fontSize: "0.9375rem",
                 letterSpacing: "0.01em",
                 padding: "0.9rem 1.8rem",
-                borderRadius: "4px",
+                borderRadius: "6px",
                 textDecoration: "none",
                 boxShadow: "0 4px 18px rgba(161, 134, 80, 0.35)",
-                transition: "background-color 200ms ease, transform 200ms ease, box-shadow 200ms ease",
+                transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = "#C5A869";
-                e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 8px 24px rgba(161, 134, 80, 0.45)";
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.05)";
+                e.currentTarget.style.boxShadow = "0 14px 32px rgba(161, 134, 80, 0.5), 0 0 0 2px rgba(229, 213, 165, 0.4)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "#A18650";
-                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
                 e.currentTarget.style.boxShadow = "0 4px 18px rgba(161, 134, 80, 0.35)";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = "translateY(1.5px) scale(0.96)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.05)";
               }}
             >
               <span>Borrowing Calculator</span>
-              <span aria-hidden="true">→</span>
+              <span className="btn-arrow" aria-hidden="true" style={{ transition: "transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1)", display: "inline-block" }}>→</span>
             </Link>
 
             {/* Book a Chat */}
             <Link
               href="/contact"
               id="hero-cta-contact"
+              className="playful-btn"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -319,22 +327,30 @@ export default function Hero() {
                 fontSize: "0.9375rem",
                 letterSpacing: "0.01em",
                 padding: "0.9rem 1.8rem",
-                borderRadius: "4px",
+                borderRadius: "6px",
                 textDecoration: "none",
                 border: "1px solid rgba(255, 255, 255, 0.28)",
                 backdropFilter: "blur(4px)",
                 WebkitBackdropFilter: "blur(4px)",
-                transition: "background-color 200ms ease, border-color 200ms ease, transform 200ms ease",
+                transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.16)";
-                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.5)";
-                e.currentTarget.style.transform = "translateY(-2px)";
+                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.18)";
+                e.currentTarget.style.borderColor = "#C5A869";
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.05)";
+                e.currentTarget.style.boxShadow = "0 12px 28px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(197, 168, 105, 0.4)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.08)";
                 e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.28)";
-                e.currentTarget.style.transform = "translateY(0)";
+                e.currentTarget.style.transform = "translateY(0) scale(1)";
+                e.currentTarget.style.boxShadow = "none";
+              }}
+              onMouseDown={(e) => {
+                e.currentTarget.style.transform = "translateY(1.5px) scale(0.96)";
+              }}
+              onMouseUp={(e) => {
+                e.currentTarget.style.transform = "translateY(-4px) scale(1.05)";
               }}
             >
               <span>Book a Chat</span>

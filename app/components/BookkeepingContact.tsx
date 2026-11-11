@@ -17,22 +17,10 @@ export default function BookkeepingContact({
   serviceName = "Small Business Bookkeeping",
   submitButtonText,
   darkTheme = false,
-  hideSoftwareField = false,
 }: BookkeepingContactProps) {
   const isMortgage = /mortgage|loan|finance|buyer|refinanc/i.test(serviceName);
-  const isSoftware = /software|xero|myob|quickbooks|add-ons|integration|migration|cloud setup/i.test(serviceName);
-  const isBookkeeping = !isSoftware && /bookkeeping|payroll|reconciliation|payable|receivable|invoice|invoicing|budget|cash flow/i.test(serviceName);
-  const isTaxOrAccounting = !isSoftware && !isBookkeeping && !isMortgage && /tax|accounting|advice|asic|fbt|gst|bas|smsf/i.test(serviceName);
-
-  const getInitialSoftware = () => {
-    if (isMortgage) return "Exploring Best Rates";
-    const sLower = serviceName.toLowerCase();
-    if (sLower.includes("myob")) return "MYOB";
-    if (sLower.includes("quickbooks")) return "QuickBooks Online";
-    if (sLower.includes("xero")) return "Xero";
-    if (sLower.includes("add-ons") || sLower.includes("integration")) return "Cloud Add-Ons (Dext/Tradify/Shopify)";
-    return "Xero";
-  };
+  const isBookkeeping = /bookkeeping|payroll|reconciliation|payable|receivable|invoice|invoicing|budget|cash flow/i.test(serviceName);
+  const isTaxOrAccounting = !isBookkeeping && !isMortgage;
 
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -43,7 +31,6 @@ export default function BookkeepingContact({
     email: "",
     phone: "",
     businessName: "",
-    software: getInitialSoftware(),
     message: "",
   });
 
@@ -69,7 +56,8 @@ export default function BookkeepingContact({
           email: formData.email,
           phone: formData.phone,
           businessName: formData.businessName,
-          selectedService: `${serviceName} (${isMortgage ? "Lender" : "Software"}: ${formData.software})`,
+          selectedService: serviceName,
+          source: `Service Page (${serviceName})`,
           message: formData.message,
         }),
       });
@@ -86,10 +74,11 @@ export default function BookkeepingContact({
         setSubmitted(true);
         setIsSuccess(false);
       }, 750);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Submission error:", err);
+      const e = err as { message?: string };
       setErrorMessage(
-        err.message || "Unable to send message directly via SMTP. Please try again or reach us via WhatsApp."
+        e?.message || "Unable to send message directly via SMTP. Please try again or reach us via WhatsApp."
       );
     } finally {
       setLoading(false);
@@ -98,10 +87,8 @@ export default function BookkeepingContact({
 
   const whatsappMessage = encodeURIComponent(
     isMortgage
-      ? `Hi Taxnet, I'm looking for advice regarding ${serviceName}. I'd like to book a consultation with a mortgage broker.`
-      : isSoftware
-      ? `Hi Taxnet, I'm interested in ${serviceName} for my business. I'd like to connect with a certified software specialist.`
-      : `Hi Taxnet, I'm interested in your ${serviceName} services for my business. I'd like to book a quick consultation.`
+      ? `Hi Taxnet, I'm looking for advice regarding ${serviceName}. I'd like to book a consultation with an accredited mortgage broker.`
+      : `Hi Taxnet, I'm interested in your ${serviceName} services for my business. I'd like to book a consultation.`
   );
 
   const labelColor = "#0A0D0B";
@@ -411,10 +398,8 @@ export default function BookkeepingContact({
                   Your inquiry for <strong>{serviceName}</strong> has been received. One of our
                   {isMortgage
                     ? " accredited FBAA mortgage brokers "
-                    : isSoftware
-                    ? " certified cloud software specialists "
                     : " senior Melbourne CPAs "}
-                  will review your {isMortgage ? "borrowing scenario" : isSoftware ? "software setup and migration goals" : "details"} and connect with you within 2 business hours.
+                  will review your {isMortgage ? "borrowing scenario" : "details"} and connect with you within 2 business hours.
                 </p>
                 <button
                   type="button"
@@ -445,19 +430,17 @@ export default function BookkeepingContact({
                       letterSpacing: "-0.01em",
                     }}
                   >
-                    {isTaxOrAccounting || isSoftware
+                    {isTaxOrAccounting
                       ? `Request a Free ${serviceName} Consultation`
                       : isMortgage
                       ? `Request a Free ${serviceName} Assessment`
                       : `Request a Free Bookkeeping Assessment`}
                   </h3>
                   <p style={{ fontSize: "0.82rem", color: darkTheme ? "#9CA3AF" : "#6B7C72", margin: 0 }}>
-                    {isSoftware
-                      ? "100% confidential · Certified Cloud Platform Partners · Direct CPA Migration Blueprint"
-                      : isTaxOrAccounting
+                    {isTaxOrAccounting
                       ? "100% confidential · Direct CPA Partner Review · Upfront Fixed Proposal"
                       : isMortgage
-                      ? "100% complimentary · Accredited FBAA broker review · 40+ bank comparisons"
+                      ? "100% complimentary · Accredited FBAA broker review · a wide range of lenders"
                       : "100% confidential · Direct CPA review · Flat monthly fee quote"}
                   </p>
                 </div>
@@ -577,74 +560,13 @@ export default function BookkeepingContact({
                   </div>
                 </div>
 
-                {/* Accounting Software / Platform (Only for Bookkeeping/Tax/Software, not Mortgage) */}
-                {!isMortgage && !hideSoftwareField && (
-                  <div style={{ marginBottom: "1rem" }}>
-                    <label
-                      htmlFor="bk-software"
-                      style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
-                    >
-                      {isSoftware
-                        ? "Target Platform or Migration Current State"
-                        : "Current Accounting Software / Method"}
-                    </label>
-                    <select
-                      id="bk-software"
-                      name="software"
-                      value={formData.software}
-                      onChange={handleChange}
-                      style={{
-                        width: "100%",
-                        padding: "10px 12px",
-                        borderRadius: "8px",
-                        border: inputBorder,
-                        fontSize: "0.88rem",
-                        color: inputTextColor,
-                        outline: "none",
-                        backgroundColor: inputBg,
-                        cursor: "pointer",
-                      }}
-                    >
-                      {isSoftware ? (
-                        <>
-                          <option value="Xero">Xero (Gold Certified Practice)</option>
-                          <option value="MYOB">MYOB (Certified Practice Specialist)</option>
-                          <option value="QuickBooks Online">QuickBooks Online (Advanced ProAdvisor)</option>
-                          <option value="Cloud Add-Ons (Dext/Tradify/Shopify)">Cloud Add-Ons (Dext, Tradify, Shopify)</option>
-                          <option value="Migrating from Desktop (MYOB/Reckon)">Migrating from Desktop (MYOB AccountRight / Reckon)</option>
-                          <option value="Looking for Best Platform Recommendation">Looking for Best Platform Recommendation</option>
-                        </>
-                      ) : isBookkeeping ? (
-                        <>
-                          <option value="Xero">Xero (Certified Practice)</option>
-                          <option value="MYOB">MYOB</option>
-                          <option value="QuickBooks Online">QuickBooks Online</option>
-                          <option value="Spreadsheets / Excel">Spreadsheets / Excel</option>
-                          <option value="Need New Setup">Looking to set up fresh cloud software</option>
-                        </>
-                      ) : (
-                        <>
-                          <option value="Xero">Xero (Certified Practice)</option>
-                          <option value="MYOB">MYOB</option>
-                          <option value="QuickBooks Online">QuickBooks Online</option>
-                          <option value="Spreadsheets / Excel">Spreadsheets / Excel</option>
-                          <option value="Individual / No Software">Individual Return / No Software</option>
-                          <option value="Need Fresh Cloud Accounting Setup">Need Fresh Cloud Accounting Setup</option>
-                        </>
-                      )}
-                    </select>
-                  </div>
-                )}
-
                 {/* Message */}
                 <div style={{ marginBottom: "1.25rem" }}>
                   <label
                     htmlFor="bk-msg"
                     style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
                   >
-                    {isSoftware
-                      ? "How can our certified cloud specialists assist with your software setup?"
-                      : isTaxOrAccounting
+                    {isTaxOrAccounting
                       ? "How can our Melbourne CPA team assist your business or tax?"
                       : isMortgage
                       ? "What are your borrowing or property purchasing goals?"
@@ -655,9 +577,7 @@ export default function BookkeepingContact({
                     name="message"
                     rows={3}
                     placeholder={
-                      isSoftware
-                        ? "e.g. We want to migrate from desktop MYOB to Xero, integrate inventory or job management add-ons, or need specialized staff training..."
-                        : isTaxOrAccounting
+                      isTaxOrAccounting
                         ? "e.g. Need pre-EOFY tax planning, business return lodgement, or company/trust structuring..."
                         : isMortgage
                         ? "e.g. Looking to purchase a home or investment property in Melbourne, refinance current loan, or calculate borrowing power..."
@@ -720,7 +640,7 @@ export default function BookkeepingContact({
                     boxShadow: loading
                       ? "0 0 16px rgba(197, 168, 105, 0.25)"
                       : "0 4px 14px rgba(10, 13, 11, 0.25)",
-                    transition: "all 200ms ease",
+                    transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -730,14 +650,26 @@ export default function BookkeepingContact({
                     if (!loading && !isSuccess) {
                       e.currentTarget.style.backgroundColor = submitHoverBg;
                       e.currentTarget.style.borderColor = "#C5A869";
-                      e.currentTarget.style.transform = "translateY(-1px)";
+                      e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
+                      e.currentTarget.style.boxShadow = "0 12px 28px rgba(10, 13, 11, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.35)";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!loading && !isSuccess) {
                       e.currentTarget.style.backgroundColor = submitBg;
                       e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
-                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.transform = "translateY(0) scale(1)";
+                      e.currentTarget.style.boxShadow = "0 4px 14px rgba(10, 13, 11, 0.25)";
+                    }
+                  }}
+                  onMouseDown={(e) => {
+                    if (!loading && !isSuccess) {
+                      e.currentTarget.style.transform = "translateY(1.5px) scale(0.97)";
+                    }
+                  }}
+                  onMouseUp={(e) => {
+                    if (!loading && !isSuccess) {
+                      e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
                     }
                   }}
                 >
@@ -778,7 +710,7 @@ export default function BookkeepingContact({
                       <span>
                         {submitButtonText ? submitButtonText : "Book A Consultation"}
                       </span>
-                      <span style={{ fontSize: "1.05rem" }}>→</span>
+                      <span className="btn-arrow" style={{ fontSize: "1.05rem", transition: "transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1)", display: "inline-block" }}>→</span>
                     </>
                   )}
                 </button>
@@ -812,6 +744,7 @@ export default function BookkeepingContact({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat with us on WhatsApp"
+                  className="playful-btn"
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -828,19 +761,25 @@ export default function BookkeepingContact({
                     textDecoration: "none",
                     cursor: "pointer",
                     boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
-                    transition: "all 180ms ease",
+                    transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = "#F9FAF9";
                     e.currentTarget.style.borderColor = "#25D366";
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.boxShadow = "0 4px 14px rgba(37, 211, 102, 0.15)";
+                    e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
+                    e.currentTarget.style.boxShadow = "0 8px 22px rgba(37, 211, 102, 0.25)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = "#FFFFFF";
                     e.currentTarget.style.borderColor = "#D1DCD5";
-                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
                     e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
+                  }}
+                  onMouseDown={(e) => {
+                    e.currentTarget.style.transform = "translateY(1.5px) scale(0.97)";
+                  }}
+                  onMouseUp={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
                   }}
                 >
                   <svg

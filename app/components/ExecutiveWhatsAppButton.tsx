@@ -24,7 +24,7 @@ export default function ExecutiveWhatsAppButton({
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat with us on WhatsApp"
-      className={className}
+      className={`playful-btn ${className || ""}`.trim()}
       style={{
         display: "inline-flex",
         alignItems: "center",
@@ -39,18 +39,25 @@ export default function ExecutiveWhatsAppButton({
         cursor: "pointer",
         boxShadow: "0 4px 14px rgba(0, 0, 0, 0.08)",
         border: "1px solid rgba(0, 0, 0, 0.12)",
-        transition: "all 180ms ease",
+        transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+        willChange: "transform",
         ...style,
       }}
       onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "translateY(-2px)";
-        e.currentTarget.style.boxShadow = "0 8px 20px rgba(0, 0, 0, 0.12)";
-        e.currentTarget.style.borderColor = "rgba(0, 0, 0, 0.22)";
+        e.currentTarget.style.transform = "translateY(-3.5px) scale(1.04)";
+        e.currentTarget.style.boxShadow = "0 14px 28px rgba(37, 211, 102, 0.3), 0 0 0 1px rgba(37, 211, 102, 0.45)";
+        e.currentTarget.style.borderColor = "#25D366";
       }}
       onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "translateY(0)";
+        e.currentTarget.style.transform = "translateY(0) scale(1)";
         e.currentTarget.style.boxShadow = "0 4px 14px rgba(0, 0, 0, 0.08)";
         e.currentTarget.style.borderColor = "rgba(0, 0, 0, 0.12)";
+      }}
+      onMouseDown={(e) => {
+        e.currentTarget.style.transform = "translateY(1.5px) scale(0.965)";
+      }}
+      onMouseUp={(e) => {
+        e.currentTarget.style.transform = "translateY(-3.5px) scale(1.04)";
       }}
     >
       <svg

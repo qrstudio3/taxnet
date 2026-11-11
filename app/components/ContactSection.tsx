@@ -40,6 +40,7 @@ export default function ContactSection() {
           phone: formData.phone,
           businessName: formData.businessName,
           selectedService: formData.service,
+          source: "Home Page Contact Form",
           message: formData.message,
         }),
       });
@@ -55,10 +56,11 @@ export default function ContactSection() {
         setSubmitted(true);
         setIsSuccess(false);
       }, 750);
-    } catch (err: any) {
+    } catch (err: unknown) {
       console.error("Submission error:", err);
+      const e = err as { message?: string };
       setErrorMessage(
-        err.message || "Unable to send message directly via SMTP. Please try again or reach us via WhatsApp."
+        e?.message || "Unable to send message directly via SMTP. Please try again or reach us via WhatsApp."
       );
     } finally {
       setLoading(false);
@@ -512,12 +514,13 @@ export default function ContactSection() {
                         marginBottom: "4px",
                       }}
                     >
-                      Phone Number
+                      Phone Number *
                     </label>
                     <input
                       id="contact-phone"
                       name="phone"
                       type="tel"
+                      required
                       placeholder="0400 000 000"
                       value={formData.phone}
                       onChange={handleChange}
@@ -681,7 +684,7 @@ export default function ContactSection() {
                     boxShadow: loading
                       ? "0 0 16px rgba(197, 168, 105, 0.25)"
                       : "0 4px 18px rgba(0, 0, 0, 0.25)",
-                    transition: "all 200ms ease",
+                    transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
@@ -691,14 +694,26 @@ export default function ContactSection() {
                     if (!loading && !isSuccess) {
                       e.currentTarget.style.backgroundColor = "#161A18";
                       e.currentTarget.style.borderColor = "#C5A869";
-                      e.currentTarget.style.transform = "translateY(-1px)";
+                      e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
+                      e.currentTarget.style.boxShadow = "0 12px 28px rgba(10, 13, 11, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.3)";
                     }
                   }}
                   onMouseLeave={(e) => {
                     if (!loading && !isSuccess) {
                       e.currentTarget.style.backgroundColor = "#0A0D0B";
                       e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
-                      e.currentTarget.style.transform = "translateY(0)";
+                      e.currentTarget.style.transform = "translateY(0) scale(1)";
+                      e.currentTarget.style.boxShadow = "0 4px 18px rgba(0, 0, 0, 0.25)";
+                    }
+                  }}
+                  onMouseDown={(e) => {
+                    if (!loading && !isSuccess) {
+                      e.currentTarget.style.transform = "translateY(1.5px) scale(0.97)";
+                    }
+                  }}
+                  onMouseUp={(e) => {
+                    if (!loading && !isSuccess) {
+                      e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
                     }
                   }}
                 >
@@ -737,7 +752,7 @@ export default function ContactSection() {
                   ) : (
                     <>
                       <span>Request Consultation · Get Free Assessment</span>
-                      <span style={{ fontSize: "1.05rem" }}>→</span>
+                      <span className="btn-arrow" style={{ fontSize: "1.05rem", transition: "transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1)", display: "inline-block" }}>→</span>
                     </>
                   )}
                 </button>
@@ -771,6 +786,7 @@ export default function ContactSection() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Chat with us on WhatsApp"
+                  className="playful-btn"
                   style={{
                     display: "flex",
                     alignItems: "center",
@@ -787,19 +803,25 @@ export default function ContactSection() {
                     textDecoration: "none",
                     cursor: "pointer",
                     boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
-                    transition: "all 180ms ease",
+                    transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
                   }}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.backgroundColor = "#F9FAF9";
                     e.currentTarget.style.borderColor = "#25D366";
-                    e.currentTarget.style.transform = "translateY(-1px)";
-                    e.currentTarget.style.boxShadow = "0 4px 14px rgba(37, 211, 102, 0.15)";
+                    e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
+                    e.currentTarget.style.boxShadow = "0 8px 22px rgba(37, 211, 102, 0.25)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.backgroundColor = "#FFFFFF";
                     e.currentTarget.style.borderColor = "#D1DCD5";
-                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
                     e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
+                  }}
+                  onMouseDown={(e) => {
+                    e.currentTarget.style.transform = "translateY(1.5px) scale(0.97)";
+                  }}
+                  onMouseUp={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
                   }}
                 >
                   <svg

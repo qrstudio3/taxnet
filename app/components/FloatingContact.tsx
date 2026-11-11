@@ -53,6 +53,7 @@ export default function FloatingContact() {
           align-items: flex-end;
           gap: 12px;
           font-family: inherit;
+          pointer-events: none;
         }
 
         .fab-menu {
@@ -60,7 +61,8 @@ export default function FloatingContact() {
           flex-direction: column;
           align-items: flex-end;
           gap: 12px;
-          transition: opacity 220ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1), visibility 220ms;
+          transition: opacity 220ms ease, transform 220ms cubic-bezier(0.16, 1, 0.3, 1), max-height 260ms ease, margin 220ms ease, visibility 220ms;
+          pointer-events: none;
         }
 
         .fab-menu.closed {
@@ -68,6 +70,9 @@ export default function FloatingContact() {
           visibility: hidden;
           pointer-events: none;
           transform: translateY(14px) scale(0.95);
+          max-height: 0;
+          margin-bottom: -12px;
+          overflow: hidden;
         }
 
         .fab-menu.open {
@@ -75,6 +80,8 @@ export default function FloatingContact() {
           visibility: visible;
           pointer-events: auto;
           transform: translateY(0) scale(1);
+          max-height: 380px;
+          margin-bottom: 0;
         }
 
         .fab-action-row {
@@ -83,11 +90,18 @@ export default function FloatingContact() {
           gap: 10px;
           text-decoration: none;
           cursor: pointer;
-          transition: transform 180ms ease;
+          transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+          pointer-events: auto;
+          will-change: transform;
         }
 
         .fab-action-row:hover {
-          transform: translateX(-3px);
+          transform: translateX(-5px) scale(1.04);
+        }
+
+        .fab-action-row:active {
+          transform: translateX(-2px) scale(0.96);
+          transition-duration: 100ms;
         }
 
         .fab-action-pill {
@@ -157,15 +171,22 @@ export default function FloatingContact() {
           justify-content: center;
           box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.2);
           cursor: pointer;
-          transition: transform 200ms ease, background-color 200ms ease, box-shadow 200ms ease, border-color 200ms ease;
+          transition: transform 340ms cubic-bezier(0.34, 1.56, 0.64, 1), background-color 200ms ease, box-shadow 340ms cubic-bezier(0.34, 1.56, 0.64, 1), border-color 200ms ease;
           position: relative;
+          pointer-events: auto;
+          will-change: transform;
         }
 
         .fab-trigger-btn:hover {
-          transform: scale(1.06);
+          transform: scale(1.12);
           background-color: #141815;
           border-color: #E5D6B6;
-          box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), 0 0 16px rgba(197, 168, 105, 0.35);
+          box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 20px rgba(197, 168, 105, 0.45);
+        }
+
+        .fab-trigger-btn:active {
+          transform: scale(0.92);
+          transition-duration: 100ms;
         }
 
         .fab-trigger-icon {

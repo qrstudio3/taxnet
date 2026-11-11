@@ -192,10 +192,24 @@ a:hover {
   border: none;
   cursor: pointer;
   border-radius: var(--radius-md);
-  transition: all var(--transition-normal);
+  transition: transform 320ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 320ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 200ms ease,
+              border-color 200ms ease,
+              color 200ms ease;
   text-decoration: none;
   white-space: nowrap;
   line-height: 1;
+  will-change: transform;
+}
+
+.btn:hover {
+  transform: translateY(-3.5px) scale(1.04);
+}
+
+.btn:active {
+  transform: translateY(1.5px) scale(0.965);
+  transition-duration: 120ms;
 }
 
 .btn-primary {
@@ -207,11 +221,11 @@ a:hover {
 .btn-primary:hover {
   background-color: var(--color-secondary-light);
   color: #fff;
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  box-shadow: 0 12px 28px -6px rgba(10, 13, 11, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.3);
+  transform: translateY(-3.5px) scale(1.04);
 }
 .btn-primary:active {
-  transform: translateY(0);
+  transform: translateY(1.5px) scale(0.965);
   box-shadow: var(--shadow-sm);
 }
 
@@ -224,6 +238,11 @@ a:hover {
 .btn-secondary:hover {
   background-color: var(--color-secondary);
   color: var(--color-text-inverse);
+  box-shadow: 0 10px 24px -4px rgba(10, 13, 11, 0.25);
+  transform: translateY(-3.5px) scale(1.04);
+}
+.btn-secondary:active {
+  transform: translateY(1.5px) scale(0.965);
 }
 
 .btn-ghost {
@@ -236,6 +255,85 @@ a:hover {
   background-color: rgba(249, 249, 246, 0.12);
   border-color: rgba(249, 249, 246, 0.7);
   color: var(--color-text-inverse);
+  transform: translateY(-3.5px) scale(1.04);
+}
+.btn-ghost:active {
+  transform: translateY(1.5px) scale(0.965);
+}
+
+/* Playful Button System Class */
+.playful-btn {
+  transition: transform 340ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 340ms cubic-bezier(0.34, 1.56, 0.64, 1),
+              background-color 220ms ease,
+              border-color 220ms ease,
+              color 200ms ease !important;
+  will-change: transform;
+  cursor: pointer;
+}
+
+.playful-btn:hover {
+  transform: translateY(-3.5px) scale(1.04) !important;
+}
+
+.playful-btn:active {
+  transform: translateY(1.5px) scale(0.965) !important;
+  transition-duration: 100ms !important;
+}
+
+.playful-btn .btn-arrow,
+.playful-btn span:last-child {
+  transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  display: inline-block;
+}
+
+.playful-btn:hover .btn-arrow,
+.playful-btn:hover span:last-child {
+  transform: translateX(4px) scale(1.15);
+}
+
+.playful-btn-primary {
+  background-color: #C5A869;
+  color: #0A0D0B !important;
+  box-shadow: 0 6px 20px rgba(197, 168, 105, 0.4);
+}
+.playful-btn-primary:hover {
+  background-color: #DFC386 !important;
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 0 14px 32px rgba(197, 168, 105, 0.55) !important;
+}
+.playful-btn-primary:active {
+  transform: translateY(1.5px) scale(0.965) !important;
+}
+
+.playful-btn-secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.playful-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  border-color: #C5A869 !important;
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(197, 168, 105, 0.4) !important;
+}
+.playful-btn-secondary:active {
+  transform: translateY(1.5px) scale(0.965) !important;
+}
+
+.playful-btn-ghost {
+  background-color: transparent;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+.playful-btn-ghost:hover {
+  background-color: rgba(255, 255, 255, 0.14) !important;
+  border-color: #C5A869 !important;
+  transform: translateY(-4px) scale(1.05) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.4) !important;
+}
+.playful-btn-ghost:active {
+  transform: translateY(1.5px) scale(0.965) !important;
 }
 
 /* --- Cards --- */
