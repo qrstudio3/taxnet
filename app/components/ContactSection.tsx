@@ -13,7 +13,7 @@ export default function ContactSection() {
     email: "",
     phone: "",
     businessName: "",
-    service: "Corporate Tax & Structuring",
+    service: "Accounting & Tax",
     message: "",
   });
 
@@ -373,7 +373,7 @@ export default function ContactSection() {
                   }}
                 >
                   Your discovery consultation request has been received. One of our
-                  senior CPA partners will review your details and reach out within 2
+                  team members will review your details and reach out within 2
                   business hours.
                 </p>
                 <div
@@ -635,27 +635,10 @@ export default function ContactSection() {
                       cursor: "pointer",
                     }}
                   >
-                    <option value="Corporate Tax & Structuring">
-                      Corporate Tax & Structuring
-                    </option>
-                    <option value="Mortgage Broking & Home Loans">
-                      Mortgage Broking & Home Loans
-                    </option>
-                    <option value="Full Scope Bookkeeping & BAS">
-                      Full Scope Bookkeeping & BAS
-                    </option>
-                    <option value="Commercial & Equipment Financing">
-                      Commercial & Equipment Financing
-                    </option>
-                    <option value="Virtual CFO & Advisory">
-                      Virtual CFO & Strategic Advisory
-                    </option>
-                    <option value="Cloud Accounting & Software Setup">
-                      Cloud Accounting & Software Setup (Xero / MYOB)
-                    </option>
-                    <option value="High-Net-Worth / Individual Tax">
-                      High-Net-Worth / Individual Tax
-                    </option>
+                    <option value="Accounting & Tax">Accounting & Tax</option>
+                    <option value="Mortgage Broking">Mortgage Broking</option>
+                    <option value="Bookkeeping">Bookkeeping</option>
+                    <option value="Something else">Something else</option>
                   </select>
                 </div>
 

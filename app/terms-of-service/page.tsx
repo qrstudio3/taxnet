@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -40,7 +40,7 @@ const SECTIONS = [
           <li>
             <strong>Mortgage Broking &amp; Credit Assistance:</strong> Provided in accordance with the
             <em> National Consumer Credit Protection Act 2009 (Cth)</em> and overseen by the
-            <strong> Mortgage &amp; Finance Association of Australia (MFAA)</strong>.
+            <strong> Finance Brokers Association of Australia (FBAA)</strong>.
           </li>
         </ul>
         <p>
@@ -121,7 +121,7 @@ const SECTIONS = [
           Liability limited by a scheme approved under Professional Standards Legislation.
         </p>
         <p>
-          Taxnet Advisory Pty Ltd participates in the <strong>CPA Australia Professional Standards Scheme</strong> approved under the
+          Taxnet Business Consultants participates in the <strong>CPA Australia Professional Standards Scheme</strong> approved under the
           <em> Professional Standards Act 2003 (VIC)</em>. The scheme limits the civil liability of our firm, partners, and employees
           to the monetary caps established under the statutory scheme, except where liability cannot be excluded by law (such as fraud or gross negligence).
         </p>
@@ -320,7 +320,7 @@ export default function TermsOfServicePage() {
               }}
             >
               Professional terms governing all CPA accounting, taxation advisory, corporate ASIC compliance,
-              and mortgage broking services rendered by Taxnet Advisory Pty Ltd.
+              and mortgage broking services rendered by Taxnet Business Consultants.
             </p>
 
             {/* Regulatory Governance Strip */}
@@ -339,7 +339,7 @@ export default function TermsOfServicePage() {
                 <strong style={{ color: "#C5A869" }}>Practice Standard:</strong> CPA Australia Public Practice
               </div>
               <div>
-                <strong style={{ color: "#C5A869" }}>Regulatory Oversight:</strong> Tax Practitioners Board (TPB) &amp; MFAA
+                <strong style={{ color: "#C5A869" }}>Regulatory Oversight:</strong> Tax Practitioners Board (TPB) &amp; FBAA
               </div>
               <div>
                 <strong style={{ color: "#C5A869" }}>Jurisdiction:</strong> Victoria, Australia

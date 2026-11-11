@@ -2,31 +2,27 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
-import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
-import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 
 export const metadata: Metadata = {
-  title: "Mortgage Broker Melbourne | 40+ Bank & Non-Bank Lenders | Taxnet",
+  title: "Mortgage Broking Melbourne | FBAA Accredited Brokers | Taxnet",
   description:
-    "Expert mortgage broking services in Melbourne. Compare 40+ Australian lenders for first homes, refinancing, investment property, construction, and business loans. $0 broker fee.",
+    "Accredited mortgage broking services in Melbourne. Compare 40+ Australian lenders for first homes, refinancing, investment property, and commercial loans.",
   keywords: [
     "mortgage broker Melbourne",
     "home loans Melbourne",
     "first home buyer loan Melbourne",
     "refinancing mortgage broker",
     "commercial business loans Melbourne",
-    "MFAA accredited mortgage broker",
+    "FBAA accredited mortgage broker",
   ],
 };
 
 interface MortgageServiceItem {
   icon: BenefitIconType;
   title: string;
-  href: string;
   desc: string;
 }
 
@@ -34,77 +30,69 @@ const MORTGAGE_SERVICES: MortgageServiceItem[] = [
   {
     icon: "key",
     title: "Buying Your First Home",
-    href: "/mortgage-broking/first-home-buyer",
-    desc: "First Home Owner Grants (FHOG), 5% deposit First Home Guarantee Scheme, Victorian stamp duty concessions, and maximum borrowing power.",
+    desc: "Step-by-step guidance from pre-approval to settlement. We help you understand deposit requirements and government support schemes.",
   },
   {
     icon: "home",
     title: "Buying Your Next Home",
-    href: "/mortgage-broking/next-home-buyer",
-    desc: "Upgrading or downsizing with equity release, simultaneous settlements, loan porting, and transition finance to secure your dream home.",
+    desc: "Using the equity in your current property to upsize or relocate, coordinating finance so your purchase and sale move in sync.",
   },
   {
     icon: "refresh",
     title: "Refinancing & Debt Consolidation",
-    href: "/mortgage-broking/refinancing-debt-consolidation",
-    desc: "Slash 0.5%–1.5% off your existing interest rate, unlock equity for renovations, capture bank cashback offers, and consolidate debts into one low payment.",
+    desc: "Comparing your current loan against 40+ lenders to explore better features and consolidate multiple debts into one simple repayment.",
   },
   {
     icon: "building",
     title: "Investment Property Loans",
-    href: "/mortgage-broking/investment-property-loans",
-    desc: "Strategic interest-only facilities, stand-alone mortgages avoiding cross-collateralization, and tax-effective loan structuring integrated with our CPA team.",
+    desc: "Structuring your investment loans with stand-alone security, integrated directly with your overall tax and accounting plan.",
   },
   {
     icon: "tool",
     title: "Land & Construction Loans",
-    href: "/mortgage-broking/land-construction-loans",
-    desc: "Progressive drawdown construction financing across slab, frame, lockup, fixing, and practical completion stages on fixed-price builder contracts.",
+    desc: "Progressive payment finance for vacant land purchases, knockdown-rebuilds, and builder construction contracts.",
   },
   {
     icon: "briefcase",
     title: "Business & Commercial Loans",
-    href: "/mortgage-broking/business-loans",
-    desc: "Secured and unsecured commercial debt, working capital facilities, debtor finance, and commercial property mortgages with CPA-backed credit submissions.",
+    desc: "Commercial mortgages, working capital facilities, and business borrowing structured to match your cash flow.",
   },
   {
     icon: "car",
     title: "Personal, Car & Equipment Finance",
-    href: "/mortgage-broking/personal-car-equipment-finance",
-    desc: "Commercial chattel mortgages, novated car leases, yellow goods equipment funding, and instant asset write-off coordination for tax savings.",
+    desc: "Chattel mortgages, novated car leases, and equipment finance to secure business assets while keeping cash reserves intact.",
   },
   {
     icon: "clock",
     title: "Bridging Loans",
-    href: "/mortgage-broking/bridging-loans",
-    desc: "Buy before you sell without stressful auction deadlines. Peak debt bridging structures with interest capitalization to avoid rushed property sales.",
+    desc: "Short-term transition finance to help you purchase your next home before your existing home is sold.",
   },
 ];
 
 const FAQS = [
   {
-    q: "Why should I use a Taxnet mortgage broker instead of going directly to my bank?",
-    a: "A single bank can only offer you their own proprietary loan products and interest rates. Taxnet has access to a panel of over 40 major Australian banks and non-bank lenders (including CBA, ANZ, NAB, Westpac, Macquarie, ING, and Bankwest). We compare thousands of products, negotiate discounted discretionary rates, handle all lender paperwork, and ensure your borrowing structure aligns with your overall tax and wealth strategy.",
+    q: "Why should I use a mortgage broker instead of going directly to my bank?",
+    a: "A single bank can only offer you their own loans. We compare options from more than 40 Australian banks and lenders to find the right loan structure for your situation.",
   },
   {
-    q: "How much do Taxnet's mortgage broking services cost?",
-    a: "Our residential mortgage broking services are completely free ($0) to you. The lender pays our practice an industry-standard commission after your loan settles. You receive independent, unbiased credit advice, maximum borrowing power calculations, and full application management without paying a broker fee.",
+    q: "How much does your mortgage broking service cost?",
+    a: "Our residential mortgage broking services are provided at no direct charge to you. The lender pays us an industry-standard commission after your loan settles.",
   },
   {
-    q: "How does having an accounting firm manage our mortgage broking help us?",
-    a: "For business owners, self-employed contractors, trust beneficiaries, and property investors, traditional lenders often struggle to interpret company financial statements, add-backs, and depreciation. Because Taxnet is a qualified CPA public practice, we prepare verified lender-ready credit memorandums that commercial credit underwriters understand, avoiding common self-employed loan rejections.",
+    q: "How does having an accountant on your team help with my loan?",
+    a: "If you are self-employed or have a family trust, lenders can find financial accounts complex. Our accountants make sure your figures are presented clearly to lenders.",
   },
   {
-    q: "How quickly can you arrange loan pre-approval?",
-    a: "Depending on the chosen lender, pre-approval turnaround typically takes between 2 to 5 business days once your complete documentation is submitted. For urgent auction deadlines, we fast-track applications through priority broker assessment channels.",
+    q: "How long does loan pre-approval take?",
+    a: "Pre-approval usually takes between 2 to 5 business days once your complete paperwork is submitted. Turnaround times vary depending on the lender.",
   },
   {
-    q: "What deposit do I need to buy a home in Victoria?",
-    a: "While a traditional 20% deposit avoids Lenders Mortgage Insurance (LMI), eligible first-home buyers can purchase with as little as a 5% deposit through the federal First Home Guarantee Scheme without paying any LMI. Investors and next-home buyers can also utilize existing home equity as a deposit without dipping into cash reserves.",
+    q: "What deposit do I need to buy a home?",
+    a: "A 20% deposit avoids Lenders Mortgage Insurance. However, eligible buyers can often purchase with lower deposits through government schemes or existing home equity.",
   },
 ];
 
-export default function MortgageBrokingHubPage() {
+export default function MortgageBrokingPage() {
   const heroImg = "/taxnet-categories-images/Mortgage%20Broking/Buying%20Your%20First%20Home/hero.jpg";
 
   return (
@@ -116,7 +104,7 @@ export default function MortgageBrokingHubPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "74vh",
+            minHeight: "72vh",
             backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
@@ -125,10 +113,8 @@ export default function MortgageBrokingHubPage() {
             overflow: "hidden",
           }}
         >
-          {/* Parallax Background Hero Image */}
           <CategoryHeroParallax heroImg={heroImg} />
 
-          {/* Dark Overlay Gradient */}
           <div
             style={{
               position: "absolute",
@@ -150,14 +136,25 @@ export default function MortgageBrokingHubPage() {
           >
             {/* Breadcrumb */}
             <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>
-                Home
-              </Link>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Home</Link>
               <span style={{ margin: "0 8px" }}>/</span>
               <span style={{ color: "#C5A869" }}>Mortgage Broking</span>
             </nav>
 
-            {/* Headline */}
+            <span
+              style={{
+                display: "inline-block",
+                color: "#C5A869",
+                fontWeight: 700,
+                fontSize: "0.82rem",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                marginBottom: "0.75rem",
+              }}
+            >
+              FBAA Accredited · 40+ Australian Lenders
+            </span>
+
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
@@ -167,38 +164,25 @@ export default function MortgageBrokingHubPage() {
                 lineHeight: 1.1,
                 letterSpacing: "-0.015em",
                 maxWidth: "860px",
-                marginBottom: "1rem",
+                marginBottom: "1.25rem",
               }}
             >
-              Independent Mortgage Broking.{" "}
-              <span
-                style={{
-                  background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  color: "transparent",
-                }}
-              >
-                40+ Australian Lenders.
-              </span>{" "}
-              Zero Broker Fees.
+              Mortgage Broking & Lending
             </h1>
 
-            {/* Subtitle - Lesser & Punchy */}
             <p
               style={{
                 fontSize: "clamp(1rem, 1.25vw, 1.15rem)",
-                lineHeight: 1.6,
-                color: "rgba(255,255,255,0.8)",
-                maxWidth: "620px",
-                marginBottom: "2rem",
+                lineHeight: 1.65,
+                color: "rgba(255,255,255,0.82)",
+                maxWidth: "640px",
+                marginBottom: "2.25rem",
               }}
             >
-              Compare 40+ banks and specialist lenders. Access wholesale discounted interest rates with zero broker fees.
+              We compare loans from over 40 banks and lenders to find the right loan structure for your purchase, refinancing, or business needs.
             </p>
 
-            {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem" }}>
               <Link
                 href="/calculator"
                 style={{
@@ -207,23 +191,36 @@ export default function MortgageBrokingHubPage() {
                   gap: "8px",
                   backgroundColor: "#C5A869",
                   color: "#0A0D0B",
-                  fontWeight: 800,
+                  fontWeight: 700,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
-                  borderRadius: "8px",
+                  borderRadius: "6px",
                   textDecoration: "none",
                   boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Calculate Borrowing Capacity →
+                Borrowing Calculator →
               </Link>
 
-              <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I'd like to discuss mortgage broking options."
-                label="Chat with a Mortgage Partner"
-                sublabel="Direct WhatsApp Line"
-              />
+              <Link
+                href="/contact"
+                style={{
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: "8px",
+                  backgroundColor: "rgba(255, 255, 255, 0.08)",
+                  color: "#FFFFFF",
+                  fontWeight: 600,
+                  fontSize: "0.95rem",
+                  padding: "0.9rem 1.8rem",
+                  borderRadius: "6px",
+                  textDecoration: "none",
+                  border: "1px solid rgba(255, 255, 255, 0.3)",
+                }}
+              >
+                Book a Chat
+              </Link>
 
               <a
                 href="tel:0398025800"
@@ -241,9 +238,174 @@ export default function MortgageBrokingHubPage() {
           </div>
         </section>
 
-        {/* ─── SERVICES AUTO-SLIDER ─── */}
-        <section id="services" style={{ padding: "5.5rem 0", backgroundColor: "#F9F9F6" }}>
+        {/* ─── SERVICES LIST (Single Page, No Sub-Pages) ─── */}
+        <section id="services-list" style={{ padding: "5rem 0", backgroundColor: "#FFFFFF" }}>
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
+              <span
+                style={{
+                  color: "#A18650",
+                  fontWeight: 700,
+                  fontSize: "0.82rem",
+                  letterSpacing: "0.1em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Lending Solutions
+              </span>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                  fontSize: "clamp(2rem, 3.6vw, 3rem)",
+                  color: "#0A0D0B",
+                  marginTop: "0.5rem",
+                  letterSpacing: "-0.01em",
+                }}
+              >
+                What We Offer
+              </h2>
+              <p style={{ color: "#55645B", maxWidth: "620px", margin: "0.75rem auto 0", fontSize: "0.95rem", lineHeight: 1.6 }}>
+                Clear loan options tailored to your purchase timeline, personal goals, and cash flow.
+              </p>
+            </div>
+
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gap: "1.5rem",
+              }}
+            >
+              {MORTGAGE_SERVICES.map((srv, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    padding: "1.75rem",
+                    backgroundColor: "#F9F9F6",
+                    borderRadius: "14px",
+                    border: "1px solid #E2E8E4",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.03)",
+                  }}
+                >
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1rem" }}>
+                      <div
+                        style={{
+                          width: "42px",
+                          height: "42px",
+                          borderRadius: "10px",
+                          backgroundColor: "rgba(197, 168, 105, 0.15)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <BookkeepingBenefitIcon type={srv.icon} />
+                      </div>
+                      <h3
+                        style={{
+                          fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                          fontSize: "1.2rem",
+                          fontWeight: 600,
+                          color: "#0A0D0B",
+                          margin: 0,
+                        }}
+                      >
+                        {srv.title}
+                      </h3>
+                    </div>
+
+                    <p style={{ color: "#4B5563", fontSize: "0.9rem", lineHeight: 1.65, margin: 0 }}>
+                      {srv.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Credit Disclosure Callout Box */}
+            <div
+              style={{
+                marginTop: "3.5rem",
+                padding: "1.5rem 1.75rem",
+                backgroundColor: "#F9F9F6",
+                borderRadius: "12px",
+                border: "1px solid rgba(197, 168, 105, 0.35)",
+                fontSize: "0.82rem",
+                color: "#4B5563",
+                lineHeight: 1.6,
+              }}
+            >
+              <strong style={{ color: "#0A0D0B" }}>Australian Credit Licence & Credit Disclosure:</strong>{" "}
+              Mortgage broking and credit assistance services are provided by Taxnet Business Consultants in accordance with the National Consumer Credit Protection Act 2009. Credit Representative / Australian Credit Licence details: [Details to be supplied] · FBAA Accredited.
+            </div>
+
+            {/* Bottom Call to Action */}
+            <div
+              style={{
+                marginTop: "2.5rem",
+                textAlign: "center",
+                padding: "2.5rem 1.5rem",
+                backgroundColor: "#0A0D0B",
+                borderRadius: "16px",
+                color: "#FFFFFF",
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                  fontSize: "1.75rem",
+                  color: "#FFFFFF",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Estimate Your Borrowing Power Today
+              </h3>
+              <p style={{ color: "rgba(255,255,255,0.7)", maxWidth: "520px", margin: "0 auto 1.5rem", fontSize: "0.92rem" }}>
+                Use our borrowing calculator to explore repayments and borrowing capacity, or book a consultation with our broking team.
+              </p>
+              <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
+                <Link
+                  href="/calculator"
+                  style={{
+                    backgroundColor: "#C5A869",
+                    color: "#0A0D0B",
+                    fontWeight: 700,
+                    fontSize: "0.92rem",
+                    padding: "0.8rem 1.8rem",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                  }}
+                >
+                  Open Borrowing Calculator →
+                </Link>
+                <Link
+                  href="/contact"
+                  style={{
+                    backgroundColor: "transparent",
+                    color: "#FFFFFF",
+                    border: "1px solid rgba(255, 255, 255, 0.35)",
+                    fontWeight: 600,
+                    fontSize: "0.92rem",
+                    padding: "0.8rem 1.8rem",
+                    borderRadius: "6px",
+                    textDecoration: "none",
+                  }}
+                >
+                  Book a Chat
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── FAQS SECTION ─── */}
+        <section style={{ padding: "4.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E5ECE7" }}>
+          <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
                 style={{
@@ -254,98 +416,49 @@ export default function MortgageBrokingHubPage() {
                   textTransform: "uppercase",
                 }}
               >
-                Comprehensive Lending Solutions
+                Common Questions
               </span>
               <h2
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.6vw, 3rem)",
+                  fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
                   color: "#0A0D0B",
                   marginTop: "0.5rem",
-                }}
-              >
-                Explore Tailored Mortgage & Finance Disciplines
-              </h2>
-              <p style={{ color: "#55645B", maxWidth: "660px", margin: "0.75rem auto 0", fontSize: "0.95rem" }}>
-                Whether you are stepping onto the property ladder, refinancing to slash monthly repayments, or funding a
-                commercial business expansion, our Melbourne finance brokers deliver market-leading outcomes.
-              </p>
-            </div>
-
-            <AutoSlidingCards items={MORTGAGE_SERVICES} />
-          </div>
-        </section>
-
-        {/* ─── PLANS SECTION EMBEDDED ─── */}
-        <PlansSection />
-
-        {/* ─── DEDICATED FAQS ─── */}
-        <section style={{ padding: "5.5rem 0", backgroundColor: "#FFFFFF", borderTop: "1px solid #E6ECE8" }}>
-          <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-              <span
-                style={{
-                  color: "#A18650",
-                  fontWeight: 700,
-                  fontSize: "0.82rem",
-                  letterSpacing: "0.08em",
-                  textTransform: "uppercase",
-                }}
-              >
-                Clarity Before Borrowing
-              </span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
-                  color: "#0A0D0B",
-                  marginTop: "0.4rem",
                 }}
               >
                 Frequently Asked Questions
               </h2>
             </div>
 
-            <div style={{ borderTop: "1px solid #E5EAE7" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {FAQS.map((faq, i) => (
-                <details
+                <div
                   key={i}
                   style={{
-                    borderBottom: "1px solid #E5EAE7",
-                    padding: "1.35rem 0.5rem",
-                    cursor: "pointer",
+                    backgroundColor: "#FFFFFF",
+                    borderRadius: "12px",
+                    padding: "1.5rem",
+                    border: "1px solid #E2E8E4",
+                    boxShadow: "0 2px 6px rgba(0,0,0,0.02)",
                   }}
                 >
-                  <summary
-                    style={{
-                      fontSize: "1.08rem",
-                      fontWeight: 700,
-                      color: "#0A0D0B",
-                      outline: "none",
-                      listStyle: "none",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <span>{faq.q}</span>
-                    <span style={{ color: "#A18650", fontSize: "1.35rem" }}>+</span>
-                  </summary>
-                  <p style={{ color: "#4A5A50", fontSize: "0.94rem", lineHeight: 1.7, marginTop: "0.85rem", paddingLeft: "0.25rem" }}>
+                  <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0A0D0B", marginBottom: "0.5rem" }}>
+                    {faq.q}
+                  </h4>
+                  <p style={{ color: "#4B5563", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>
                     {faq.a}
                   </p>
-                </details>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
+        {/* ─── CONTACT SECTION ─── */}
         <BookkeepingContact
-          serviceName="Mortgage Broking & Credit Strategy"
-          submitButtonText="Book A Consultation"
-          title="Secure Your Ideal Loan Structure"
-          subtitle="Speak with an MFAA-accredited Melbourne finance broker at our Doncaster East offices or connect directly over phone or WhatsApp."
+          serviceName="Mortgage Broking"
+          title="Speak With Our Finance Team"
+          subtitle="Connect with our accredited mortgage brokers in Doncaster East. Available in person, over video, or by phone."
         />
       </main>
 

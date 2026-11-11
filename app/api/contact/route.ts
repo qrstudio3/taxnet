@@ -194,7 +194,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center">
-                    <a href="mailto:${email}?subject=RE: Taxnet Advisory Consultation - ${encodeURIComponent(name)}" style="display: inline-block; background-color: #0A0D0B; color: #FFFFFF; border: 1.5px solid #C5A869; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
+                    <a href="mailto:${email}?subject=RE: Taxnet Consultation - ${encodeURIComponent(name)}" style="display: inline-block; background-color: #0A0D0B; color: #FFFFFF; border: 1.5px solid #C5A869; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
                       Reply Directly to Client (${email}) →
                     </a>
                   </td>

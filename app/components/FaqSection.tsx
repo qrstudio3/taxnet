@@ -7,39 +7,45 @@ import AnimatedHeading from "./AnimatedHeading";
 const FAQ_ITEMS = [
   {
     id: "faq-1",
-    question: "What Areas In Melbourne Do You Service?",
+    question: "What Types Of Businesses Do You Work With?",
     answer:
-      "We provide full accounting, taxation, and bookkeeping services across Greater Melbourne—including the CBD, Richmond, South Yarra, Carlton, Dandenong, and the outer growth corridors. With our secure cloud infrastructure, we also partner with and advise clients right across Australia.",
+      "We work with Australian businesses across trades, medical and dental practices, legal and professional services, hospitality, engineering, and expanding family enterprises. Whether you are an owner-operator, an expanding SME, or a multi-entity group, our solutions scale with you.",
   },
   {
     id: "faq-2",
-    question: "What Types Of Businesses Do You Work With?",
+    question: "Do You Offer Agreed Pricing?",
     answer:
-      "We specialize in growth-oriented Australian businesses across medical and dental practices, legal and professional services, building & construction trades, engineering, hospitality groups, and tech startups. Whether you are an expanding SME, a multi-entity group, or a family enterprise, our solutions scale with you.",
+      "Yes. We offer transparent, agreed pricing tailored to your business needs, entity structure, and transaction volume so you always have cost certainty without unexpected fees.",
   },
   {
     id: "faq-3",
-    question: "Do You Offer Fixed Monthly Pricing?",
+    question: "Which Accounting Software Do You Use?",
     answer:
-      "Yes. All our ongoing accounting, bookkeeping, and virtual CFO packages are billed on predictable, transparent monthly retainers. You receive unlimited day-to-day email and phone advisory, scheduled quarterly business reviews, and complete statutory lodgement with zero surprise hourly invoices.",
+      "We are accredited Gold Champion Partners with Xero, and also fully support MYOB and QuickBooks Online. We handle complete historical ledger migrations, automate bank feeds, set up Single Touch Payroll (STP Phase 2), and integrate industry add-ons like Dext and Stripe.",
   },
   {
     id: "faq-4",
-    question: "Which Accounting Software Do You Use?",
+    question: "What Makes Taxnet Different From Other Accounting Firms?",
     answer:
-      "We are accredited Platinum Partners with Xero, and also fully support MYOB and QuickBooks Online. We handle complete historical ledger migrations, automate bank feeds, set up Single Touch Payroll (STP Phase 2), and integrate industry add-ons like Dext, Deputy, and Stripe.",
+      "Unlike traditional firms that only review your numbers once a year at tax time, Taxnet works proactively with you throughout the year. We combine experienced tax accountants, bookkeepers, and licensed mortgage brokers under one roof—ensuring your tax structuring, bookkeeping, and lending work in harmony.",
   },
   {
     id: "faq-5",
-    question: "What Makes Taxnet Different From Other Accounting Firms?",
-    answer:
-      "Unlike traditional firms that only review your numbers once a year at tax time, Taxnet acts as your proactive year-round growth partner. We combine certified CPA tax strategists, senior bookkeepers, and licensed mortgage brokers under one roof—ensuring your tax minimization, cash flow, and lending capacity work in complete harmony.",
-  },
-  {
-    id: "faq-6",
     question: "How Difficult Is It To Switch From Our Previous Accountant?",
     answer:
       "It is completely seamless and requires zero effort from your team. We manage the entire handover process: sending ethical clearance letters to your previous firm, securely transferring historical files and depreciation schedules, and conducting an initial tax review to check for missed deductions.",
+  },
+  {
+    id: "faq-6",
+    question: "What Are Your Office Opening Hours?",
+    answer:
+      "Our office is open Monday to Friday from 9:00am to 5:30pm (closed Saturday and Sunday). You can reach our team by phone, email, or schedule an in-person appointment at our Doncaster East office.",
+  },
+  {
+    id: "faq-areas",
+    question: "What Areas Do You Service?",
+    answer:
+      "Our office is located in Doncaster East. We service clients across Melbourne's eastern suburbs (including Doncaster, Doncaster East, Templestowe, Box Hill, Blackburn, and Manningham) as well as clients across Victoria and Australia via secure video and phone consultations.",
   },
 ];
 
@@ -230,7 +236,7 @@ export default function FaqSection() {
                 textUnderlineOffset: "3px",
               }}
             >
-              Speak with a Senior CPA Advisor →
+              Book a Consultation →
             </Link>
           </p>
         </div>

@@ -45,7 +45,7 @@ const STEPS = [
   {
     num: "02",
     title: "Clear Plan & Fixed Quote",
-    desc: "We deliver a transparent, tailored roadmap with guaranteed upfront fixed pricing and zero surprise billing.",
+    desc: "We deliver a transparent, tailored roadmap with agreed upfront pricing and clear communication.",
   },
   {
     num: "03",
@@ -161,7 +161,7 @@ export default function ContactPage() {
                         <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", letterSpacing: "0.04em" }}>
                           Direct WhatsApp Advisory
                         </span>
-                        <span style={{ fontSize: "0.74rem", color: "#6B7C72" }}>• Mon–Fri 6am–6pm</span>
+                        <span style={{ fontSize: "0.74rem", color: "#6B7C72" }}>• Mon–Fri 9:00am–5:30pm</span>
                       </div>
                       <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
                         +61 420 956 761
@@ -215,7 +215,7 @@ export default function ContactPage() {
                         (03) 9802 5800
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
-                        Monday to Friday: 6:00 AM – 6:00 PM (AEST)
+                        Monday to Friday: 9:00 AM – 5:30 PM (AEST)
                       </div>
                     </div>
                     <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
@@ -351,7 +351,7 @@ export default function ContactPage() {
                   >
                     <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
                       <span style={{ fontWeight: 600, color: "#25382E" }}>Monday – Friday:</span>
-                      <span style={{ fontWeight: 700, color: "#0A0D0B" }}>6:00 AM – 6:00 PM</span>
+                      <span style={{ fontWeight: 700, color: "#0A0D0B" }}>9:00 AM – 5:30 PM</span>
                     </div>
                     <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
                       <span style={{ fontWeight: 600, color: "#25382E" }}>Saturday:</span>

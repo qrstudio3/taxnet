@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
@@ -30,7 +30,7 @@ const SECTIONS = [
         </p>
         <p>
           As a registered <strong>CPA Australia Public Practice</strong>, an authorised <strong>Tax Practitioners Board (TPB)</strong> registered
-          tax agent, and an accredited member firm of the <strong>Mortgage &amp; Finance Association of Australia (MFAA)</strong>,
+          tax agent, and an accredited member firm of the <strong>Finance Brokers Association of Australia (FBAA)</strong>,
           our handling of your information is strictly governed by:
         </p>
         <ul>
@@ -121,7 +121,7 @@ const SECTIONS = [
         </p>
         <ul>
           <li>Preparing and lodging annual Income Tax Returns, Business Activity Statements (BAS), Fringe Benefits Tax (FBT) returns, and SMSF compliance accounts with the ATO;</li>
-          <li>Delivering proactive business structuring, cashflow advisory, Division 7A loan planning, and corporate secretarial management with ASIC;</li>
+          <li>Delivering proactive business structuring, cashflow advisory, and corporate secretarial management with ASIC;</li>
           <li>Structuring, assessing, and submitting residential mortgage, refinancing, and commercial equipment finance applications to Australian banks and accredited non-bank lenders;</li>
           <li>Communicating critical statutory deadlines, regulatory tax reforms, and practice updates relevant to your enterprise; and</li>
           <li>Complying with statutory reporting requirements under the <em>Corporations Act 2001</em>, <em>TASA 2009</em>, and <em>AML/CTF Act 2006</em>.</li>
@@ -243,13 +243,13 @@ const SECTIONS = [
             Appointed Privacy Officer · Taxnet Practice
           </div>
           <div style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem" }}>
-            Taxnet Advisory Pty Ltd
+            Taxnet Business Consultants
           </div>
           <div style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "rgba(255, 255, 255, 0.85)" }}>
             Suite 6, 861 Doncaster Road, Doncaster East VIC 3109<br />
             Telephone: (03) 9802 5800<br />
             Email: <a href="mailto:info@taxnet.com.au" style={{ color: "#C5A869", textDecoration: "underline" }}>info@taxnet.com.au</a> (Attn: Privacy Officer)<br />
-            Operating Hours: Monday – Friday: 6:00 AM – 6:00 PM (AEST)
+            Operating Hours: Monday – Friday: 9:00 AM – 5:30 PM (AEST)
           </div>
         </div>
         <p style={{ marginTop: "1rem", fontSize: "0.88rem", color: "#6A7B70" }}>
@@ -386,7 +386,7 @@ export default function PrivacyPolicyPage() {
               }}
             >
               <div>
-                <strong style={{ color: "#C5A869" }}>Governing Entity:</strong> Taxnet Advisory Pty Ltd (ABN 40 610 387 881)
+                <strong style={{ color: "#C5A869" }}>Governing Entity:</strong> Taxnet Business Consultants (ABN 40 610 387 881)
               </div>
               <div>
                 <strong style={{ color: "#C5A869" }}>Primary Jurisdiction:</strong> Victoria, Australia (APPs Compliant)
@@ -500,7 +500,7 @@ export default function PrivacyPolicyPage() {
                   Have Specific Compliance or Confidentiality Requirements?
                 </h3>
                 <p style={{ margin: 0, fontSize: "0.92rem", color: "rgba(255, 255, 255, 0.8)", lineHeight: 1.6 }}>
-                  Speak directly with our senior CPA partners regarding secure data exchange, NDA executions, or bespoke corporate advisory governance.
+                  Speak directly with our advisory team regarding secure data exchange, NDA executions, or bespoke corporate governance.
                 </p>
               </div>
 

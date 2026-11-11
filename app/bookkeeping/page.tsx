@@ -1,32 +1,29 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
-import PlansSection from "@/app/components/PlansSection";
 import BookkeepingContact from "@/app/components/BookkeepingContact";
 import CategoryHeroParallax from "@/app/components/CategoryHeroParallax";
-import ExecutiveWhatsAppButton from "@/app/components/ExecutiveWhatsAppButton";
-import AutoSlidingCards from "@/app/components/AutoSlidingCards";
 import BookkeepingBenefitIcon, { BenefitIconType } from "@/app/components/BookkeepingBenefitIcon";
 
 export const metadata: Metadata = {
-  title: "Bookkeeping Services Melbourne | Small Business CPA Bookkeepers | Taxnet",
+  title: "Bookkeeping Services Melbourne | Xero, MYOB & QuickBooks | Taxnet",
   description:
-    "End-to-end bookkeeping services for Melbourne businesses. Bank reconciliations, STP Phase 2 payroll, automated invoicing, cash flow forecasting, and cloud accounting setup.",
+    "Tailored bookkeeping services for Australian businesses. Bank reconciliations, payroll, invoicing, and cloud accounting in Doncaster East.",
   keywords: [
     "bookkeeping services Melbourne",
-    "bookkeeper Melbourne",
-    "small business bookkeeping Australia",
-    "CPA bookkeeper Melbourne",
-    "Xero certified bookkeeper",
-    "payroll bookkeeping Melbourne",
+    "bookkeeper Doncaster East",
+    "small business bookkeeping",
+    "Xero bookkeeper Melbourne",
+    "MYOB bookkeeping",
+    "payroll services Melbourne",
   ],
 };
 
 interface BookkeepingServiceItem {
   icon: BenefitIconType;
   title: string;
-  href: string;
   desc: string;
 }
 
@@ -34,67 +31,60 @@ const BOOKKEEPING_SERVICES: BookkeepingServiceItem[] = [
   {
     icon: "briefcase",
     title: "Small Business Bookkeeping",
-    href: "/small-business-bookkeeping",
-    desc: "Complete day-to-day transaction coding, expense categorization, and weekly ledger reconciliations on flat monthly plans.",
+    desc: "Day-to-day transaction coding, expense tracking, and regular reconciliations keeping your business ledger accurate and up to date.",
   },
   {
-    icon: "trend",
-    title: "Budgeting & Cash Flow Forecasting",
-    href: "/small-business-bookkeeping/budgeting-cash-flow",
-    desc: "13-week rolling cash forecasts and variance tracking so you know your exact cash runway months in advance.",
+    icon: "calculator",
+    title: "Bank Reconciliation & BAS-Ready Records",
+    desc: "Prompt bank feed matching and balance sheet reviews so your financial records are always balanced and ready for BAS lodgement.",
+  },
+  {
+    icon: "clock",
+    title: "Payroll & Superannuation Compliance",
+    desc: "Timely pay runs, Single Touch Payroll (STP Phase 2) reporting, and superannuation clearing house filings to keep your staff paid on schedule.",
   },
   {
     icon: "card",
     title: "Invoicing & Debtor Management",
-    href: "/small-business-bookkeeping/invoicing",
-    desc: "Prompt billing workflows, click-to-pay online gateways, and polite automated reminders to get paid 2x faster.",
+    desc: "Digital invoice templates, online payment links, and polite automated reminders to help you collect customer payments promptly.",
   },
   {
     icon: "coin",
-    title: "Accounts Payable & Receivable",
-    href: "/small-business-bookkeeping/accounts-management",
-    desc: "Receipt capture via Dext/Hubdoc, approval workflows, and 1-click ABA batch bank transfers to eliminate double payments.",
+    title: "Accounts Payable & Supplier Bills",
+    desc: "Systematic receipt capture, supplier bill approvals, and organized payables tracking to maintain positive vendor relationships.",
   },
   {
-    icon: "clock",
-    title: "Payroll & STP Phase 2 Compliance",
-    href: "/small-business-bookkeeping/payroll",
-    desc: "Weekly, fortnightly, or monthly pay runs, Super Guarantee 11.5% clearing house filing, and Modern Award interpretations.",
-  },
-  {
-    icon: "calculator",
-    title: "Bank Reconciliation & BAS Records",
-    href: "/small-business-bookkeeping/bank-reconciliation",
-    desc: "Zero-discrepancy bank balance matching, GST audit checks, and quarterly BAS-ready ledger preparation.",
+    icon: "trend",
+    title: "Budgeting & Cash Flow Forecasting",
+    desc: "Rolling cash flow forecasts and practical variance tracking so you have clear visibility over upcoming cash runway.",
   },
   {
     icon: "cloud",
     title: "Cloud Accounting Setup & Migration",
-    href: "/small-business-bookkeeping/cloud-accounting",
-    desc: "Full transitions from spreadsheets or desktop software to Xero or MYOB with zero data loss and team training.",
+    desc: "Setup and transition to Xero, MYOB, or QuickBooks, including chart of accounts customization and staff training.",
   },
 ];
 
 const FAQS = [
   {
     q: "How does Taxnet differ from standard freelance bookkeepers?",
-    a: "Unlike sole-operator bookkeepers who may fall ill or lack high-level tax knowledge, Taxnet provides a dedicated Melbourne bookkeeping team directly supervised by certified CPA partners and registered tax agents. Your books are maintained with strategic tax minimization and audit-defense in mind from day one.",
+    a: "Our bookkeeping team works directly alongside our registered tax accountants. Your files are maintained with tax season and compliance in mind from day one.",
   },
   {
-    q: "Are all your staff based in Australia?",
-    a: "Yes. Our client advisory, review, and partner team is based in our Melbourne head office at Suite 6, 861 Doncaster Road, Doncaster East. You can call, email, or visit our office for in-person meetings.",
+    q: "Where is your team based?",
+    a: "Our team is based at Suite 6, 861 Doncaster Road, Doncaster East. You can call, email, or visit our office for in-person meetings.",
   },
   {
-    q: "How do we switch from our previous bookkeeper or accountant?",
-    a: "We manage 100% of the handover seamlessly. We send professional ethical clearance notices, transfer cloud access, securely import historical ledgers, and perform a complimentary initial health audit.",
+    q: "How do we switch from our previous bookkeeper?",
+    a: "We manage the handover process smoothly. We contact your previous firm, transfer software access, and review your historical ledgers.",
   },
   {
-    q: "What size businesses do you typically work with?",
-    a: "We work with Australian sole traders, growing SMEs with 5 to 50+ staff, medical and legal practices, trade companies, hospitality groups, and tech startups.",
+    q: "Which cloud accounting software do you support?",
+    a: "We fully support Xero, MYOB, and QuickBooks Online. We also assist with receipt capture tools like Dext and Stripe integrations.",
   },
 ];
 
-export default function BookkeepingHubPage() {
+export default function BookkeepingPage() {
   const heroImg = "/taxnet-categories-images/Bookkeeping/Small%20Business%20Bookkeeping/hero.jpg";
 
   return (
@@ -106,7 +96,7 @@ export default function BookkeepingHubPage() {
         <section
           style={{
             position: "relative",
-            minHeight: "74vh",
+            minHeight: "72vh",
             backgroundColor: "#0A0D0B",
             display: "flex",
             alignItems: "center",
@@ -115,10 +105,8 @@ export default function BookkeepingHubPage() {
             overflow: "hidden",
           }}
         >
-          {/* Parallax Background Hero Image */}
           <CategoryHeroParallax heroImg={heroImg} />
 
-          {/* Dark Overlay Gradient */}
           <div
             style={{
               position: "absolute",
@@ -140,10 +128,25 @@ export default function BookkeepingHubPage() {
           >
             {/* Breadcrumb */}
             <nav style={{ marginBottom: "1.25rem", fontSize: "0.82rem", color: "rgba(255,255,255,0.6)" }}>
-              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Home</Link><span style={{ margin: "0 8px" }}>/</span><span style={{ color: "#C5A869" }}>Bookkeeping</span>
+              <Link href="/" style={{ color: "rgba(255,255,255,0.6)", textDecoration: "none" }}>Home</Link>
+              <span style={{ margin: "0 8px" }}>/</span>
+              <span style={{ color: "#C5A869" }}>Bookkeeping</span>
             </nav>
 
-            {/* Headline */}
+            <span
+              style={{
+                display: "inline-block",
+                color: "#C5A869",
+                fontWeight: 700,
+                fontSize: "0.82rem",
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                marginBottom: "0.75rem",
+              }}
+            >
+              Certified Xero Gold Partner · MYOB · QuickBooks
+            </span>
+
             <h1
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
@@ -153,52 +156,44 @@ export default function BookkeepingHubPage() {
                 lineHeight: 1.1,
                 letterSpacing: "-0.015em",
                 maxWidth: "860px",
-                marginBottom: "1rem",
+                marginBottom: "1.25rem",
               }}
             >
-              High-Precision Bookkeeping.{" "}<span style={{ background: "linear-gradient(135deg, #8A7040, #E5D6B6, #C5A869)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", color: "transparent" }}>CPA Strategic Oversight.</span>{" "}Total Peace of Mind.
+              Bookkeeping & Payroll Services
             </h1>
 
-            {/* Subtitle - Lesser & Punchy */}
             <p
               style={{
                 fontSize: "clamp(1rem, 1.25vw, 1.15rem)",
-                lineHeight: 1.6,
-                color: "rgba(255,255,255,0.8)",
+                lineHeight: 1.65,
+                color: "rgba(255,255,255,0.82)",
                 maxWidth: "640px",
-                marginBottom: "2rem",
+                marginBottom: "2.25rem",
               }}
             >
-              Receipt coding, STP Phase 2 payroll, 13-week cash flow modeling, and BAS reconciliations for Melbourne businesses.
+              Clean accounts, prompt bank reconciliations, and reliable payroll processing. We keep your business numbers accurate so you can focus on running your business.
             </p>
 
-            {/* CTA Buttons */}
-            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", marginBottom: "2rem" }}>
-              <a
-                href="#services"
+            <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem" }}>
+              <Link
+                href="/contact"
                 style={{
                   display: "inline-flex",
                   alignItems: "center",
                   gap: "8px",
                   backgroundColor: "#C5A869",
                   color: "#0A0D0B",
-                  fontWeight: 800,
+                  fontWeight: 700,
                   fontSize: "0.95rem",
                   padding: "0.9rem 2rem",
-                  borderRadius: "8px",
+                  borderRadius: "6px",
                   textDecoration: "none",
                   boxShadow: "0 6px 20px rgba(197, 168, 105, 0.4)",
                   transition: "all 180ms ease",
                 }}
               >
-                Explore Bookkeeping Solutions →
-              </a>
-
-              <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I'd like to discuss bookkeeping services."
-                label="Chat with a Bookkeeping Partner"
-                sublabel="Direct WhatsApp Line"
-              />
+                Book a Consultation →
+              </Link>
 
               <a
                 href="tel:0398025800"
@@ -216,20 +211,187 @@ export default function BookkeepingHubPage() {
           </div>
         </section>
 
-        {/* ─── SERVICE DIRECTORY CARDS ─── */}
-        <section id="services" style={{ padding: "5.5rem 0", backgroundColor: "#FFFFFF" }}>
+        {/* ─── SOFTWARE WE USE ROW (Xero, MYOB & QuickBooks) ─── */}
+        <section
+          style={{
+            backgroundColor: "#FFFFFF",
+            borderBottom: "1px solid #E5ECE7",
+            padding: "2.75rem 0",
+          }}
+        >
           <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
-            <div style={{ textAlign: "center", marginBottom: "4rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "1.75rem" }}>
+              <span
+                style={{
+                  color: "#6B7280",
+                  fontSize: "0.78rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                }}
+              >
+                Platforms We Support & Integrate
+              </span>
+            </div>
+
+            {/* Single Row of 3 Platforms */}
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                gap: "1.5rem",
+                alignItems: "stretch",
+              }}
+            >
+              {/* Xero Card */}
+              <div
+                style={{
+                  padding: "1.5rem 1.75rem",
+                  borderRadius: "12px",
+                  backgroundColor: "#F9F9F6",
+                  border: "1px solid #E2E8E4",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
+                <div
+                  style={{
+                    width: "52px",
+                    height: "52px",
+                    borderRadius: "10px",
+                    backgroundColor: "#FFFFFF",
+                    border: "1px solid #E5E7EB",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    padding: "6px",
+                  }}
+                >
+                  <Image
+                    src="/software-logo/xero.webp"
+                    alt="Xero Logo"
+                    width={40}
+                    height={40}
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <div>
+                  <h4 style={{ margin: "0 0 2px 0", fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
+                    Xero
+                  </h4>
+                  <p style={{ margin: 0, fontSize: "0.8rem", color: "#6B7280" }}>
+                    Gold Champion Partner · Setup & migration
+                  </p>
+                </div>
+              </div>
+
+              {/* MYOB Card */}
+              <div
+                style={{
+                  padding: "1.5rem 1.75rem",
+                  borderRadius: "12px",
+                  backgroundColor: "#F9F9F6",
+                  border: "1px solid #E2E8E4",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
+                <div
+                  style={{
+                    width: "52px",
+                    height: "52px",
+                    borderRadius: "10px",
+                    backgroundColor: "#FFFFFF",
+                    border: "1px solid #E5E7EB",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    padding: "6px",
+                  }}
+                >
+                  <Image
+                    src="/software-logo/myob.webp"
+                    alt="MYOB Logo"
+                    width={40}
+                    height={40}
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <div>
+                  <h4 style={{ margin: "0 0 2px 0", fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
+                    MYOB
+                  </h4>
+                  <p style={{ margin: 0, fontSize: "0.8rem", color: "#6B7280" }}>
+                    Certified Partner · Business & payroll support
+                  </p>
+                </div>
+              </div>
+
+              {/* QuickBooks Online Card */}
+              <div
+                style={{
+                  padding: "1.5rem 1.75rem",
+                  borderRadius: "12px",
+                  backgroundColor: "#F9F9F6",
+                  border: "1px solid #E2E8E4",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "1rem",
+                }}
+              >
+                <div
+                  style={{
+                    width: "52px",
+                    height: "52px",
+                    borderRadius: "10px",
+                    backgroundColor: "#FFFFFF",
+                    border: "1px solid #E5E7EB",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    flexShrink: 0,
+                    padding: "6px",
+                  }}
+                >
+                  <Image
+                    src="/software-logo/quickbooks.webp"
+                    alt="QuickBooks Online Logo"
+                    width={40}
+                    height={40}
+                    style={{ objectFit: "contain" }}
+                  />
+                </div>
+                <div>
+                  <h4 style={{ margin: "0 0 2px 0", fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
+                    QuickBooks Online
+                  </h4>
+                  <p style={{ margin: 0, fontSize: "0.8rem", color: "#6B7280" }}>
+                    Certified ProAdvisor · Mobile invoicing & setup
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ─── SERVICES LIST (Single Page, No Sub-Pages) ─── */}
+        <section id="services-list" style={{ padding: "5rem 0", backgroundColor: "#FFFFFF" }}>
+          <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
+            <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
               <span
                 style={{
                   color: "#A18650",
                   fontWeight: 700,
                   fontSize: "0.82rem",
-                  letterSpacing: "0.08em",
+                  letterSpacing: "0.1em",
                   textTransform: "uppercase",
                 }}
               >
-                Specialized Disciplines
+                Bookkeeping Solutions
               </span>
               <h2
                 style={{
@@ -237,25 +399,119 @@ export default function BookkeepingHubPage() {
                   fontSize: "clamp(2rem, 3.6vw, 3rem)",
                   color: "#0A0D0B",
                   marginTop: "0.5rem",
+                  letterSpacing: "-0.01em",
                 }}
               >
-                Explore Our Tailored Bookkeeping Capabilities
+                What We Offer
               </h2>
-              <p style={{ color: "#55645B", maxWidth: "640px", margin: "0.75rem auto 0", fontSize: "0.95rem" }}>
-                Select a specialized area below to learn how we streamline workflows, automate reporting, and protect
-                compliance for your sector.
+              <p style={{ color: "#55645B", maxWidth: "620px", margin: "0.75rem auto 0", fontSize: "0.95rem", lineHeight: 1.6 }}>
+                Clear bookkeeping services to give you accurate books, timely reporting, and effortless tax handovers.
               </p>
             </div>
 
-            <AutoSlidingCards items={BOOKKEEPING_SERVICES} />
+            <div
+              style={{
+                display: "grid",
+                gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+                gap: "1.5rem",
+              }}
+            >
+              {BOOKKEEPING_SERVICES.map((srv, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    padding: "1.75rem",
+                    backgroundColor: "#F9F9F6",
+                    borderRadius: "14px",
+                    border: "1px solid #E2E8E4",
+                    boxShadow: "0 2px 8px rgba(0,0,0,0.03)",
+                  }}
+                >
+                  <div>
+                    <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1rem" }}>
+                      <div
+                        style={{
+                          width: "42px",
+                          height: "42px",
+                          borderRadius: "10px",
+                          backgroundColor: "rgba(197, 168, 105, 0.15)",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <BookkeepingBenefitIcon type={srv.icon} />
+                      </div>
+                      <h3
+                        style={{
+                          fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                          fontSize: "1.2rem",
+                          fontWeight: 600,
+                          color: "#0A0D0B",
+                          margin: 0,
+                        }}
+                      >
+                        {srv.title}
+                      </h3>
+                    </div>
+
+                    <p style={{ color: "#4B5563", fontSize: "0.9rem", lineHeight: 1.65, margin: 0 }}>
+                      {srv.desc}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Bottom Call to Action */}
+            <div
+              style={{
+                marginTop: "3.5rem",
+                textAlign: "center",
+                padding: "2.5rem 1.5rem",
+                backgroundColor: "#0A0D0B",
+                borderRadius: "16px",
+                color: "#FFFFFF",
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                  fontSize: "1.75rem",
+                  color: "#FFFFFF",
+                  marginBottom: "0.5rem",
+                }}
+              >
+                Looking for Dependable Bookkeeping?
+              </h3>
+              <p style={{ color: "rgba(255,255,255,0.7)", maxWidth: "520px", margin: "0 auto 1.5rem", fontSize: "0.92rem" }}>
+                Speak with our bookkeeping team in Doncaster East to discuss your transaction volume and software needs.
+              </p>
+              <Link
+                href="/contact"
+                style={{
+                  display: "inline-block",
+                  backgroundColor: "#C5A869",
+                  color: "#0A0D0B",
+                  fontWeight: 700,
+                  fontSize: "0.92rem",
+                  padding: "0.8rem 1.8rem",
+                  borderRadius: "6px",
+                  textDecoration: "none",
+                }}
+              >
+                Book a Consultation →
+              </Link>
+            </div>
           </div>
         </section>
 
-        {/* ─── PLANS SECTION EMBEDDED ─── */}
-        <PlansSection />
-
-        {/* ─── FAQS ─── */}
-        <section style={{ padding: "5rem 0", backgroundColor: "#FFFFFF" }}>
+        {/* ─── FAQS SECTION ─── */}
+        <section style={{ padding: "4.5rem 0", backgroundColor: "#F9F9F6", borderTop: "1px solid #E5ECE7" }}>
           <div style={{ maxWidth: "860px", margin: "0 auto", padding: "0 1.5rem" }}>
             <div style={{ textAlign: "center", marginBottom: "3rem" }}>
               <span
@@ -267,60 +523,49 @@ export default function BookkeepingHubPage() {
                   textTransform: "uppercase",
                 }}
               >
-                Frequently Asked Questions
+                Common Questions
               </span>
               <h2
                 style={{
                   fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
-                  fontSize: "clamp(2rem, 3.2vw, 2.6rem)",
+                  fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
                   color: "#0A0D0B",
-                  marginTop: "0.4rem",
+                  marginTop: "0.5rem",
                 }}
               >
-                Everything You Need to Know About Partnering With Us
+                Frequently Asked Questions
               </h2>
             </div>
 
-            <div style={{ borderTop: "1px solid #E5EAE7" }}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
               {FAQS.map((faq, i) => (
-                <details
+                <div
                   key={i}
                   style={{
-                    borderBottom: "1px solid #E5EAE7",
-                    padding: "1.25rem 0.5rem",
-                    cursor: "pointer",
+                    backgroundColor: "#FFFFFF",
+                    borderRadius: "12px",
+                    padding: "1.5rem",
+                    border: "1px solid #E2E8E4",
+                    boxShadow: "0 2px 6px rgba(0,0,0,0.02)",
                   }}
                 >
-                  <summary
-                    style={{
-                      fontSize: "1.05rem",
-                      fontWeight: 700,
-                      color: "#0A0D0B",
-                      outline: "none",
-                      listStyle: "none",
-                      display: "flex",
-                      justifyContent: "space-between",
-                      alignItems: "center",
-                    }}
-                  >
-                    <span>{faq.q}</span>
-                    <span style={{ color: "#A18650", fontSize: "1.25rem" }}>+</span>
-                  </summary>
-                  <p style={{ color: "#4A5A50", fontSize: "0.92rem", lineHeight: 1.65, marginTop: "0.75rem", paddingLeft: "0.25rem" }}>
+                  <h4 style={{ fontSize: "1rem", fontWeight: 700, color: "#0A0D0B", marginBottom: "0.5rem" }}>
+                    {faq.q}
+                  </h4>
+                  <p style={{ color: "#4B5563", fontSize: "0.9rem", lineHeight: 1.6, margin: 0 }}>
                     {faq.a}
                   </p>
-                </details>
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ─── CONTACT SECTION WITH EMAIL & WHATSAPP ─── */}
+        {/* ─── CONTACT SECTION ─── */}
         <BookkeepingContact
-          serviceName="Complete Bookkeeping Services"
-          submitButtonText="Book A Consultation"
-          title="Transform Your Financial Back-Office Today"
-          subtitle="Speak directly with our Melbourne CPA bookkeepers. Free discovery consultation, no lock-in contracts, and transparent flat monthly pricing."
+          serviceName="Bookkeeping"
+          title="Discuss Your Bookkeeping Needs"
+          subtitle="Speak with our bookkeeping and cloud accounting team in Doncaster East. Available in person, over video, or by phone."
         />
       </main>
 
@@ -328,4 +573,3 @@ export default function BookkeepingHubPage() {
     </>
   );
 }
-

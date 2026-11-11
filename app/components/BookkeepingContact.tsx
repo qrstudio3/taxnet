@@ -30,7 +30,7 @@ export default function BookkeepingContact({
     if (sLower.includes("myob")) return "MYOB";
     if (sLower.includes("quickbooks")) return "QuickBooks Online";
     if (sLower.includes("xero")) return "Xero";
-    if (sLower.includes("add-ons") || sLower.includes("integration")) return "Cloud Add-Ons (Dext/Deputy/Tradify)";
+    if (sLower.includes("add-ons") || sLower.includes("integration")) return "Cloud Add-Ons (Dext/Tradify/Shopify)";
     return "Xero";
   };
 
@@ -410,7 +410,7 @@ export default function BookkeepingContact({
                 >
                   Your inquiry for <strong>{serviceName}</strong> has been received. One of our
                   {isMortgage
-                    ? " accredited MFAA mortgage brokers "
+                    ? " accredited FBAA mortgage brokers "
                     : isSoftware
                     ? " certified cloud software specialists "
                     : " senior Melbourne CPAs "}
@@ -457,7 +457,7 @@ export default function BookkeepingContact({
                       : isTaxOrAccounting
                       ? "100% confidential · Direct CPA Partner Review · Upfront Fixed Proposal"
                       : isMortgage
-                      ? "100% complimentary · Accredited MFAA broker review · 40+ bank comparisons"
+                      ? "100% complimentary · Accredited FBAA broker review · 40+ bank comparisons"
                       : "100% confidential · Direct CPA review · Flat monthly fee quote"}
                   </p>
                 </div>
@@ -607,10 +607,10 @@ export default function BookkeepingContact({
                     >
                       {isSoftware ? (
                         <>
-                          <option value="Xero">Xero (Platinum Certified Practice)</option>
+                          <option value="Xero">Xero (Gold Certified Practice)</option>
                           <option value="MYOB">MYOB (Certified Practice Specialist)</option>
                           <option value="QuickBooks Online">QuickBooks Online (Advanced ProAdvisor)</option>
-                          <option value="Cloud Add-Ons (Dext/Deputy/Tradify)">Cloud Add-Ons (Dext, Deputy, Tradify, Shopify)</option>
+                          <option value="Cloud Add-Ons (Dext/Tradify/Shopify)">Cloud Add-Ons (Dext, Tradify, Shopify)</option>
                           <option value="Migrating from Desktop (MYOB/Reckon)">Migrating from Desktop (MYOB AccountRight / Reckon)</option>
                           <option value="Looking for Best Platform Recommendation">Looking for Best Platform Recommendation</option>
                         </>
@@ -658,7 +658,7 @@ export default function BookkeepingContact({
                       isSoftware
                         ? "e.g. We want to migrate from desktop MYOB to Xero, integrate inventory or job management add-ons, or need specialized staff training..."
                         : isTaxOrAccounting
-                        ? "e.g. Need pre-EOFY tax planning, business return lodgement, Division 7A advice, or company/trust structuring..."
+                        ? "e.g. Need pre-EOFY tax planning, business return lodgement, or company/trust structuring..."
                         : isMortgage
                         ? "e.g. Looking to purchase a home or investment property in Melbourne, refinance current loan, or calculate borrowing power..."
                         : "e.g. We are behind on bank reconciliations, payroll & STP compliance is getting messy, or we want our bookkeeping on fixed-fee autopilot..."

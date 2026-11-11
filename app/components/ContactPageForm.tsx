@@ -20,11 +20,12 @@ export default function ContactPageForm() {
     email: "",
     phone: "",
     businessName: "",
+    service: "Accounting & Tax",
     message: "",
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -46,7 +47,7 @@ export default function ContactPageForm() {
           email: formData.email,
           phone: formData.phone,
           businessName: formData.businessName,
-          selectedService: "General Consultation & Advisory",
+          selectedService: formData.service,
           clientType: "Client",
           meetingFormat,
           message: formData.message,
@@ -85,6 +86,7 @@ export default function ContactPageForm() {
       email: "",
       phone: "",
       businessName: "",
+      service: "Accounting & Tax",
       message: "",
     });
   };
@@ -462,6 +464,44 @@ export default function ContactPageForm() {
                 }}
               />
             </div>
+          </div>
+
+          {/* Service Needed Dropdown */}
+          <div style={{ marginBottom: "1.2rem" }}>
+            <label
+              htmlFor="cf-service"
+              style={{
+                display: "block",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                color: "#0A0D0B",
+                marginBottom: "6px",
+              }}
+            >
+              Primary Service Needed *
+            </label>
+            <select
+              id="cf-service"
+              name="service"
+              value={formData.service}
+              onChange={handleChange}
+              style={{
+                width: "100%",
+                padding: "12px 14px",
+                borderRadius: "10px",
+                border: "1.5px solid #D1DCD5",
+                fontSize: "0.92rem",
+                color: "#1C2022",
+                outline: "none",
+                backgroundColor: "#FAFBF9",
+                cursor: "pointer",
+              }}
+            >
+              <option value="Accounting & Tax">Accounting & Tax</option>
+              <option value="Mortgage Broking">Mortgage Broking</option>
+              <option value="Bookkeeping">Bookkeeping</option>
+              <option value="Something else">Something else</option>
+            </select>
           </div>
 
           {/* Meeting Format Radio Cards */}

@@ -5,7 +5,7 @@ import Link from "next/link";
 import gsap from "gsap";
 
 /* Combined navbar height: top row 72px + service bar 44px = 116px */
-const NAV_H = 116;
+const NAV_H = 80;
 
 export default function Hero() {
   const heroRef     = useRef<HTMLElement>(null);
@@ -205,43 +205,45 @@ export default function Hero() {
         {/* Left */}
         <div>
 
-          {/* Overline */}
+          {/* Overline: Big-firm expertise · Personal service */}
           <div
             ref={overlineRef}
             style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem", opacity: 0 }}
           >
-            <span style={{ display: "block", width: "2rem", height: "1px", backgroundColor: "rgba(249,249,246,0.38)" }} />
+            <span style={{ display: "block", width: "2rem", height: "1px", backgroundColor: "#C5A869" }} />
             <span style={{
-              fontFamily: "var(--font-sans)", fontSize: "0.6875rem", fontWeight: 600,
-              letterSpacing: "0.2em", textTransform: "uppercase", color: "rgba(249,249,246,0.5)",
+              fontFamily: "var(--font-sans)", fontSize: "0.8rem", fontWeight: 700,
+              letterSpacing: "0.14em", textTransform: "uppercase", color: "#C5A869",
             }}>
-              Taxation · Bookkeeping · Mortgage · Business Advisory
+              Big-firm expertise · Personal service
             </span>
           </div>
 
-          {/* Headline */}
+          {/* Headline: One firm. Every financial move. */}
           <h1
             ref={h1Ref}
-            aria-label="File right. Pay less."
+            aria-label="One firm. Every financial move."
             style={{
               fontFamily: "var(--font-monety)",
-              fontSize: "clamp(2.75rem, 7.5vw, 8.5rem)",
+              fontSize: "clamp(2.4rem, 6.2vw, 6.5rem)",
               fontWeight: 400,
-              lineHeight: 0.93,
+              lineHeight: 0.96,
               letterSpacing: "-0.01em",
               color: "#ffffff",
               marginBottom: "1.5rem",
             }}
           >
             <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.1em" }}>
-              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>File</span>
+              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>One</span>
               {" "}
-              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>right.</span>
+              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>firm.</span>
             </span>
             <span style={{ display: "block", overflow: "hidden", paddingBottom: "0.1em" }}>
-              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>Pay</span>
+              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>Every</span>
               {" "}
-              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>less.</span>
+              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>financial</span>
+              {" "}
+              <span className="hl-word" style={{ display: "inline-block", opacity: 0 }}>move.</span>
             </span>
           </h1>
 
@@ -252,14 +254,14 @@ export default function Hero() {
               fontFamily: "var(--font-sans)",
               fontSize: "clamp(0.9375rem,1.4vw,1.125rem)",
               lineHeight: 1.72,
-              color: "rgba(249,249,246,0.58)",
+              color: "rgba(249,249,246,0.7)",
               maxWidth: "34rem",
               marginBottom: "2rem",
               opacity: 0,
             }}
           >
-            Expert advisors keeping more of your money where it belongs — in your hands.
-            Tax, mortgages, bookkeeping and business strategy under one roof.
+            Tax, accounting, mortgage broking and bookkeeping under one roof.
+            We help individuals and businesses make smart financial moves with clarity and personal care.
           </p>
 
           {/* CTAs */}
@@ -267,7 +269,7 @@ export default function Hero() {
             ref={ctaRef}
             style={{ display: "flex", alignItems: "center", gap: "1rem", flexWrap: "wrap", opacity: 0 }}
           >
-            {/* Calculator Link */}
+            {/* Borrowing Calculator Button */}
             <Link
               href="/calculator"
               id="hero-cta-calculator"
@@ -298,22 +300,20 @@ export default function Hero() {
                 e.currentTarget.style.boxShadow = "0 4px 18px rgba(161, 134, 80, 0.35)";
               }}
             >
-              <span>How much I can borrow</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+              <span>Borrowing Calculator</span>
+              <span aria-hidden="true">→</span>
             </Link>
 
+            {/* Book a Chat */}
             <Link
               href="/contact"
-              id="hero-cta-primary"
+              id="hero-cta-contact"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
-                gap: "0.625rem",
-                backgroundColor: "#0A0D0B",
-                color: "#fff",
-                border: "1px solid rgba(197, 168, 105, 0.45)",
+                gap: "0.5rem",
+                backgroundColor: "rgba(255, 255, 255, 0.08)",
+                color: "#FFFFFF",
                 fontFamily: "var(--font-sans)",
                 fontWeight: 600,
                 fontSize: "0.9375rem",
@@ -321,41 +321,26 @@ export default function Hero() {
                 padding: "0.9rem 1.8rem",
                 borderRadius: "4px",
                 textDecoration: "none",
-                transition: "background-color 220ms ease, transform 200ms ease, border-color 220ms ease",
+                border: "1px solid rgba(255, 255, 255, 0.28)",
+                backdropFilter: "blur(4px)",
+                WebkitBackdropFilter: "blur(4px)",
+                transition: "background-color 200ms ease, border-color 200ms ease, transform 200ms ease",
               }}
-              onMouseEnter={e => { e.currentTarget.style.backgroundColor = "#161A18"; e.currentTarget.style.borderColor = "#C5A869"; e.currentTarget.style.transform = "translateY(-2px)"; }}
-              onMouseLeave={e => { e.currentTarget.style.backgroundColor = "#0A0D0B"; e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)"; e.currentTarget.style.transform = "translateY(0)"; }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.16)";
+                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.5)";
+                e.currentTarget.style.transform = "translateY(-2px)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.08)";
+                e.currentTarget.style.borderColor = "rgba(255, 255, 255, 0.28)";
+                e.currentTarget.style.transform = "translateY(0)";
+              }}
             >
-              Book a Chat
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M5 12h14M12 5l7 7-7 7" />
-              </svg>
+              <span>Book a Chat</span>
             </Link>
-
-            <a
-              href="#services"
-              id="hero-cta-secondary"
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "0.5rem",
-                color: "rgba(249,249,246,0.72)",
-                fontFamily: "var(--font-sans)",
-                fontWeight: 500,
-                fontSize: "0.9375rem",
-                textDecoration: "none",
-                paddingBottom: "2px",
-                borderBottom: "1px solid rgba(249,249,246,0.28)",
-                transition: "color 180ms ease, border-color 180ms ease",
-              }}
-              onMouseEnter={e => { e.currentTarget.style.color = "#fff"; e.currentTarget.style.borderColor = "rgba(249,249,246,0.75)"; }}
-              onMouseLeave={e => { e.currentTarget.style.color = "rgba(249,249,246,0.72)"; e.currentTarget.style.borderColor = "rgba(249,249,246,0.28)"; }}
-            >
-              Our Services
-            </a>
           </div>
         </div>
-
       </div>
 
       {/* Scroll line */}

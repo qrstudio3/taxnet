@@ -409,7 +409,7 @@ export default function AboutHero() {
               transform: "translateY(24px)",
             }}
           >
-            Senior CPA taxation strategy united with bespoke lending intelligence—delivering clarity and certainty for Australian enterprises.
+            Expert taxation strategy united with bespoke lending intelligence—delivering clarity and certainty for Australian enterprises.
           </p>
 
           {/* ── Book A Consultation CTA ── */}

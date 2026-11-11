@@ -5,45 +5,28 @@ import Image from "next/image";
 import Link from "next/link";
 
 const SERVICES_LINKS = [
-  { label: "Business Accounting", href: "/accounting-and-tax/business-accounting" },
-  { label: "Strategic Tax Planning", href: "/accounting-and-tax/tax-planning" },
-  { label: "Property Investment Tax", href: "/accounting-and-tax/property-investment-tax" },
-  { label: "SMSF Tax & Compliance", href: "/accounting-and-tax/super-fund-tax-returns" },
-  { label: "Small Business Bookkeeping", href: "/small-business-bookkeeping" },
-  { label: "Mortgage Broking & Loans", href: "/mortgage-broking" },
-  { label: "First Home Buyer Mortgage", href: "/mortgage-broking/first-home-buyer" },
-  { label: "Mortgage Refinancing", href: "/mortgage-broking/refinancing-debt-consolidation" },
-  { label: "Commercial & Business Loans", href: "/mortgage-broking/business-loans" },
-];
-
-const INDUSTRIES_LINKS = [
-  { label: "Medical & Dental Clinics", href: "/#industries" },
-  { label: "Legal & Professional Firms", href: "/#industries" },
-  { label: "Building & Construction Trades", href: "/#industries" },
-  { label: "Engineering & Fabrication", href: "/#industries" },
-  { label: "Hospitality & Restaurant Groups", href: "/#industries" },
-  { label: "High-Growth Tech Startups", href: "/#industries" },
-];
-
-const OPENING_HOURS = [
-  { day: "Monday", hours: "6am - 6pm" },
-  { day: "Tuesday", hours: "6am - 6pm" },
-  { day: "Wednesday", hours: "6am - 6pm" },
-  { day: "Thursday", hours: "6am - 6pm" },
-  { day: "Friday", hours: "6am - 6pm" },
-  { day: "Saturday", hours: "Closed" },
-  { day: "Sunday", hours: "Closed" },
+  { label: "Accounting & Tax Services", href: "/accounting-and-tax" },
+  { label: "Mortgage Broking & Lending", href: "/mortgage-broking" },
+  { label: "Bookkeeping & Payroll", href: "/bookkeeping" },
 ];
 
 const QUICK_LINKS = [
-  { label: "About Our Practice", href: "/about" },
+  { label: "Home", href: "/" },
+  { label: "About Taxnet", href: "/about" },
   { label: "Borrowing Power Calculator", href: "/calculator" },
-  { label: "Industries We Serve", href: "/#industries" },
-  { label: "Cloud Software & Add-Ons", href: "/software-we-use" },
-  { label: "Accreditations & Trust", href: "/#trust" },
   { label: "Client Testimonials", href: "/#testimonials" },
   { label: "Frequently Asked Questions", href: "/#faq" },
-  { label: "Book a Discovery Call", href: "/contact" },
+  { label: "Book a Consultation", href: "/contact" },
+];
+
+const OPENING_HOURS = [
+  { day: "Monday", hours: "9:00am - 5:30pm" },
+  { day: "Tuesday", hours: "9:00am - 5:30pm" },
+  { day: "Wednesday", hours: "9:00am - 5:30pm" },
+  { day: "Thursday", hours: "9:00am - 5:30pm" },
+  { day: "Friday", hours: "9:00am - 5:30pm" },
+  { day: "Saturday", hours: "Closed" },
+  { day: "Sunday", hours: "Closed" },
 ];
 
 export default function Footer() {
@@ -471,49 +454,7 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Industries */}
-          <div>
-            <h4
-              style={{
-                fontSize: "0.85rem",
-                fontWeight: 700,
-                color: "#C5A869",
-                letterSpacing: "0.06em",
-                textTransform: "uppercase",
-                marginBottom: "1.25rem",
-              }}
-            >
-              Key Sectors
-            </h4>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
-              {INDUSTRIES_LINKS.map((link) => (
-                <li key={link.label} style={{ marginBottom: "0.65rem" }}>
-                  <Link
-                    href={link.href}
-                    style={{
-                      fontSize: "0.84rem",
-                      color: "rgba(255, 255, 255, 0.7)",
-                      textDecoration: "none",
-                      transition: "color 180ms ease, transform 180ms ease",
-                      display: "inline-block",
-                    }}
-                    onMouseEnter={(e) => {
-                      e.currentTarget.style.color = "#FFFFFF";
-                      e.currentTarget.style.transform = "translateX(4px)";
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.color = "rgba(255, 255, 255, 0.7)";
-                      e.currentTarget.style.transform = "translateX(0)";
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Column 4: Quick Links */}
+          {/* Column 3: Quick Links */}
           <div>
             <h4
               style={{
@@ -625,9 +566,9 @@ export default function Footer() {
             <span style={{ color: "rgba(197, 168, 105, 0.6)" }}>·</span>
             <span>Tax Practitioners Board (TPB)</span>
             <span style={{ color: "rgba(197, 168, 105, 0.6)" }}>·</span>
-            <span>MFAA Accredited Broker</span>
+            <span>FBAA Accredited Broker</span>
             <span style={{ color: "rgba(197, 168, 105, 0.6)" }}>·</span>
-            <span>Xero Platinum Champion Partner</span>
+            <span>Xero Gold Champion Partner</span>
           </div>
 
           <button
@@ -656,6 +597,21 @@ export default function Footer() {
           </button>
         </div>
 
+        {/* ── Mortgage Broking Credit Disclosure ── */}
+        <div
+          style={{
+            borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+            paddingTop: "1.25rem",
+            paddingBottom: "1.25rem",
+            fontSize: "0.74rem",
+            lineHeight: 1.6,
+            color: "rgba(255, 255, 255, 0.55)",
+          }}
+        >
+          <strong style={{ color: "#C5A869" }}>Credit Services & Mortgage Broking Disclosure:</strong>{" "}
+          Credit activities and mortgage broking services are provided in accordance with the National Consumer Credit Protection Act 2009. Credit Representative / Australian Credit Licence (ACL) details: [Australian Credit Licence / Credit Representative No. — To be specified]. Taxnet Business Consultants operates in compliance with all relevant ASIC and regulatory credit obligations.
+        </div>
+
         {/* ── Bottom Legal Disclaimer & Copyright ── */}
         <div
           style={{
@@ -671,7 +627,7 @@ export default function Footer() {
           }}
         >
           <div>
-            © {new Date().getFullYear()} Taxnet Advisory Pty Ltd. ABN 40 610 387 881. All rights reserved.
+            © {new Date().getFullYear()} Taxnet Business Consultants. ABN 40 610 387 881. All rights reserved.
           </div>
 
           <div style={{ display: "flex", gap: "1.25rem", flexWrap: "wrap" }}>
@@ -880,13 +836,12 @@ export default function Footer() {
               fontSize: "0.84rem",
             }}
           >
+            <Link href="/" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Home</Link>
             <Link href="/about" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>About Taxnet</Link>
-            <Link href="/accounting-and-tax/business-accounting" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Business Accounting</Link>
-            <Link href="/accounting-and-tax/tax-planning" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Tax Planning</Link>
-            <Link href="/small-business-bookkeeping" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Bookkeeping</Link>
+            <Link href="/accounting-and-tax" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Accounting & Tax</Link>
             <Link href="/mortgage-broking" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Mortgage Broking</Link>
+            <Link href="/bookkeeping" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Bookkeeping</Link>
             <Link href="/calculator" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Loan Calculator</Link>
-            <Link href="/software-we-use" style={{ color: "rgba(255, 255, 255, 0.82)", textDecoration: "none" }}>Cloud Software</Link>
             <Link href="/contact" style={{ color: "#C5A869", textDecoration: "none", fontWeight: 600 }}>Get In Touch →</Link>
           </div>
         </div>
@@ -919,8 +874,22 @@ export default function Footer() {
                 <polyline points="12 6 12 12 16 14" />
               </svg>
             </span>
-            <span>Mon – Fri: 6:00am – 6:00pm (Sat & Sun: Closed)</span>
+            <span>Mon – Fri: 9:00am – 5:30pm (Sat & Sun: Closed)</span>
           </div>
+        </div>
+
+        {/* Mobile Credit Disclosure */}
+        <div
+          style={{
+            borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+            paddingTop: "0.85rem",
+            marginBottom: "0.85rem",
+            fontSize: "0.68rem",
+            lineHeight: 1.5,
+            color: "rgba(255, 255, 255, 0.5)",
+          }}
+        >
+          <strong style={{ color: "#C5A869" }}>Credit Disclosure:</strong> Mortgage broking services are provided in accordance with the National Consumer Credit Protection Act 2009. Credit Rep / ACL: [To be inserted].
         </div>
 
         {/* Compact Legal Footer & Back to Top */}
@@ -937,7 +906,7 @@ export default function Footer() {
             color: "rgba(255, 255, 255, 0.5)",
           }}
         >
-          <div>© {new Date().getFullYear()} Taxnet Advisory Pty Ltd</div>
+          <div>© {new Date().getFullYear()} Taxnet Business Consultants</div>
           <div style={{ display: "flex", gap: "10px", alignItems: "center" }}>
             <Link href="/privacy-policy" style={{ color: "rgba(255, 255, 255, 0.6)", textDecoration: "none" }}>Privacy</Link>
             <span>·</span>

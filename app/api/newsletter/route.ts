@@ -118,7 +118,7 @@ Welcome to Taxnet Business Consultants Insights
 Thank you for subscribing to Taxnet's quarterly market and tax intelligence.
 
 As an ambitious Australian business owner or property investor, you will receive:
-1. Senior CPA tax structuring and minimization insights.
+1. Proactive tax structuring and minimization insights.
 2. ATO compliance alerts and key lodgement dates.
 3. Commercial borrowing benchmarks and lending rate reviews.
 
@@ -155,7 +155,7 @@ If you ever wish to unsubscribe, simply reply to this email with "Unsubscribe".
         <div style="background-color: #FAFCFA; border-left: 3.5px solid #C5A869; padding: 20px 22px; border-radius: 8px; border: 1px solid #E4EAE5; margin: 24px 0;">
           <div style="font-weight: 800; color: #0A0D0B; font-size: 14px; margin-bottom: 10px;">What You Will Receive:</div>
           <ul style="margin: 0; padding-left: 20px; font-size: 14px; color: #3A4A41; line-height: 1.75;">
-            <li><strong style="color: #0A0D0B;">CPA Tax Minimization:</strong> Legal structuring strategies for small businesses, trusts, and family enterprises.</li>
+            <li><strong style="color: #0A0D0B;">Proactive Tax Planning:</strong> Legal structuring strategies for small businesses, trusts, and family enterprises.</li>
             <li><strong style="color: #0A0D0B;">ATO Regulatory Alerts:</strong> Timely guidance on lodgement deadlines, STP Phase 2, and legislative changes.</li>
             <li><strong style="color: #0A0D0B;">Mortgage &amp; Refinancing Intel:</strong> Commercial lending capacity benchmarks and interest rate analysis.</li>
           </ul>
