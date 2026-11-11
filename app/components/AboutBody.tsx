@@ -14,7 +14,7 @@ const FIRM_MILESTONES = [
   {
     stage: "02",
     title: "Strategic Growth",
-    desc: "Mergers with boutique local practices expanding technical capacity, property tax, and medical industry specialisation.",
+    desc: "Expanding our expertise in property tax and the medical sector.",
   },
   {
     stage: "03",
@@ -117,15 +117,32 @@ const SECTORS = [
       </svg>
     ),
   },
+];
+
+const TEAM_MEMBERS = [
   {
-    id: "primary",
-    name: "Primary Producers",
-    desc: "Agricultural tax concessions, farm income averaging, livestock accounting, and multi-generational family land succession.",
-    icon: (
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-      </svg>
-    ),
+    name: "Benjamin Willis",
+    role: "Mortgage Broker",
+    email: "Ben@taxnet.com.au",
+    initials: "BW",
+  },
+  {
+    name: "Aaron Li",
+    role: "Accountant",
+    email: "Aaron@taxnet.com.au",
+    initials: "AL",
+  },
+  {
+    name: "Dulanga Gunathilake",
+    role: "Accountant",
+    email: "Dulanga@taxnet.com.au",
+    initials: "DG",
+  },
+  {
+    name: "Shanty Bavan",
+    role: "Bookkeeper",
+    email: "Shanty@taxnet.com.au",
+    initials: "SB",
   },
 ];
 
@@ -512,7 +529,7 @@ export default function AboutBody() {
                 >
                   As qualified CPA accountants and licensed mortgage brokers under one roof, we
                   coordinate your tax returns and lending applications simultaneously. We ensure
-                  tax deductions never inadvertently hinder your borrowing capacity across 40+ lenders.
+                  tax deductions never inadvertently hinder your borrowing capacity across a wide range of lenders.
                 </p>
 
                 <Link
@@ -679,7 +696,7 @@ export default function AboutBody() {
                     Philip Youssef
                   </h3>
                   <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#A18650" }}>
-                    Principal · CPA Accountant & Accredited Mortgage Broker (FBAA)
+                    Principal · CPA Accountant, Registered Tax Agent (TPB) & Accredited Mortgage Broker (FBAA)
                   </div>
                 </div>
 
@@ -907,6 +924,186 @@ export default function AboutBody() {
                 </div>
               </article>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════
+          OUR TEAM SECTION (Directly below Leadership)
+          Heading: Our Team
+          Intro: The people you’ll work with day to day.
+          ══════════════════════════════════════════════════════════════ */}
+      <section
+        id="our-team"
+        style={{
+          padding: "4.5rem 0 5rem",
+          backgroundColor: "#FAFBF9",
+          borderTop: "1px solid #E5ECE7",
+        }}
+      >
+        <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
+          {/* Section Header */}
+          <div style={{ textAlign: "center", marginBottom: "3rem" }}>
+            <h2
+              style={{
+                fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                fontSize: "clamp(2rem, 3.5vw, 2.85rem)",
+                color: "#0A0D0B",
+                fontWeight: 400,
+                margin: "0 0 0.6rem",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Our Team
+            </h2>
+            <p
+              style={{
+                fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                fontSize: "1rem",
+                color: "#54655B",
+                maxWidth: "520px",
+                margin: "0 auto",
+                lineHeight: 1.6,
+              }}
+            >
+              The people you’ll work with day to day.
+            </p>
+          </div>
+
+          {/* 4 Team Member Cards */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              gap: "1.5rem",
+            }}
+          >
+            {TEAM_MEMBERS.map((member) => (
+              <div
+                key={member.email}
+                style={{
+                  backgroundColor: "#FFFFFF",
+                  borderRadius: "14px",
+                  border: "1px solid #E5ECE7",
+                  padding: "1.85rem 1.5rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  textAlign: "center",
+                  boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+                  transition: "transform 200ms ease, box-shadow 200ms ease, border-color 200ms ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "translateY(-4px)";
+                  e.currentTarget.style.boxShadow = "0 10px 24px rgba(0, 0, 0, 0.08)";
+                  e.currentTarget.style.borderColor = "#C5A869";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "translateY(0)";
+                  e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
+                  e.currentTarget.style.borderColor = "#E5ECE7";
+                }}
+              >
+                {/* Circle with Initials in Brand Gold */}
+                <div
+                  style={{
+                    width: "56px",
+                    height: "56px",
+                    borderRadius: "50%",
+                    backgroundColor: "rgba(197, 168, 105, 0.12)",
+                    border: "1.5px solid rgba(197, 168, 105, 0.45)",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    marginBottom: "1.1rem",
+                    color: "#8C713A",
+                    fontSize: "1.05rem",
+                    fontWeight: 700,
+                    fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    letterSpacing: "0.06em",
+                  }}
+                >
+                  {member.initials}
+                </div>
+
+                {/* Name */}
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontSize: "1.18rem",
+                    fontWeight: 700,
+                    color: "#0A0D0B",
+                    margin: "0 0 0.35rem",
+                    letterSpacing: "-0.015em",
+                  }}
+                >
+                  {member.name}
+                </h3>
+
+                {/* Role */}
+                <div
+                  style={{
+                    fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                    fontSize: "0.8rem",
+                    fontWeight: 600,
+                    textTransform: "uppercase",
+                    letterSpacing: "0.08em",
+                    color: "#A18650",
+                    marginBottom: "1.25rem",
+                  }}
+                >
+                  {member.role}
+                </div>
+
+                {/* Clickable Mailto Link */}
+                <div
+                  style={{
+                    width: "100%",
+                    paddingTop: "0.85rem",
+                    borderTop: "1px solid #EEF3EF",
+                    marginTop: "auto",
+                  }}
+                >
+                  <a
+                    href={`mailto:${member.email}`}
+                    style={{
+                      fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      fontSize: "0.85rem",
+                      color: "#182820",
+                      fontWeight: 600,
+                      textDecoration: "none",
+                      display: "inline-flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      gap: "6px",
+                      transition: "color 180ms ease",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = "#C5A869";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = "#182820";
+                    }}
+                  >
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="#A18650"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      aria-hidden="true"
+                    >
+                      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                      <polyline points="22,6 12,13 2,6" />
+                    </svg>
+                    <span>{member.email}</span>
+                  </a>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

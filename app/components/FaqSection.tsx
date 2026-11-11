@@ -1,51 +1,36 @@
 "use client";
 
 import React, { useState } from "react";
-import Link from "next/link";
-import AnimatedHeading from "./AnimatedHeading";
 
-const FAQ_ITEMS = [
+interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
+const FAQ_ITEMS: FaqItem[] = [
   {
-    id: "faq-1",
-    question: "What Types Of Businesses Do You Work With?",
+    id: "where-are-you-based",
+    question: "Where are you based?",
     answer:
-      "We work with Australian businesses across trades, medical and dental practices, legal and professional services, hospitality, engineering, and expanding family enterprises. Whether you are an owner-operator, an expanding SME, or a multi-entity group, our solutions scale with you.",
+      "Suite 6, 861 Doncaster Road, Doncaster East. We see clients in person, by phone or online.",
   },
   {
-    id: "faq-2",
-    question: "Do You Offer Agreed Pricing?",
+    id: "help-tax-and-loan",
+    question: "Can you help with both my tax and my home loan?",
     answer:
-      "Yes. We offer transparent, agreed pricing tailored to your business needs, entity structure, and transaction volume so you always have cost certainty without unexpected fees.",
+      "Yes. That’s what we’re set up for, and it often saves you time and paperwork.",
   },
   {
-    id: "faq-3",
-    question: "Which Accounting Software Do You Use?",
+    id: "switch-accountants",
+    question: "How hard is it to switch accountants?",
     answer:
-      "We are accredited Gold Champion Partners with Xero, and also fully support MYOB and QuickBooks Online. We handle complete historical ledger migrations, automate bank feeds, set up Single Touch Payroll (STP Phase 2), and integrate industry add-ons like Dext and Stripe.",
+      "Not hard. We contact your previous accountant and arrange the handover for you.",
   },
   {
-    id: "faq-4",
-    question: "What Makes Taxnet Different From Other Accounting Firms?",
-    answer:
-      "Unlike traditional firms that only review your numbers once a year at tax time, Taxnet works proactively with you throughout the year. We combine experienced tax accountants, bookkeepers, and licensed mortgage brokers under one roof—ensuring your tax structuring, bookkeeping, and lending work in harmony.",
-  },
-  {
-    id: "faq-5",
-    question: "How Difficult Is It To Switch From Our Previous Accountant?",
-    answer:
-      "It is completely seamless and requires zero effort from your team. We manage the entire handover process: sending ethical clearance letters to your previous firm, securely transferring historical files and depreciation schedules, and conducting an initial tax review to check for missed deductions.",
-  },
-  {
-    id: "faq-6",
-    question: "What Are Your Office Opening Hours?",
-    answer:
-      "Our office is open Monday to Friday from 9:00am to 5:30pm (closed Saturday and Sunday). You can reach our team by phone, email, or schedule an in-person appointment at our Doncaster East office.",
-  },
-  {
-    id: "faq-areas",
-    question: "What Areas Do You Service?",
-    answer:
-      "Our office is located in Doncaster East. We service clients across Melbourne's eastern suburbs (including Doncaster, Doncaster East, Templestowe, Box Hill, Blackburn, and Manningham) as well as clients across Victoria and Australia via secure video and phone consultations.",
+    id: "software-work-with",
+    question: "Which software do you work with?",
+    answer: "Xero, MYOB and QuickBooks.",
   },
 ];
 
@@ -61,53 +46,52 @@ export default function FaqSection() {
       id="faq"
       style={{
         backgroundColor: "#FFFFFF",
-        paddingTop: "4rem",
-        paddingBottom: "4.5rem",
+        paddingTop: "5rem",
+        paddingBottom: "5.5rem",
         position: "relative",
       }}
     >
       <div
         style={{
-          maxWidth: "860px",
+          maxWidth: "840px",
           margin: "0 auto",
           padding: "0 1.5rem",
         }}
       >
-        {/* ── Section Header (No Badges) ── */}
+        {/* Section Header */}
         <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-          <AnimatedHeading>
-            <h2
-              style={{
-                fontFamily: '"Monety", Georgia, serif',
-                fontSize: "clamp(2rem, 3.5vw, 2.75rem)",
-                fontWeight: 400,
-                color: "#1C2022",
-                lineHeight: 1.2,
-                letterSpacing: "-0.01em",
-                margin: "0 auto 0.6rem",
-              }}
-            >
-              Frequently Asked <span style={{ color: "#C5A869" }}>Questions</span>
-            </h2>
-            <p
-              style={{
-                fontSize: "0.95rem",
-                color: "#5A6B62",
-                maxWidth: "540px",
-                margin: "0 auto",
-                lineHeight: 1.6,
-              }}
-            >
-              Clear answers to common questions about our tax, bookkeeping, and
-              commercial advisory services for Australian businesses.
-            </p>
-          </AnimatedHeading>
+          <span
+            style={{
+              color: "#C5A869",
+              fontSize: "0.8rem",
+              fontWeight: 700,
+              letterSpacing: "0.14em",
+              textTransform: "uppercase",
+              display: "block",
+              marginBottom: "0.5rem",
+            }}
+          >
+            Got Questions?
+          </span>
+          <h2
+            style={{
+              fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+              fontSize: "clamp(2.2rem, 4vw, 3rem)",
+              fontWeight: 400,
+              color: "#111827",
+              lineHeight: 1.15,
+              margin: 0,
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Common questions
+          </h2>
         </div>
 
-        {/* ── FAQ Accordion List (Matching Reference Design) ── */}
+        {/* FAQ Accordion List */}
         <div
           style={{
-            borderTop: "1px solid #E5EAE7",
+            borderTop: "1px solid #E5E7EB",
           }}
         >
           {FAQ_ITEMS.map((item, index) => {
@@ -116,7 +100,7 @@ export default function FaqSection() {
               <div
                 key={item.id}
                 style={{
-                  borderBottom: "1px solid #E5EAE7",
+                  borderBottom: "1px solid #E5E7EB",
                   transition: "background-color 200ms ease",
                   backgroundColor: isOpen ? "#FAFBF9" : "transparent",
                 }}
@@ -130,7 +114,7 @@ export default function FaqSection() {
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "space-between",
-                    padding: "1.35rem 0.5rem",
+                    padding: "1.4rem 0.5rem",
                     background: "none",
                     border: "none",
                     textAlign: "left",
@@ -140,9 +124,9 @@ export default function FaqSection() {
                 >
                   <span
                     style={{
-                      fontSize: "1.05rem",
+                      fontSize: "1.1rem",
                       fontWeight: 600,
-                      color: isOpen ? "#C5A869" : "#1C2022",
+                      color: isOpen ? "#8A7040" : "#111827",
                       lineHeight: 1.4,
                       letterSpacing: "-0.01em",
                       transition: "color 180ms ease",
@@ -151,94 +135,48 @@ export default function FaqSection() {
                     {item.question}
                   </span>
 
-                  {/* Clean + / − Icon Toggle */}
                   <div
                     style={{
                       width: "30px",
                       height: "30px",
                       borderRadius: "50%",
-                      backgroundColor: isOpen
-                        ? "rgba(197, 168, 105, 0.12)"
-                        : "rgba(0, 0, 0, 0.03)",
+                      backgroundColor: isOpen ? "rgba(197, 168, 105, 0.15)" : "#F3F4F6",
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
+                      color: isOpen ? "#8A7040" : "#6B7280",
+                      fontSize: "1.25rem",
+                      fontWeight: 300,
                       flexShrink: 0,
                       transition: "all 200ms ease",
+                      transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                     }}
                   >
-                    <span
-                      style={{
-                        fontSize: "1.25rem",
-                        lineHeight: 1,
-                        fontWeight: 400,
-                        color: isOpen ? "#C5A869" : "#6B7C72",
-                        transform: isOpen ? "rotate(180deg)" : "none",
-                        transition: "transform 250ms ease, color 200ms ease",
-                      }}
-                    >
-                      {isOpen ? "−" : "+"}
-                    </span>
+                    +
                   </div>
                 </button>
 
-                {/* Animated Dropdown Content */}
-                <div
-                  style={{
-                    maxHeight: isOpen ? "300px" : "0px",
-                    overflow: "hidden",
-                    opacity: isOpen ? 1 : 0,
-                    transition:
-                      "max-height 320ms cubic-bezier(0.4, 0, 0.2, 1), opacity 260ms ease",
-                  }}
-                >
+                {isOpen && (
                   <div
                     style={{
-                      padding: "0 0.5rem 1.4rem 0.5rem",
-                      color: "#4A5A50",
-                      fontSize: "0.92rem",
-                      lineHeight: 1.65,
+                      padding: "0 0.5rem 1.4rem",
                     }}
                   >
-                    {item.answer}
+                    <p
+                      style={{
+                        margin: 0,
+                        fontSize: "0.98rem",
+                        color: "#4B5563",
+                        lineHeight: 1.65,
+                      }}
+                    >
+                      {item.answer}
+                    </p>
                   </div>
-                </div>
+                )}
               </div>
             );
           })}
-        </div>
-
-        {/* ── Still have questions CTA ── */}
-        <div
-          style={{
-            textAlign: "center",
-            marginTop: "2.5rem",
-            padding: "1.25rem",
-            borderRadius: "14px",
-            backgroundColor: "#F8FAF8",
-            border: "1px solid #E5ECE7",
-          }}
-        >
-          <p
-            style={{
-              fontSize: "0.9rem",
-              color: "#4A5A50",
-              margin: 0,
-            }}
-          >
-            Have a specific scenario or complex entity structure? &nbsp;
-            <Link
-              href="/contact"
-              style={{
-                color: "#C5A869",
-                fontWeight: 700,
-                textDecoration: "underline",
-                textUnderlineOffset: "3px",
-              }}
-            >
-              Book a Consultation →
-            </Link>
-          </p>
         </div>
       </div>
     </section>

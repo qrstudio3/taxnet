@@ -1,6 +1,7 @@
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import ServicesSection from "./components/ServicesSection";
+import WhyTaxnetSection from "./components/WhyTaxnetSection";
 import TestimonialsSection from "./components/TestimonialsSection";
 import FaqSection from "./components/FaqSection";
 import ContactSection from "./components/ContactSection";
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <Hero />
         <ServicesSection />
+        <WhyTaxnetSection />
         <TestimonialsSection />
         <FaqSection />
         <ContactSection />

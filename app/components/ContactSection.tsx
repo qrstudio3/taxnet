@@ -97,46 +97,50 @@ export default function ContactSection() {
             alignItems: "start",
           }}
         >
-          {/* ── Left Column: Contact Info (No Badges) ── */}
+          {/* ── Left Column: Contact Info ── */}
           <div>
           <AnimatedHeading>
-            <h2
+            <span
               style={{
-                fontFamily: '"Monety", Georgia, serif',
-                fontSize: "clamp(2rem, 3.6vw, 2.75rem)",
-                fontWeight: 400,
-                color: "#1C2022",
-                lineHeight: 1.2,
-                letterSpacing: "-0.01em",
-                margin: "0 0 1rem 0",
+                color: "#C5A869",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                display: "block",
+                marginBottom: "0.5rem",
               }}
             >
-              Let’s Elevate Your{" "}
-              <span
-                style={{
-                  color: "#C5A869",
-                }}
-              >
-                Financial Position
-              </span>
+              Contact
+            </span>
+            <h2
+              style={{
+                fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                fontSize: "clamp(2.2rem, 3.6vw, 2.85rem)",
+                fontWeight: 400,
+                color: "#111827",
+                lineHeight: 1.2,
+                letterSpacing: "-0.01em",
+                margin: "0 0 0.85rem 0",
+              }}
+            >
+              Let’s talk.
             </h2>
 
             <p
               style={{
-                fontSize: "0.95rem",
-                color: "#4A5A50",
-                lineHeight: 1.6,
+                fontSize: "1rem",
+                color: "#4B5563",
+                lineHeight: 1.65,
                 marginBottom: "2.25rem",
                 maxWidth: "520px",
               }}
             >
-              Book a confidential discovery session with our Melbourne partner team.
-              We’ll review your entity structure, uncover immediate tax deductions,
-              and tailor a seamless bookkeeping roadmap for your business.
+              Book a chat and tell us what you need. There’s no cost for the first conversation.
             </p>
           </AnimatedHeading>
 
-            {/* Direct Contact Details with Theme Green Icons */}
+            {/* Direct Contact Details */}
             <div
               style={{
                 display: "flex",
@@ -173,11 +177,11 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
-                    Melbourne Head Office
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#8A7040" }}>
+                    Location
                   </div>
-                  <div style={{ fontSize: "0.88rem", color: "#3B4A41", marginTop: "2px" }}>
-                    Suite 6 , 861 Doncaster Road, Doncaster East VIC 3109
+                  <div style={{ fontSize: "0.92rem", color: "#1F2937", marginTop: "2px" }}>
+                    Suite 6, 861 Doncaster Road, Doncaster East VIC 3109
                   </div>
                 </div>
               </div>
@@ -210,17 +214,17 @@ export default function ContactSection() {
                   </svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
-                    Direct Advisory Line
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#8A7040" }}>
+                    Phone
                   </div>
                   <a
                     href="tel:0398025800"
                     style={{
-                      fontSize: "0.88rem",
-                      color: "#3B4A41",
+                      fontSize: "0.92rem",
+                      color: "#1F2937",
                       marginTop: "2px",
-                      display: "inline-block",
                       textDecoration: "none",
+                      display: "block",
                       fontWeight: 600,
                     }}
                   >
@@ -253,66 +257,25 @@ export default function ContactSection() {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   >
-                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <rect width="20" height="16" x="2" y="4" rx="2" />
                     <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
                   </svg>
                 </div>
                 <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
-                    Email Advisory
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#8A7040" }}>
+                    Email
                   </div>
                   <a
                     href="mailto:info@taxnet.com.au"
                     style={{
-                      fontSize: "0.88rem",
-                      color: "#3B4A41",
+                      fontSize: "0.92rem",
+                      color: "#1F2937",
                       marginTop: "2px",
-                      display: "inline-block",
                       textDecoration: "none",
-                      fontWeight: 600,
+                      display: "block",
                     }}
                   >
                     info@taxnet.com.au
-                  </a>
-                </div>
-              </div>
-
-              <div style={{ display: "flex", alignItems: "flex-start", gap: "14px" }}>
-                <div
-                  style={{
-                    width: "42px",
-                    height: "42px",
-                    borderRadius: "10px",
-                    backgroundColor: "rgba(37, 211, 102, 0.12)",
-                    border: "1px solid rgba(37, 211, 102, 0.25)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    flexShrink: 0,
-                  }}
-                >
-                  <svg width="20" height="20" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true">
-                    <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
-                  </svg>
-                </div>
-                <div>
-                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#C5A869" }}>
-                    Direct WhatsApp
-                  </div>
-                  <a
-                    href="https://wa.me/61420956761?text=Hi%20Taxnet%2C%20I%20would%20like%20to%20speak%20with%20an%20advisor."
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      fontSize: "0.88rem",
-                      color: "#3B4A41",
-                      marginTop: "2px",
-                      display: "inline-block",
-                      textDecoration: "none",
-                      fontWeight: 600,
-                    }}
-                  >
-                    +61 420 956 761 (Chat with us)
                   </a>
                 </div>
               </div>
