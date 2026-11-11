@@ -66,6 +66,15 @@ export async function POST(request: Request) {
       timeStyle: "short",
     });
 
+    // Clean parameters for mailto response (fully encoded to prevent '+' or '+-+' symbol artifacts)
+    const cleanClientName = (name || "Client").trim();
+    const cleanService = (selectedService || "Taxnet Advisory").trim();
+    const mailtoSubject = encodeURIComponent(`Taxnet Consultation - ${cleanClientName}`);
+    const mailtoBody = encodeURIComponent(
+      `Hi ${cleanClientName},\n\nThank you for reaching out to Taxnet regarding ${cleanService}. We have received your inquiry and would be delighted to assist you.\n\nPlease let us know what time suits you best for a brief call, or feel free to reply directly to this email with any documents or details.\n\nWarm regards,\nPhilip\nTaxnet Advisory Desk\n(03) 9802 5800\nSuite 1, 1024 Doncaster Road, Doncaster East VIC 3109`
+    );
+    const replyMailtoUrl = `mailto:${encodeURIComponent(email)}?subject=${mailtoSubject}&body=${mailtoBody}`;
+
     // Clean Plain Text Fallback
     const textContent = `
 NEW TAXNET CLIENT CONSULTATION INQUIRY
@@ -140,7 +149,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
                       <tr>
                         <td style="color: #6B7C72; font-size: 13px; font-weight: 600;">Email Address:</td>
                         <td style="font-size: 14px;">
-                          <a href="mailto:${email}" style="color: #0A0D0B; text-decoration: underline; font-weight: 600;">${email}</a>
+                          <a href="${replyMailtoUrl}" style="color: #0A0D0B; text-decoration: underline; font-weight: 600;">${email}</a>
                         </td>
                       </tr>
                       <tr>
@@ -200,7 +209,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
               <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
                 <tr>
                   <td align="center">
-                    <a href="mailto:${email}?subject=RE: Taxnet Consultation - ${encodeURIComponent(name)}" style="display: inline-block; background-color: #0A0D0B; color: #FFFFFF; border: 1.5px solid #C5A869; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
+                    <a href="${replyMailtoUrl}" style="display: inline-block; background-color: #0A0D0B; color: #FFFFFF; border: 1.5px solid #C5A869; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
                       Reply Directly to Client (${email}) →
                     </a>
                   </td>
@@ -214,7 +223,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
           <tr>
             <td style="background-color: #0A0D0B; padding: 24px 32px; border-top: 1px solid rgba(197, 168, 105, 0.25); text-align: center; color: rgba(255, 255, 255, 0.75); font-size: 11px; line-height: 1.6;">
               <div style="color: #FFFFFF; font-weight: 700; margin-bottom: 4px; font-size: 12px;">Taxnet Pty Ltd · CPA Australia Public Practice</div>
-              <div>Suite 6, 861 Doncaster Road, Doncaster East VIC 3109</div>
+              <div>Suite 1, 1024 Doncaster Road, Doncaster East VIC 3109</div>
               <div style="color: #C5A869; margin-top: 4px;">Phone: (03) 9802 5800 · Direct WhatsApp: +61 420 956 761</div>
             </td>
           </tr>

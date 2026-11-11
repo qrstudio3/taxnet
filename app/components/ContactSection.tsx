@@ -689,6 +689,7 @@ export default function ContactSection() {
                     alignItems: "center",
                     justifyContent: "center",
                     gap: "10px",
+                    pointerEvents: loading || isSuccess ? "none" : "auto",
                   }}
                   onMouseEnter={(e) => {
                     if (!loading && !isSuccess) {

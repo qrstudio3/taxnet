@@ -272,24 +272,38 @@ a:hover {
   cursor: pointer;
 }
 
-.playful-btn:hover {
+.playful-btn:hover:not(:disabled) {
   transform: translateY(-3.5px) scale(1.04) !important;
 }
 
-.playful-btn:active {
+.playful-btn:active:not(:disabled) {
   transform: translateY(1.5px) scale(0.965) !important;
   transition-duration: 100ms !important;
 }
 
-.playful-btn .btn-arrow,
-.playful-btn span:last-child {
+/* Strictly target .btn-arrow for the arrow slide effect, never generic spans */
+.playful-btn .btn-arrow {
   transition: transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
   display: inline-block;
+  will-change: transform;
 }
 
-.playful-btn:hover .btn-arrow,
-.playful-btn:hover span:last-child {
+.playful-btn:hover:not(:disabled) .btn-arrow {
   transform: translateX(4px) scale(1.15);
+}
+
+/* Disabled & loading buttons should remain completely stable on hover */
+.playful-btn:disabled,
+button:disabled.playful-btn,
+.playful-btn[aria-disabled="true"] {
+  transform: none !important;
+  cursor: not-allowed !important;
+  box-shadow: none !important;
+  pointer-events: none;
+}
+.playful-btn:disabled .btn-arrow,
+button:disabled.playful-btn .btn-arrow {
+  transform: none !important;
 }
 
 .playful-btn-primary {

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname, searchParams } = request.nextUrl;
 
   // Environment flag: checks MAINTENANCE_MODE or NEXT_PUBLIC_MAINTENANCE_MODE
@@ -92,6 +92,9 @@ export function middleware(request: NextRequest) {
 
   return NextResponse.next();
 }
+
+// Keep backwards-compatible export for any Next tooling
+export const middleware = proxy;
 
 export const config = {
   matcher: [

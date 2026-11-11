@@ -131,7 +131,7 @@ export default function MaintenancePage() {
           }}
         >
           <Image
-            src="/logo/emblem.png?v=3"
+            src="/logo/emblem.png"
             alt="Taxnet Logo"
             width={28}
             height={28}
