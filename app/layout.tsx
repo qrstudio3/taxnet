@@ -30,6 +30,7 @@ export const metadata: Metadata = {
 
 import FloatingContact from "./components/FloatingContact";
 import FloatingBorrowingPower from "./components/FloatingBorrowingPower";
+import MaintenanceAdminBanner from "./components/MaintenanceAdminBanner";
 
 export default function RootLayout({
   children,
@@ -43,6 +44,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/logo/emblem.png?v=3" />
       </head>
       <body className="min-h-full flex flex-col">
+        <MaintenanceAdminBanner />
         {children}
         <FloatingBorrowingPower />
         <FloatingContact />

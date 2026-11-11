@@ -41,8 +41,8 @@ export default function FloatingBorrowingPower() {
     return () => clearTimeout(timeoutId);
   }, []);
 
-  // Do not show on the calculator or contact page
-  if (!mounted || pathname === "/calculator" || pathname === "/contact") {
+  // Do not show on calculator, contact, or maintenance pages
+  if (!mounted || pathname === "/calculator" || pathname === "/contact" || pathname === "/maintenance") {
     return null;
   }
 

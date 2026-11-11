@@ -35,8 +35,8 @@ export default function FloatingContact() {
     };
   }, [isOpen]);
 
-  // Do not show on the dedicated contact page
-  if (pathname === "/contact") {
+  // Do not show on dedicated contact or maintenance pages
+  if (pathname === "/contact" || pathname === "/maintenance") {
     return null;
   }
 
