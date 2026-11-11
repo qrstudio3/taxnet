@@ -66,14 +66,15 @@ export async function POST(request: Request) {
       timeStyle: "short",
     });
 
-    // Clean parameters for mailto response (fully encoded to prevent '+' or '+-+' symbol artifacts)
+    // Clean parameters for mailto response (preserve raw '@' for the recipient so email clients populate 'To' field)
     const cleanClientName = (name || "Client").trim();
+    const cleanEmail = (email || "").trim();
     const cleanService = (selectedService || "Taxnet Advisory").trim();
     const mailtoSubject = encodeURIComponent(`Taxnet Consultation - ${cleanClientName}`);
     const mailtoBody = encodeURIComponent(
       `Hi ${cleanClientName},\n\nThank you for reaching out to Taxnet regarding ${cleanService}. We have received your inquiry and would be delighted to assist you.\n\nPlease let us know what time suits you best for a brief call, or feel free to reply directly to this email with any documents or details.\n\nWarm regards,\nPhilip\nTaxnet Advisory Desk\n(03) 9802 5800\nSuite 1, 1024 Doncaster Road, Doncaster East VIC 3109`
     );
-    const replyMailtoUrl = `mailto:${encodeURIComponent(email)}?subject=${mailtoSubject}&body=${mailtoBody}`;
+    const replyMailtoUrl = `mailto:${cleanEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
 
     // Clean Plain Text Fallback
     const textContent = `
