@@ -119,12 +119,26 @@ const SECTORS = [
   },
 ];
 
-const TEAM_MEMBERS = [
+interface TeamMember {
+  name: string;
+  role?: string;
+  email: string;
+  initials: string;
+  note?: string;
+}
+
+const TEAM_MEMBERS: TeamMember[] = [
   {
     name: "Benjamin Willis",
     role: "Mortgage Broker",
     email: "Ben@taxnet.com.au",
     initials: "BW",
+  },
+  {
+    name: "Amanda Lew",
+    email: "Amanda@taxnet.com.au",
+    initials: "AL",
+    note: "Amanda is currently on leave and will be returning early 2027",
   },
   {
     name: "Aaron Li",
@@ -771,7 +785,7 @@ export default function AboutBody() {
                     Professional Background
                   </div>
                   <p style={{ fontSize: "0.92rem", color: "#4A5A50", lineHeight: 1.7, margin: 0 }}>
-                    Philip is a CPA Accountant and accredited Mortgage Broker with over 13 years of experience
+                    Philip is a CPA Accountant and accredited Mortgage Broker with over 20 years experience having started in January 2005,
                     advising small to medium-sized businesses across Victoria. Holding an Accounting degree
                     majoring in Finance and Commerce from Swinburne and La Trobe Universities, he provides
                     coordinated leadership across entity structuring, commercial debt advisory, and home loans.
@@ -1223,11 +1237,12 @@ export default function AboutBody() {
             </p>
           </div>
 
-          {/* 4 Team Member Cards */}
+          {/* Team Member Cards */}
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
+              display: "flex",
+              flexWrap: "wrap",
+              justifyContent: "center",
               gap: "1.5rem",
             }}
           >
@@ -1235,6 +1250,9 @@ export default function AboutBody() {
               <div
                 key={member.email}
                 style={{
+                  flex: "1 1 240px",
+                  maxWidth: "285px",
+                  width: "100%",
                   backgroundColor: "#FFFFFF",
                   borderRadius: "14px",
                   border: "1px solid #E5ECE7",
@@ -1294,19 +1312,37 @@ export default function AboutBody() {
                 </h3>
 
                 {/* Role */}
-                <div
-                  style={{
-                    fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
-                    fontSize: "0.8rem",
-                    fontWeight: 600,
-                    textTransform: "uppercase",
-                    letterSpacing: "0.08em",
-                    color: "#A18650",
-                    marginBottom: "1.25rem",
-                  }}
-                >
-                  {member.role}
-                </div>
+                {member.role && (
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      fontSize: "0.8rem",
+                      fontWeight: 600,
+                      textTransform: "uppercase",
+                      letterSpacing: "0.08em",
+                      color: "#A18650",
+                      marginBottom: member.note ? "0.45rem" : "1.25rem",
+                    }}
+                  >
+                    {member.role}
+                  </div>
+                )}
+
+                {/* Note (in italics) */}
+                {member.note && (
+                  <div
+                    style={{
+                      fontFamily: 'var(--font-sans), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+                      fontSize: "0.82rem",
+                      fontStyle: "italic",
+                      color: "#54655B",
+                      lineHeight: 1.45,
+                      marginBottom: "1.25rem",
+                    }}
+                  >
+                    {member.note}
+                  </div>
+                )}
 
                 {/* Clickable Mailto Link */}
                 <div
