@@ -433,14 +433,16 @@ export default function BookkeepingContact({
                     {isTaxOrAccounting
                       ? `Request a Free ${serviceName} Consultation`
                       : isMortgage
-                      ? `Request a Free ${serviceName} Assessment`
+                      ? (serviceName.toLowerCase().endsWith("assessment")
+                          ? `Request a Free ${serviceName}`
+                          : `Request a Free ${serviceName} Assessment`)
                       : `Request a Free Bookkeeping Assessment`}
                   </h3>
                   <p style={{ fontSize: "0.82rem", color: darkTheme ? "#9CA3AF" : "#6B7C72", margin: 0 }}>
                     {isTaxOrAccounting
                       ? "100% confidential · Direct CPA Partner Review · Upfront Fixed Proposal"
                       : isMortgage
-                      ? "100% complimentary · Accredited FBAA broker review · a wide range of lenders"
+                      ? "Complimentary consultation · Wide range of lenders · Tailored credit guidance"
                       : "100% confidential · Direct CPA review · Flat monthly fee quote"}
                   </p>
                 </div>
@@ -479,14 +481,14 @@ export default function BookkeepingContact({
                       htmlFor="bk-email"
                       style={{ display: "block", fontSize: "0.78rem", fontWeight: 700, color: labelColor, marginBottom: "4px" }}
                     >
-                      Business Email *
+                      Email *
                     </label>
                     <input
                       id="bk-email"
                       name="email"
                       type="email"
                       required
-                      placeholder="sarah@business.com.au"
+                      placeholder="sarah@example.com.au"
                       value={formData.email}
                       onChange={handleChange}
                       style={{

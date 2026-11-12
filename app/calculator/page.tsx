@@ -8,49 +8,49 @@ import BookkeepingBenefitIcon from "@/app/components/BookkeepingBenefitIcon";
 import ExpandableFaq from "@/app/components/ExpandableFaq";
 
 export const metadata: Metadata = {
-  title: "Borrowing Power Calculator Australia | Accurate Home Loan Capacity | Taxnet",
+  title: "Borrowing Power Calculator Australia | Taxnet",
   description:
-    "Calculate your exact home loan borrowing capacity across 40+ Australian lenders. Includes APRA 3.00% serviceability stress buffers, HEM living expense benchmarks, and visual cashflow charts. Free assessment.",
+    "Estimate your home loan borrowing capacity across a wide range of Australian lenders. Includes serviceability buffers, living expense benchmarks, and visual cashflow charts.",
   keywords: [
     "borrowing power calculator Australia",
     "home loan borrowing capacity Melbourne",
-    "mortgage calculator with APRA buffer",
+    "mortgage calculator with buffer",
     "how much can I borrow home loan",
     "mortgage broker borrowing assessment",
-    "HEM benchmark calculator",
+    "living expense benchmark calculator",
   ],
 };
 
 const KEY_FACTORS = [
   {
     icon: "shield" as const,
-    title: "APRA 3.00% Stress Buffer",
-    desc: "Lenders test repayments at 3.00% above your actual rate to ensure loan safety if interest rates increase.",
+    title: "Serviceability Buffer",
+    desc: "Lenders add a buffer to the interest rate when assessing your repayments to ensure loan safety if interest rates increase.",
   },
   {
     icon: "card" as const,
     title: "Credit Card Limits",
-    desc: "Banks count ~3.5% of your approved credit card limit monthly as an ongoing commitment, even if your balance is $0.",
+    desc: "Lenders count part of your credit card limits as a monthly commitment, even with a $0 balance.",
   },
   {
     icon: "home" as const,
-    title: "Statutory HEM Benchmark",
-    desc: "Lenders compare declared living expenses against official household benchmarks (HEM) based on family size and location.",
+    title: "Living Expense Benchmarks",
+    desc: "Lenders compare declared living expenses against official household living expense benchmarks based on family size and location.",
   },
 ];
 
 const CALC_FAQS = [
   {
-    q: "How accurate is this borrowing calculator?",
-    a: "It implements the official APRA 3.00% serviceability buffer, 2024–2025 Stage 3 tax brackets, Medicare levies, and statutory HEM benchmark floors for highly accurate preliminary figures.",
+    q: "How does this borrowing calculator estimate capacity?",
+    a: "It applies serviceability buffers, income tax calculations, Medicare levies, and living expense benchmarks to provide a preliminary estimate.",
   },
   {
     q: "Why do different Australian banks offer different loan amounts?",
-    a: "Credit policies diverge across lenders. Some shade rental income to 70% while others allow 90%, and policies for self-employed income vary substantially. Taxnet compares 40+ lenders to maximize your capacity.",
+    a: "Credit policies diverge across lenders. Lenders treat some types of income differently, and policies for self-employed income vary substantially. Taxnet compares a wide range of lenders.",
   },
   {
     q: "How much does a formal broker assessment cost?",
-    a: "Our residential mortgage broking services are 100% free ($0 broker fee to you). The lender pays our practice an industry-standard commission after your mortgage settles.",
+    a: "We don’t usually charge a fee. Lenders pay us a commission, which is disclosed in our Credit Guide.",
   },
 ];
 
@@ -242,6 +242,24 @@ export default function CalculatorPage() {
                 </div>
               ))}
             </div>
+
+            {/* Credit Disclosure Callout Box (Before FAQs) */}
+            <div
+              style={{
+                marginTop: "2.5rem",
+                padding: "1.5rem 1.75rem",
+                backgroundColor: "#FFFFFF",
+                borderRadius: "12px",
+                border: "1px solid rgba(197, 168, 105, 0.35)",
+                fontSize: "0.82rem",
+                color: "#4B5563",
+                lineHeight: 1.6,
+                boxShadow: "0 4px 18px rgba(0, 0, 0, 0.03)",
+              }}
+            >
+              <strong style={{ color: "#0A0D0B" }}>Australian Credit Licence &amp; Credit Disclosure:</strong>{" "}
+              Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328) has access to a panel of lenders through National Mortgage Brokers Pty Ltd., (ACN 093 874 376 / Australian Credit Licence 391209), which is a fully-owned subsidiary of Liberty Financial Pty Ltd (ACN 077 248 983 / Australian Credit Licence 286596). Taxnet Business Consultants Pty Ltd has access to products including those from Liberty Financial.
+            </div>
           </div>
         </section>
 
@@ -280,9 +298,9 @@ export default function CalculatorPage() {
         {/* ─── BOOKING & CONSULTATION FORM ─── */}
         <div id="booking">
           <BookkeepingContact
-            title="Ready for a Verified Borrowing Assessment?"
-            subtitle="Book a confidential 15-minute consultation with our Melbourne mortgage broking & CPA team. We'll run your profile across 40+ lenders and unlock your maximum borrowing capacity."
-            serviceName="Mortgage Borrowing Power Assessment"
+            title="Ready to Assess Your Borrowing Power?"
+            subtitle="Book a confidential 15-minute consultation with our Melbourne mortgage broking & CPA team. We'll assess your borrowing power across a wide range of lenders."
+            serviceName="Borrowing Power Assessment"
             submitButtonText="Book A Consultation"
           />
         </div>

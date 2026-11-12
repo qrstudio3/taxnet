@@ -91,18 +91,6 @@ export default function ContactPage() {
               {/* ── LEFT COLUMN: DIRECT CHANNELS & OFFICE LOCATION ── */}
               <div>
                 <div style={{ marginBottom: "2rem" }}>
-                  <div
-                    style={{
-                      fontSize: "0.78rem",
-                      fontWeight: 700,
-                      color: "#A18650",
-                      letterSpacing: "0.08em",
-                      textTransform: "uppercase",
-                      marginBottom: "0.5rem",
-                    }}
-                  >
-                    Direct Senior Access
-                  </div>
                   <h2
                     style={{
                       fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
@@ -114,7 +102,7 @@ export default function ContactPage() {
                       margin: 0,
                     }}
                   >
-                    Immediate Advisory & Head Office Details
+                    CONTACT US
                   </h2>
                 </div>
 
@@ -157,17 +145,14 @@ export default function ContactPage() {
                       </svg>
                     </div>
                     <div style={{ flexGrow: 1 }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "8px", marginBottom: "2px" }}>
-                        <span style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", letterSpacing: "0.04em" }}>
-                          Direct WhatsApp Advisory
-                        </span>
-                        <span style={{ fontSize: "0.74rem", color: "#6B7C72" }}>• Mon–Fri 9:00am–5:30pm</span>
+                      <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", letterSpacing: "0.04em", marginBottom: "2px" }}>
+                        (Direct WhatsApp)
                       </div>
                       <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
-                        +61 420 956 761
+                        0420 956 761
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
-                        Instant chat with our senior advisory team
+                        Instant chat with our team
                       </div>
                     </div>
                     <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
@@ -209,13 +194,13 @@ export default function ContactPage() {
                     </div>
                     <div style={{ flexGrow: 1 }}>
                       <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", marginBottom: "2px" }}>
-                        Melbourne Reception & Advice
+                        Melbourne Office
                       </div>
                       <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
                         (03) 9802 5800
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
-                        Monday to Friday: 9:00 AM – 5:30 PM (AEST)
+                        Monday to Friday: 9:00am – 5:30pm
                       </div>
                     </div>
                     <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
@@ -258,13 +243,10 @@ export default function ContactPage() {
                     </div>
                     <div style={{ flexGrow: 1 }}>
                       <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase", marginBottom: "2px" }}>
-                        Formal Email Inquiries
+                        Email Enquiries
                       </div>
                       <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B" }}>
                         info@taxnet.com.au
-                      </div>
-                      <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
-                        Monitored by CPA partners with fast 2-hour turnaround
                       </div>
                     </div>
                     <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>
@@ -302,7 +284,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <div style={{ fontSize: "0.78rem", fontWeight: 700, color: "#A18650", textTransform: "uppercase" }}>
-                        Head Office Location
+                        Office Location
                       </div>
                       <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#0A0D0B", marginTop: "2px" }}>
                         Suite 6, 861 Doncaster Road
@@ -311,7 +293,7 @@ export default function ContactPage() {
                         Doncaster East VIC 3109, Australia
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#7A8C82", marginTop: "4px" }}>
-                        Free on-site client parking available & full wheelchair accessibility.
+                        Free on-site client parking
                       </div>
                     </div>
                   </div>
@@ -339,28 +321,21 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  {/* Opening Hours Table */}
+                  {/* Opening Hours */}
                   <div
                     style={{
                       backgroundColor: "#F7F9F7",
                       borderRadius: "12px",
-                      padding: "1rem 1.25rem",
+                      padding: "0.85rem 1.25rem",
                       fontSize: "0.84rem",
                       marginBottom: "1.25rem",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
                     }}
                   >
-                    <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
-                      <span style={{ fontWeight: 600, color: "#25382E" }}>Monday – Friday:</span>
-                      <span style={{ fontWeight: 700, color: "#0A0D0B" }}>9:00 AM – 5:30 PM</span>
-                    </div>
-                    <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: "1px solid #E5EBE7" }}>
-                      <span style={{ fontWeight: 600, color: "#25382E" }}>Saturday:</span>
-                      <span style={{ color: "#7B8E82" }}>Closed (By Appointment)</span>
-                    </div>
-                    <div style={{ display: "flex", justifyContent: "space-between", padding: "4px 0" }}>
-                      <span style={{ fontWeight: 600, color: "#25382E" }}>Sunday:</span>
-                      <span style={{ color: "#7B8E82" }}>Closed</span>
-                    </div>
+                    <span style={{ fontWeight: 600, color: "#25382E" }}>Monday to Friday:</span>
+                    <span style={{ fontWeight: 700, color: "#0A0D0B" }}>9:00am – 5:30pm</span>
                   </div>
 
                   <a

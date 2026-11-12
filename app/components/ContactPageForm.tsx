@@ -2,14 +2,7 @@
 
 import React, { useState } from "react";
 
-const MEETING_FORMATS = [
-  { id: "in-person", label: "In-Person Doncaster East" },
-  { id: "video", label: "Video Call (Zoom / Teams)" },
-  { id: "phone", label: "Direct Phone Call" },
-];
-
 export default function ContactPageForm() {
-  const [meetingFormat, setMeetingFormat] = useState<string>("In-Person Doncaster East");
   const [submitted, setSubmitted] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [isSuccess, setIsSuccess] = useState<boolean>(false);
@@ -48,8 +41,6 @@ export default function ContactPageForm() {
           phone: formData.phone,
           businessName: formData.businessName,
           selectedService: formData.service,
-          clientType: "Client",
-          meetingFormat,
           source: "Dedicated Contact Page",
           message: formData.message,
         }),
@@ -97,415 +88,354 @@ export default function ContactPageForm() {
     <div
       style={{
         backgroundColor: "#FFFFFF",
-        borderRadius: "24px",
-        padding: "clamp(1.75rem, 3.5vw, 2.75rem)",
-        boxShadow: "0 20px 50px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04)",
+        borderRadius: "20px",
+        padding: "2.25rem 2rem",
+        boxShadow: "0 10px 35px rgba(0, 0, 0, 0.06)",
         border: "1px solid #E5ECE7",
-        position: "relative",
-        overflow: "hidden",
       }}
     >
-      {/* Decorative Top Accent Gradient Bar */}
-      <div
-        aria-hidden="true"
-        style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "5px",
-          background: "linear-gradient(90deg, #0A0D0B 0%, #C5A869 50%, #0A0D0B 100%)",
-        }}
-      />
+      <style>{`
+        @keyframes tnBtnSpin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+      `}</style>
 
       {submitted ? (
         <div
           style={{
             textAlign: "center",
-            padding: "2.5rem 1rem",
-            animation: "fadeIn 300ms ease",
+            padding: "3rem 1rem",
           }}
         >
           <div
             style={{
-              width: "72px",
-              height: "72px",
+              width: "60px",
+              height: "60px",
               borderRadius: "50%",
-              backgroundColor: "rgba(161, 134, 80, 0.12)",
-              border: "2px solid #C5A869",
+              backgroundColor: "rgba(197, 168, 105, 0.15)",
+              color: "#C5A869",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
-              margin: "0 auto 1.5rem auto",
-              color: "#A18650",
+              margin: "0 auto 1.25rem",
             }}
           >
-            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <svg
+              width="28"
+              height="28"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              aria-hidden="true"
+            >
               <polyline points="20 6 9 17 4 12" />
             </svg>
           </div>
 
           <h3
             style={{
-              fontFamily: 'var(--font-monety), "Monety", serif',
-              fontSize: "2rem",
-              color: "#0A0D0B",
-              marginBottom: "0.75rem",
-              fontWeight: 400,
+              fontFamily: '"Monety", Georgia, serif',
+              fontSize: "1.75rem",
+              color: "#1C2022",
+              marginBottom: "0.5rem",
             }}
           >
-            Consultation Request Received
+            Thank You, {formData.name || "Client"}
           </h3>
 
           <p
             style={{
-              fontSize: "0.98rem",
+              fontSize: "0.92rem",
               color: "#4A5A50",
               lineHeight: 1.6,
-              maxWidth: "480px",
-              margin: "0 auto 1.75rem auto",
+              maxWidth: "420px",
+              margin: "0 auto 1.5rem",
             }}
           >
-            Thank you, <strong>{formData.name || "Client"}</strong>. Your consultation briefing has been securely dispatched directly to our senior advisory desk via Gmail SMTP. A partner will review your requirements and respond within 2 business hours.
+            Your discovery consultation request has been received. One of our team
+            members will review your details and reach out within 2 business
+            hours.
           </p>
 
           <div
             style={{
-              backgroundColor: "#F6F9F7",
-              borderRadius: "14px",
-              padding: "1.25rem 1.5rem",
-              marginBottom: "2rem",
-              border: "1px solid #E1EBE4",
-              textAlign: "left",
-              fontSize: "0.88rem",
-              color: "#2C3E33",
+              display: "flex",
+              flexDirection: "column",
+              gap: "10px",
+              maxWidth: "320px",
+              margin: "0 auto",
             }}
           >
-            <div style={{ marginBottom: "6px" }}>
-              <span style={{ color: "#7B8E82", fontWeight: 600 }}>Meeting Preference:</span> <strong>{meetingFormat}</strong>
-            </div>
-            <div>
-              <span style={{ color: "#7B8E82", fontWeight: 600 }}>Response Guarantee:</span> <strong>Within 2 business hours</strong>
-            </div>
-          </div>
-
-          <div style={{ display: "flex", flexDirection: "column", gap: "10px" }}>
             <a
               href={`https://wa.me/61420956761?text=${encodeURIComponent(
                 `Hi Taxnet, I just submitted a consultation request. My name is ${formData.name || ""}.`
               )}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="playful-btn"
+              aria-label="Chat with us on WhatsApp"
               style={{
-                display: "inline-flex",
+                display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                gap: "10px",
-                backgroundColor: "#25D366",
-                color: "#FFFFFF",
+                gap: "9px",
+                backgroundColor: "#FFFFFF",
+                color: "#1C2022",
+                border: "1.5px solid #25D366",
+                borderRadius: "8px",
+                padding: "11px 18px",
+                fontSize: "0.9rem",
                 fontWeight: 700,
-                fontSize: "0.95rem",
-                padding: "13px 24px",
-                borderRadius: "10px",
                 textDecoration: "none",
-                boxShadow: "0 4px 14px rgba(37, 211, 102, 0.3)",
-                transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+                boxShadow: "0 2px 8px rgba(37, 211, 102, 0.15)",
+                transition: "all 180ms ease",
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "translateY(-3.5px) scale(1.035)";
-                e.currentTarget.style.boxShadow = "0 14px 30px rgba(37, 211, 102, 0.45)";
+                e.currentTarget.style.backgroundColor = "#25D366";
+                e.currentTarget.style.color = "#FFFFFF";
+                e.currentTarget.style.transform = "translateY(-1.5px)";
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.boxShadow = "0 4px 14px rgba(37, 211, 102, 0.3)";
-              }}
-              onMouseDown={(e) => {
-                e.currentTarget.style.transform = "translateY(1.5px) scale(0.97)";
+                e.currentTarget.style.backgroundColor = "#FFFFFF";
+                e.currentTarget.style.color = "#1C2022";
+                e.currentTarget.style.transform = "translateY(0)";
               }}
             >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style={{ flexShrink: 0 }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style={{ flexShrink: 0 }}>
                 <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z" />
               </svg>
-              <span style={{ whiteSpace: "nowrap" }}>Fast-Track on WhatsApp Instant Chat</span>
+              <span>Chat with us</span>
             </a>
 
             <button
               type="button"
               onClick={resetForm}
               style={{
-                background: "none",
-                border: "none",
-                color: "#6B7C72",
+                background: "#0A0D0B",
+                color: "#FFFFFF",
+                border: "1px solid rgba(197, 168, 105, 0.4)",
+                borderRadius: "8px",
+                padding: "10px 22px",
                 fontSize: "0.85rem",
-                textDecoration: "underline",
+                fontWeight: 600,
                 cursor: "pointer",
-                padding: "8px",
+                transition: "background-color 180ms ease",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.backgroundColor = "#222824";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.backgroundColor = "#0A0D0B";
               }}
             >
-              Submit another enquiry
+              Submit Another Enquiry
             </button>
           </div>
         </div>
       ) : (
         <form onSubmit={handleSubmit}>
-          {/* Header */}
-          <div style={{ marginBottom: "2rem" }}>
-            <div
-              style={{
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                letterSpacing: "0.08em",
-                textTransform: "uppercase",
-                color: "#A18650",
-                marginBottom: "0.5rem",
-              }}
-            >
-              Partner Consultation Request
-            </div>
+          <h3
+            style={{
+              fontSize: "1.25rem",
+              fontWeight: 700,
+              color: "#1C2022",
+              marginBottom: "0.4rem",
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Book Your Free Consultation
+          </h3>
+          <p
+            style={{
+              fontSize: "0.82rem",
+              color: "#6B7C72",
+              marginBottom: "1.5rem",
+            }}
+          >
+            Zero cost, zero obligation discovery with our senior advisors.
+          </p>
 
-            <h3
-              style={{
-                fontFamily: 'var(--font-monety), "Monety", serif',
-                fontSize: "clamp(1.75rem, 2.5vw, 2.3rem)",
-                color: "#0A0D0B",
-                fontWeight: 400,
-                lineHeight: 1.18,
-                letterSpacing: "-0.01em",
-                margin: "0 0 0.5rem 0",
-              }}
-            >
-              Book Your Complimentary Discovery
-            </h3>
-
-            <p
-              style={{
-                fontSize: "0.92rem",
-                color: "#5A6B60",
-                lineHeight: 1.55,
-                margin: 0,
-              }}
-            >
-              Confidential, partner-level review of your entity structure, immediate tax opportunities, and lending options. Zero obligation.
-            </p>
-          </div>
-
-          {/* Form Fields: Name & Email */}
+          {/* Name & Email Row */}
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: "1.2rem",
-              marginBottom: "1.2rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "1rem",
+              marginBottom: "1rem",
             }}
           >
             <div>
               <label
-                htmlFor="cf-name"
+                htmlFor="contact-name"
                 style={{
                   display: "block",
-                  fontSize: "0.8rem",
+                  fontSize: "0.78rem",
                   fontWeight: 700,
-                  color: "#0A0D0B",
-                  marginBottom: "6px",
+                  color: "#1C2022",
+                  marginBottom: "4px",
                 }}
               >
                 Full Name *
               </label>
               <input
-                id="cf-name"
+                id="contact-name"
                 name="name"
                 type="text"
                 required
-                placeholder="e.g. David Mitchell"
+                placeholder="e.g. John Smith"
                 value={formData.name}
                 onChange={handleChange}
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: "10px",
-                  border: "1.5px solid #D1DCD5",
-                  fontSize: "0.92rem",
+                  padding: "10px 12px",
+                  borderRadius: "8px",
+                  border: "1px solid #D1DCD5",
+                  fontSize: "0.88rem",
                   color: "#1C2022",
                   outline: "none",
                   backgroundColor: "#FAFBF9",
-                  transition: "border-color 180ms ease, box-shadow 180ms ease",
-                }}
-                onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0A0D0B";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
-                }}
-                onBlur={(e) => {
-                  e.currentTarget.style.borderColor = "#D1DCD5";
-                  e.currentTarget.style.boxShadow = "none";
                 }}
               />
             </div>
-
             <div>
               <label
-                htmlFor="cf-email"
+                htmlFor="contact-email"
                 style={{
                   display: "block",
-                  fontSize: "0.8rem",
+                  fontSize: "0.78rem",
                   fontWeight: 700,
-                  color: "#0A0D0B",
-                  marginBottom: "6px",
+                  color: "#1C2022",
+                  marginBottom: "4px",
                 }}
               >
-                Business or Personal Email *
+                Email Address *
               </label>
               <input
-                id="cf-email"
+                id="contact-email"
                 name="email"
                 type="email"
                 required
-                placeholder="david@enterprise.com.au"
+                placeholder="john@company.com.au"
                 value={formData.email}
                 onChange={handleChange}
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: "10px",
-                  border: "1.5px solid #D1DCD5",
-                  fontSize: "0.92rem",
+                  padding: "10px 12px",
+                  borderRadius: "8px",
+                  border: "1px solid #D1DCD5",
+                  fontSize: "0.88rem",
                   color: "#1C2022",
                   outline: "none",
                   backgroundColor: "#FAFBF9",
-                  transition: "border-color 180ms ease, box-shadow 180ms ease",
-                }}
-                onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0A0D0B";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
-                }}
-                onBlur={(e) => {
-                  e.currentTarget.style.borderColor = "#D1DCD5";
-                  e.currentTarget.style.boxShadow = "none";
                 }}
               />
             </div>
           </div>
 
-          {/* Form Fields: Phone & Business Name */}
+          {/* Phone & Business Name Row */}
           <div
             style={{
               display: "grid",
-              gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-              gap: "1.2rem",
-              marginBottom: "1.2rem",
+              gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+              gap: "1rem",
+              marginBottom: "1rem",
             }}
           >
             <div>
               <label
-                htmlFor="cf-phone"
+                htmlFor="contact-phone"
                 style={{
                   display: "block",
-                  fontSize: "0.8rem",
+                  fontSize: "0.78rem",
                   fontWeight: 700,
-                  color: "#0A0D0B",
-                  marginBottom: "6px",
+                  color: "#1C2022",
+                  marginBottom: "4px",
                 }}
               >
-                Contact Phone Number *
+                Phone Number *
               </label>
               <input
-                id="cf-phone"
+                id="contact-phone"
                 name="phone"
                 type="tel"
                 required
-                placeholder="e.g. 0420 956 761 or (03) 9802 5800"
+                placeholder="0400 000 000"
                 value={formData.phone}
                 onChange={handleChange}
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: "10px",
-                  border: "1.5px solid #D1DCD5",
-                  fontSize: "0.92rem",
+                  padding: "10px 12px",
+                  borderRadius: "8px",
+                  border: "1px solid #D1DCD5",
+                  fontSize: "0.88rem",
                   color: "#1C2022",
                   outline: "none",
                   backgroundColor: "#FAFBF9",
-                  transition: "border-color 180ms ease, box-shadow 180ms ease",
-                }}
-                onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0A0D0B";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
-                }}
-                onBlur={(e) => {
-                  e.currentTarget.style.borderColor = "#D1DCD5";
-                  e.currentTarget.style.boxShadow = "none";
                 }}
               />
             </div>
-
             <div>
               <label
-                htmlFor="cf-biz"
+                htmlFor="contact-business"
                 style={{
                   display: "block",
-                  fontSize: "0.8rem",
+                  fontSize: "0.78rem",
                   fontWeight: 700,
-                  color: "#0A0D0B",
-                  marginBottom: "6px",
+                  color: "#1C2022",
+                  marginBottom: "4px",
                 }}
               >
-                Business / Company Name (Optional)
+                Business / Entity Name
               </label>
               <input
-                id="cf-biz"
+                id="contact-business"
                 name="businessName"
                 type="text"
-                placeholder="e.g. Mitchell Holdings Pty Ltd"
+                placeholder="e.g. Smith Holdings Pty Ltd"
                 value={formData.businessName}
                 onChange={handleChange}
                 style={{
                   width: "100%",
-                  padding: "12px 14px",
-                  borderRadius: "10px",
-                  border: "1.5px solid #D1DCD5",
-                  fontSize: "0.92rem",
+                  padding: "10px 12px",
+                  borderRadius: "8px",
+                  border: "1px solid #D1DCD5",
+                  fontSize: "0.88rem",
                   color: "#1C2022",
                   outline: "none",
                   backgroundColor: "#FAFBF9",
-                  transition: "border-color 180ms ease, box-shadow 180ms ease",
-                }}
-                onFocus={(e) => {
-                  e.currentTarget.style.borderColor = "#0A0D0B";
-                  e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
-                }}
-                onBlur={(e) => {
-                  e.currentTarget.style.borderColor = "#D1DCD5";
-                  e.currentTarget.style.boxShadow = "none";
                 }}
               />
             </div>
           </div>
 
-          {/* Service Needed Dropdown */}
-          <div style={{ marginBottom: "1.2rem" }}>
+          {/* Service Selection */}
+          <div style={{ marginBottom: "1rem" }}>
             <label
-              htmlFor="cf-service"
+              htmlFor="contact-service"
               style={{
                 display: "block",
-                fontSize: "0.8rem",
+                fontSize: "0.78rem",
                 fontWeight: 700,
-                color: "#0A0D0B",
-                marginBottom: "6px",
+                color: "#1C2022",
+                marginBottom: "4px",
               }}
             >
-              Primary Service Needed *
+              Primary Service Needed
             </label>
             <select
-              id="cf-service"
+              id="contact-service"
               name="service"
               value={formData.service}
               onChange={handleChange}
               style={{
                 width: "100%",
-                padding: "12px 14px",
-                borderRadius: "10px",
-                border: "1.5px solid #D1DCD5",
-                fontSize: "0.92rem",
+                padding: "10px 12px",
+                borderRadius: "8px",
+                border: "1px solid #D1DCD5",
+                fontSize: "0.88rem",
                 color: "#1C2022",
                 outline: "none",
                 backgroundColor: "#FAFBF9",
@@ -519,171 +449,64 @@ export default function ContactPageForm() {
             </select>
           </div>
 
-          {/* Meeting Format Radio Cards */}
+          {/* Message Field */}
           <div style={{ marginBottom: "1.5rem" }}>
             <label
+              htmlFor="contact-message"
               style={{
                 display: "block",
-                fontSize: "0.8rem",
+                fontSize: "0.78rem",
                 fontWeight: 700,
-                color: "#0A0D0B",
-                letterSpacing: "0.02em",
-                marginBottom: "0.65rem",
-                textTransform: "uppercase",
+                color: "#1C2022",
+                marginBottom: "4px",
               }}
             >
-              Preferred Meeting Format *
-            </label>
-            <div
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))",
-                gap: "0.6rem",
-              }}
-            >
-              {MEETING_FORMATS.map((fmt) => {
-                const isSelected = meetingFormat === fmt.label;
-                return (
-                  <button
-                    key={fmt.id}
-                    type="button"
-                    onClick={() => setMeetingFormat(fmt.label)}
-                    style={{
-                      padding: "11px 14px",
-                      borderRadius: "10px",
-                      border: isSelected
-                        ? "1.5px solid #0A0D0B"
-                        : "1px solid #D9E4DD",
-                      backgroundColor: isSelected ? "#0A0D0B" : "#FAFBF9",
-                      color: isSelected ? "#FFFFFF" : "#1C2022",
-                      cursor: "pointer",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: "0.84rem",
-                      fontWeight: isSelected ? 700 : 500,
-                      transition: "all 260ms cubic-bezier(0.34, 1.56, 0.64, 1)",
-                      textAlign: "center",
-                      willChange: "transform",
-                    }}
-                    onMouseEnter={(e) => {
-                      if (!isSelected) {
-                        e.currentTarget.style.transform = "translateY(-2.5px) scale(1.03)";
-                        e.currentTarget.style.borderColor = "#C5A869";
-                        e.currentTarget.style.boxShadow = "0 6px 16px rgba(197, 168, 105, 0.18)";
-                      } else {
-                        e.currentTarget.style.transform = "translateY(-2px) scale(1.02)";
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (!isSelected) {
-                        e.currentTarget.style.transform = "translateY(0) scale(1)";
-                        e.currentTarget.style.borderColor = "#D9E4DD";
-                        e.currentTarget.style.boxShadow = "none";
-                      } else {
-                        e.currentTarget.style.transform = "translateY(0) scale(1)";
-                      }
-                    }}
-                    onMouseDown={(e) => {
-                      e.currentTarget.style.transform = "translateY(1.5px) scale(0.97)";
-                    }}
-                    onMouseUp={(e) => {
-                      e.currentTarget.style.transform = "translateY(-2px) scale(1.02)";
-                    }}
-                  >
-                    <span>{fmt.label}</span>
-                  </button>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Message / Objectives Field */}
-          <div style={{ marginBottom: "1.75rem" }}>
-            <label
-              htmlFor="cf-message"
-              style={{
-                display: "block",
-                fontSize: "0.8rem",
-                fontWeight: 700,
-                color: "#0A0D0B",
-                marginBottom: "6px",
-              }}
-            >
-              How can we best prepare for your session? (Optional)
+              How Can We Help? (Optional)
             </label>
             <textarea
-              id="cf-message"
+              id="contact-message"
               name="message"
               rows={3}
-              placeholder="e.g. Looking to review current trust distribution before 30 June, reduce GST on upcoming transactions, and review borrowing power for a commercial property purchase..."
+              placeholder="Tell us briefly about your current situation, business goals, or challenges..."
               value={formData.message}
               onChange={handleChange}
               style={{
                 width: "100%",
-                padding: "12px 14px",
-                borderRadius: "10px",
-                border: "1.5px solid #D1DCD5",
-                fontSize: "0.9rem",
+                padding: "10px 12px",
+                borderRadius: "8px",
+                border: "1px solid #D1DCD5",
+                fontSize: "0.88rem",
                 color: "#1C2022",
                 outline: "none",
                 backgroundColor: "#FAFBF9",
                 fontFamily: "inherit",
                 resize: "vertical",
-                lineHeight: 1.5,
-              }}
-              onFocus={(e) => {
-                e.currentTarget.style.borderColor = "#0A0D0B";
-                e.currentTarget.style.boxShadow = "0 0 0 3px rgba(10, 13, 11, 0.12)";
-              }}
-              onBlur={(e) => {
-                e.currentTarget.style.borderColor = "#D1DCD5";
-                e.currentTarget.style.boxShadow = "none";
               }}
             />
           </div>
 
-          {/* Error Notice if SMTP Fails */}
+          {/* Inline Error Message */}
           {errorMessage && (
             <div
               style={{
-                marginBottom: "1.25rem",
-                padding: "14px 18px",
-                borderRadius: "10px",
+                marginBottom: "1rem",
+                padding: "12px 16px",
+                borderRadius: "8px",
                 backgroundColor: "#FEF2F2",
                 border: "1px solid #FCA5A5",
                 color: "#991B1B",
-                fontSize: "0.88rem",
-                lineHeight: 1.5,
-                display: "flex",
-                flexDirection: "column",
-                gap: "8px",
+                fontSize: "0.85rem",
+                lineHeight: 1.45,
               }}
             >
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", fontWeight: 700 }}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                  <circle cx="12" cy="12" r="10" />
-                  <line x1="12" y1="8" x2="12" y2="12" />
-                  <line x1="12" y1="16" x2="12.01" y2="16" />
-                </svg>
-                <span>Submission Note:</span>
-              </div>
-              <p style={{ margin: 0 }}>{errorMessage}</p>
+              <strong>Submission Note:</strong> {errorMessage}
             </div>
           )}
-
-          <style>{`
-            @keyframes tnBtnSpin {
-              from { transform: rotate(0deg); }
-              to { transform: rotate(360deg); }
-            }
-          `}</style>
 
           {/* Submit Button */}
           <button
             type="submit"
             disabled={loading || isSuccess}
-            className="playful-btn"
             style={{
               width: "100%",
               backgroundColor: isSuccess ? "#C5A869" : loading ? "#141815" : "#0A0D0B",
@@ -693,15 +516,15 @@ export default function ContactPageForm() {
                 : isSuccess
                 ? "1.5px solid #C5A869"
                 : "1px solid rgba(197, 168, 105, 0.45)",
-              borderRadius: "12px",
-              padding: "16px 24px",
-              fontSize: "1rem",
+              borderRadius: "10px",
+              padding: "14px 20px",
+              fontSize: "0.95rem",
               fontWeight: 700,
-              letterSpacing: "0.02em",
+              letterSpacing: "0.01em",
               cursor: loading || isSuccess ? "default" : "pointer",
               boxShadow: loading
-                ? "0 0 18px rgba(197, 168, 105, 0.25)"
-                : "0 8px 24px rgba(10, 13, 11, 0.25)",
+                ? "0 0 16px rgba(197, 168, 105, 0.25)"
+                : "0 4px 18px rgba(0, 0, 0, 0.25)",
               transition: "all 340ms cubic-bezier(0.34, 1.56, 0.64, 1)",
               display: "flex",
               alignItems: "center",
@@ -711,10 +534,11 @@ export default function ContactPageForm() {
             }}
             onMouseEnter={(e) => {
               if (!loading && !isSuccess) {
-                e.currentTarget.style.backgroundColor = "#1a211d";
+                e.currentTarget.style.backgroundColor = "#161A18";
                 e.currentTarget.style.borderColor = "#C5A869";
-                e.currentTarget.style.transform = "translateY(-4px) scale(1.025)";
-                e.currentTarget.style.boxShadow = "0 16px 36px -6px rgba(10, 13, 11, 0.45), 0 0 0 1px rgba(197, 168, 105, 0.5)";
+                e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
+                e.currentTarget.style.boxShadow =
+                  "0 12px 28px rgba(10, 13, 11, 0.35), 0 0 0 1px rgba(197, 168, 105, 0.3)";
               }
             }}
             onMouseLeave={(e) => {
@@ -722,17 +546,17 @@ export default function ContactPageForm() {
                 e.currentTarget.style.backgroundColor = "#0A0D0B";
                 e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
                 e.currentTarget.style.transform = "translateY(0) scale(1)";
-                e.currentTarget.style.boxShadow = "0 8px 24px rgba(10, 13, 11, 0.25)";
+                e.currentTarget.style.boxShadow = "0 4px 18px rgba(0, 0, 0, 0.25)";
               }
             }}
             onMouseDown={(e) => {
               if (!loading && !isSuccess) {
-                e.currentTarget.style.transform = "translateY(1.5px) scale(0.975)";
+                e.currentTarget.style.transform = "translateY(1.5px) scale(0.97)";
               }
             }}
             onMouseUp={(e) => {
               if (!loading && !isSuccess) {
-                e.currentTarget.style.transform = "translateY(-4px) scale(1.025)";
+                e.currentTarget.style.transform = "translateY(-3.5px) scale(1.025)";
               }
             }}
           >
@@ -746,8 +570,19 @@ export default function ContactPageForm() {
                   fill="none"
                   aria-hidden="true"
                 >
-                  <circle cx="12" cy="12" r="10" stroke="rgba(255, 255, 255, 0.25)" strokeWidth="3" />
-                  <path d="M12 2a10 10 0 0 1 10 10" stroke="#C5A869" strokeWidth="3" strokeLinecap="round" />
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="rgba(255, 255, 255, 0.25)"
+                    strokeWidth="3"
+                  />
+                  <path
+                    d="M12 2a10 10 0 0 1 10 10"
+                    stroke="#C5A869"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
                 </svg>
                 <span>Submitting Consultation Request...</span>
               </>
@@ -770,8 +605,17 @@ export default function ContactPageForm() {
               </>
             ) : (
               <>
-                <span>Book A Consultation</span>
-                <span className="btn-arrow" style={{ fontSize: "1.1rem" }}>→</span>
+                <span>Request Consultation · Get Free Assessment</span>
+                <span
+                  className="btn-arrow"
+                  style={{
+                    fontSize: "1.05rem",
+                    transition: "transform 300ms cubic-bezier(0.34, 1.56, 0.64, 1)",
+                    display: "inline-block",
+                  }}
+                >
+                  →
+                </span>
               </>
             )}
           </button>
@@ -792,4 +636,3 @@ export default function ContactPageForm() {
     </div>
   );
 }
-

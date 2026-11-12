@@ -597,11 +597,23 @@ export default function Footer() {
           </button>
         </div>
 
-        {/* ── Mortgage Broking Credit Disclosure ── */}
+        {/* ── Professional Standards Scheme Notice ── */}
         <div
           style={{
             borderTop: "1px solid rgba(255, 255, 255, 0.08)",
-            paddingTop: "1.25rem",
+            paddingTop: "1rem",
+            paddingBottom: "0.5rem",
+            fontSize: "0.8rem",
+            lineHeight: 1.5,
+            color: "rgba(255, 255, 255, 0.7)",
+          }}
+        >
+          Liability limited by a scheme approved under Professional Standards Legislation.
+        </div>
+
+        {/* ── Mortgage Broking Credit Disclosure ── */}
+        <div
+          style={{
             paddingBottom: "1.25rem",
             fontSize: "0.74rem",
             lineHeight: 1.6,
@@ -609,7 +621,7 @@ export default function Footer() {
           }}
         >
           <strong style={{ color: "#C5A869" }}>Credit Services & Mortgage Broking Disclosure:</strong>{" "}
-          Credit activities and mortgage broking services are provided in accordance with the National Consumer Credit Protection Act 2009. Credit Representative / Australian Credit Licence (ACL) details: [Australian Credit Licence / Credit Representative No. — To be specified]. Taxnet Business Consultants operates in compliance with all relevant ASIC and regulatory credit obligations.
+          Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328) has access to a panel of lenders through National Mortgage Brokers Pty Ltd., (ACN 093 874 376 / Australian Credit Licence 391209), which is a fully-owned subsidiary of Liberty Financial Pty Ltd (ACN 077 248 983 / Australian Credit Licence 286596). Taxnet Business Consultants Pty Ltd has access to products including those from Liberty Financial.
         </div>
 
         {/* ── Bottom Legal Disclaimer & Copyright ── */}
@@ -645,7 +657,7 @@ export default function Footer() {
               onMouseEnter={(e) => (e.currentTarget.style.color = "#C5A869")}
               onMouseLeave={(e) => (e.currentTarget.style.color = "rgba(255, 255, 255, 0.65)")}
             >
-              Terms of Engagement
+              Terms of Service
             </Link>
             <Link
               href="/contact"
@@ -878,18 +890,31 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Mobile Credit Disclosure */}
+        {/* Mobile Professional Standards Notice */}
         <div
           style={{
             borderTop: "1px solid rgba(255, 255, 255, 0.08)",
             paddingTop: "0.85rem",
-            marginBottom: "0.85rem",
+            paddingBottom: "0.35rem",
+            fontSize: "0.78rem",
+            lineHeight: 1.5,
+            color: "rgba(255, 255, 255, 0.7)",
+          }}
+        >
+          Liability limited by a scheme approved under Professional Standards Legislation.
+        </div>
+
+        {/* Mobile Credit Disclosure */}
+        <div
+          style={{
+            paddingBottom: "0.85rem",
             fontSize: "0.68rem",
             lineHeight: 1.5,
             color: "rgba(255, 255, 255, 0.5)",
           }}
         >
-          <strong style={{ color: "#C5A869" }}>Credit Disclosure:</strong> Mortgage broking services are provided in accordance with the National Consumer Credit Protection Act 2009. Credit Rep / ACL: [To be inserted].
+          <strong style={{ color: "#C5A869" }}>Credit Services & Mortgage Broking Disclosure:</strong>{" "}
+          Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328) has access to a panel of lenders through National Mortgage Brokers Pty Ltd., (ACN 093 874 376 / Australian Credit Licence 391209), which is a fully-owned subsidiary of Liberty Financial Pty Ltd (ACN 077 248 983 / Australian Credit Licence 286596). Taxnet Business Consultants Pty Ltd has access to products including those from Liberty Financial.
         </div>
 
         {/* Compact Legal Footer & Back to Top */}

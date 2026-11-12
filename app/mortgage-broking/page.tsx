@@ -372,7 +372,7 @@ export default function MortgageBrokingPage() {
               }}
             >
               <strong style={{ color: "#0A0D0B" }}>Australian Credit Licence & Credit Disclosure:</strong>{" "}
-              Mortgage broking and credit assistance services are provided by Taxnet Business Consultants in accordance with the National Consumer Credit Protection Act 2009. Credit Representative / Australian Credit Licence details: [Details to be supplied] · FBAA Accredited.
+              Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328) has access to a panel of lenders through National Mortgage Brokers Pty Ltd., (ACN 093 874 376 / Australian Credit Licence 391209), which is a fully-owned subsidiary of Liberty Financial Pty Ltd (ACN 077 248 983 / Australian Credit Licence 286596). Taxnet Business Consultants Pty Ltd has access to products including those from Liberty Financial.
             </div>
 
             {/* ─── CALL TO ACTION BANNER ─── */}

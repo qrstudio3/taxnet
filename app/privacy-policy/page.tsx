@@ -4,259 +4,147 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | Taxnet CPA Accountants & Mortgage Advisory Melbourne",
+  title: "Privacy Policy | Taxnet Business Consultants Melbourne",
   description:
-    "Taxnet's Privacy Policy outlining our compliance with the Privacy Act 1988 (Cth), Australian Privacy Principles (APPs), Tax Agent Services Act 2009, and CPA Australia fiduciary codes.",
+    "Privacy Policy for Taxnet Business Consultants. How we handle personal and financial information in line with the Privacy Act 1988 (Cth), Australian Privacy Principles, and the Privacy (TFN) Rule 2015.",
   keywords: [
     "Taxnet privacy policy",
-    "CPA client confidentiality Melbourne",
+    "client confidentiality Melbourne",
     "Privacy Act 1988 compliance",
     "Tax File Number security",
     "Australian Privacy Principles accounting",
   ],
 };
 
-const SECTIONS = [
+const PRIVACY_SECTIONS = [
   {
-    id: "overview",
     number: "01",
-    title: "Commitment to Fiduciary Confidentiality",
+    title: "Who we are",
     content: (
-      <>
-        <p>
-          Taxnet Pty Ltd (&ldquo;Taxnet&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;, or &ldquo;our&rdquo;), operating under
-          ABN 40 610 387 881, is committed to safeguarding the confidentiality, integrity, and privacy of all personal,
-          commercial, and financial information entrusted to us by our clients and website visitors.
-        </p>
-        <p>
-          As a registered <strong>CPA Australia Public Practice</strong>, an authorised <strong>Tax Practitioners Board (TPB)</strong> registered
-          tax agent, and an accredited member firm of the <strong>Finance Brokers Association of Australia (FBAA)</strong>,
-          our handling of your information is strictly governed by:
-        </p>
-        <ul>
-          <li>The <em>Privacy Act 1988 (Cth)</em> and the Australian Privacy Principles (APPs);</li>
-          <li>The <em>Privacy (Tax File Number) Rule 2015</em> issued under the <em>Privacy Act 1988</em>;</li>
-          <li>The <em>Tax Agent Services Act 2009 (TASA)</em> Code of Professional Conduct;</li>
-          <li>The <em>National Consumer Credit Protection Act 2009 (Cth)</em> (NCCP Act); and</li>
-          <li>APES 110 <em>Code of Ethics for Professional Accountants</em> issued by the Accounting Professional &amp; Ethical Standards Board.</li>
-        </ul>
-      </>
+      <p style={{ margin: 0 }}>
+        This policy applies to The Trustee for Taxnet Unit Trust trading as Taxnet Business Consultants (ABN 40 610 387 881), and to Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328) for mortgage broking (&ldquo;Taxnet&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). We handle personal information in line with the <em>Privacy Act 1988 (Cth)</em>, the Australian Privacy Principles and the <em>Privacy (Tax File Number) Rule 2015</em>.
+      </p>
     ),
   },
   {
-    id: "information-collected",
     number: "02",
-    title: "Personal & Financial Information We Collect",
+    title: "What we collect",
     content: (
       <>
-        <p>
-          To provide senior-level taxation strategy, accounting lodgements, and credit assistance, Taxnet collects various
-          categories of information necessary to fulfill our professional engagements:
+        <p style={{ margin: "0 0 0.85rem 0" }}>
+          We collect information we need to provide our services, including:
         </p>
-        <div style={{ display: "grid", gap: "1rem", marginTop: "1rem" }}>
-          <div style={{ padding: "1.25rem", borderRadius: "12px", backgroundColor: "#F7FAF8", border: "1px solid #E1ECE4" }}>
-            <h4 style={{ margin: "0 0 0.5rem 0", color: "#0D3E26", fontSize: "0.98rem" }}>A. Identity &amp; Contact Particulars</h4>
-            <p style={{ margin: 0, fontSize: "0.9rem", color: "#4A5A50" }}>
-              Full legal names, residential addresses, registered business addresses, dates of birth, passport and driver licence details,
-              Medicare details, email addresses, and contact phone numbers required for client identification and verification under the
-              <em>Anti-Money Laundering and Counter-Terrorism Financing Act 2006 (AML/CTF Act)</em>.
-            </p>
-          </div>
-
-          <div style={{ padding: "1.25rem", borderRadius: "12px", backgroundColor: "#F7FAF8", border: "1px solid #E1ECE4" }}>
-            <h4 style={{ margin: "0 0 0.5rem 0", color: "#0D3E26", fontSize: "0.98rem" }}>B. Taxation &amp; Regulatory Identifiers</h4>
-            <p style={{ margin: 0, fontSize: "0.9rem", color: "#4A5A50" }}>
-              Tax File Numbers (TFNs), Australian Business Numbers (ABNs), Australian Company Numbers (ACNs), Director Identification Numbers (DINs),
-              and Australian Taxation Office (ATO) historical portal lodgement records.
-            </p>
-          </div>
-
-          <div style={{ padding: "1.25rem", borderRadius: "12px", backgroundColor: "#F7FAF8", border: "1px solid #E1ECE4" }}>
-            <h4 style={{ margin: "0 0 0.5rem 0", color: "#0D3E26", fontSize: "0.98rem" }}>C. Financial Statements, Ledgers &amp; Payroll Records</h4>
-            <p style={{ margin: 0, fontSize: "0.9rem", color: "#4A5A50" }}>
-              Bank account statements, balance sheets, profit &amp; loss statements, general ledgers from cloud software (Xero, MYOB, QuickBooks),
-              invoices, payroll records, Single Touch Payroll (STP) files, superannuation contribution records, asset registers, and depreciation schedules.
-            </p>
-          </div>
-
-          <div style={{ padding: "1.25rem", borderRadius: "12px", backgroundColor: "#F7FAF8", border: "1px solid #E1ECE4" }}>
-            <h4 style={{ margin: "0 0 0.5rem 0", color: "#0D3E26", fontSize: "0.98rem" }}>D. Mortgage, Lending &amp; Credit Information</h4>
-            <p style={{ margin: 0, fontSize: "0.9rem", color: "#4A5A50" }}>
-              Existing mortgage balances, credit card limits, personal loan contracts, living expense estimates (HEM benchmarks), real estate
-              valuations, purchase contracts of sale, and personal asset-and-liability summaries required for lender serviceability assessments.
-            </p>
-          </div>
-        </div>
+        <ul style={{ margin: 0, paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.55rem" }}>
+          <li>Name, contact details, date of birth and identification documents</li>
+          <li>Tax file numbers, ABNs and other government identifiers</li>
+          <li>Income, financial, business, payroll and tax records</li>
+          <li>For loans: employment, assets, liabilities, expenses and credit history</li>
+          <li>Website enquiries and any other information you choose to give us</li>
+        </ul>
       </>
     ),
   },
   {
-    id: "collection-methods",
     number: "03",
-    title: "How We Collect Your Information",
+    title: "How we collect it",
     content: (
-      <>
-        <p>
-          We collect personal and financial information through transparent, lawful means:
-        </p>
-        <ul>
-          <li><strong>Direct Client Communication:</strong> During in-person discovery meetings at our Doncaster East suites, secure video conferences, telephone calls, and structured digital questionnaires;</li>
-          <li><strong>Secure Website Submissions:</strong> When you complete an inquiry or booking form on <code>taxnet.com.au</code>;</li>
-          <li><strong>Client Portal &amp; Cloud Integrations:</strong> Via direct invitation into cloud accounting platforms (Xero, MYOB, QuickBooks Online) or encrypted document transmission;</li>
-          <li><strong>Government Agencies &amp; Regulators:</strong> Directly from the Australian Taxation Office (ATO) via our registered Tax Agent Portal, and the Australian Securities &amp; Investments Commission (ASIC);</li>
-          <li><strong>Previous Professional Advisers:</strong> From your predecessor accountant upon execution of formal Ethical Clearance documentation pursuant to CPA Australia professional standards; and</li>
-          <li><strong>Credit Reporting Bodies &amp; Financial Institutions:</strong> With your express written consent when applying for residential mortgages or commercial credit facilities.</li>
-        </ul>
-      </>
+      <p style={{ margin: 0 }}>
+        Mostly directly from you, in person, by phone, email or our website. With your consent, we may also collect it from the ATO, ASIC, your previous accountant, lenders, credit reporting bodies, and others you authorise.
+      </p>
     ),
   },
   {
-    id: "use-and-disclosure",
     number: "04",
-    title: "Purpose of Collection, Use & Disclosure",
+    title: "Why we collect it",
     content: (
-      <>
-        <p>
-          Taxnet collects and uses your information strictly for legitimate commercial and fiduciary advisory objectives:
-        </p>
-        <ul>
-          <li>Preparing and lodging annual Income Tax Returns, Business Activity Statements (BAS), Fringe Benefits Tax (FBT) returns, and SMSF compliance accounts with the ATO;</li>
-          <li>Delivering proactive business structuring, cashflow advisory, and corporate secretarial management with ASIC;</li>
-          <li>Structuring, assessing, and submitting residential mortgage, refinancing, and commercial equipment finance applications to Australian banks and accredited non-bank lenders;</li>
-          <li>Communicating critical statutory deadlines, regulatory tax reforms, and practice updates relevant to your enterprise; and</li>
-          <li>Complying with statutory reporting requirements under the <em>Corporations Act 2001</em>, <em>TASA 2009</em>, and <em>AML/CTF Act 2006</em>.</li>
-        </ul>
-        <div style={{ padding: "1rem 1.25rem", borderRadius: "10px", backgroundColor: "#FEF9EE", border: "1px solid #EBD5A0", marginTop: "1rem" }}>
-          <strong style={{ color: "#7B5B1E", display: "block", marginBottom: "0.25rem" }}>Our Strict Non-Monetization Pledge:</strong>
-          <span style={{ fontSize: "0.92rem", color: "#5F4517" }}>
-            Taxnet will <strong>never</strong> sell, rent, license, or disclose your personal contact information or financial data to third-party marketing companies, advertisers, or lead brokers. All disclosures occur solely within direct fiduciary lines authorized by you.
-          </span>
-        </div>
-      </>
+      <p style={{ margin: 0 }}>
+        To prepare and lodge returns and statements, provide accounting, bookkeeping and advisory services, help you apply for credit, verify your identity, meet our legal obligations, and keep in touch with you about your affairs. We don’t sell your personal information.
+      </p>
     ),
   },
   {
-    id: "tfn-protection",
     number: "05",
-    title: "Tax File Number (TFN) Security",
+    title: "Who we share it with",
     content: (
-      <>
-        <p>
-          Tax File Numbers are subject to heightened legislative protection under the <em>Privacy (Tax File Number) Rule 2015</em>.
-          Taxnet strictly adheres to all statutory restrictions:
-        </p>
-        <ul>
-          <li>Your TFN is only requested and used for authorised taxation and superannuation compliance purposes;</li>
-          <li>We will never disclose your TFN to third parties (including lenders or commercial brokers) without explicit legislative sanction or distinct written authority;</li>
-          <li>TFNs stored within our secure cloud databases are encrypted at rest; and</li>
-          <li>When records reach the conclusion of statutory retention periods, TFNs are securely de-identified or destroyed in accordance with TPB guidance.</li>
-        </ul>
-      </>
+      <p style={{ margin: 0 }}>
+        Only as needed to provide our services, or where the law requires it. This may include the ATO, ASIC, lenders and our credit licensee National Mortgage Brokers Pty Ltd (Australian Credit Licence 391209), credit reporting bodies, your other advisers (with your consent), and service providers who help us run our practice, such as our email, cloud accounting and document storage providers. We only use or disclose your tax file number for purposes allowed by law.
+      </p>
     ),
   },
   {
-    id: "storage-security",
     number: "06",
-    title: "Data Storage, Sovereignty & Cybersecurity",
+    title: "Overseas storage",
     content: (
-      <>
-        <p>
-          Taxnet employs enterprise-grade cybersecurity measures engineered to protect sensitive client records against
-          loss, unauthorized access, alteration, or interception:
-        </p>
-        <ul>
-          <li><strong>Data Sovereignty:</strong> Primary cloud infrastructure and document repositories reside within certified Australian ISO 27001 data centers located in Melbourne and Sydney;</li>
-          <li><strong>Transport &amp; At-Rest Encryption:</strong> All website interactions and API endpoints enforce TLS 1.3 encryption. Internal databases utilize AES-256 encryption;</li>
-          <li><strong>Multi-Factor Authentication (MFA):</strong> All partner, staff, and external administrative access mandates hardware-backed or authenticator-based multi-factor authentication;</li>
-          <li><strong>Certified Cloud Ecosystems:</strong> We partner exclusively with accredited cloud accounting platforms (Xero, MYOB, Intuit QuickBooks) adhering to SOC-2 Type II benchmark audits; and</li>
-          <li><strong>Physical Suite Security:</strong> Our Doncaster East offices maintain biometric/code-controlled access, clean desk policies, and secure on-site document destruction bins.</li>
-        </ul>
-      </>
+      <p style={{ margin: 0 }}>
+        Some of our service providers may store or process information outside Australia, including in [countries to be confirmed, e.g. the United States]. We take reasonable steps to make sure they protect your information.
+      </p>
     ),
   },
   {
-    id: "record-retention",
     number: "07",
-    title: "Retention & Disposal of Financial Records",
+    title: "How we keep it secure",
     content: (
-      <>
-        <p>
-          Under section 382-5 of Schedule 1 to the <em>Taxation Administration Act 1953 (Cth)</em> and associated legislation,
-          taxpayers and registered tax agents must retain accounting records, receipts, and supporting tax working papers for a
-          statutory minimum period of <strong>five (5) to seven (7) years</strong> from the date of assessment or transaction completion.
-        </p>
-        <p>
-          Upon the expiration of statutory retention obligations and where records are no longer required for active professional
-          representation, electronic records are permanently purged and physical documents are shredded by licensed confidential
-          waste contractors.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        We take reasonable steps to protect your information from misuse, loss and unauthorised access, including secure systems, multi-factor authentication and restricted staff access. We keep records for as long as the law requires, then destroy or de-identify them securely.
+      </p>
     ),
   },
   {
-    id: "access-and-correction",
     number: "08",
-    title: "Your Rights to Access & Correction",
+    title: "Marketing",
     content: (
-      <>
-        <p>
-          Under Australian Privacy Principles 12 and 13, you have the right to request access to any personal information Taxnet
-          holds about you, and to request correction if you believe the information is inaccurate, out of date, or incomplete.
-        </p>
-        <p>
-          To exercise your rights, please submit a written request to our Privacy Officer. We will respond within thirty (30) days.
-          In certain circumstances where statutory exemptions apply (such as ongoing legal proceedings or client legal privilege),
-          we will provide a written explanation detailing the statutory rationale.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        We may send you practice updates. You can opt out at any time by contacting us or using the unsubscribe link.
+      </p>
     ),
   },
   {
-    id: "cookies-analytics",
     number: "09",
-    title: "Website Cookies & Digital Analytics",
+    title: "Our website",
     content: (
-      <>
-        <p>
-          When you browse <code>taxnet.com.au</code>, we may employ standard HTTP cookies and privacy-respecting analytics
-          to measure aggregate website traffic, optimize page rendering speeds, and improve visitor usability.
-        </p>
-        <p>
-          Cookies do not extract personal identifiers from your device. You may disable cookies in your browser settings at any time
-          without losing access to essential website functionality.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        Our website may use cookies and basic analytics to understand how it’s used. Information you submit through our forms is used only to respond to your enquiry.
+      </p>
     ),
   },
   {
-    id: "contact-privacy-officer",
     number: "10",
-    title: "Privacy Officer Contact Details & Complaints",
+    title: "Access and correction",
     content: (
-      <>
-        <p>
-          If you have any questions, concerns, or wish to lodge a formal complaint regarding Taxnet&rsquo;s handling of your
-          personal information under the Australian Privacy Principles, please contact our appointed Privacy Officer:
-        </p>
-        <div style={{ padding: "1.5rem", borderRadius: "14px", backgroundColor: "#0D3E26", color: "#FFFFFF", marginTop: "1rem" }}>
-          <div style={{ fontSize: "0.82rem", color: "#C5A869", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "0.5rem" }}>
-            Appointed Privacy Officer · Taxnet Practice
-          </div>
-          <div style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "0.5rem" }}>
-            Taxnet Business Consultants
-          </div>
-          <div style={{ fontSize: "0.92rem", lineHeight: 1.6, color: "rgba(255, 255, 255, 0.85)" }}>
-            Suite 6, 861 Doncaster Road, Doncaster East VIC 3109<br />
-            Telephone: (03) 9802 5800<br />
-            Email: <a href="mailto:info@taxnet.com.au" style={{ color: "#C5A869", textDecoration: "underline" }}>info@taxnet.com.au</a> (Attn: Privacy Officer)<br />
-            Operating Hours: Monday – Friday: 9:00 AM – 5:30 PM (AEST)
-          </div>
-        </div>
-        <p style={{ marginTop: "1rem", fontSize: "0.88rem", color: "#6A7B70" }}>
-          If you are dissatisfied with our response, you retain the statutory right to escalate your complaint to the
-          <strong> Office of the Australian Information Commissioner (OAIC)</strong> at <a href="https://www.oaic.gov.au" target="_blank" rel="noopener noreferrer" style={{ color: "#0D3E26", textDecoration: "underline" }}>www.oaic.gov.au</a> or by calling 1300 363 992.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        You can ask to see or correct the personal information we hold about you. Contact us and we’ll respond within 30 days.
+      </p>
+    ),
+  },
+  {
+    number: "11",
+    title: "Questions and complaints",
+    content: (
+      <p style={{ margin: 0 }}>
+        Contact our Privacy Officer on{" "}
+        <a href="tel:0398025800" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          (03) 9802 5800
+        </a>
+        , at{" "}
+        <a href="mailto:info@taxnet.com.au" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          info@taxnet.com.au
+        </a>
+        , or at{" "}
+        <strong>Suite 6, 861 Doncaster Road, Doncaster East VIC 3109</strong>. We’ll respond within 30 days. If you’re not satisfied, you can contact the Office of the Australian Information Commissioner at{" "}
+        <a
+          href="https://www.oaic.gov.au"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ color: "#A18650", textDecoration: "underline" }}
+        >
+          www.oaic.gov.au
+        </a>{" "}
+        or{" "}
+        <a href="tel:1300363992" style={{ color: "#A18650", textDecoration: "underline" }}>
+          1300 363 992
+        </a>
+        . Complaints about credit services can also go to AFCA, as set out in our Credit Guide.
+      </p>
     ),
   },
 ];
@@ -270,8 +158,8 @@ export default function PrivacyPolicyPage() {
         {/* ── Header Hero Banner ── */}
         <section
           style={{
-            backgroundColor: "#061A10",
-            background: "linear-gradient(180deg, #04140D 0%, #0D3E26 100%)",
+            backgroundColor: "#0A0D0B",
+            background: "linear-gradient(180deg, #070908 0%, #0E1410 100%)",
             color: "#FFFFFF",
             paddingTop: "140px",
             paddingBottom: "4.5rem",
@@ -280,7 +168,7 @@ export default function PrivacyPolicyPage() {
             borderBottom: "1px solid rgba(197, 168, 105, 0.25)",
           }}
         >
-          {/* Subtle Ambient Halo */}
+          {/* Ambient Golden Glow */}
           <div
             aria-hidden="true"
             style={{
@@ -325,40 +213,30 @@ export default function PrivacyPolicyPage() {
               <span style={{ color: "#C5A869" }}>Privacy Policy</span>
             </div>
 
-            {/* Overline Badge */}
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                padding: "6px 14px",
-                borderRadius: "999px",
-                backgroundColor: "rgba(197, 168, 105, 0.12)",
-                border: "1px solid rgba(197, 168, 105, 0.3)",
-                color: "#E5D6B6",
-                fontSize: "0.78rem",
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                marginBottom: "1.25rem",
-              }}
-            >
-              <span>Statutory Legal Notice &amp; Client Protection</span>
-            </div>
-
             <h1
               style={{
-                fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                 fontSize: "clamp(2.4rem, 4.8vw, 3.8rem)",
                 fontWeight: 400,
                 lineHeight: 1.12,
                 color: "#FFFFFF",
-                margin: "0 0 1.25rem 0",
+                margin: "0 0 0.5rem 0",
                 letterSpacing: "-0.018em",
               }}
             >
-              Privacy Policy &amp; Data Governance
+              Privacy Policy
             </h1>
+
+            <div
+              style={{
+                fontSize: "0.88rem",
+                color: "#C5A869",
+                fontWeight: 600,
+                marginBottom: "1.25rem",
+              }}
+            >
+              Last updated: November 2026
+            </div>
 
             <p
               style={{
@@ -369,11 +247,10 @@ export default function PrivacyPolicyPage() {
                 margin: "0 0 2rem 0",
               }}
             >
-              How Taxnet collects, protects, utilizes, and governs confidential accounting, taxation, and mortgage
-              data pursuant to the <em>Privacy Act 1988 (Cth)</em> and CPA Australia professional ethical standards.
+              This policy outlines how Taxnet Business Consultants and Taxnet Business Consultants Pty Ltd handle personal information in line with the Privacy Act 1988 (Cth), the Australian Privacy Principles and the Privacy (Tax File Number) Rule 2015.
             </p>
 
-            {/* Practice Governance Highlights */}
+            {/* Regulatory Governance Strip */}
             <div
               style={{
                 display: "flex",
@@ -386,13 +263,13 @@ export default function PrivacyPolicyPage() {
               }}
             >
               <div>
-                <strong style={{ color: "#C5A869" }}>Governing Entity:</strong> Taxnet Business Consultants (ABN 40 610 387 881)
+                <strong style={{ color: "#C5A869" }}>Statutory Framework:</strong> Privacy Act 1988 (Cth) &amp; APPs
               </div>
               <div>
-                <strong style={{ color: "#C5A869" }}>Primary Jurisdiction:</strong> Victoria, Australia (APPs Compliant)
+                <strong style={{ color: "#C5A869" }}>TFN Protection:</strong> Privacy (TFN) Rule 2015
               </div>
               <div>
-                <strong style={{ color: "#C5A869" }}>Last Reviewed:</strong> November 2026
+                <strong style={{ color: "#C5A869" }}>Office:</strong> Suite 6, 861 Doncaster Road, Doncaster East VIC 3109
               </div>
             </div>
           </div>
@@ -401,7 +278,7 @@ export default function PrivacyPolicyPage() {
         {/* ── Main Legal Clauses Content Section ── */}
         <section
           style={{
-            paddingTop: "4rem",
+            paddingTop: "3.5rem",
             paddingBottom: "5.5rem",
           }}
         >
@@ -417,28 +294,27 @@ export default function PrivacyPolicyPage() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr",
-                gap: "2.5rem",
+                gap: "1.75rem",
               }}
             >
-              {SECTIONS.map((sec) => (
+              {PRIVACY_SECTIONS.map((sec) => (
                 <article
-                  key={sec.id}
-                  id={sec.id}
+                  key={sec.number}
                   style={{
                     backgroundColor: "#FFFFFF",
-                    borderRadius: "20px",
-                    padding: "clamp(1.75rem, 3.5vw, 2.75rem)",
-                    border: "1px solid #E3ECE5",
-                    boxShadow: "0 4px 20px rgba(13, 62, 38, 0.04)",
+                    borderRadius: "16px",
+                    padding: "clamp(1.5rem, 3vw, 2.25rem)",
+                    border: "1px solid #E2ECE5",
+                    boxShadow: "0 4px 18px rgba(0, 0, 0, 0.03)",
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1rem" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "0.85rem" }}>
                     <span
                       style={{
                         fontSize: "0.82rem",
                         fontWeight: 800,
                         color: "#C5A869",
-                        backgroundColor: "#0D3E26",
+                        backgroundColor: "#0A0D0B",
                         padding: "4px 10px",
                         borderRadius: "6px",
                         letterSpacing: "0.08em",
@@ -448,10 +324,10 @@ export default function PrivacyPolicyPage() {
                     </span>
                     <h2
                       style={{
-                        fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
-                        fontSize: "clamp(1.5rem, 2.5vw, 1.95rem)",
+                        fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                        fontSize: "clamp(1.35rem, 2.2vw, 1.7rem)",
                         fontWeight: 400,
-                        color: "#0D3E26",
+                        color: "#0A0D0B",
                         margin: 0,
                         lineHeight: 1.25,
                       }}
@@ -462,7 +338,7 @@ export default function PrivacyPolicyPage() {
 
                   <div
                     style={{
-                      fontSize: "0.96rem",
+                      fontSize: "0.95rem",
                       lineHeight: 1.75,
                       color: "#38473E",
                     }}
@@ -473,34 +349,36 @@ export default function PrivacyPolicyPage() {
               ))}
             </div>
 
-            {/* Direct Consultation Link Card */}
+            {/* Questions Card */}
             <div
               style={{
                 marginTop: "3.5rem",
                 padding: "2.5rem",
                 borderRadius: "20px",
-                backgroundColor: "#0D3E26",
+                backgroundColor: "#0A0D0B",
                 color: "#FFFFFF",
                 display: "flex",
                 flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "space-between",
                 gap: "1.5rem",
+                border: "1px solid rgba(197, 168, 105, 0.3)",
               }}
             >
               <div style={{ maxWidth: "600px" }}>
                 <h3
                   style={{
-                    fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                    fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "1.65rem",
                     fontWeight: 400,
+                    color: "#FFFFFF",
                     margin: "0 0 0.5rem 0",
                   }}
                 >
-                  Have Specific Compliance or Confidentiality Requirements?
+                  Questions About Your Privacy or Information?
                 </h3>
-                <p style={{ margin: 0, fontSize: "0.92rem", color: "rgba(255, 255, 255, 0.8)", lineHeight: 1.6 }}>
-                  Speak directly with our advisory team regarding secure data exchange, NDA executions, or bespoke corporate governance.
+                <p style={{ margin: 0, fontSize: "0.92rem", color: "rgba(255, 255, 255, 0.9)", lineHeight: 1.6 }}>
+                  Our team is committed to transparency. Contact our Privacy Officer for any questions regarding your personal information, records, or privacy rights.
                 </p>
               </div>
 
@@ -508,16 +386,17 @@ export default function PrivacyPolicyPage() {
                 href="/contact"
                 style={{
                   backgroundColor: "#C5A869",
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   fontWeight: 700,
                   fontSize: "0.92rem",
                   padding: "14px 26px",
                   borderRadius: "10px",
                   textDecoration: "none",
                   boxShadow: "0 6px 18px rgba(197, 168, 105, 0.35)",
+                  transition: "background-color 180ms ease, transform 180ms ease",
                 }}
               >
-                Book Practice Consultation →
+                Contact Privacy Officer →
               </Link>
             </div>
           </div>
@@ -528,4 +407,3 @@ export default function PrivacyPolicyPage() {
     </>
   );
 }
-

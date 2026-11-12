@@ -69,10 +69,10 @@ export async function POST(request: Request) {
     // Clean parameters for mailto response (preserve raw '@' for the recipient so email clients populate 'To' field)
     const cleanClientName = (name || "Client").trim();
     const cleanEmail = (email || "").trim();
-    const cleanService = (selectedService || "Taxnet Advisory").trim();
-    const mailtoSubject = encodeURIComponent(`Taxnet Consultation - ${cleanClientName}`);
+    const cleanService = (selectedService || "Accounting & Advisory").trim();
+    const mailtoSubject = encodeURIComponent(`Taxnet Consultation for ${cleanClientName}`);
     const mailtoBody = encodeURIComponent(
-      `Hi ${cleanClientName},\n\nThank you for reaching out to Taxnet regarding ${cleanService}. We have received your inquiry and would be delighted to assist you.\n\nPlease let us know what time suits you best for a brief call, or feel free to reply directly to this email with any documents or details.\n\nWarm regards,\nPhilip\nTaxnet Advisory Desk\n(03) 9802 5800\nSuite 1, 1024 Doncaster Road, Doncaster East VIC 3109`
+      `Hi ${cleanClientName},\n\nThank you for reaching out to Taxnet regarding ${cleanService}. We have received your enquiry and would be delighted to assist you.\n\nPlease let us know what day and time suits you best for a brief call, or feel free to reply directly to this email with any documents or details.\n\nWarm regards,\nPhilip Youssef\nPrincipal | Taxnet Business Consultants\nPhone: (03) 9802 5800\nWhatsApp: 0420 956 761\nSuite 6, 861 Doncaster Road, Doncaster East VIC 3109\nwww.taxnet.com.au`
     );
     const replyMailtoUrl = `mailto:${cleanEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
 
@@ -223,9 +223,9 @@ Delivered securely via Taxnet Gmail SMTP Integration.
           <!-- Footer Information -->
           <tr>
             <td style="background-color: #0A0D0B; padding: 24px 32px; border-top: 1px solid rgba(197, 168, 105, 0.25); text-align: center; color: rgba(255, 255, 255, 0.75); font-size: 11px; line-height: 1.6;">
-              <div style="color: #FFFFFF; font-weight: 700; margin-bottom: 4px; font-size: 12px;">Taxnet Pty Ltd · CPA Australia Public Practice</div>
-              <div>Suite 1, 1024 Doncaster Road, Doncaster East VIC 3109</div>
-              <div style="color: #C5A869; margin-top: 4px;">Phone: (03) 9802 5800 · Direct WhatsApp: +61 420 956 761</div>
+              <div style="color: #FFFFFF; font-weight: 700; margin-bottom: 4px; font-size: 12px;">Taxnet Business Consultants Pty Ltd · CPA Australia Practice</div>
+              <div>Suite 6, 861 Doncaster Road, Doncaster East VIC 3109</div>
+              <div style="color: #C5A869; margin-top: 4px;">Phone: (03) 9802 5800 · Direct WhatsApp: 0420 956 761</div>
             </td>
           </tr>
 

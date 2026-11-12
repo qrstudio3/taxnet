@@ -4,209 +4,132 @@ import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service & Engagement | Taxnet CPA Accountants Melbourne",
+  title: "Terms of Service | Taxnet Business Consultants Melbourne",
   description:
-    "Taxnet's standard Terms of Service and Professional Engagement outlining advisory scope, client substantiation obligations, fee policies, and CPA Australia standards.",
+    "Terms of Service for Taxnet Business Consultants. Professional accounting, tax, and credit advisory services governed by Victorian and Australian law.",
   keywords: [
     "Taxnet terms of service",
-    "CPA terms of engagement Melbourne",
-    "Tax agent client obligations",
-    "Professional Standards Act Victoria",
-    "accounting retainer agreement",
+    "Taxnet Business Consultants terms",
+    "CPA terms Melbourne",
+    "accounting terms Victoria",
+    "credit assistance terms",
   ],
 };
 
-const SECTIONS = [
+const TERMS_SECTIONS = [
   {
-    id: "scope-and-capacity",
     number: "01",
-    title: "Dual-Disciplinary Scope of Engagement",
+    title: "About these terms",
     content: (
-      <>
-        <p>
-          These Terms of Service and Engagement (&ldquo;Terms&rdquo;) govern all professional accounting, taxation advisory,
-          Single Touch Payroll compliance, bookkeeping, and credit advisory services provided by Taxnet Pty Ltd (ABN 40 610 387 881)
-          (&ldquo;Taxnet&rdquo;) to you (&ldquo;the Client&rdquo;).
-        </p>
-        <p>
-          Our practice operates across two distinctly regulated professional capacities:
-        </p>
-        <ul>
-          <li>
-            <strong>Public Practice Accounting &amp; Taxation:</strong> Bound by statutory ethical standards as a registered
-            <strong> CPA Australia Public Practice</strong> and a registered <strong>Tax Agent</strong> under the
-            <em> Tax Agent Services Act 2009 (Cth)</em> (Registration overseen by the Tax Practitioners Board).
-          </li>
-          <li>
-            <strong>Mortgage Broking &amp; Credit Assistance:</strong> Provided in accordance with the
-            <em> National Consumer Credit Protection Act 2009 (Cth)</em> and overseen by the
-            <strong> Finance Brokers Association of Australia (FBAA)</strong>.
-          </li>
-        </ul>
-        <p>
-          Each individual engagement is confirmed via a tailored <em>Letter of Engagement</em> detailing specific entities, lodgement deliverables,
-          and fee arrangements. In the event of any inconsistency, the specific Letter of Engagement shall prevail over these general terms.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        These terms apply to your use of this website and to services provided by The Trustee for Taxnet Unit Trust trading as Taxnet Business Consultants (ABN 40 610 387 881) (&ldquo;Taxnet&rdquo;, &ldquo;we&rdquo;, &ldquo;us&rdquo;). Each engagement is confirmed in a written engagement letter. If the engagement letter differs from these terms, the engagement letter applies.
+      </p>
     ),
   },
   {
-    id: "client-responsibilities",
     number: "02",
-    title: "Client Obligations & Tax Substantiation",
+    title: "Our services",
     content: (
-      <>
-        <p>
-          Australian taxation legislation places the primary legal responsibility for the accuracy and completeness of tax returns,
-          BAS statements, and declarations squarely upon the taxpayer. To enable Taxnet to deliver accurate advice, the Client agrees to:
-        </p>
-        <ul>
-          <li><strong>Full &amp; Frank Disclosure:</strong> Provide complete, truthful, and accurate disclosures of all worldwide income, revenue, business assets, and allowable deductions;</li>
-          <li><strong>Documentary Substantiation:</strong> Maintain and retain all primary accounting source records, invoices, logbooks, receipts, and bank statements required by the ATO for a minimum of five (5) to seven (7) years;</li>
-          <li><strong>Timely Information Provision:</strong> Furnish requested ledger files, payroll queries, and bank reconciliation verifications within agreed preparation timelines; and</li>
-          <li><strong>Formal Verification:</strong> Review all draft Income Tax Returns, activity statements, and loan applications thoroughly prior to executing final electronic authorizations.</li>
-        </ul>
-        <div style={{ padding: "1rem 1.25rem", borderRadius: "10px", backgroundColor: "#FEF2F2", border: "1px solid #FCA5A5", marginTop: "1rem", color: "#991B1B" }}>
-          <strong>Statutory ATO Audit Notice:</strong> Taxnet relies on the financial records provided by the Client without independent forensic audit unless specifically engaged to conduct formal auditing. The ATO may apply statutory administrative penalties and general interest charges (GIC) if claims are unsubstantiated.
-        </div>
-      </>
+      <ul style={{ margin: 0, paddingLeft: "1.25rem", display: "flex", flexDirection: "column", gap: "0.85rem" }}>
+        <li>
+          <strong>Accounting and tax:</strong> provided by a registered tax agent with the Tax Practitioners Board and CPA Australia members in public practice.
+        </li>
+        <li>
+          <strong>Mortgage broking and credit assistance:</strong> provided by Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328). Taxnet Business Consultants Pty Ltd has access to a panel of lenders through National Mortgage Brokers Pty Ltd (ACN 093 874 376 / Australian Credit Licence 391209), which is a fully-owned subsidiary of Liberty Financial Pty Ltd (ACN 077 248 983 / Australian Credit Licence 286596). Taxnet Business Consultants Pty Ltd has access to products including those from Liberty Financial. Before we help with a loan, we give you our Credit Guide, which explains our fees, the commissions we may receive and how to make a complaint.
+        </li>
+      </ul>
     ),
   },
   {
-    id: "lodgement-deadlines",
     number: "03",
-    title: "Statutory Deadlines & Lodgement Extensions",
+    title: "Information on this website",
     content: (
-      <>
-        <p>
-          As a registered Tax Agent, Taxnet clients are entitled to beneficial lodgement program extensions under the ATO Tax Agent Lodgement Program
-          (typically extending annual return deadlines from 31 October up to 15 May or 5 June of the following calendar year, subject to compliance history).
-        </p>
-        <p>
-          To maintain access to these concessional extensions, the Client must ensure that all outstanding prior-year lodgements are up to date and that
-          all required financial documentation for the current financial year is delivered to our offices no later than <strong>thirty (30) days prior</strong>
-          to the relevant statutory deadline. Taxnet accepts no liability for statutory late lodgement penalties resulting from late document provision by the Client.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        The information on this website is general only. It doesn’t take your circumstances into account and isn’t advice. Tax and lending rules change, so please speak with us before acting on it.
+      </p>
     ),
   },
   {
-    id: "fees-and-retainers",
     number: "04",
-    title: "Fee Structures, Retainers & Invoicing",
+    title: "Your responsibilities",
     content: (
-      <>
-        <p>
-          Taxnet rejects opaque hourly billing. We provide clear, agreed billing models:
-        </p>
-        <ul>
-          <li><strong>Agreed Fixed Retainers:</strong> Ongoing business clients operate on an agreed monthly retainer covering all scheduled BAS, quarterly reviews, payroll oversight, and annual corporate returns;</li>
-          <li><strong>Upfront Project Proposals:</strong> One-off tax structuring, SMSF setups, or prior-year backlog rectifications are quoted with guaranteed fixed upfront pricing; and</li>
-          <li><strong>Credit Advisory Services:</strong> Standard residential mortgage broking services are provided at zero direct advisory cost to the consumer (commission is paid by the lending institution, fully disclosed under our Credit Proposal Disclosure).</li>
-        </ul>
-        <p>
-          Invoices are payable within <strong>fourteen (14) days</strong> of issue via direct debit, electronic funds transfer (EFT), or credit card.
-          Taxnet reserves the statutory right to suspend preparation or withhold ATO lodgement where undisputed fees remain overdue beyond thirty (30) days.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        You’re responsible for giving us complete and accurate information on time, and for keeping the records the law requires. We rely on the information you provide and don’t audit it unless engaged to. Please review documents carefully before you approve them for lodgement.
+      </p>
     ),
   },
   {
-    id: "limitation-of-liability",
     number: "05",
-    title: "Limitation of Professional Liability",
+    title: "Fees",
     content: (
-      <>
-        <p>
-          Liability limited by a scheme approved under Professional Standards Legislation.
-        </p>
-        <p>
-          Taxnet Business Consultants participates in the <strong>CPA Australia Professional Standards Scheme</strong> approved under the
-          <em> Professional Standards Act 2003 (VIC)</em>. The scheme limits the civil liability of our firm, partners, and employees
-          to the monetary caps established under the statutory scheme, except where liability cannot be excluded by law (such as fraud or gross negligence).
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        Fees are set out in your engagement letter or quote. Invoices are due within 14 days. We may pause work if fees remain unpaid. For mortgage broking, lenders usually pay us a commission. This is disclosed to you before you proceed.
+      </p>
     ),
   },
   {
-    id: "fiduciary-independence",
     number: "06",
-    title: "Fiduciary Independence & Commissions",
+    title: "Confidentiality and privacy",
     content: (
-      <>
-        <p>
-          Our dual-disciplinary practice guarantees complete transparency regarding financial incentives:
-        </p>
-        <ul>
-          <li><strong>Accounting &amp; Tax Strategy:</strong> We accept zero referral kickbacks or proprietary product commissions from wealth management or financial products. Our advice is 100% fiduciary and objective; and</li>
-          <li><strong>Mortgage Broking:</strong> When acting as your licensed finance broker, we receive upfront and ongoing trail commissions directly from the credit provider. Every commission dollar, percentage, and potential volume incentive is formally disclosed to you in writing via our <em>Credit Guide</em> and <em>Credit Proposal Document</em> before any loan agreement is executed.</li>
-        </ul>
-      </>
+      <p style={{ margin: 0 }}>
+        We keep your information confidential and handle it in line with our{" "}
+        <Link href="/privacy-policy" style={{ color: "#A18650", fontWeight: 600, textDecoration: "underline" }}>
+          Privacy Policy
+        </Link>.
+      </p>
     ),
   },
   {
-    id: "electronic-communications",
     number: "07",
-    title: "Electronic Signatures & Document Authority",
+    title: "Electronic communication",
     content: (
-      <>
-        <p>
-          Pursuant to the <em>Electronic Transactions Act 1999 (Cth)</em>, the Client consents to receiving statutory notices, engagement letters,
-          invoices, and draft tax returns electronically via email or encrypted client portals.
-        </p>
-        <p>
-          Electronic signatures (executed via verified cloud platforms such as Adobe Sign, DocuSign, or portal click-to-sign) shall be deemed
-          legally binding and equivalent to physical wet signatures for all ATO declarations, ASIC resolutions, and lender credit applications.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        You agree that we may send notices, documents and invoices electronically, and that electronic signatures may be used where the law allows.
+      </p>
     ),
   },
   {
-    id: "confidentiality-and-data",
     number: "08",
-    title: "Confidentiality & Cloud Ledger Integrity",
+    title: "Ending an engagement",
     content: (
-      <>
-        <p>
-          Taxnet holds all Client files, financial balances, and communications in strict professional confidence under
-          APES 110 <em>Code of Ethics for Professional Accountants</em> and section 30-10(6) of the <em>Tax Agent Services Act 2009</em>.
-        </p>
-        <p>
-          We will not disclose any information to third parties (including your bank, financial planner, or solicitor) without your express
-          prior authorization, except where mandated by statutory legal warrant, court order, or regulatory notice issued by the ATO or ASIC.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        Either of us may end an engagement by written notice. Fees for work already done remain payable. If you move to a new adviser, we’ll provide your records as required by our professional obligations.
+      </p>
     ),
   },
   {
-    id: "termination-and-handover",
     number: "09",
-    title: "Termination & Ethical Clearance Handover",
+    title: "Complaints",
     content: (
-      <>
-        <p>
-          Either party may terminate the professional engagement by providing fourteen (14) days written notice.
-        </p>
-        <p>
-          Upon termination, the Client remains responsible for fees incurred up to the termination date. In accordance with CPA Australia
-          professional regulations, upon receiving an ethical clearance request from your nominated incoming accountant, Taxnet will promptly
-          transfer all primary client records, prior-year depreciation schedules, and trial balances with zero operational obstruction.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        Please contact us first on{" "}
+        <a href="tel:0398025800" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          (03) 9802 5800
+        </a>{" "}
+        or{" "}
+        <a href="mailto:info@taxnet.com.au" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          info@taxnet.com.au
+        </a>.{" "}
+        If we can’t resolve your concern, you can contact the Tax Practitioners Board about tax agent services, or the Australian Financial Complaints Authority (AFCA) about credit services. AFCA details are in our Credit Guide.
+      </p>
     ),
   },
   {
-    id: "governing-law",
     number: "10",
-    title: "Governing Law & Jurisdiction",
+    title: "Limitation of liability",
     content: (
-      <>
-        <p>
-          These Terms are governed by and construed in accordance with the laws in force in the State of <strong>Victoria, Australia</strong>.
-          The Client and Taxnet submit to the exclusive jurisdiction of the Courts of Victoria and the Commonwealth of Australia in respect of
-          any proceedings arising out of or in connection with these Terms.
-        </p>
-      </>
+      <p style={{ margin: 0 }}>
+        Liability limited by a scheme approved under Professional Standards Legislation. This applies to our accounting and tax services. Nothing in these terms limits your rights under the Australian Consumer Law.
+      </p>
+    ),
+  },
+  {
+    number: "11",
+    title: "Governing law",
+    content: (
+      <p style={{ margin: 0 }}>
+        These terms are governed by the laws of Victoria, Australia.
+      </p>
     ),
   },
 ];
@@ -220,8 +143,8 @@ export default function TermsOfServicePage() {
         {/* ── Header Hero Banner ── */}
         <section
           style={{
-            backgroundColor: "#061A10",
-            background: "linear-gradient(180deg, #04140D 0%, #0D3E26 100%)",
+            backgroundColor: "#0A0D0B",
+            background: "linear-gradient(180deg, #070908 0%, #0E1410 100%)",
             color: "#FFFFFF",
             paddingTop: "140px",
             paddingBottom: "4.5rem",
@@ -275,40 +198,30 @@ export default function TermsOfServicePage() {
               <span style={{ color: "#C5A869" }}>Terms of Service</span>
             </div>
 
-            {/* Overline Badge */}
-            <div
-              style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "10px",
-                padding: "6px 14px",
-                borderRadius: "999px",
-                backgroundColor: "rgba(197, 168, 105, 0.12)",
-                border: "1px solid rgba(197, 168, 105, 0.3)",
-                color: "#E5D6B6",
-                fontSize: "0.78rem",
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-                marginBottom: "1.25rem",
-              }}
-            >
-              <span>Practice Governance &amp; Engagement Charter</span>
-            </div>
-
             <h1
               style={{
-                fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                 fontSize: "clamp(2.4rem, 4.8vw, 3.8rem)",
                 fontWeight: 400,
                 lineHeight: 1.12,
                 color: "#FFFFFF",
-                margin: "0 0 1.25rem 0",
+                margin: "0 0 0.5rem 0",
                 letterSpacing: "-0.018em",
               }}
             >
-              Terms of Service &amp; Engagement
+              Terms of Service
             </h1>
+
+            <div
+              style={{
+                fontSize: "0.88rem",
+                color: "#C5A869",
+                fontWeight: 600,
+                marginBottom: "1.25rem",
+              }}
+            >
+              Last updated: November 2026
+            </div>
 
             <p
               style={{
@@ -319,8 +232,7 @@ export default function TermsOfServicePage() {
                 margin: "0 0 2rem 0",
               }}
             >
-              Professional terms governing all CPA accounting, taxation advisory, corporate ASIC compliance,
-              and mortgage broking services rendered by Taxnet Business Consultants.
+              These terms apply to your use of this website and to services provided by The Trustee for Taxnet Unit Trust trading as Taxnet Business Consultants (ABN 40 610 387 881).
             </p>
 
             {/* Regulatory Governance Strip */}
@@ -336,13 +248,13 @@ export default function TermsOfServicePage() {
               }}
             >
               <div>
-                <strong style={{ color: "#C5A869" }}>Practice Standard:</strong> CPA Australia Public Practice
+                <strong style={{ color: "#C5A869" }}>Accounting &amp; Tax:</strong> Registered Tax Agent &amp; CPA Australia Public Practice
               </div>
               <div>
-                <strong style={{ color: "#C5A869" }}>Regulatory Oversight:</strong> Tax Practitioners Board (TPB) &amp; FBAA
+                <strong style={{ color: "#C5A869" }}>Credit Services:</strong> Credit Representative No. 480328 (ACL 391209)
               </div>
               <div>
-                <strong style={{ color: "#C5A869" }}>Jurisdiction:</strong> Victoria, Australia
+                <strong style={{ color: "#C5A869" }}>Governing Law:</strong> Victoria, Australia
               </div>
             </div>
           </div>
@@ -351,7 +263,7 @@ export default function TermsOfServicePage() {
         {/* ── Main Legal Clauses Content Section ── */}
         <section
           style={{
-            paddingTop: "4rem",
+            paddingTop: "3.5rem",
             paddingBottom: "5.5rem",
           }}
         >
@@ -367,28 +279,27 @@ export default function TermsOfServicePage() {
               style={{
                 display: "grid",
                 gridTemplateColumns: "1fr",
-                gap: "2.5rem",
+                gap: "1.75rem",
               }}
             >
-              {SECTIONS.map((sec) => (
+              {TERMS_SECTIONS.map((sec) => (
                 <article
-                  key={sec.id}
-                  id={sec.id}
+                  key={sec.number}
                   style={{
                     backgroundColor: "#FFFFFF",
-                    borderRadius: "20px",
-                    padding: "clamp(1.75rem, 3.5vw, 2.75rem)",
-                    border: "1px solid #E3ECE5",
-                    boxShadow: "0 4px 20px rgba(13, 62, 38, 0.04)",
+                    borderRadius: "16px",
+                    padding: "clamp(1.5rem, 3vw, 2.25rem)",
+                    border: "1px solid #E2ECE5",
+                    boxShadow: "0 4px 18px rgba(0, 0, 0, 0.03)",
                   }}
                 >
-                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1rem" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "0.85rem" }}>
                     <span
                       style={{
                         fontSize: "0.82rem",
                         fontWeight: 800,
                         color: "#C5A869",
-                        backgroundColor: "#0D3E26",
+                        backgroundColor: "#0A0D0B",
                         padding: "4px 10px",
                         borderRadius: "6px",
                         letterSpacing: "0.08em",
@@ -398,10 +309,10 @@ export default function TermsOfServicePage() {
                     </span>
                     <h2
                       style={{
-                        fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
-                        fontSize: "clamp(1.5rem, 2.5vw, 1.95rem)",
+                        fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                        fontSize: "clamp(1.35rem, 2.2vw, 1.7rem)",
                         fontWeight: 400,
-                        color: "#0D3E26",
+                        color: "#0A0D0B",
                         margin: 0,
                         lineHeight: 1.25,
                       }}
@@ -412,7 +323,7 @@ export default function TermsOfServicePage() {
 
                   <div
                     style={{
-                      fontSize: "0.96rem",
+                      fontSize: "0.95rem",
                       lineHeight: 1.75,
                       color: "#38473E",
                     }}
@@ -429,28 +340,30 @@ export default function TermsOfServicePage() {
                 marginTop: "3.5rem",
                 padding: "2.5rem",
                 borderRadius: "20px",
-                backgroundColor: "#0D3E26",
+                backgroundColor: "#0A0D0B",
                 color: "#FFFFFF",
                 display: "flex",
                 flexWrap: "wrap",
                 alignItems: "center",
                 justifyContent: "space-between",
                 gap: "1.5rem",
+                border: "1px solid rgba(197, 168, 105, 0.3)",
               }}
             >
               <div style={{ maxWidth: "600px" }}>
                 <h3
                   style={{
-                    fontFamily: 'var(--font-monety), "Monety", Georgia, serif',
+                    fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                     fontSize: "1.65rem",
                     fontWeight: 400,
+                    color: "#FFFFFF",
                     margin: "0 0 0.5rem 0",
                   }}
                 >
-                  Ready to Establish a Professional Engagement?
+                  Questions Regarding Your Engagement?
                 </h3>
-                <p style={{ margin: 0, fontSize: "0.92rem", color: "rgba(255, 255, 255, 0.8)", lineHeight: 1.6 }}>
-                  Schedule a complimentary discovery consultation at our Doncaster East suites or via secure video Australia-wide.
+                <p style={{ margin: 0, fontSize: "0.92rem", color: "rgba(255, 255, 255, 0.9)", lineHeight: 1.6 }}>
+                  Our team is readily accessible to assist with engagement details, invoicing queries, or credit guide requests.
                 </p>
               </div>
 
@@ -458,16 +371,17 @@ export default function TermsOfServicePage() {
                 href="/contact"
                 style={{
                   backgroundColor: "#C5A869",
-                  color: "#0D3E26",
+                  color: "#0A0D0B",
                   fontWeight: 700,
                   fontSize: "0.92rem",
                   padding: "14px 26px",
                   borderRadius: "10px",
                   textDecoration: "none",
                   boxShadow: "0 6px 18px rgba(197, 168, 105, 0.35)",
+                  transition: "background-color 180ms ease, transform 180ms ease",
                 }}
               >
-                Book Discovery Session →
+                Contact Our Team →
               </Link>
             </div>
           </div>
@@ -478,4 +392,3 @@ export default function TermsOfServicePage() {
     </>
   );
 }
-

@@ -713,8 +713,11 @@ export default function AboutBody() {
                   >
                     Philip Youssef
                   </h3>
-                  <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "#A18650" }}>
-                    Principal · CPA Accountant, Registered Tax Agent (TPB) & Accredited Mortgage Broker (FBAA)
+                  <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#A18650", marginBottom: "0.2rem" }}>
+                    Principal
+                  </div>
+                  <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "#54655B", lineHeight: 1.45 }}>
+                    CPA Accountant, Registered Tax Agent (TPB) &amp; Accredited Mortgage Broker (FBAA)
                   </div>
                 </div>
 
@@ -836,7 +839,7 @@ export default function AboutBody() {
                       marginBottom: "1.25rem",
                     }}
                   >
-                    Senior Accountant · Property Development Specialist
+                    Senior Accountant
                   </div>
 
                   <p
@@ -906,7 +909,7 @@ export default function AboutBody() {
                       marginBottom: "1.25rem",
                     }}
                   >
-                    Practice Manager · Client Operations Director
+                    Practice Manager
                   </div>
 
                   <p

@@ -183,23 +183,12 @@ export default function BorrowingPowerCalculator() {
           }}
         >
           <div>
-            <span
-              style={{
-                color: "#C5A869",
-                fontSize: "0.78rem",
-                fontWeight: 700,
-                letterSpacing: "0.1em",
-                textTransform: "uppercase",
-              }}
-            >
-              Precision Assessment Engine
-            </span>
             <h2
               style={{
                 fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
                 fontSize: "clamp(1.6rem, 2.4vw, 2.2rem)",
                 fontWeight: 400,
-                margin: "0.25rem 0 0 0",
+                margin: 0,
                 color: "#FFFFFF",
               }}
             >
@@ -390,7 +379,7 @@ export default function BorrowingPowerCalculator() {
                 style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
               <span style={{ fontSize: "0.72rem", color: "#7A8A80", display: "block", marginTop: "2px" }}>
-                *Lenders shade secondary/rental income to 80%.
+                *Lenders may count only part of some income, such as rental income.
               </span>
             </div>
           </div>
@@ -432,7 +421,7 @@ export default function BorrowingPowerCalculator() {
                 style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
               <span style={{ fontSize: "0.72rem", color: "#7A8A80", display: "block", marginTop: "2px" }}>
-                Benchmarked against HEM floor of {formatAud(hemBenchmark)}/mo.
+                Benchmarked against living expense benchmarks.
               </span>
             </div>
 
@@ -479,7 +468,7 @@ export default function BorrowingPowerCalculator() {
                 style={{ width: "100%", accentColor: "#0A0D0B", height: "6px" }}
               />
               <span style={{ fontSize: "0.72rem", color: "#7A8A80", display: "block", marginTop: "2px" }}>
-                *Lenders assess 3.5% of total limit monthly, even at $0 balance.
+                *Lenders count part of your credit card limits as a monthly commitment, even with a $0 balance.
               </span>
             </div>
 
@@ -570,7 +559,7 @@ export default function BorrowingPowerCalculator() {
 
               <div>
                 <label htmlFor={interestRateId} style={{ fontSize: "0.78rem", color: "#55645B", fontWeight: 600, display: "block", marginBottom: "4px" }}>
-                  Interest Rate (% p.a.)
+                  Enter an interest rate (example only)
                 </label>
                 <input
                   id={interestRateId}
@@ -646,7 +635,7 @@ export default function BorrowingPowerCalculator() {
               </div>
 
               <div style={{ fontSize: "0.8rem", color: "#55645B", marginBottom: "1rem" }}>
-                Tested at stress rate of <strong style={{ color: "#0A0D0B" }}>{(interestRate + 3.0).toFixed(2)}% p.a.</strong> (APRA Buffer)
+                Lenders add a buffer to the interest rate when assessing your repayments
               </div>
 
               {/* Repayments grid */}
@@ -664,7 +653,7 @@ export default function BorrowingPowerCalculator() {
                   <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0A0D0B", marginTop: "2px" }}>
                     {formatAud(actualMonthlyRepayment)}
                   </div>
-                  <div style={{ fontSize: "0.68rem", color: "#8A9990" }}>At {interestRate}% p.a.</div>
+                  <div style={{ fontSize: "0.68rem", color: "#8A9990" }}>At example rate of {interestRate}% p.a.</div>
                 </div>
 
                 <div style={{ backgroundColor: "#F7FAF8", padding: "10px", borderRadius: "10px" }}>
@@ -672,9 +661,26 @@ export default function BorrowingPowerCalculator() {
                   <div style={{ fontSize: "1.15rem", fontWeight: 800, color: "#0A0D0B", marginTop: "2px" }}>
                     {formatAud(actualFortnightlyRepayment)}
                   </div>
-                  <div style={{ fontSize: "0.68rem", color: "#8A9990" }}>At {interestRate}% p.a.</div>
+                  <div style={{ fontSize: "0.68rem", color: "#8A9990" }}>At example rate of {interestRate}% p.a.</div>
                 </div>
               </div>
+            </div>
+
+            {/* Disclaimer directly under the result */}
+            <div
+              style={{
+                fontSize: "0.76rem",
+                lineHeight: 1.6,
+                color: "#55645B",
+                backgroundColor: "#F2F5F3",
+                padding: "0.9rem 1.1rem",
+                borderRadius: "12px",
+                border: "1px solid #E1E8E4",
+                marginBottom: "1.5rem",
+                textAlign: "left",
+              }}
+            >
+              This calculator gives a rough estimate only, based on the information you enter and general assumptions. It isn’t a loan offer, pre-approval or credit assistance, and it doesn’t take your full financial situation into account. Lenders apply their own criteria, which change from time to time, so the amount you can borrow may be higher or lower. Interest rates shown are examples only. Speak with our broker for an assessment based on your circumstances.
             </div>
 
             {/* ─── INTERACTIVE CHARTS SECTION ─── */}
@@ -1070,7 +1076,7 @@ export default function BorrowingPowerCalculator() {
                 transition: "opacity 160ms ease, transform 160ms ease",
               }}
             >
-              Lock In Formal Borrowing Pre-Approval →
+              Talk to our broker →
             </a>
 
             <a

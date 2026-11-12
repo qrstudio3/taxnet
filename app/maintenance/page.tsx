@@ -381,7 +381,7 @@ export default function MaintenancePage() {
         }}
       >
         <div>
-          Suite 1, 1024 Doncaster Road, Doncaster East VIC 3109 · Melbourne, Australia
+          Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 · Melbourne, Australia
         </div>
 
         <div>
