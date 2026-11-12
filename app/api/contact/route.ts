@@ -51,9 +51,11 @@ export async function POST(request: Request) {
       );
     }
 
-    // Create Nodemailer Transporter with Gmail service
+    // Create Nodemailer Transporter using direct Gmail SSL SMTP (port 465)
     const transporter = nodemailer.createTransport({
-      service: "gmail",
+      host: "smtp.gmail.com",
+      port: 465,
+      secure: true,
       auth: {
         user: gmailUser,
         pass: gmailPass,
@@ -66,39 +68,41 @@ export async function POST(request: Request) {
       timeStyle: "short",
     });
 
-    // Clean parameters for mailto response (preserve raw '@' for the recipient so email clients populate 'To' field)
+    // Clean parameters
     const cleanClientName = (name || "Client").trim();
     const cleanEmail = (email || "").trim();
-    const cleanService = (selectedService || "Accounting & Advisory").trim();
-    const mailtoSubject = encodeURIComponent(`Taxnet Consultation for ${cleanClientName}`);
-    const mailtoBody = encodeURIComponent(
-      `Hi ${cleanClientName},\n\nThank you for reaching out to Taxnet regarding ${cleanService}. We have received your enquiry and would be delighted to assist you.\n\nPlease let us know what day and time suits you best for a brief call, or feel free to reply directly to this email with any documents or details.\n\nWarm regards,\nPhilip Youssef\nPrincipal | Taxnet Business Consultants\nPhone: (03) 9802 5800\nWhatsApp: 0420 956 761\nSuite 6, 861 Doncaster Road, Doncaster East VIC 3109\nwww.taxnet.com.au`
-    );
-    const replyMailtoUrl = `mailto:${cleanEmail}?subject=${mailtoSubject}&body=${mailtoBody}`;
+    const cleanPhone = (phone || "").trim();
+    const cleanService = (selectedService || "General Advisory").trim();
+    const cleanBusiness = (businessName || "").trim();
+    const cleanMessage = (message || "").trim();
 
-    // Clean Plain Text Fallback
+    // Standard RFC-compliant clean mailto URL for direct reply
+    const replyMailtoUrl = `mailto:${cleanEmail}?subject=${encodeURIComponent(`Re: Taxnet Enquiry - ${cleanClientName}`)}`;
+
+    // Clean Plain Text Fallback (Ensures optimal text-to-HTML ratio for spam filters)
     const textContent = `
-NEW TAXNET CLIENT CONSULTATION INQUIRY
-=======================================
-Date / Time: ${formattedDate} (Melbourne Time)
+NEW TAXNET WEBSITE ENQUIRY
+==========================
+Received: ${formattedDate} (Melbourne Time)
 
 CLIENT CONTACT DETAILS
 ----------------------
-Full Name:         ${name}
-Email Address:     ${email}
-Phone Number:      ${phone}
-Entity / Business: ${businessName || "Not specified"}
+Full Name:         ${cleanClientName}
+Email Address:     ${cleanEmail}
+Phone Number:      ${cleanPhone}
+Entity / Business: ${cleanBusiness || "Not specified"}
 
-ENGAGEMENT PREFERENCES
-----------------------
-Requested Service: ${selectedService || "General Advisory"}
+ENQUIRY DETAILS
+---------------
+Requested Service: ${cleanService}
 ${source ? `Source Page:       ${source}\n` : ""}${clientType ? `Client Profile:    ${clientType}\n` : ""}${meetingFormat ? `Meeting Format:    ${meetingFormat}\n` : ""}
 CLIENT MESSAGE / REQUIREMENTS:
 ------------------------------
-${message || "No additional notes provided."}
+${cleanMessage || "No additional notes provided."}
 
-=======================================
-Delivered securely via Taxnet Gmail SMTP Integration.
+==========================
+Taxnet Business Consultants Pty Ltd · CPA Australia Practice
+Delivered securely via authenticated Taxnet SMTP Integration.
 `.trim();
 
     // High-End Luxury HTML Email Template (Onyx Black & Warm Gold)
@@ -108,7 +112,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>New Taxnet Client Consultation Request</title>
+  <title>New Taxnet Website Enquiry</title>
 </head>
 <body style="margin: 0; padding: 0; background-color: #F7F8F7; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #0A0D0B;">
   <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #F7F8F7; padding: 40px 15px;">
@@ -120,10 +124,10 @@ Delivered securely via Taxnet Gmail SMTP Integration.
           <tr>
             <td style="background: linear-gradient(135deg, #0A0D0B 0%, #171C19 100%); padding: 36px 32px; text-align: left; border-bottom: 2.5px solid #C5A869;">
               <div style="color: #C5A869; font-size: 11px; font-weight: 800; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 8px;">
-                CPA Australia Practice · Consultation Desk
+                CPA Australia Practice · Website Enquiry
               </div>
               <h1 style="color: #FFFFFF; font-size: 24px; font-weight: 600; margin: 0; line-height: 1.25; font-family: Georgia, 'Times New Roman', serif;">
-                New Advisory Consultation Request
+                New Client Consultation Enquiry
               </h1>
               <p style="color: rgba(229, 214, 182, 0.85); font-size: 13px; margin: 8px 0 0 0;">
                 Received on ${formattedDate}
@@ -145,23 +149,23 @@ Delivered securely via Taxnet Gmail SMTP Integration.
                     <table role="presentation" width="100%" cellspacing="0" cellpadding="6">
                       <tr>
                         <td width="35%" style="color: #6B7C72; font-size: 13px; font-weight: 600;">Full Name:</td>
-                        <td style="color: #0A0D0B; font-size: 15px; font-weight: 700;">${name}</td>
+                        <td style="color: #0A0D0B; font-size: 15px; font-weight: 700;">${cleanClientName}</td>
                       </tr>
                       <tr>
                         <td style="color: #6B7C72; font-size: 13px; font-weight: 600;">Email Address:</td>
                         <td style="font-size: 14px;">
-                          <a href="${replyMailtoUrl}" style="color: #0A0D0B; text-decoration: underline; font-weight: 600;">${email}</a>
+                          <a href="${replyMailtoUrl}" style="color: #0A0D0B; text-decoration: underline; font-weight: 600;">${cleanEmail}</a>
                         </td>
                       </tr>
                       <tr>
                         <td style="color: #6B7C72; font-size: 13px; font-weight: 600;">Phone Number:</td>
                         <td style="font-size: 14px;">
-                          <a href="tel:${phone.replace(/\s+/g, "")}" style="color: #0A0D0B; text-decoration: none; font-weight: 700;">${phone}</a>
+                          <a href="tel:${cleanPhone.replace(/\s+/g, "")}" style="color: #0A0D0B; text-decoration: none; font-weight: 700;">${cleanPhone}</a>
                         </td>
                       </tr>
                       <tr>
                         <td style="color: #6B7C72; font-size: 13px; font-weight: 600;">Business / Entity:</td>
-                        <td style="color: #0A0D0B; font-size: 14px; font-weight: 600;">${businessName || "Not specified"}</td>
+                        <td style="color: #0A0D0B; font-size: 14px; font-weight: 600;">${cleanBusiness || "Not specified"}</td>
                       </tr>
                     </table>
                   </td>
@@ -170,14 +174,14 @@ Delivered securely via Taxnet Gmail SMTP Integration.
 
               <!-- Engagement Criteria -->
               <div style="font-size: 11px; font-weight: 800; color: #A18650; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px;">
-                Engagement Scope &amp; Preferences
+                Enquiry Scope &amp; Preferences
               </div>
               <table role="presentation" width="100%" cellspacing="0" cellpadding="8" style="border-collapse: collapse; margin-bottom: 24px;">
                 <tr style="border-bottom: 1px solid #EDF2EE;">
                   <td width="35%" style="color: #6B7C72; font-size: 13px;">Selected Service:</td>
                   <td style="color: #0A0D0B; font-size: 14px; font-weight: 700;">
                     <span style="display: inline-block; background-color: #F8F5EE; color: #8A7040; border: 1px solid rgba(197, 168, 105, 0.4); padding: 5px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">
-                      ${selectedService || "General Advisory"}
+                      ${cleanService}
                     </span>
                   </td>
                 </tr>
@@ -203,7 +207,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
                 Client Notes / Scope Requirements
               </div>
               <div style="background-color: #FAFCFA; border: 1px solid #E4EAE5; border-left: 3.5px solid #C5A869; border-radius: 8px; padding: 18px; font-size: 14px; line-height: 1.65; color: #2C3530; margin-bottom: 28px;">
-                ${(message || "I would like to schedule a discovery consultation with Taxnet.").replace(/\n/g, "<br>")}
+                ${(cleanMessage || "I would like to schedule a consultation with Taxnet.").replace(/\n/g, "<br>")}
               </div>
 
               <!-- Quick Action Button -->
@@ -211,7 +215,7 @@ Delivered securely via Taxnet Gmail SMTP Integration.
                 <tr>
                   <td align="center">
                     <a href="${replyMailtoUrl}" style="display: inline-block; background-color: #0A0D0B; color: #FFFFFF; border: 1.5px solid #C5A869; font-size: 14px; font-weight: 700; text-decoration: none; padding: 14px 32px; border-radius: 8px; box-shadow: 0 4px 16px rgba(0,0,0,0.25);">
-                      Reply Directly to Client (${email}) →
+                      Reply to ${cleanClientName} (${cleanEmail}) →
                     </a>
                   </td>
                 </tr>
@@ -237,18 +241,17 @@ Delivered securely via Taxnet Gmail SMTP Integration.
 </html>
 `.trim();
 
-    // Dispatch email via Gmail SMTP with anti-spam transactional headers
+    // Dispatch email via Gmail SMTP with deliverability-optimized headers
     await transporter.sendMail({
-      from: `"Taxnet Notification" <${gmailUser}>`,
+      from: `"Taxnet Notifications" <${gmailUser}>`,
       to: receiverEmail,
-      replyTo: email,
-      subject: `[Taxnet Web Inquiry] ${name} - ${selectedService || "Consultation Request"}`,
+      replyTo: `"${cleanClientName.replace(/"/g, "")}" <${cleanEmail}>`,
+      subject: `New Website Enquiry: ${cleanClientName} — ${cleanService}`,
       text: textContent,
       html: htmlContent,
       headers: {
-        "X-Mailer": "Taxnet Web Contact Form",
-        "X-Priority": "3",
-        "Importance": "Normal",
+        "Auto-Submitted": "auto-generated",
+        "X-Auto-Response-Suppress": "All",
       },
     });
 
