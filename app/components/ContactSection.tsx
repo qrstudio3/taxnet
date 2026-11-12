@@ -318,6 +318,18 @@ export default function ContactSection() {
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
                 </div>
+                <div
+                  style={{
+                    color: "#C5A869",
+                    fontSize: "0.78rem",
+                    fontWeight: 800,
+                    letterSpacing: "0.14em",
+                    textTransform: "uppercase",
+                    marginBottom: "0.4rem",
+                  }}
+                >
+                  Enquiry Received
+                </div>
                 <h3
                   style={{
                     fontFamily: '"Monety", Georgia, serif',
@@ -330,16 +342,30 @@ export default function ContactSection() {
                 </h3>
                 <p
                   style={{
-                    fontSize: "0.92rem",
+                    fontSize: "0.94rem",
                     color: "#4A5A50",
-                    lineHeight: 1.6,
-                    maxWidth: "420px",
+                    lineHeight: 1.65,
+                    maxWidth: "460px",
                     margin: "0 auto 1.5rem",
                   }}
                 >
-                  Your discovery consultation request has been received. One of our
-                  team members will review your details and reach out within 2
-                  business hours.
+                  Thank you, we have received your enquiry. A member of our team will be in touch with you shortly.
+                  <br />
+                  <span style={{ display: "inline-block", marginTop: "0.55rem" }}>
+                    If your matter is urgent, please call us on{" "}
+                    <a
+                      href="tel:0398025800"
+                      style={{
+                        color: "#A18650",
+                        fontWeight: 700,
+                        textDecoration: "underline",
+                        textUnderlineOffset: "3px",
+                      }}
+                    >
+                      (03) 9802 5800
+                    </a>
+                    .
+                  </span>
                 </p>
                 <div
                   style={{

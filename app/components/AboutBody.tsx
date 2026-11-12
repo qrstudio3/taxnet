@@ -136,6 +136,7 @@ const TEAM_MEMBERS: TeamMember[] = [
   },
   {
     name: "Amanda Lew",
+    role: "Accountant",
     email: "Amanda@taxnet.com.au",
     initials: "AL",
     note: "Amanda is currently on leave and will be returning early 2027",
