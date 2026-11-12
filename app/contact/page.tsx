@@ -152,7 +152,7 @@ export default function ContactPage() {
                         0420 956 761
                       </div>
                       <div style={{ fontSize: "0.8rem", color: "#6A7B71", marginTop: "2px" }}>
-                        Instant chat with our team
+                        Chat with our team on WhatsApp
                       </div>
                     </div>
                     <span style={{ color: "#0A0D0B", fontSize: "1.2rem", fontWeight: 700 }}>→</span>

@@ -41,8 +41,8 @@ export default function FloatingBorrowingPower() {
     return () => clearTimeout(timeoutId);
   }, []);
 
-  // Do not show on calculator, contact, or maintenance pages
-  if (!mounted || pathname === "/calculator" || pathname === "/contact" || pathname === "/maintenance") {
+  // Do not show on calculator, contact, maintenance, or hidden calculator pages
+  if (!mounted || pathname === "/calculator" || pathname === "/contact" || pathname === "/maintenance" || pathname.startsWith("/fhb-calculator")) {
     return null;
   }
 

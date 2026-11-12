@@ -371,8 +371,43 @@ export default function MortgageBrokingPage() {
                 lineHeight: 1.6,
               }}
             >
-              <strong style={{ color: "#0A0D0B" }}>Australian Credit Licence & Credit Disclosure:</strong>{" "}
-              Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328) has access to a panel of lenders through National Mortgage Brokers Pty Ltd., (ACN 093 874 376 / Australian Credit Licence 391209), which is a fully-owned subsidiary of Liberty Financial Pty Ltd (ACN 077 248 983 / Australian Credit Licence 286596). Taxnet Business Consultants Pty Ltd has access to products including those from Liberty Financial.
+              <div>
+                <strong style={{ color: "#0A0D0B" }}>Australian Credit Licence &amp; Credit Disclosure:</strong>{" "}
+                Taxnet Business Consultants Pty Ltd (ACN 169 468 482 / Credit Representative Number 480328) has access to a panel of lenders through National Mortgage Brokers Pty Ltd., (ACN 093 874 376 / Australian Credit Licence 391209), which is a fully-owned subsidiary of Liberty Financial Pty Ltd (ACN 077 248 983 / Australian Credit Licence 286596). Taxnet Business Consultants Pty Ltd has access to products including those from Liberty Financial.
+              </div>
+              <div style={{ marginTop: "0.85rem", paddingTop: "0.85rem", borderTop: "1px solid rgba(197, 168, 105, 0.2)" }}>
+                <a
+                  href="/NMB_Credit_Guide.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    color: "#A18650",
+                    fontWeight: 700,
+                    textDecoration: "underline",
+                    fontSize: "0.85rem",
+                  }}
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  <span>Download our Credit Guide</span>
+                </a>
+              </div>
             </div>
 
             {/* ─── CALL TO ACTION BANNER ─── */}

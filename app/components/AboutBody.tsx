@@ -461,8 +461,7 @@ export default function AboutBody() {
                   marginBottom: "2rem",
                 }}
               >
-                Over more than a decade, organic client advocacy and strategic integration with
-                respected local practitioners have broadened our advisory scope across corporate tax,
+                Over more than a decade, organic client referrals have broadened our advisory scope across corporate tax,
                 cloud bookkeeping, and bespoke lending facilities.
               </p>
 
@@ -715,6 +714,9 @@ export default function AboutBody() {
                   </h3>
                   <div style={{ fontSize: "1.05rem", fontWeight: 700, color: "#A18650", marginBottom: "0.2rem" }}>
                     Principal
+                  </div>
+                  <div style={{ fontSize: "0.82rem", fontWeight: 700, color: "#A18650", marginBottom: "0.35rem" }}>
+                    Credit Representative No. 484876
                   </div>
                   <div style={{ fontSize: "0.88rem", fontWeight: 600, color: "#54655B", lineHeight: 1.45 }}>
                     CPA Accountant, Registered Tax Agent (TPB) &amp; Accredited Mortgage Broker (FBAA)
@@ -997,7 +999,7 @@ export default function AboutBody() {
                 lineHeight: 1.6,
               }}
             >
-              Recognised across Victoria and nationally for lending excellence, portfolio milestones, and industry partnerships.
+              Recognised for lending excellence, portfolio milestones and industry partnerships.
             </p>
           </div>
 

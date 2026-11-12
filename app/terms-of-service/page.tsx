@@ -63,7 +63,7 @@ const TERMS_SECTIONS = [
     title: "Fees",
     content: (
       <p style={{ margin: 0 }}>
-        Fees are set out in your engagement letter or quote. Invoices are due within 14 days. We may pause work if fees remain unpaid. For mortgage broking, lenders usually pay us a commission. This is disclosed to you before you proceed.
+        Fees are set out in your engagement letter or quote. We may pause work if fees remain unpaid. For mortgage broking, lenders usually pay us a commission. This is disclosed to you before you proceed.
       </p>
     ),
   },
@@ -110,7 +110,22 @@ const TERMS_SECTIONS = [
         <a href="mailto:info@taxnet.com.au" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
           info@taxnet.com.au
         </a>.{" "}
-        If we can’t resolve your concern, you can contact the Tax Practitioners Board about tax agent services, or the Australian Financial Complaints Authority (AFCA) about credit services. AFCA details are in our Credit Guide.
+        If we can&apos;t resolve a concern about our tax agent services, you can contact the Tax Practitioners Board. For credit services, you can contact National Mortgage Brokers&apos; complaints officer on{" "}
+        <a href="tel:1300668662" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          1300 668 662
+        </a>{" "}
+        or{" "}
+        <a href="mailto:compliance@nmb.com.au" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          compliance@nmb.com.au
+        </a>.{" "}
+        If your complaint is still not resolved, you can contact the Australian Financial Complaints Authority (AFCA) on{" "}
+        <a href="tel:1800931678" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          1800 931 678
+        </a>{" "}
+        or at{" "}
+        <a href="http://www.afca.org.au/" target="_blank" rel="noopener noreferrer" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          www.afca.org.au
+        </a>.
       </p>
     ),
   },

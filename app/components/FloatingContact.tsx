@@ -35,8 +35,8 @@ export default function FloatingContact() {
     };
   }, [isOpen]);
 
-  // Do not show on dedicated contact or maintenance pages
-  if (pathname === "/contact" || pathname === "/maintenance") {
+  // Do not show on dedicated contact, maintenance, or hidden calculator pages
+  if (pathname === "/contact" || pathname === "/maintenance" || pathname.startsWith("/fhb-calculator")) {
     return null;
   }
 

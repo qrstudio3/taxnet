@@ -67,7 +67,10 @@ const PRIVACY_SECTIONS = [
     title: "Who we share it with",
     content: (
       <p style={{ margin: 0 }}>
-        Only as needed to provide our services, or where the law requires it. This may include the ATO, ASIC, lenders and our credit licensee National Mortgage Brokers Pty Ltd (Australian Credit Licence 391209), credit reporting bodies, your other advisers (with your consent), and service providers who help us run our practice, such as our email, cloud accounting and document storage providers. We only use or disclose your tax file number for purposes allowed by law.
+        Only as needed to provide our services, or where the law requires it. This may include the ATO, ASIC, lenders and our credit licensee National Mortgage Brokers Pty Ltd (Australian Credit Licence 391209), credit reporting bodies, your other advisers (with your consent), and service providers who help us run our practice, such as our email, cloud accounting and document storage providers. We only use or disclose your tax file number for purposes allowed by law. For loan clients, National Mortgage Brokers&apos; privacy policy also applies. You can find it at{" "}
+        <a href="http://nmb.com.au/" target="_blank" rel="noopener noreferrer" style={{ color: "#A18650", fontWeight: 700, textDecoration: "none" }}>
+          nmb.com.au
+        </a>.
       </p>
     ),
   },
@@ -76,7 +79,7 @@ const PRIVACY_SECTIONS = [
     title: "Overseas storage",
     content: (
       <p style={{ margin: 0 }}>
-        Some of our service providers may store or process information outside Australia, including the United States. We take reasonable steps to make sure they protect your information.
+        Some of our service providers may store or process information outside Australia, including the United States and New Zealand. We take reasonable steps to make sure they protect your information.
       </p>
     ),
   },

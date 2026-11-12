@@ -35,7 +35,7 @@ const KEY_FACTORS = [
   {
     icon: "home" as const,
     title: "Living Expense Benchmarks",
-    desc: "Lenders compare declared living expenses against official household living expense benchmarks based on family size and location.",
+    desc: "Lenders compare declared living expenses against household living expense benchmarks based on family size and location.",
   },
 ];
 
@@ -300,7 +300,7 @@ export default function CalculatorPage() {
           <BookkeepingContact
             serviceName="Mortgage Broking"
             title="Let’s Talk About Your Home Loan"
-            subtitle="Speak with our broker team in Melbourne. We assess your scenario across a wide range of lenders to find the right loan structure and competitive rates."
+            subtitle="Speak with our broker team in Melbourne. We assess your scenario across a wide range of lenders to find the right loan structure for you."
             submitButtonText="Book A Loan Consultation"
           />
         </div>
