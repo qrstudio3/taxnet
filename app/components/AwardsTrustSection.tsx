@@ -78,8 +78,9 @@ const TRUST_ITEMS = [
 const BADGES = [
   "CPA Australia",
   "Tax Practitioners Board (TPB)",
-  "FBAA Accredited Broking",
+  "Credit Representative 480328",
   "Xero Gold Partner",
+  "MYOB · QuickBooks",
   "ATO Registered E-Filer",
 ];
 

@@ -629,7 +629,7 @@ export default function ContactPageForm() {
               color: "#6B7C72",
             }}
           >
-            Direct Senior Partner Review · Zero Obligation
+            Direct Senior Advisor Review · Zero Obligation
           </div>
         </form>
       )}

@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect, useCallback } from "react";
+import Link from "next/link";
 
 interface WhyItemData {
   id: string;
@@ -534,6 +535,49 @@ export default function WhyTaxnetSection() {
               isInView={isInView}
             />
           ))}
+        </div>
+
+        {/* Short Line linking to About Page Awards */}
+        <div
+          style={{
+            marginTop: "3rem",
+            textAlign: "center",
+          }}
+        >
+          <Link
+            href="/about#awards"
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: "8px",
+              padding: "10px 22px",
+              borderRadius: "999px",
+              backgroundColor: "#0A0D0B",
+              border: "1px solid rgba(197, 168, 105, 0.45)",
+              color: "#FFFFFF",
+              fontSize: "0.88rem",
+              fontWeight: 600,
+              textDecoration: "none",
+              boxShadow: "0 4px 18px rgba(10, 13, 11, 0.25)",
+              transition: "all 200ms ease",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.backgroundColor = "#161A18";
+              e.currentTarget.style.borderColor = "#C5A869";
+              e.currentTarget.style.transform = "translateY(-2px)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(197, 168, 105, 0.25)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.backgroundColor = "#0A0D0B";
+              e.currentTarget.style.borderColor = "rgba(197, 168, 105, 0.45)";
+              e.currentTarget.style.transform = "translateY(0)";
+              e.currentTarget.style.boxShadow = "0 4px 18px rgba(10, 13, 11, 0.25)";
+            }}
+          >
+            <span style={{ color: "#C5A869", fontSize: "0.95rem" }}>★</span>
+            <span>Philip Youssef – Broker of the Year, Victoria, National Mortgage Brokers 2025</span>
+            <span style={{ color: "#C5A869", fontSize: "0.85rem", marginLeft: "4px" }}>→</span>
+          </Link>
         </div>
       </div>
     </section>

@@ -9,7 +9,7 @@ import ExpandableFaq from "@/app/components/ExpandableFaq";
 export const metadata: Metadata = {
   title: "Contact Taxnet | CPA Accountants & Mortgage Brokers Melbourne",
   description:
-    "Schedule a confidential consultation with Taxnet's certified CPA accountants, registered tax agents, and licensed mortgage brokers. Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 or video consultation Australia-wide.",
+    "Schedule a confidential consultation with Taxnet's certified CPA accountants, registered tax agents, and accredited mortgage brokers. Suite 6, 861 Doncaster Road, Doncaster East VIC 3109 or video consultation Australia-wide.",
   keywords: [
     "contact Taxnet",
     "tax accountant Doncaster East",
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     q: "Can Taxnet coordinate my business tax and my mortgage together?",
-    a: "Yes. As qualified CPA accountants and licensed mortgage brokers under one roof, we structure your financials so business tax deductions don't inadvertently limit your home loan borrowing capacity.",
+    a: "Yes. As qualified CPA accountants and accredited mortgage brokers under one roof, we structure your financials so business tax deductions don't inadvertently limit your home loan borrowing capacity.",
   },
 ];
 
@@ -44,13 +44,13 @@ const STEPS = [
   },
   {
     num: "02",
-    title: "Clear Plan & Fixed Quote",
-    desc: "We deliver a transparent, tailored roadmap with agreed upfront pricing and clear communication.",
+    title: "Clear Plan & Advice on Fees",
+    desc: "We deliver a transparent, tailored roadmap with clear advice on fees before we start and ongoing communication.",
   },
   {
     num: "03",
-    title: "Partner-Led Execution",
-    desc: "Our senior Melbourne CPAs and brokers handle complete file setup, ATO lodgements, and lender submissions.",
+    title: "Senior Advisor Execution",
+    desc: "Our team of senior advisors and brokers handle complete file setup, ATO lodgements, and lender submissions.",
   },
 ];
 
@@ -416,7 +416,7 @@ export default function ContactPage() {
                 What Happens When You Reach Out?
               </h2>
               <p style={{ fontSize: "0.95rem", color: "#55675D", lineHeight: 1.6, margin: 0 }}>
-                From initial confidential discovery to final execution, our Melbourne partners ensure a seamless, structured experience.
+                From initial confidential discovery to final execution, our team ensures a seamless, structured experience.
               </p>
             </div>
 
@@ -593,7 +593,7 @@ export default function ContactPage() {
               }}
             >
               <ExecutiveWhatsAppButton
-                message="Hi Taxnet, I would like to schedule a consultation with your Melbourne partners."
+                message="Hi Taxnet, I would like to schedule a consultation with your team."
                 style={{
                   fontSize: "0.95rem",
                   padding: "0.9rem 1.75rem",

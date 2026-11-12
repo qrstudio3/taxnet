@@ -285,7 +285,7 @@ export default function Footer() {
                 marginBottom: "1rem",
               }}
             >
-              Taxnet is an Australian CPA accounting firm and licensed finance broking
+              Taxnet is an Australian CPA accounting firm and finance broking
               practice providing full-spectrum corporate tax, proactive bookkeeping,
               and commercial debt solutions.
             </p>
@@ -566,9 +566,11 @@ export default function Footer() {
             <span style={{ color: "rgba(197, 168, 105, 0.6)" }}>·</span>
             <span>Tax Practitioners Board (TPB)</span>
             <span style={{ color: "rgba(197, 168, 105, 0.6)" }}>·</span>
-            <span>FBAA Accredited Broker</span>
+            <span>Credit Representative 480328</span>
             <span style={{ color: "rgba(197, 168, 105, 0.6)" }}>·</span>
-            <span>Xero Gold Champion Partner</span>
+            <span>Xero Gold Partner</span>
+            <span style={{ color: "rgba(197, 168, 105, 0.6)" }}>·</span>
+            <span>MYOB · QuickBooks</span>
           </div>
 
           <button
@@ -751,7 +753,7 @@ export default function Footer() {
             margin: "0 0 1.25rem 0",
           }}
         >
-          CPA Australia Public Practice & licensed finance broking firm delivering proactive tax, bookkeeping, and commercial lending advice.
+          CPA Australia Public Practice & finance broking practice delivering proactive tax, bookkeeping, and commercial lending advice.
         </p>
 
         {/* Quick Touch Contact Actions */}

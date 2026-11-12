@@ -128,7 +128,7 @@ export default function BookkeepingPage() {
                 marginBottom: "0.75rem",
               }}
             >
-              Certified Partners · Personal Service
+              Xero Gold Partner · MYOB · QuickBooks
             </span>
 
             <h1
@@ -424,7 +424,7 @@ export default function BookkeepingPage() {
                     Xero
                   </h4>
                   <p style={{ margin: 0, fontSize: "0.82rem", color: "#6B7280", lineHeight: 1.4 }}>
-                    Gold Champion Partner · Setup & migration
+                    Xero Gold Partner · Setup &amp; migration
                   </p>
                 </div>
               </div>
@@ -468,7 +468,7 @@ export default function BookkeepingPage() {
                     MYOB
                   </h4>
                   <p style={{ margin: 0, fontSize: "0.82rem", color: "#6B7280", lineHeight: 1.4 }}>
-                    Certified Partner · Business & payroll support
+                    Business &amp; payroll support
                   </p>
                 </div>
               </div>
@@ -512,7 +512,7 @@ export default function BookkeepingPage() {
                     QuickBooks Online
                   </h4>
                   <p style={{ margin: 0, fontSize: "0.82rem", color: "#6B7280", lineHeight: 1.4 }}>
-                    Certified ProAdvisor · Mobile invoicing & setup
+                    Mobile invoicing &amp; ledger setup
                   </p>
                 </div>
               </div>

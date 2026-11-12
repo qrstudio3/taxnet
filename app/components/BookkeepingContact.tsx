@@ -13,12 +13,12 @@ interface BookkeepingContactProps {
 
 export default function BookkeepingContact({
   title = "Ready to Put Your Books on Autopilot?",
-  subtitle = "Book a confidential 15-minute discovery consultation with our Melbourne CPA team. We'll assess your current ledger, eliminate bottlenecks, and tailor a flat-fee bookkeeping plan.",
+  subtitle = "Book a confidential 15-minute discovery consultation with our Melbourne CPA team. We'll assess your current ledger, eliminate bottlenecks, and tailor a bookkeeping plan with clear advice on fees before we start.",
   serviceName = "Small Business Bookkeeping",
   submitButtonText,
   darkTheme = false,
 }: BookkeepingContactProps) {
-  const isMortgage = /mortgage|loan|finance|buyer|refinanc/i.test(serviceName);
+  const isMortgage = /mortgage|loan|finance|buyer|refinanc|borrowing/i.test(serviceName);
   const isBookkeeping = /bookkeeping|payroll|reconciliation|payable|receivable|invoice|invoicing|budget|cash flow/i.test(serviceName);
   const isTaxOrAccounting = !isBookkeeping && !isMortgage;
 
@@ -233,7 +233,7 @@ export default function BookkeepingContact({
                   </svg>
                   <div>
                     <div style={{ fontSize: "0.98rem", fontWeight: 700, color: "#0A0D0B" }}>Chat with us</div>
-                    <div style={{ fontSize: "0.78rem", color: "#5C6B63" }}>Instant reply · Melbourne Advisory Desk</div>
+                    <div style={{ fontSize: "0.78rem", color: "#5C6B63" }}>Chat with us on WhatsApp · Melbourne Office</div>
                   </div>
                 </div>
                 <span style={{ fontSize: "1.1rem", fontWeight: 700, color: "#0A0D0B" }}>→</span>
@@ -440,10 +440,10 @@ export default function BookkeepingContact({
                   </h3>
                   <p style={{ fontSize: "0.82rem", color: darkTheme ? "#9CA3AF" : "#6B7C72", margin: 0 }}>
                     {isTaxOrAccounting
-                      ? "100% confidential · Direct CPA Partner Review · Upfront Fixed Proposal"
+                      ? "100% confidential · Direct CPA review · Clear advice on fees before we start"
                       : isMortgage
                       ? "Complimentary consultation · Wide range of lenders · Tailored credit guidance"
-                      : "100% confidential · Direct CPA review · Flat monthly fee quote"}
+                      : "100% confidential · Direct CPA review · Clear advice on fees before we start"}
                   </p>
                 </div>
 

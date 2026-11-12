@@ -76,7 +76,7 @@ const PRIVACY_SECTIONS = [
     title: "Overseas storage",
     content: (
       <p style={{ margin: 0 }}>
-        Some of our service providers may store or process information outside Australia, including in [countries to be confirmed, e.g. the United States]. We take reasonable steps to make sure they protect your information.
+        Some of our service providers may store or process information outside Australia, including the United States. We take reasonable steps to make sure they protect your information.
       </p>
     ),
   },

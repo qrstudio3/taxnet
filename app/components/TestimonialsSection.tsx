@@ -3,96 +3,104 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 
-interface ReviewItem {
+interface GoogleReviewItem {
   id: string;
   name: string;
   initials: string;
   avatarBg: string;
-  subtitle: string;
-  platform: "gmail" | "imessage";
-  headline: string;
+  badge?: string;
+  dateText: string;
   quote: string;
-  serviceTag: string;
 }
 
-const REVIEWS: ReviewItem[] = [
+const GOOGLE_REVIEWS: GoogleReviewItem[] = [
   {
-    id: "nicole-turner",
-    name: "Nicole Turner",
-    initials: "NT",
-    avatarBg: "#1A73E8", // Google Blue
-    subtitle: "Victorian Dept. of Education · Client",
-    platform: "gmail",
-    headline: "Fantastic service as always, very grateful!",
+    id: "gianni-della-negra",
+    name: "Gianni Della Negra",
+    initials: "GD",
+    avatarBg: "#1F2937",
+    badge: "9 reviews",
+    dateText: "7 months ago",
     quote:
-      "Hello. Happy Friday!! Thank you so very much for the fantastic service as always. Very grateful. Have a great weekend 😃",
-    serviceTag: "Accounting & Tax",
+      "Excellent experience with the whole team. They recently helped me manage a complicated transaction with a lot of moving parts, and their advice was spot on and kept everything secure. It’s rare to find an accounting firm that is this responsive and genuinely focused on long-term goals. Thank you team!",
+  },
+  {
+    id: "julie-bristow",
+    name: "Julie Bristow",
+    initials: "JB",
+    avatarBg: "#0F9D58",
+    badge: "Local Guide · 15 reviews",
+    dateText: "a year ago",
+    quote:
+      "Taxnet have been looking after my tax and financial requirements for quite a few years now and I am really impressed by their service and ease of the relationship. There are often times in between my tax returns that they do for me each year that I need additional support and they are always really responsive to my emails and phone calls and give me sound advice, often without additional charges, which makes me feel as though they are there to generally support their clients, not just as a $ making exercise.",
   },
   {
     id: "johnny-c",
     name: "Johnny C",
     initials: "JC",
-    avatarBg: "#0F9D58", // Google Green
-    subtitle: "Tax & Compliance Client",
-    platform: "gmail",
-    headline: "Good feeling to start fresh – sorting out all that mess",
+    avatarBg: "#4285F4",
+    badge: "Local Guide · 10 reviews",
+    dateText: "a year ago",
     quote:
-      "That's fantastic!!! Thank you so much! I'll fix it up at asap. I've also paid your invoice , thanks again so much for sorting out all that mess . Good feeling to start fresh!",
-    serviceTag: "Tax & Compliance",
+      "Phil and his team are great. I can’t express how prompt and accurate the communication is which makes dealing with finances easier and gives you piece of mind that you are well looked after. Phil and the teams knowledge is vast and beyond competent. Really gives you confidence in any business venture or financial situation. Can’t thank Phil and the team enough for helping me and my family out. Would highly recommend anyone to Phil and the taxnet team.",
   },
   {
-    id: "gian",
-    name: "Gian",
-    initials: "G",
-    avatarBg: "#EA4335", // Google Red
-    subtitle: "Finance & Broking Client",
-    platform: "gmail",
-    headline: "Car arrived & sorted – heavy lifting on the numbers",
+    id: "marian-rafael",
+    name: "Marian Rafael",
+    initials: "MR",
+    avatarBg: "#0288D1",
+    badge: "Local Guide · 25 reviews",
+    dateText: "2 years ago",
     quote:
-      "Just letting you know the car arrived and everything is sorted. Thanks for the help with the heavy lifting on the numbers. also Ben was a massive help, he answered every question I threw at him. Really appreciate it! Now we just need to organise a drive day 🏎️",
-    serviceTag: "Car & Equipment Finance",
+      "We came on board as Phil came highly recommended and I must say, he and his team have been nothing short of fantastic. They are efficient, proactive and very professional, nothing is too hard and there is a solution for everything, which is so refreshing. We are so pleased with how we have been able to restructure a few things and also set a plan moving forward. If you're looking for accounting/business consultants with a vision for growth, assistance with strategy and a 'can do' attitude, this team is the one.",
   },
   {
-    id: "mina-ghobrial",
-    name: "Mina Ghobrial",
-    initials: "MG",
-    avatarBg: "#8E24AA", // Purple
-    subtitle: "B.Pharmacy (Hons.) & Proprietor",
-    platform: "gmail",
-    headline: "Much appreciate your effort with this SMSF settlement",
+    id: "jordy-habib",
+    name: "Jordy Habib",
+    initials: "JH",
+    avatarBg: "#5C6BC0",
+    badge: "3 reviews",
+    dateText: "a year ago",
     quote:
-      "Hi Ben, Thanks heaps to you and Philip! Much appreciate your effort with this one. Looking forward to the next one.",
-    serviceTag: "SMSF Property Settlement",
+      "I switched to Philip at TaxNet from my previous tax accountant, couldn’t be happier! The service is much more efficient and straightforward. Highly recommend",
   },
   {
-    id: "raelene",
-    name: "Raelene",
-    initials: "RR",
-    avatarBg: "#34C759", // Apple Green
-    subtitle: "Personal Tax Client",
-    platform: "imessage",
-    headline: "Was that easy? Absolutely. I appreciate you so much!",
+    id: "karim-george",
+    name: "Karim George",
+    initials: "KG",
+    avatarBg: "#E91E63",
+    badge: "Local Guide · 279 reviews",
+    dateText: "4 years ago",
     quote:
-      "Good morning Mirel... If that works that will be great. Thankyou so much Mirel. Was that easy? Absolutely. Thankyou so much, Mirel. I appreciate you so much ❤️",
-    serviceTag: "Personal Tax Service",
-  },
-  {
-    id: "nicole-advisory",
-    name: "Nicole",
-    initials: "N",
-    avatarBg: "#007AFF", // Apple Blue
-    subtitle: "Client Advisory",
-    platform: "imessage",
-    headline: "I could not be more grateful – thank you so much",
-    quote:
-      "I'm happy to pay her fee now if you want to send it through. I'm so grateful for your service!! I could not be more grateful Thank you so much.",
-    serviceTag: "Client Advisory",
+      "I can't speak high enough about Taxnet. Very professional and caring, genuine interest in helping and providing the best service. Knowledgeable and professional. Philip and the team are really great to deal with and very approachable. Highly recommended.",
   },
 ];
 
-const TOTAL_REAL = REVIEWS.length;
-// Duplicate items to ensure smooth infinite wrap-around
-const DISPLAY_ITEMS = [...REVIEWS, ...REVIEWS];
+const TOTAL_REAL = GOOGLE_REVIEWS.length;
+const DISPLAY_ITEMS = [...GOOGLE_REVIEWS, ...GOOGLE_REVIEWS];
+
+function GoogleGIcon({ size = 18 }: { size?: number }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" style={{ flexShrink: 0 }}>
+      <path
+        fill="#4285F4"
+        d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.665-5.17 3.665-9.17z"
+      />
+      <path
+        fill="#34A853"
+        d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.34 24 12 24z"
+      />
+      <path
+        fill="#FBBC05"
+        d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 10.03 0 12s.45 3.82 1.25 5.42l4.03-3.15z"
+      />
+      <path
+        fill="#EA4335"
+        d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.34 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"
+      />
+    </svg>
+  );
+}
 
 export default function TestimonialsSection() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -180,7 +188,7 @@ export default function TestimonialsSection() {
     if (isPaused) return;
     const timer = setInterval(() => {
       handleNext();
-    }, 4500);
+    }, 5500);
     return () => clearInterval(timer);
   }, [isPaused, handleNext]);
 
@@ -250,31 +258,6 @@ export default function TestimonialsSection() {
             transition: "transform 800ms ease, opacity 800ms ease",
           }}
         >
-          {/* Google Review Trust Badge */}
-          <div
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "rgba(197, 168, 105, 0.12)",
-              border: "1px solid rgba(197, 168, 105, 0.3)",
-              padding: "6px 14px",
-              borderRadius: "999px",
-              marginBottom: "1rem",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: "2px" }}>
-              {[0, 1, 2, 3, 4].map((i) => (
-                <svg key={i} width="13" height="13" viewBox="0 0 24 24" fill="#FBBC04" aria-hidden="true">
-                  <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                </svg>
-              ))}
-            </div>
-            <span style={{ color: "#E5E7EB", fontSize: "0.78rem", fontWeight: 700, letterSpacing: "0.04em" }}>
-              5.0 · Verified Client Feedback
-            </span>
-          </div>
-
           <h2
             style={{
               fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
@@ -297,7 +280,7 @@ export default function TestimonialsSection() {
               lineHeight: 1.6,
             }}
           >
-            Genuine correspondence and verified feedback from the clients we work with every day.
+            Read reviews from clients who work with Philip and our Melbourne team.
           </p>
         </div>
 
@@ -338,7 +321,7 @@ export default function TestimonialsSection() {
                   boxSizing: "border-box",
                 }}
               >
-                {/* Google Review Card Box */}
+                {/* Google Review Quote Card */}
                 <div
                   style={{
                     backgroundColor: "#FFFFFF",
@@ -347,7 +330,7 @@ export default function TestimonialsSection() {
                     display: "flex",
                     flexDirection: "column",
                     justifyContent: "space-between",
-                    minHeight: "330px",
+                    minHeight: "340px",
                     height: "100%",
                     boxShadow: "0 8px 24px rgba(0, 0, 0, 0.18)",
                     border: "1px solid #E5E7EB",
@@ -370,28 +353,29 @@ export default function TestimonialsSection() {
                   }}
                 >
                   <div>
-                    {/* Header: User Initials Avatar + Name + Platform Logo */}
+                    {/* Header: User Avatar + Name + Google Review Badge */}
                     <div
                       style={{
                         display: "flex",
-                        alignItems: "center",
+                        alignItems: "flex-start",
                         justifyContent: "space-between",
-                        marginBottom: "0.85rem",
+                        gap: "12px",
+                        marginBottom: "1rem",
                       }}
                     >
                       <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
                         {/* Avatar Circle with Initials */}
                         <div
                           style={{
-                            width: "44px",
-                            height: "44px",
+                            width: "42px",
+                            height: "42px",
                             borderRadius: "50%",
                             backgroundColor: r.avatarBg,
                             color: "#FFFFFF",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
-                            fontSize: "0.95rem",
+                            fontSize: "0.92rem",
                             fontWeight: 700,
                             letterSpacing: "0.02em",
                             boxShadow: "0 2px 6px rgba(0,0,0,0.14)",
@@ -411,177 +395,141 @@ export default function TestimonialsSection() {
                           >
                             {r.name}
                           </div>
-                          <div
-                            style={{
-                              fontSize: "0.74rem",
-                              color: "#6B7280",
-                              marginTop: "2px",
-                              lineHeight: 1.3,
-                            }}
-                          >
-                            {r.subtitle}
-                          </div>
+                          {r.badge && (
+                            <div
+                              style={{
+                                fontSize: "0.74rem",
+                                color: "#6B7280",
+                                marginTop: "2px",
+                                lineHeight: 1.3,
+                              }}
+                            >
+                              {r.badge}
+                            </div>
+                          )}
                         </div>
                       </div>
 
-                      {/* Platform Icon: Official Multi-Color Gmail or Apple Messages Bubble */}
-                      {r.platform === "gmail" ? (
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            width: "38px",
-                            height: "38px",
-                            borderRadius: "10px",
-                            backgroundColor: "#FFFFFF",
-                            border: "1px solid #E5E7EB",
-                            boxShadow: "0 2px 6px rgba(0,0,0,0.06)",
-                            flexShrink: 0,
-                          }}
-                          title="Verified via Gmail"
-                        >
-                          <svg width="22" height="22" viewBox="0 0 24 24" aria-label="Gmail">
-                            <path fill="#4285F4" d="M4 20h2.5V11.2L2 8v10.5c0 .83.67 1.5 1.5 1.5h.5z" />
-                            <path fill="#34A853" d="M17.5 20H20c.83 0 1.5-.67 1.5-1.5V8l-4.5 3.2V20h.5z" />
-                            <path fill="#EA4335" d="M17.5 11.2V5.5L12 9.5 6.5 5.5v5.7L12 15l5.5-3.8z" />
-                            <path fill="#FBBC04" d="M2 8l4.5 3.2V5.5L4.7 4.2C3.3 3.1 2 4.1 2 5.5V8z" />
-                            <path fill="#C5221F" d="M22 8l-4.5 3.2V5.5l1.8-1.3c1.4-1.1 2.7-.1 2.7 1.3V8z" />
-                          </svg>
-                        </div>
-                      ) : (
-                        <div
-                          style={{
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            width: "38px",
-                            height: "38px",
-                            borderRadius: "10px",
-                            backgroundColor: "#FFFFFF",
-                            border: "1px solid #E5E7EB",
-                            boxShadow: "0 2px 6px rgba(0,0,0,0.06)",
-                            flexShrink: 0,
-                          }}
-                          title="Verified via Apple Messages"
-                        >
-                          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-label="Apple Message">
-                            <rect width="24" height="24" rx="6" fill="#34C759" />
-                            <path
-                              d="M12 4.5C7.306 4.5 3.5 7.858 3.5 12c0 2.378 1.258 4.512 3.235 5.823-.153.898-.624 2.14-1.574 2.996-.154.145-.043.402.171.402 1.506.017 3.125-.574 4.22-1.395.786.148 1.604.224 2.448.224 4.694 0 8.5-3.358 8.5-7.5S16.694 4.5 12 4.5z"
-                              fill="#FFFFFF"
-                            />
-                          </svg>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Google 5-Star Rating (Official Google #FBBC04 Yellow Stars) + Verified Pill */}
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "space-between",
-                        marginBottom: "0.75rem",
-                      }}
-                    >
-                      <div style={{ display: "flex", alignItems: "center", gap: "3px" }}>
-                        {[0, 1, 2, 3, 4].map((starIdx) => (
-                          <svg
-                            key={starIdx}
-                            width="16"
-                            height="16"
-                            viewBox="0 0 24 24"
-                            fill="#FBBC04"
-                            aria-hidden="true"
-                          >
-                            <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
-                          </svg>
-                        ))}
-                      </div>
-                      <span
+                      {/* Google review label badge */}
+                      <div
                         style={{
-                          fontSize: "0.72rem",
-                          color: "#059669",
-                          fontWeight: 600,
                           display: "inline-flex",
                           alignItems: "center",
-                          gap: "3px",
+                          gap: "6px",
+                          backgroundColor: "#F3F4F6",
+                          border: "1px solid #E5E7EB",
+                          padding: "4px 10px",
+                          borderRadius: "999px",
+                          flexShrink: 0,
                         }}
                       >
-                        ✓ Verified
-                      </span>
+                        <GoogleGIcon size={14} />
+                        <span
+                          style={{
+                            fontSize: "0.72rem",
+                            fontWeight: 700,
+                            color: "#374151",
+                            letterSpacing: "0.02em",
+                          }}
+                        >
+                          Google review
+                        </span>
+                      </div>
                     </div>
-
-                    {/* Headline */}
-                    <h4
-                      style={{
-                        fontSize: "0.94rem",
-                        fontWeight: 700,
-                        color: "#111827",
-                        lineHeight: 1.35,
-                        margin: "0 0 0.5rem 0",
-                      }}
-                    >
-                      &ldquo;{r.headline}&rdquo;
-                    </h4>
 
                     {/* Review Body */}
                     <p
                       style={{
-                        fontSize: "0.86rem",
+                        fontSize: "0.88rem",
                         color: "#374151",
-                        lineHeight: 1.6,
-                        margin: "0 0 1rem 0",
+                        lineHeight: 1.65,
+                        margin: 0,
                         fontWeight: 400,
+                        fontStyle: "italic",
                       }}
                     >
-                      {r.quote}
+                      &ldquo;{r.quote}&rdquo;
                     </p>
                   </div>
 
-                  {/* Bottom Tag */}
+                  {/* Bottom: Both Action Buttons on each review card */}
                   <div
                     style={{
                       borderTop: "1px solid #F3F4F6",
-                      paddingTop: "0.75rem",
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "space-between",
+                      paddingTop: "0.85rem",
+                      marginTop: "1.1rem",
+                      display: "grid",
+                      gridTemplateColumns: "1fr 1fr",
+                      gap: "8px",
                     }}
                   >
-                    <span
+                    <a
+                      href="https://g.page/r/CSpLRi2RID-zEBM"
+                      target="_blank"
+                      rel="noopener noreferrer"
                       style={{
-                        fontSize: "0.72rem",
-                        fontWeight: 700,
-                        color: "#8A7040",
-                        background: "rgba(197, 168, 105, 0.12)",
-                        padding: "3px 10px",
-                        borderRadius: "999px",
-                      }}
-                    >
-                      {r.serviceTag}
-                    </span>
-                    <span
-                      style={{
-                        fontSize: "0.7rem",
-                        color: "#6B7280",
-                        display: "flex",
+                        display: "inline-flex",
                         alignItems: "center",
+                        justifyContent: "center",
                         gap: "5px",
-                        fontWeight: 500,
+                        backgroundColor: "#F9FAFB",
+                        color: "#111827",
+                        border: "1px solid #E5E7EB",
+                        borderRadius: "8px",
+                        padding: "8px 8px",
+                        fontSize: "0.74rem",
+                        fontWeight: 700,
+                        textDecoration: "none",
+                        textAlign: "center",
+                        transition: "all 160ms ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#F3F4F6";
+                        e.currentTarget.style.borderColor = "#D1D5DB";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#F9FAFB";
+                        e.currentTarget.style.borderColor = "#E5E7EB";
                       }}
                     >
-                      {r.platform === "gmail" ? (
-                        <>
-                          <span style={{ color: "#EA4335", fontWeight: 700 }}>✉</span> Gmail
-                        </>
-                      ) : (
-                        <>
-                          <span style={{ color: "#34C759", fontWeight: 700 }}>💬</span> Apple Message
-                        </>
-                      )}
-                    </span>
+                      <GoogleGIcon size={13} />
+                      <span>View all reviews</span>
+                    </a>
+
+                    <a
+                      href="https://g.page/r/CSpLRi2RID-zEBM/review"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        display: "inline-flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "5px",
+                        backgroundColor: "#0A0D0B",
+                        color: "#FFFFFF",
+                        border: "1px solid #0A0D0B",
+                        borderRadius: "8px",
+                        padding: "8px 8px",
+                        fontSize: "0.74rem",
+                        fontWeight: 700,
+                        textDecoration: "none",
+                        textAlign: "center",
+                        transition: "all 160ms ease",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.backgroundColor = "#C5A869";
+                        e.currentTarget.style.borderColor = "#C5A869";
+                        e.currentTarget.style.color = "#0A0D0B";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.backgroundColor = "#0A0D0B";
+                        e.currentTarget.style.borderColor = "#0A0D0B";
+                        e.currentTarget.style.color = "#FFFFFF";
+                      }}
+                    >
+                      <span>Leave us a review</span>
+                      <span style={{ color: "#E5D6B6" }}>★</span>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -646,7 +594,7 @@ export default function TestimonialsSection() {
 
           {/* Dots */}
           <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
-            {REVIEWS.map((_, dotIdx) => (
+            {GOOGLE_REVIEWS.map((_, dotIdx) => (
               <button
                 key={dotIdx}
                 type="button"
@@ -720,7 +668,7 @@ export default function TestimonialsSection() {
         <div
           style={{
             textAlign: "center",
-            marginTop: "2.75rem",
+            marginTop: "2.5rem",
             transform: visible ? "translateY(0)" : "translateY(16px)",
             opacity: visible ? 0.85 : 0,
             transition: "transform 600ms ease 240ms, opacity 600ms ease 240ms",

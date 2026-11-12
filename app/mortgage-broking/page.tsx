@@ -408,7 +408,7 @@ export default function MortgageBrokingPage() {
                   lineHeight: 1.6,
                 }}
               >
-                Explore repayments with our borrowing calculator or speak with our accredited brokers about your situation.
+                Explore repayments with our borrowing calculator or speak with our broker team about your situation.
               </p>
               <div
                 style={{

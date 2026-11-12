@@ -32,7 +32,7 @@ const CORE_VALUES = [
   {
     num: "01",
     title: "Integrity & Trust",
-    desc: "Long-term relationships built on honesty, confidentiality, and professional integrity as an uncompromised fiduciary partner.",
+    desc: "Long-term relationships built on honesty, confidentiality, and professional integrity.",
   },
   {
     num: "02",
@@ -47,7 +47,7 @@ const CORE_VALUES = [
   {
     num: "04",
     title: "Personal Attention",
-    desc: "Direct partner access with responsive, friendly, and technically sound advice—no junior hand-offs and zero call centres.",
+    desc: "Direct access to our team, with no call centres, offering responsive, friendly, and technically sound advice.",
   },
   {
     num: "05",
@@ -527,7 +527,7 @@ export default function AboutBody() {
                     marginBottom: "1.5rem",
                   }}
                 >
-                  As qualified CPA accountants and licensed mortgage brokers under one roof, we
+                  As qualified CPA accountants and accredited mortgage brokers under one roof, we
                   coordinate your tax returns and lending applications simultaneously. We ensure
                   tax deductions never inadvertently hinder your borrowing capacity across a wide range of lenders.
                 </p>
@@ -950,6 +950,236 @@ export default function AboutBody() {
       </section>
 
       {/* ══════════════════════════════════════════════════════════════
+          AWARDS & RECOGNITION SECTION (Directly below Leadership)
+          ══════════════════════════════════════════════════════════════ */}
+      <section
+        id="awards"
+        style={{
+          padding: "5rem 0 5.5rem",
+          backgroundColor: "#FFFFFF",
+          borderTop: "1px solid #E5ECE7",
+        }}
+      >
+        <div style={{ maxWidth: "1240px", margin: "0 auto", padding: "0 1.5rem" }}>
+          {/* Section Header */}
+          <div style={{ textAlign: "center", marginBottom: "3.25rem" }}>
+            <span
+              style={{
+                color: "#A18650",
+                fontSize: "0.8rem",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                display: "block",
+                marginBottom: "0.4rem",
+              }}
+            >
+              Industry Excellence
+            </span>
+            <h2
+              style={{
+                fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                fontSize: "clamp(2rem, 3.5vw, 2.85rem)",
+                color: "#0A0D0B",
+                fontWeight: 400,
+                margin: "0 0 0.6rem",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Awards &amp; Recognition
+            </h2>
+            <p
+              style={{
+                fontSize: "1rem",
+                color: "#54655B",
+                maxWidth: "560px",
+                margin: "0 auto",
+                lineHeight: 1.6,
+              }}
+            >
+              Recognised across Victoria and nationally for lending excellence, portfolio milestones, and industry partnerships.
+            </p>
+          </div>
+
+          {/* Two Columns: Philip Youssef & Taxnet Business Consultants */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
+              gap: "2rem",
+            }}
+          >
+            {/* Column 1: Philip Youssef */}
+            <div
+              style={{
+                backgroundColor: "#FAFBF9",
+                borderRadius: "16px",
+                border: "1px solid #E5ECE7",
+                padding: "2.25rem 2rem",
+                boxShadow: "0 4px 18px rgba(0, 0, 0, 0.03)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1.25rem" }}>
+                <span
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "8px",
+                    backgroundColor: "rgba(161, 134, 80, 0.12)",
+                    color: "#A18650",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "1.1rem",
+                    flexShrink: 0,
+                  }}
+                >
+                  ★
+                </span>
+                <div>
+                  <h3
+                    style={{
+                      fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                      fontSize: "1.5rem",
+                      fontWeight: 400,
+                      color: "#0A0D0B",
+                      margin: 0,
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Philip Youssef
+                  </h3>
+                  <span style={{ fontSize: "0.8rem", color: "#8C713A", fontWeight: 600 }}>
+                    Principal Broker &amp; Advisor
+                  </span>
+                </div>
+              </div>
+
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.9rem",
+                }}
+              >
+                {[
+                  "Broker of the Year, Victoria – National Mortgage Brokers, 2025",
+                  "Platinum Broker – Westpac, 2024",
+                  "Elite Broker – CommBank, 2021",
+                  "$10m Monthly Settlements – National Mortgage Brokers, June 2020",
+                ].map((item, idx) => (
+                  <li
+                    key={idx}
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: "10px",
+                      fontSize: "0.92rem",
+                      color: "#374151",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    <span style={{ color: "#C5A869", fontWeight: 700, marginTop: "2px" }}>•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* Column 2: Taxnet Business Consultants */}
+            <div
+              style={{
+                backgroundColor: "#FAFBF9",
+                borderRadius: "16px",
+                border: "1px solid #E5ECE7",
+                padding: "2.25rem 2rem",
+                boxShadow: "0 4px 18px rgba(0, 0, 0, 0.03)",
+                display: "flex",
+                flexDirection: "column",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1.25rem" }}>
+                <span
+                  style={{
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "8px",
+                    backgroundColor: "rgba(161, 134, 80, 0.12)",
+                    color: "#A18650",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: "1.1rem",
+                    flexShrink: 0,
+                  }}
+                >
+                  🏆
+                </span>
+                <div>
+                  <h3
+                    style={{
+                      fontFamily: 'var(--font-monety), "Playfair Display", Georgia, serif',
+                      fontSize: "1.5rem",
+                      fontWeight: 400,
+                      color: "#0A0D0B",
+                      margin: 0,
+                      lineHeight: 1.2,
+                    }}
+                  >
+                    Taxnet Business Consultants
+                  </h3>
+                  <span style={{ fontSize: "0.8rem", color: "#8C713A", fontWeight: 600 }}>
+                    Practice Milestones &amp; Partnerships
+                  </span>
+                </div>
+              </div>
+
+              <ul
+                style={{
+                  listStyle: "none",
+                  padding: 0,
+                  margin: 0,
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.85rem",
+                }}
+              >
+                {[
+                  "Medallion Club – National Mortgage Brokers, 2022, 2023, 2024 and 2025",
+                  "$250m Portfolio Milestone – National Mortgage Brokers, September 2023",
+                  "Top 11 Broker (1st XI) – National Mortgage Brokers network, 2020",
+                  "$100m Portfolio Milestone – National Mortgage Brokers, March 2019",
+                  "Sales Milestone – National Mortgage Brokers, December 2018",
+                  "$50m Club Portfolio Milestone – National Mortgage Brokers, September 2017",
+                  "Xero Gold Partner",
+                ].map((item, idx) => (
+                  <li
+                    key={idx}
+                    style={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: "10px",
+                      fontSize: "0.92rem",
+                      color: "#374151",
+                      lineHeight: 1.5,
+                    }}
+                  >
+                    <span style={{ color: "#C5A869", fontWeight: 700, marginTop: "2px" }}>•</span>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ══════════════════════════════════════════════════════════════
           OUR TEAM SECTION (Directly below Leadership)
           Heading: Our Team
           Intro: The people you’ll work with day to day.
@@ -1192,7 +1422,7 @@ export default function AboutBody() {
               </h2>
               <p style={{ color: "#55645B", fontSize: "0.96rem", lineHeight: 1.65, margin: 0 }}>
                 Swipe or scroll horizontally to explore the foundational principles that guide our
-                accounting practice and fiduciary commitments.
+                accounting practice and professional standards.
               </p>
             </div>
 

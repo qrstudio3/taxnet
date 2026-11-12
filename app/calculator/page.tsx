@@ -295,13 +295,13 @@ export default function CalculatorPage() {
           </div>
         </section>
 
-        {/* ─── BOOKING & CONSULTATION FORM ─── */}
+        {/* ─── BOOKING & CONSULTATION FORM (MORTGAGE BROKING FORM) ─── */}
         <div id="booking">
           <BookkeepingContact
-            title="Ready to Assess Your Borrowing Power?"
-            subtitle="Book a confidential 15-minute consultation with our Melbourne mortgage broking & CPA team. We'll assess your borrowing power across a wide range of lenders."
-            serviceName="Borrowing Power Assessment"
-            submitButtonText="Book A Consultation"
+            serviceName="Mortgage Broking"
+            title="Let’s Talk About Your Home Loan"
+            subtitle="Speak with our broker team in Melbourne. We assess your scenario across a wide range of lenders to find the right loan structure and competitive rates."
+            submitButtonText="Book A Loan Consultation"
           />
         </div>
       </main>
